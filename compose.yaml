@@ -1,0 +1,50 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-tawos}
+      POSTGRES_USER: ${POSTGRES_USER:-tawos}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tawos_local_dev}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tawos} -d ${POSTGRES_DB:-tawos}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build: .
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://tawos:tawos_local_dev@db:5432/tawos}
+      APP_NAME: Sprint Risk Research API
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  source-mysql:
+    image: mysql:8.0
+    container_name: tawos-source-mysql
+    profiles: ["migration"]
+    environment:
+      MYSQL_DATABASE: TAWOS
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-tawos_mysql_local}
+      MYSQL_ROOT_HOST: "%"
+    command: ["--max-allowed-packet=1G", "--default-authentication-plugin=mysql_native_password"]
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./data/raw/unpacked/TAWOS.sql:/docker-entrypoint-initdb.d/01-tawos.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 30s
+
+volumes:
+  postgres_data:
+  mysql_data:
