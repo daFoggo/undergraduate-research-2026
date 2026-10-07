@@ -13,7 +13,7 @@ Trạng thái: TODO → RUNNING → DONE; BLOCKED chỉ khi thiếu điều ki�
 | P1.3 | Khóa protocol và quyết định phương pháp | DONE | `Protocol_v1.md`, `artifacts/protocol/config.json`, `lock.json` trước fit |
 | P2.1 | Dựng cohort, nhãn và exclusion log | DONE | 28.746 commitments, 22.147 labeled (77,04%), eligibility/exclusion/mapping CSV |
 | P2.2 | Snapshot 0/25/50/75% | DONE | 88.588 snapshots; `feature_dictionary.csv`, provenance timestamps |
-| P2.3 | Kiểm thử temporal integrity | DONE | 10 tests và `data_validation.json`; cohort aggregate tính trước label exclusion |
+| P2.3 | Kiểm thử temporal integrity | DONE | 12 tests và `data_validation.json`; kiểm tra aggregate invariant với outcome tương lai/NA |
 | P3.1 | Split temporal và cross-project | DONE | 14 projects, manifest temporal/cross; purge nhãn chưa khả dụng |
 | P3.2 | Baseline tần suất/quy tắc/tĩnh | RUNNING | Model/config/validation/prediction artifacts đang bắt đầu |
 | P3.3 | Mô hình động, ablation và calibration | RUNNING | Cấu hình khóa trước fit, sigmoid validation-only |
@@ -32,6 +32,7 @@ Trạng thái: TODO → RUNNING → DONE; BLOCKED chỉ khi thiếu điều ki�
 | D04 / 2026-10-08 | ≥50 sprint/project, ≥10 test; purge nhãn ở ranh giới, fit temporal riêng project | Yêu cầu 10 test với tỷ lệ 20%, overlap | Cohort counts | 14 project eligible |
 | D05 / 2026-10-08 | Giữ ceil budget theo protocol; thêm floor/active-only/scope-change/seen-ID sensitivity | Sprint nhỏ và nhận biết Done có thể thổi phồng kết quả | Chưa model metric | Báo cáo cả nominal/realized budget |
 | D06 / 2026-10-08 | Cấu hình CatBoost cố định, sigmoid validation-only; static/dynamic matched model | So sánh thông tin, không thay thuật toán giữa hai vế | Chưa model metric | Không lựa chọn tham số theo test |
+| D07 / 2026-10-08 | Thêm raw-ranking và temporal project-weighted bootstrap như kiểm tra phụ, giữ nguyên H1 | Sigmoid slope âm có thể đảo rank; cluster issue/sprint | Code/validation artifacts, chưa test metrics | Tách tác động calibrator, kiểm tra trọng số project; exploratory |
 
 ## Nhật ký và checkpoint tiếp tục
 
@@ -41,10 +42,14 @@ Trạng thái: TODO → RUNNING → DONE; BLOCKED chỉ khi thiếu điều ki�
 - Data build hoàn tất: `python -m research.build`; protocol/split: `python -m research.splits`; full data verification: `python -m research.validate_data`. Các lượt build trước train đã cải thiện audit gaps, chưa xem test model metric.
 - SQL sample audit 765 instance đối chiếu forward và reverse consistency đều pass. Không có inter-rater agreement hoặc Jira status-category metadata; giới hạn đã đăng ký rõ.
 - Bước kế tiếp: `python -m research.train --experiment temporal`, sau đó cross_project; viết evaluator/plots/alert replay và báo cáo. Kiểm tra run hash khi resume; không ghi đè artifact khác hash.
-- Huấn luyện đang chạy đồng thời bằng hai process: terminal session `4431` (temporal) và `10455` (cross_project), xác nhận live bằng polling; không khởi chạy bản thứ hai cùng experiment. Checkpoint mới nhất: temporal đã sang CONFSERVER, cross_project đang CONFCLOUD.
+- Huấn luyện đang chạy đồng thời bằng hai process: terminal session `4431` (temporal) và `10455` (cross_project), xác nhận live bằng polling; không khởi chạy bản thứ hai cùng experiment. Checkpoint mới nhất: temporal 177/336, cross_project 137/336 prediction files; counts không thay thế kiểm tra triplet/full validation.
 - Evaluator yêu cầu đủ 672 prediction files trước khi tính test metrics. Code ở `research/evaluate.py`; test sequential budget giữ tổng cap toàn sprint, deduplicate issue.
 - Protocol/data checkpoint đã commit `2f3a73f`. Code evaluator, environment và các doc mới đang tiếp tục hoàn thiện. Còn thiếu kết quả thực nghiệm đầy đủ, plot/analysis report và completion audit; goal chưa hoàn thành.
 - Verification mới nhất: 11 tests pass, `git diff --check` pass. Runtime thực tế Python 3.12.10 và 88 installed distributions ghi ở `artifacts/environment/runtime.json`. Script split có guard chống ghi đè lock khi prediction đã tồn tại.
+- `research/validate_predictions.py --partial` đã kiểm tra 163 completed artifact triplets, toàn bộ pass. Bản full yêu cầu đủ 672 và re-inference mẫu từng model; chạy sau khi hai train process terminal success.
+- Đã viết report generator `research/report.py`, chưa sinh kết luận khi matrix chưa đầy. Raw-ranking/project-weighted robustness thêm trước khi tính test metric; protocol H1/config/model không thay đổi.
+- Verification mới nhất: compileall + 12 tests + independent data SQL/provenance/cohort-aggregate validation pass. Refactor aggregate thành helper có test không đổi giá trị feature/dataset đã khóa; không rebuild hoặc retrain.
+- Bước sau khi train đủ: `research.validate_predictions` (full) → `research.evaluate` → `research.analysis` → `research.report`; đọc metric/plots và bổ sung thảo luận thực tế, audit từng deliverable trước khi complete goal. Report generator không tự chứng minh goal complete.
 
 ## Quy tắc tiếp tục khi đổi context
 

@@ -88,6 +88,7 @@ def main():
             metrics = metrics.assign(**meta,q=q)
             per_sprint.append(metrics)
         scenarios = {
+            'raw_ranking':(group.assign(p=group.p_raw),'ceil'),
             'floor':(group,'floor'),
             'active_only':(group[group.dynamic_is_done==0],'ceil'),
             'exclude_cancelled_removed':(group[~(group.cancelled|group.removed)],'ceil'),
@@ -101,10 +102,11 @@ def main():
     sprint_table = pd.concat(per_sprint,ignore_index=True)
     for experiment in ['temporal','cross_project']:
         for landmark in config['landmarks']:
-            for scenario in ['primary','floor','active_only','exclude_cancelled_removed','unseen_issue_ids','closed_only_label']:
+            for scenario in ['primary','raw_ranking','floor','active_only','exclude_cancelled_removed','unseen_issue_ids','closed_only_label']:
                 group = data[(data.experiment==experiment)&(data.landmark==landmark)]
                 rounding='ceil'
-                if scenario=='floor': rounding='floor'
+                if scenario=='raw_ranking': group=group.assign(p=group.p_raw)
+                elif scenario=='floor': rounding='floor'
                 elif scenario=='active_only': group=group[group.dynamic_is_done==0]
                 elif scenario=='exclude_cancelled_removed': group=group[~(group.cancelled|group.removed)]
                 elif scenario=='unseen_issue_ids': group=group[~group.seen_training_issue]
@@ -116,6 +118,12 @@ def main():
                     static = static.groupby('project',as_index=False).recall.mean()
                 comparisons.append({'experiment':experiment,'landmark':landmark,'scenario':scenario,
                                     **paired_bootstrap(dynamic,static,unit='project' if experiment=='cross_project' else 'sprint_id',replicates=config['bootstrap_replicates'])})
+            if experiment=='temporal':
+                group=data[(data.experiment==experiment)&(data.landmark==landmark)]
+                dynamic=sprint_metrics(group[group.model=='dynamic_catboost']).groupby('project',as_index=False).recall.mean()
+                static=sprint_metrics(group[group.model=='static_catboost']).groupby('project',as_index=False).recall.mean()
+                comparisons.append({'experiment':experiment,'landmark':landmark,'scenario':'project_weighted_exploratory',
+                                    **paired_bootstrap(dynamic,static,unit='project',replicates=config['bootstrap_replicates'])})
         for model in config['models']:
             group = data[(data.experiment==experiment)&(data.model==model)&(data.landmark>0)]
             sm,alerts = sequential(group)

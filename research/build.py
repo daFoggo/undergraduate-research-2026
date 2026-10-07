@@ -26,6 +26,16 @@ def save_csv(name, rows):
         pd.DataFrame(rows).to_csv(OUT/f'{name}.csv', index=False)
 
 
+def attach_cohort_features(frame):
+    """Use observed states for the entire commitment cohort; never inspect outcomes."""
+    frame=frame.copy()
+    for (_,landmark),group in frame.groupby(['sprint_id','landmark']):
+        frame.loc[group.index,'dynamic_cohort_done_fraction']=group.dynamic_is_done.mean()
+        frame.loc[group.index,'static_cohort_done_fraction']=group.static_is_done.mean()
+        frame.loc[group.index,'cohort_size']=len(group)
+    return frame
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     DATA.mkdir(parents=True, exist_ok=True)
@@ -123,10 +133,7 @@ def main():
                         p_rows.append(row)
             frame = pd.DataFrame(p_rows)
             if not frame.empty:
-                for (_, landmark), group in frame.groupby(['sprint_id','landmark']):
-                    frame.loc[group.index,'dynamic_cohort_done_fraction'] = group.dynamic_is_done.mean()
-                    frame.loc[group.index,'static_cohort_done_fraction'] = group.static_is_done.mean()
-                    frame.loc[group.index,'cohort_size'] = len(group)
+                frame=attach_cohort_features(frame)
                 # Compute cohort features before outcome exclusion: future labels cannot change features.
                 all_cohorts.append(frame[frame.landmark==0].copy())
                 frame = frame[frame.y.notna()].copy()

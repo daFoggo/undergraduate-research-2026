@@ -61,6 +61,10 @@ def main():
                                  'source':'timestamped selected changelog fields; cohort aggregate before label filtering'})
     pd.DataFrame(feature_rows).to_csv(out/'feature_dictionary.csv',index=False)
     commitments = pd.read_parquet('data/processed/all_commitments.parquet')
+    cohort_expected=commitments.groupby('sprint_id').agg(expected_size=('issue_id','size'),expected_done=('static_is_done','mean'))
+    checked=data.merge(cohort_expected,left_on='sprint_id',right_index=True,validate='many_to_one')
+    np.testing.assert_allclose(checked.cohort_size,checked.expected_size)
+    np.testing.assert_allclose(checked.static_cohort_done_fraction,checked.expected_done)
     report = {'snapshots':len(data),'labeled_instances':int(len(data)/4),'commitments_with_membership':len(commitments),
               'unknown_outcomes':int(commitments.y.isna().sum()),'label_coverage':float(commitments.y.notna().mean()),
               'eligible_projects':len(lock['eligible_projects']),'sample_audits':len(samples),'checks_passed':True,

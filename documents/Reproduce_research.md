@@ -12,7 +12,10 @@ docker compose up -d db api
 .venv/Scripts/python.exe -m pytest -q
 .venv/Scripts/python.exe -m research.train --experiment temporal
 .venv/Scripts/python.exe -m research.train --experiment cross_project
+.venv/Scripts/python.exe -m research.validate_predictions
 .venv/Scripts/python.exe -m research.evaluate
+.venv/Scripts/python.exe -m research.analysis
+.venv/Scripts/python.exe -m research.report
 ```
 
 Các lệnh build/splits chỉ chạy khi tái lập từ đầu hoặc trước training. Không ghi lại config/split sau khi đã xem test để chọn một kết quả đẹp hơn. Nếu có sửa lỗi thực sự, giữ artifact cũ, ghi amendment và tạo phiên bản run mới. `train` resume các fold/model đã hoàn tất chỉ khi source/config/dataset hash khớp; không khởi động thêm bản train cùng experiment khi tiến trình cũ còn chạy.
