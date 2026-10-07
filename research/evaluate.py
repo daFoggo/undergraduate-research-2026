@@ -1,6 +1,7 @@
 """Evaluate completed frozen predictions and export metrics, plots, alert replay."""
 import json
 import math
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,9 +11,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from research.metrics import paired_bootstrap, probability_metrics, sprint_metrics, tie_key
+from research.metrics import paired_bootstrap, probability_metrics as base_probability_metrics, sprint_metrics, tie_key
 
 OUT = Path('artifacts/results')
+
+
+def probability_metrics(data):
+    result=base_probability_metrics(data)
+    if data.p.max()-data.p.min()<1e-10:
+        # Slope/intercept are not separately identifiable with constant scores.
+        result['calibration_intercept']=None
+        result['calibration_slope']=None
+    return result
 
 
 def aggregate_sprint(frame):
@@ -28,28 +38,32 @@ def aggregate_sprint(frame):
 
 def sequential(data,q=.2):
     records,alert_records = [],[]
-    for sprint_id,group in data.groupby('sprint_id'):
-        cohort = group[group.landmark==.25]
+    groups=defaultdict(list)
+    fields=['project','sprint_id','issue_id','landmark','y','p','dynamic_is_done','end','prediction_at']
+    for row in data[fields].to_dict('records'):
+        groups[row['sprint_id']].append(row)
+    for sprint_id in sorted(groups):
+        group=groups[sprint_id]
+        cohort=[row for row in group if row['landmark']==.25]
         n = len(cohort)
         k = math.ceil(q*n)
         alerted,alerts = set(),[]
+        ties={row['issue_id']:tie_key(row['issue_id'],sprint_id) for row in cohort}
         for step,landmark in enumerate((.25,.5,.75),start=1):
-            candidates = group[(group.landmark==landmark)&(group.dynamic_is_done==0)].copy()
-            candidates = candidates[~candidates.issue_id.isin(alerted)]
-            candidates['tie'] = [tie_key(i,sprint_id) for i in candidates.issue_id]
+            candidates=[row for row in group if row['landmark']==landmark and row['dynamic_is_done']==0 and row['issue_id'] not in alerted]
             # Cumulative quota: reserve capacity for later observations in larger sprints.
             allowance = math.ceil(k*step/3)-len(alerted)
-            selected = candidates.sort_values(['p','tie'],ascending=[False,True]).head(max(0,allowance))
-            for row in selected.itertuples():
-                alerted.add(row.issue_id)
-                record = {'project':row.project,'sprint_id':sprint_id,'issue_id':row.issue_id,'landmark':landmark,
-                          'y':row.y,'lead_days':(row.end-row.prediction_at).total_seconds()/86400}
+            selected=sorted(candidates,key=lambda row:(-row['p'],ties[row['issue_id']]))[:max(0,allowance)]
+            for row in selected:
+                alerted.add(row['issue_id'])
+                record = {'project':row['project'],'sprint_id':sprint_id,'issue_id':row['issue_id'],'landmark':landmark,
+                          'y':row['y'],'lead_days':(row['end']-row['prediction_at']).total_seconds()/86400}
                 alerts.append(record)
                 alert_records.append(record)
         assert len(alerted)<=k
-        positives = int(cohort.y.sum())
+        positives = int(sum(row['y'] for row in cohort))
         tp = sum(a['y'] for a in alerts)
-        records.append({'project':cohort.project.iloc[0],'sprint_id':sprint_id,'n':n,'k':len(alerted),'budget_cap':k,
+        records.append({'project':cohort[0]['project'],'sprint_id':sprint_id,'n':n,'k':len(alerted),'budget_cap':k,
                         'positives':positives,'tp':tp,'false_alerts':len(alerted)-tp,
                         'recall':tp/positives if positives else np.nan,
                         'precision':tp/len(alerted) if alerted else np.nan,
@@ -158,7 +172,7 @@ def main():
         figure.tight_layout()
         figure.savefig(OUT/f'calibration_{experiment}.png',dpi=180)
         plt.close(figure)
-    summary = {'evaluated_at':datetime.now(timezone.utc).isoformat(),'prediction_files':len(paths),'rows':len(data),
+    summary = {'evaluated_at':datetime.now(timezone.utc).isoformat(),'test_metrics_viewed':True,'prediction_files':len(paths),'rows':len(data),
                'config_sha256':lock['config_sha256'],'dataset_sha256':lock['dataset_sha256'],
                'primary_comparisons':[c for c in comparisons if c['landmark']==.5 and c['scenario']=='primary'],
                'note':'Test predictions now evaluated. No tuning or dataset rule changes permitted based on these results.'}

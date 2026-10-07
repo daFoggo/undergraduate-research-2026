@@ -1,0 +1,7 @@
+experiment,policy,left,right,analysis,n_units,delta,ci_low,ci_high
+temporal,single_50%,dynamic_catboost,business_rule,posthoc_exploratory,336,0.021341044694625257,-0.003257288701961819,0.045982112088906686
+temporal,single_50%,dynamic_catboost,dynamic_no_cohort,posthoc_exploratory,336,-0.008726788653030889,-0.02262492392441927,0.0028784178317369236
+temporal,sequential,dynamic_catboost,static_catboost,posthoc_exploratory,336,0.012958688155213777,-0.004594090257424882,0.032063714731610675
+cross_project,single_50%,dynamic_catboost,business_rule,posthoc_exploratory,14,0.03832009722551731,0.020962729240281697,0.05732963542957346
+cross_project,single_50%,dynamic_catboost,dynamic_no_cohort,posthoc_exploratory,14,0.007198235112349012,0.0005276717845704454,0.014202910807696393
+cross_project,sequential,dynamic_catboost,static_catboost,posthoc_exploratory,14,0.018780438651722343,0.005992510785101034,0.031382191304603846

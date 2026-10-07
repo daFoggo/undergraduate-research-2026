@@ -49,11 +49,13 @@ def main():
     temporal=primary[primary.experiment=='temporal'].iloc[0]
     cross=primary[primary.experiment=='cross_project'].iloc[0]
     audit=pd.read_csv('artifacts/validation/prediction_audit.csv')
-    inverse=int((audit.calibrator_slope<0).sum())
+    inverse=int(((audit.calibrator_slope<0)&~audit.key.str.endswith('__frequency')).sum())
     lines=[
         '# Báo cáo nghiên cứu đến hết giai đoạn 4',
         '',
         'Dự báo sớm outcome issue trong sprint từ execution history và cảnh báo theo ngân sách. Kết quả dưới đây được tạo từ artifact thực nghiệm đã chạy, không phải kết quả dự kiến.',
+        '',
+        'Đọc [thảo luận kết quả và hướng tiếp theo](Thao_luan_ket_qua.md) để xem diễn giải, baseline mạnh, rounding budget, active-only, calibration transfer và các phân tích post-hoc.',
         '',
         '## Kết quả chính',
         '',
@@ -89,9 +91,9 @@ def main():
         '',
         table(p50,['experiment','model','calibration','ap','ap_macro_project','brier','brier_macro_project','calibration_intercept','calibration_slope']),
         '',
-        'AP là average precision của lớp không hoàn thành, không phải trapezoidal PR area. Brier thấp hơn tốt hơn. Calibration intercept/slope được fit trên test chỉ để chẩn đoán xác suất, không dùng lại để chỉnh mô hình; lý tưởng lần lượt 0 và 1. Reliability plot gộp có thể che khác biệt project, nên phải đọc cùng per-project CSV.',
+        'AP là average precision của lớp không hoàn thành, không phải trapezoidal PR area. Brier thấp hơn tốt hơn. Calibration intercept/slope được fit trên test chỉ để chẩn đoán xác suất, không dùng lại để chỉnh mô hình; lý tưởng lần lượt 0 và 1. Khi score là hằng số thì slope/intercept không tách biệt được, nên ghi NA. Reliability plot gộp có thể che khác biệt project, nên phải đọc cùng per-project CSV.',
         '',
-        f'Sigmoid được fit không ràng buộc slope; có {inverse} artifact có hệ số âm trên validation (bao gồm các landmark/model). Hệ số âm có thể đảo thứ hạng. Phải phân biệt cải thiện do feature với hiệu ứng calibrator; raw scores được giữ nguyên để kiểm tra. Không sửa calibrator theo test trong lượt này.',
+        f'Sigmoid được fit không ràng buộc slope; có {inverse} artifact ngoài frequency có hệ số âm trên validation (bao gồm các landmark/model). Hệ số âm có thể đảo thứ hạng khi score có biến thiên; frequency hằng số không có ranking để đảo. Phải phân biệt cải thiện do feature với hiệu ứng calibrator; raw scores được giữ nguyên để kiểm tra. Không sửa calibrator theo test trong lượt này.',
         '',
         '![Temporal calibration](../artifacts/results/calibration_temporal.png)',
         '',

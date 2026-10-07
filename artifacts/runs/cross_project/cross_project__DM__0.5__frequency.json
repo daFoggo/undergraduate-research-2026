@@ -1,0 +1,25 @@
+{
+  "run_hash": "db94ff621b7d1e5f497bb6d7f6f03e83cf1be34474227cae6b99eb501ced86a0",
+  "source_hash": "33d871a8eaf3fe29049a8d20133310c69f8a51dd6060466820ac05ee730c53e0",
+  "config_hash": "da99425674f8bbff7a95f8e13c2abb7bd0a4e74cc2f0acdc3fbc6eb043f3c793",
+  "dataset_hash": "a491b23cc03f0777e8a8b33a19cbcfe1843aa6b019e2634fc8a90b38e61d084f",
+  "fold": "DM",
+  "landmark": 0.5,
+  "model": "frequency",
+  "n_train": 11883,
+  "n_validation": 1217,
+  "n_test": 5222,
+  "validation_raw": {
+    "n": 1217,
+    "prevalence": 0.5341002465078061,
+    "brier": 0.2585433647364252,
+    "ap": 0.5341002465078061,
+    "roc_auc": 0.5,
+    "calibration_intercept": 0.12800890429632786,
+    "calibration_slope": -0.03316956476145917
+  },
+  "calibration": "sigmoid",
+  "features": [],
+  "saved_at": "2026-10-07T20:23:30.341375+00:00",
+  "python": "3.12.10"
+}

@@ -1,0 +1,7 @@
+{
+  "expected": 672,
+  "checked": 672,
+  "complete": true,
+  "checks_passed": true,
+  "scope": "artifact triplets; exact test cohort/labels/timestamps; whitelist; sample model re-inference; calibrator application"
+}

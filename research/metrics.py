@@ -13,20 +13,25 @@ def tie_key(issue_id, sprint_id):
 
 
 def sprint_metrics(data, q=.2, rounding='ceil'):
-    records = []
-    for sprint_id,group in data.groupby('sprint_id'):
-        group = group.copy()
-        group['tie'] = [tie_key(i,sprint_id) for i in group.issue_id]
-        k = int(math.ceil(q*len(group)) if rounding=='ceil' else math.floor(q*len(group)))
-        alerts = group.sort_values(['p','tie'],ascending=[False,True]).head(k)
-        positives, tp = int(group.y.sum()), int(alerts.y.sum())
-        lead = (alerts.end-alerts.prediction_at).dt.total_seconds()/86400
-        records.append({'project':group.project.iloc[0],'sprint_id':sprint_id,'n':len(group),'positives':positives,
-                        'k':k,'realized_budget':k/len(group),'tp':tp,'false_alerts':k-tp,
-                        'recall':tp/positives if positives else np.nan,
-                        'precision':tp/k if k else np.nan,
-                        'lead_days':float(lead[alerts.y==1].mean()) if tp else np.nan})
-    return pd.DataFrame(records)
+    if data.empty:
+        return pd.DataFrame(columns=['project','sprint_id','n','positives','k','realized_budget','tp','false_alerts','recall','precision','lead_days'])
+    frame=data.copy()
+    frame['tie']=[tie_key(i,s) for i,s in zip(frame.issue_id,frame.sprint_id)]
+    base=frame.groupby('sprint_id').agg(project=('project','first'),n=('issue_id','size'),positives=('y','sum'))
+    budget=q*base.n
+    base['k']=(np.ceil(budget) if rounding=='ceil' else np.floor(budget)).astype(int)
+    ranked=frame.sort_values(['sprint_id','p','tie'],ascending=[True,False,True])
+    rank=ranked.groupby('sprint_id').cumcount()
+    alerts=ranked[rank<ranked.sprint_id.map(base.k)].copy()
+    alerts['true_lead_days']=((alerts.end-alerts.prediction_at).dt.total_seconds()/86400).where(alerts.y==1)
+    totals=alerts.groupby('sprint_id').agg(tp=('y','sum'),lead_days=('true_lead_days','mean'))
+    base=base.join(totals)
+    base['tp']=base.tp.fillna(0).astype(int)
+    base['realized_budget']=base.k/base.n
+    base['false_alerts']=base.k-base.tp
+    base['recall']=(base.tp/base.positives).where(base.positives>0)
+    base['precision']=(base.tp/base.k).where(base.k>0)
+    return base.reset_index()
 
 
 def probability_metrics(data):

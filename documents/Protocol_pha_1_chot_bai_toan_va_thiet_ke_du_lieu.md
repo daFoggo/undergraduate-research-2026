@@ -1,5 +1,7 @@
 # Protocol nghiên cứu — Pha 1: Chốt bài toán và thiết kế dữ liệu
 
+> Tài liệu lịch sử v0.1. Protocol thực nghiệm đã khóa trước fit là [Protocol v1](Protocol_v1.md), kèm config/split/hash trong `artifacts/protocol/`. Kết quả và giới hạn dữ liệu đã ghi ở [báo cáo giai đoạn 4](Bao_cao_nghien_cuu_giai_doan_4.md).
+
 **Dự án:** Dự báo sớm issue có nguy cơ không hoàn thành trong sprint  
 **Thời lượng:** 2 tuần  
 **Phiên bản:** 0.1 — protocol làm việc, cần khóa phiên bản trước khi chạy đánh giá mô hình  

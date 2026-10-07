@@ -1,0 +1,86 @@
+{
+  "audited_at": "2026-10-08T04:07:02.123687+07:00",
+  "scope": "registered archival study through phase 4",
+  "requirements": {
+    "protocol_and_questions": [
+      "documents/Protocol_v1.md",
+      "artifacts/protocol/config.json",
+      "artifacts/protocol/lock.json"
+    ],
+    "data_audit_and_citations": [
+      "documents/Data_card_TAWOS.md",
+      "documents/Literature_and_methods.md",
+      "documents/references.bib",
+      "artifacts/audit/source_manifest.csv"
+    ],
+    "cohort_labels_and_exclusions": [
+      "artifacts/dataset/project_eligibility.csv",
+      "artifacts/dataset/exclusion_log_enriched.csv",
+      "artifacts/dataset/label_mapping.csv",
+      "artifacts/validation/sql_sample_audit.csv"
+    ],
+    "snapshots_features_and_leakage_checks": [
+      "data/processed/snapshots.parquet",
+      "artifacts/validation/feature_dictionary.csv",
+      "artifacts/validation/data_validation.json",
+      "tests/test_replay.py",
+      "tests/test_cohort_features.py"
+    ],
+    "temporal_and_project_splits": [
+      "artifacts/protocol/temporal_split_manifest.csv",
+      "artifacts/protocol/cross_project_split_manifest.csv",
+      "tests/test_splits.py"
+    ],
+    "trained_baselines_dynamic_ablation_and_calibration": [
+      "artifacts/validation/prediction_audit.csv",
+      "artifacts/validation/prediction_validation.json"
+    ],
+    "evaluation_uncertainty_budget_and_leadtime": [
+      "artifacts/results/probability_metrics.csv",
+      "artifacts/results/paired_comparisons.csv",
+      "artifacts/results/sensitivity_metrics.csv",
+      "artifacts/results/sequential_alert_log.csv"
+    ],
+    "analysis_and_reproducibility": [
+      "documents/Bao_cao_nghien_cuu_giai_doan_4.md",
+      "documents/Thao_luan_ket_qua.md",
+      "documents/Reproduce_research.md",
+      "artifacts/environment/runtime.json"
+    ],
+    "progress_decisions_and_checkpoints": [
+      "documents/Research_progress.md"
+    ]
+  },
+  "frozen_pre_fit_artifacts_unchanged": [
+    "artifacts/protocol/config.json",
+    "artifacts/protocol/temporal_split_manifest.csv",
+    "artifacts/protocol/cross_project_split_manifest.csv",
+    "documents/Protocol_v1.md",
+    "research/train.py"
+  ],
+  "prediction_triplets_unchanged": 672,
+  "sequential_budget_and_dedup_verified": true,
+  "result_tables_checked": {
+    "probability_metrics.csv": 96,
+    "project_probability_metrics.csv": 1344,
+    "alert_budget_metrics.csv": 144,
+    "paired_comparisons.csv": 60,
+    "sequential_alert_metrics.csv": 12,
+    "posthoc_comparisons.csv": 6
+  },
+  "figures": [
+    "calibration_temporal.png",
+    "calibration_cross_project.png",
+    "landmark_budget_temporal.png",
+    "landmark_budget_cross_project.png",
+    "project_differences.png"
+  ],
+  "checks_passed": true,
+  "limitations_not_claimed_complete": [
+    "human business workflow ground truth/inter-rater agreement",
+    "historical changes to sprint dates",
+    "live intervention/Agentick integration (phase 5+)",
+    "exhaustive SOTA search or novel algorithm proof"
+  ],
+  "note": "Completion of the registered offline study is distinct from production deployment or publication acceptance."
+}

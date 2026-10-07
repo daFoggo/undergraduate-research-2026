@@ -37,6 +37,8 @@ def attach_cohort_features(frame):
 
 
 def main():
+    if Path('artifacts/predictions').exists() and any(Path('artifacts/predictions').glob('*.parquet')):
+        raise RuntimeError('Predictions already exist: preserve the frozen dataset and register a separate new run before rebuilding.')
     OUT.mkdir(parents=True, exist_ok=True)
     DATA.mkdir(parents=True, exist_ok=True)
     exclusions, rows, summaries, mapping, all_cohorts = [], [], [], [], []

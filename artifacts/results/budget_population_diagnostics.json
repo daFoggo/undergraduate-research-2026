@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "temporal",
+    "n": 3293,
+    "positive": 1883,
+    "alerts": 850,
+    "true_alerts": 682,
+    "false_alerts": 168,
+    "realized_budget_micro": 0.258123291831157,
+    "realized_budget_macro_sprint": 0.41539151315603795,
+    "sprints_fewer_than_5_instances": 207,
+    "sprints": 397
+  },
+  {
+    "experiment": "cross_project",
+    "n": 18322,
+    "positive": 8650,
+    "alerts": 4567,
+    "true_alerts": 3299,
+    "false_alerts": 1268,
+    "realized_budget_micro": 0.24926318087545027,
+    "realized_budget_macro_sprint": 0.3855169494350484,
+    "sprints_fewer_than_5_instances": 827,
+    "sprints": 1962
+  }
+]

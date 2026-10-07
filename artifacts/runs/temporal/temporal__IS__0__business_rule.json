@@ -1,0 +1,25 @@
+{
+  "run_hash": "db94ff621b7d1e5f497bb6d7f6f03e83cf1be34474227cae6b99eb501ced86a0",
+  "source_hash": "33d871a8eaf3fe29049a8d20133310c69f8a51dd6060466820ac05ee730c53e0",
+  "config_hash": "da99425674f8bbff7a95f8e13c2abb7bd0a4e74cc2f0acdc3fbc6eb043f3c793",
+  "dataset_hash": "a491b23cc03f0777e8a8b33a19cbcfe1843aa6b019e2634fc8a90b38e61d084f",
+  "fold": "IS",
+  "landmark": 0.0,
+  "model": "business_rule",
+  "n_train": 470,
+  "n_validation": 60,
+  "n_test": 94,
+  "validation_raw": {
+    "n": 60,
+    "prevalence": 0.35,
+    "brier": 0.3071553856635213,
+    "ap": 0.42019703269883885,
+    "roc_auc": 0.5677655677655677,
+    "calibration_intercept": -0.6944726888359306,
+    "calibration_slope": 0.13710720783289382
+  },
+  "calibration": "sigmoid",
+  "features": [],
+  "saved_at": "2026-10-07T20:23:51.832185+00:00",
+  "python": "3.12.10"
+}
