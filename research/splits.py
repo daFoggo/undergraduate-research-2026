@@ -36,6 +36,8 @@ def temporal_split(sprints):
 
 
 def main():
+    if Path('artifacts/predictions').exists() and any(Path('artifacts/predictions').glob('*.parquet')):
+        raise RuntimeError('Predictions already exist: preserve the locked split and register a new run before any amendment.')
     OUT.mkdir(parents=True,exist_ok=True)
     data = pd.read_parquet('data/processed/snapshots.parquet')
     cohorts = data[data.landmark==0]

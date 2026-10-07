@@ -8,7 +8,7 @@ Trạng thái: TODO → RUNNING → DONE; BLOCKED chỉ khi thiếu điều ki�
 
 | ID | Công việc | Trạng thái | Tiêu chí hoàn thành / bằng chứng |
 |---|---|---|---|
-| P1.1 | Kiểm kê dữ liệu và nguồn học thuật | RUNNING | Audit CSV đã có; còn hoàn thiện data card/literature |
+| P1.1 | Kiểm kê dữ liệu và nguồn học thuật | DONE | `Data_card_TAWOS.md`, `Literature_and_methods.md`, audit CSV; review có phạm vi, không tuyên bố SOTA |
 | P1.2 | Xác minh Sprint ID, membership và workflow | DONE | `artifacts/dataset`, 765 SQL samples; giới hạn workflow nghiệp vụ trong Protocol_v1 |
 | P1.3 | Khóa protocol và quyết định phương pháp | DONE | `Protocol_v1.md`, `artifacts/protocol/config.json`, `lock.json` trước fit |
 | P2.1 | Dựng cohort, nhãn và exclusion log | DONE | 28.746 commitments, 22.147 labeled (77,04%), eligibility/exclusion/mapping CSV |
@@ -16,9 +16,9 @@ Trạng thái: TODO → RUNNING → DONE; BLOCKED chỉ khi thiếu điều ki�
 | P2.3 | Kiểm thử temporal integrity | DONE | 10 tests và `data_validation.json`; cohort aggregate tính trước label exclusion |
 | P3.1 | Split temporal và cross-project | DONE | 14 projects, manifest temporal/cross; purge nhãn chưa khả dụng |
 | P3.2 | Baseline tần suất/quy tắc/tĩnh | RUNNING | Model/config/validation/prediction artifacts đang bắt đầu |
-| P3.3 | Mô hình động, ablation và calibration | TODO | Chọn trên validation, test được giữ ngoài |
+| P3.3 | Mô hình động, ablation và calibration | RUNNING | Cấu hình khóa trước fit, sigmoid validation-only |
 | P4.1 | Đánh giá temporal và cross-project | TODO | PR-AUC/Brier/calibration và per-project metrics |
-| P4.2 | Alert budget, uncertainty và sensitivity | TODO | Recall/precision/false-alert/lead-time, paired bootstrap |
+| P4.2 | Alert budget, uncertainty và sensitivity | RUNNING | Evaluator đã viết, test total-budget/dedup; chưa đánh giá matrix chưa đủ |
 | P4.3 | Phân tích và đóng gói kết quả | TODO | Báo cáo RQ/H1, biểu đồ, lệnh tái lập, giới hạn |
 
 ## Decision log
@@ -41,6 +41,10 @@ Trạng thái: TODO → RUNNING → DONE; BLOCKED chỉ khi thiếu điều ki�
 - Data build hoàn tất: `python -m research.build`; protocol/split: `python -m research.splits`; full data verification: `python -m research.validate_data`. Các lượt build trước train đã cải thiện audit gaps, chưa xem test model metric.
 - SQL sample audit 765 instance đối chiếu forward và reverse consistency đều pass. Không có inter-rater agreement hoặc Jira status-category metadata; giới hạn đã đăng ký rõ.
 - Bước kế tiếp: `python -m research.train --experiment temporal`, sau đó cross_project; viết evaluator/plots/alert replay và báo cáo. Kiểm tra run hash khi resume; không ghi đè artifact khác hash.
+- Huấn luyện đang chạy đồng thời bằng hai process: terminal session `4431` (temporal) và `10455` (cross_project), xác nhận live bằng polling; không khởi chạy bản thứ hai cùng experiment. Checkpoint mới nhất: temporal đã sang CONFSERVER, cross_project đang CONFCLOUD.
+- Evaluator yêu cầu đủ 672 prediction files trước khi tính test metrics. Code ở `research/evaluate.py`; test sequential budget giữ tổng cap toàn sprint, deduplicate issue.
+- Protocol/data checkpoint đã commit `2f3a73f`. Code evaluator, environment và các doc mới đang tiếp tục hoàn thiện. Còn thiếu kết quả thực nghiệm đầy đủ, plot/analysis report và completion audit; goal chưa hoàn thành.
+- Verification mới nhất: 11 tests pass, `git diff --check` pass. Runtime thực tế Python 3.12.10 và 88 installed distributions ghi ở `artifacts/environment/runtime.json`. Script split có guard chống ghi đè lock khi prediction đã tồn tại.
 
 ## Quy tắc tiếp tục khi đổi context
 
