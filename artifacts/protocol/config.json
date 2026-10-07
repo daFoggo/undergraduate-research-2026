@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "seed": 20261008,
+  "landmarks": [
+    0.0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "min_sprints": 50,
+  "min_instances": 200,
+  "min_class_instances": 30,
+  "min_test_sprints": 10,
+  "min_train_class": 10,
+  "min_validation_class": 5,
+  "min_test_class": 5,
+  "temporal_split": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "budget_rates": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "budget_rounding": "ceil; report realized fraction; floor sensitivity",
+  "models": [
+    "frequency",
+    "business_rule",
+    "static_lr",
+    "static_catboost",
+    "dynamic_catboost",
+    "dynamic_no_cohort"
+  ],
+  "catboost": {
+    "iterations": 400,
+    "depth": 5,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "thread_count": 4
+  },
+  "calibration": "sigmoid on validation only; identity fallback if insufficient validation classes",
+  "cross_project": "leave-one-project-out; held-out validation projects deterministic by seed",
+  "bootstrap_replicates": 2000,
+  "primary": "paired macro sprint Recall@20% at 50%, dynamic_catboost vs static_catboost",
+  "sensitivity": [
+    "budget_floor",
+    "active_only",
+    "exclude_cancelled_removed",
+    "unseen_issue_ids",
+    "closed_only_label"
+  ]
+}

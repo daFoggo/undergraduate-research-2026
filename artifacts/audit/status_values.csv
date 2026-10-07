@@ -1,0 +1,4566 @@
+project_id,field,from_string,to_string,n
+1,resolution,,Complete,2541
+1,resolution,,Won't Fix,137
+1,resolution,,Duplicate,137
+1,resolution,,Invalid,127
+1,resolution,,Deferred,113
+1,resolution,Complete,,108
+1,resolution,,Works as Designed,46
+1,resolution,,Fixed,43
+1,resolution,,Cannot Reproduce,23
+1,resolution,,Incomplete,9
+1,resolution,Won't Fix,,8
+1,resolution,Fixed,,4
+1,resolution,Duplicate,,4
+1,resolution,Cannot Reproduce,,3
+1,resolution,Deferred,,2
+1,resolution,Invalid,,1
+1,status,To Do,In Progress,2142
+1,status,In Progress,Done,1407
+1,status,To Do,Done,1137
+1,status,In Progress,In PR,676
+1,status,In PR,Done,632
+1,status,In Progress,To Do,186
+1,status,Done,In Progress,130
+1,status,In PR,To Do,25
+1,status,Open,To Do,22
+1,status,In PR,In Progress,15
+1,status,Open,In Progress,2
+2,resolution,,Complete,457
+2,resolution,,Fixed,190
+2,resolution,,Duplicate,43
+2,resolution,,Won't Fix,35
+2,resolution,,Works as Designed,31
+2,resolution,Complete,,24
+2,resolution,,Invalid,22
+2,resolution,,Cannot Reproduce,6
+2,resolution,,Done,4
+2,resolution,,Incomplete,3
+2,resolution,Fixed,,2
+2,resolution,Won't Fix,,1
+2,resolution,Duplicate,,1
+2,status,Resolved,Closed,633
+2,status,Open,In Progress,290
+2,status,In Progress,Resolved,251
+2,status,Open,Resolved,180
+2,status,Done,Resolved,164
+2,status,To Do,Done,97
+2,status,To Do,In Progress,90
+2,status,In Progress,Done,81
+2,status,To Do,Open,77
+2,status,In Progress,Waiting for Review,73
+2,status,Open,Closed,66
+2,status,Investigating,Resolved,43
+2,status,Waiting for Review,Investigating,34
+2,status,Waiting for Review,Resolved,33
+2,status,Open,Investigating,30
+2,status,Open,Waiting for Feedback,25
+2,status,In Progress,To Do,23
+2,status,Waiting for Review,In Progress,23
+2,status,Investigating,In Progress,19
+2,status,Open,Waiting for Review,16
+2,status,Done,In Progress,14
+2,status,Waiting for Feedback,Closed,12
+2,status,Closed,Reopened,9
+2,status,Reopened,Closed,8
+2,status,Waiting for Feedback,Investigating,6
+2,status,In Progress,Open,6
+2,status,Investigating,Closed,6
+2,status,Reopened,Resolved,6
+2,status,Waiting for Feedback,In Progress,6
+2,status,Resolved,Reopened,5
+2,status,In Progress,Closed,5
+2,status,Waiting for Feedback,Resolved,3
+2,status,In Progress,Waiting for Feedback,2
+2,status,Investigating,Waiting for Feedback,2
+2,status,Waiting for Feedback,Waiting for Review,1
+3,resolution,,Fixed,6106
+3,resolution,,Won't Fix,1764
+3,resolution,Fixed,,547
+3,resolution,,Duplicate,484
+3,resolution,,Not A Bug,343
+3,resolution,,Cannot Reproduce,319
+3,resolution,,Incomplete,265
+3,resolution,,Done,186
+3,resolution,,Out of scope,167
+3,resolution,,Parked,91
+3,resolution,Won't Fix,,84
+3,resolution,,Automatically Closed,53
+3,resolution,Cannot Reproduce,,53
+3,resolution,Duplicate,,31
+3,resolution,,Won't Do,28
+3,resolution,Not A Bug,,18
+3,resolution,Parked,,12
+3,resolution,Out of scope,,9
+3,resolution,Incomplete,,7
+3,resolution,Done,,6
+3,resolution,Automatically Closed,,3
+3,resolution,Won't Do,,2
+3,resolution,Fixed,Out of scope,1
+3,resolution,Fixed,Done,1
+3,resolution,Fixed,Cannot Reproduce,1
+3,status,Open,Closed,3642
+3,status,Open,In Progress,2750
+3,status,New,Open,2664
+3,status,To Be Tested,Testing In Progress,2090
+3,status,Testing In Progress,Closed,1934
+3,status,Waiting for Review,To Be Tested,1779
+3,status,Resolved,Closed,1282
+3,status,In Progress,Waiting for Review,966
+3,status,Open,Resolved,956
+3,status,Open,In Development,906
+3,status,In Development,Waiting for Review,905
+3,status,Waiting for Response,Open,786
+3,status,New,Closed,731
+3,status,Open,Waiting for Response,679
+3,status,In Progress,Closed,606
+3,status,In Progress,Resolved,521
+3,status,To Be Tested,Closed,503
+3,status,In Progress,To Be Tested,465
+3,status,New,Waiting for Response,412
+3,status,Open,Waiting for Review,404
+3,status,In Progress,Open,378
+3,status,Open,To Be Tested,344
+3,status,Closed,Open,338
+3,status,Waiting for Response,Inactive - Pending Closure,297
+3,status,Resolved,Reopened,289
+3,status,Reopened,Resolved,229
+3,status,Waiting for Review,Closed,212
+3,status,Inactive - Pending Closure,Closed,205
+3,status,Resolved,Testing In Progress,179
+3,status,Open,New,174
+3,status,Closed,Reopened,143
+3,status,In Development,Open,126
+3,status,Testing In Progress,Open,122
+3,status,Waiting for Review,In Development,117
+3,status,Reopened,In Progress,95
+3,status,Testing In Progress,To Be Tested,93
+3,status,Inactive - Pending Closure,Open,92
+3,status,Reopened,Closed,91
+3,status,Ready for Development,In Development,87
+3,status,Open,Defered,86
+3,status,Waiting for Review,In Progress,86
+3,status,In Development,Closed,79
+3,status,Waiting for Review,Open,73
+3,status,Testing In Progress,Done,73
+3,status,To Be Tested,Open,70
+3,status,In Development,To Be Tested,65
+3,status,Closed,Done,58
+3,status,Defered,Closed,56
+3,status,Raw,Ready for Development,48
+3,status,Testing In Progress,Resolved,47
+3,status,Waiting for Response,Closed,46
+3,status,Open,Testing In Progress,36
+3,status,Raw,In Development,34
+3,status,To Be Tested,In Development,33
+3,status,Defered,Open,32
+3,status,Ready to Groom,Ready for Development,31
+3,status,Testing In Progress,In Development,29
+3,status,Raw,Refine,29
+3,status,Raw,Done,28
+3,status,In Progress,Waiting for Response,27
+3,status,Raw,Ready to Groom,25
+3,status,To Be Tested,In Progress,25
+3,status,To Be Tested,Done,23
+3,status,Testing In Progress,In Progress,19
+3,status,Reopened,Open,17
+3,status,Refine,Ready for Development,16
+3,status,In Progress,Testing In Progress,15
+3,status,New,Raw,14
+3,status,Raw,Open,13
+3,status,New,Ready to Groom,13
+3,status,Raw,Raw,12
+3,status,In Development,Waiting for Response,11
+3,status,Refine,Ready to Groom,10
+3,status,In Development,Done,10
+3,status,Ready to Groom,Done,9
+3,status,Open,Raw,9
+3,status,In Development,Raw,7
+3,status,In Development,Ready for Development,7
+3,status,New,Refine,7
+3,status,Ready for Development,Done,6
+3,status,Open,Ready to Groom,6
+3,status,Done,Closed,6
+3,status,Testing In Progress,Raw,6
+3,status,Waiting for Review,Done,6
+3,status,In Development,Testing In Progress,6
+3,status,New,In Development,5
+3,status,Open,Ready for Development,5
+3,status,Ready to Groom,In Development,5
+3,status,Raw,New,5
+3,status,Refine,In Development,5
+3,status,Ready for Development,Refine,5
+3,status,Ready for Development,Ready to Groom,4
+3,status,Refine,Done,4
+3,status,Ready to Groom,Refine,4
+3,status,Ready for Development,In Progress,4
+3,status,To Be Tested,Waiting for Review,3
+3,status,Done,Raw,3
+3,status,In Development,In Development,3
+3,status,Done,In Development,3
+3,status,Ready for Development,Open,3
+3,status,Testing In Progress,Ready for Development,3
+3,status,New,Ready for Development,2
+3,status,Resolved,To Be Tested,2
+3,status,Ready for Development,Raw,1
+3,status,Open,Open,1
+3,status,In Progress,Defered,1
+3,status,In Development,Blocked,1
+3,status,In Development,Refine,1
+3,status,Refine,Refine,1
+3,status,Raw,To Be Tested,1
+3,status,Raw,Ready for Sprint,1
+3,status,Refine,Open,1
+3,status,Ready for Sprint,New,1
+3,status,Ready to Develop,Closed,1
+3,status,Raw,Closed,1
+3,status,Done,Ready for Development,1
+3,status,Blocked,In Development,1
+3,status,New,Ready for Sprint,1
+3,status,Waiting for Review,Defered,1
+3,status,Ready to Groom,Raw,1
+3,status,Ready to Groom,Open,1
+3,status,Ready to Groom,In Progress,1
+3,status,Open,Dev Day 1,1
+3,status,Waiting for Review,Raw,1
+3,status,Waiting for Review,Ready for Development,1
+3,status,Resolved,Open,1
+3,status,Done,Done,1
+4,resolution,,Fixed,6463
+4,resolution,,Duplicate,602
+4,resolution,,Won't Fix,460
+4,resolution,,Done,260
+4,resolution,Fixed,,172
+4,resolution,,Not A Problem,158
+4,resolution,,Cannot Reproduce,154
+4,resolution,,Invalid,128
+4,resolution,,Implemented,116
+4,resolution,,Won't Do,54
+4,resolution,,Resolved,47
+4,resolution,,Not a Problem,31
+4,resolution,,Incomplete,24
+4,resolution,,Later,19
+4,resolution,,Not A Bug,17
+4,resolution,,Unresolved,14
+4,resolution,Won't Fix,,11
+4,resolution,,Workaround,7
+4,resolution,,Pending Closed,7
+4,resolution,Not A Problem,,7
+4,resolution,Duplicate,,6
+4,resolution,Implemented,,6
+4,resolution,Invalid,,5
+4,resolution,Cannot Reproduce,,4
+4,resolution,Not a Problem,,4
+4,resolution,Pending Closed,,4
+4,resolution,Fixed,Duplicate,2
+4,resolution,Won't Fix,Fixed,2
+4,resolution,Incomplete,,2
+4,resolution,Done,,2
+4,resolution,,Information Provided,2
+4,resolution,Fixed,Unresolved,1
+4,resolution,Fixed,Done,1
+4,resolution,Duplicate,Unresolved,1
+4,resolution,,Works for Me,1
+4,resolution,,Feedback Received,1
+4,resolution,,Abandoned,1
+4,resolution,Later,,1
+4,resolution,Fixed,Won't Fix,1
+4,status,Open,Accepted,5766
+4,status,Accepted,In Progress,5423
+4,status,In Progress,Reviewable,4096
+4,status,Reviewable,Resolved,3576
+4,status,Open,Resolved,3215
+4,status,In Progress,Open,1559
+4,status,Resolved,Accepted,1303
+4,status,Open,In Progress,859
+4,status,In Progress,Resolved,848
+4,status,Accepted,Resolved,805
+4,status,Reviewable,In Progress,475
+4,status,Closed,Open,360
+4,status,Open,Closed,291
+4,status,Reopened,Resolved,151
+4,status,In Progress,Accepted,143
+4,status,Resolved,Reopened,139
+4,status,Accepted,Reviewable,125
+4,status,Resolved,Closed,102
+4,status,Closed,Reopened,85
+4,status,In Progress,Ready To Review,48
+4,status,Ready To Review,Resolved,38
+4,status,Reopened,In Progress,27
+4,status,Accepted,Open,26
+4,status,Reopened,Closed,25
+4,status,Reopened,Open,21
+4,status,In Progress,Closed,19
+4,status,Accepted,Closed,8
+4,status,Ready To Review,In Progress,3
+4,status,Waiting for Infra,Open,1
+5,resolution,,Fixed,600
+5,resolution,,Done,80
+5,resolution,,Won't Fix,54
+5,resolution,,Duplicate,41
+5,resolution,,Cannot Reproduce,22
+5,resolution,Fixed,,21
+5,resolution,,Not A Problem,11
+5,resolution,,Implemented,9
+5,resolution,,Not a Problem,9
+5,resolution,,Invalid,4
+5,resolution,,Incomplete,3
+5,resolution,Done,,2
+5,resolution,,Unresolved,2
+5,resolution,Cannot Reproduce,Fixed,1
+5,resolution,,Pending Closed,1
+5,resolution,Won't Fix,,1
+5,resolution,Fixed,Won't Fix,1
+5,resolution,Pending Closed,,1
+5,resolution,,Later,1
+5,resolution,Implemented,,1
+5,status,Resolved,Closed,809
+5,status,Open,Resolved,500
+5,status,Open,In Progress,382
+5,status,In Progress,Resolved,310
+5,status,In Progress,Open,70
+5,status,Resolved,Reopened,24
+5,status,Closed,Resolved,22
+5,status,Patch Available,Resolved,17
+5,status,Reopened,Resolved,16
+5,status,Open,Patch Available,16
+5,status,Reopened,In Progress,15
+5,status,In Progress,Patch Available,10
+5,status,Closed,Reopened,8
+5,status,Patch Available,Open,3
+5,status,Reopened,Reopened,3
+6,resolution,,Fixed,269
+6,resolution,,Done,15
+6,resolution,Fixed,,10
+6,resolution,,Implemented,7
+6,resolution,,Cannot Reproduce,7
+6,resolution,,Duplicate,7
+6,resolution,,Won't Fix,4
+6,resolution,,Not A Problem,3
+6,resolution,,Workaround,2
+6,resolution,,Information Provided,2
+6,resolution,,Not A Bug,2
+6,resolution,,Resolved,2
+6,resolution,Done,,1
+6,resolution,Implemented,,1
+6,resolution,,Won't Do,1
+6,resolution,,Later,1
+6,resolution,,Feedback Received,1
+6,status,To Do,In Progress,488
+6,status,To Do,Done,321
+6,status,In Progress,In Review,263
+6,status,In Review,Done,231
+6,status,In Progress,Done,145
+6,status,In Progress,To Do,51
+6,status,Done,In Progress,28
+6,status,Done,To Do,26
+7,resolution,,Fixed,1260
+7,resolution,Fixed,,274
+7,resolution,,Invalid,124
+7,resolution,,Duplicate,115
+7,resolution,,Won't Fix,93
+7,resolution,,Cannot Reproduce,39
+7,resolution,Invalid,,33
+7,resolution,Won't Fix,,16
+7,resolution,Cannot Reproduce,,14
+7,resolution,,Hold,10
+7,resolution,Hold,,8
+7,resolution,Duplicate,,8
+7,resolution,,Needs more info,7
+7,resolution,,Not Our Bug,7
+7,resolution,,Won't Do,5
+7,resolution,,Done,4
+7,resolution,Needs more info,,3
+7,resolution,Incomplete,,1
+7,resolution,Not Our Bug,,1
+7,resolution,,Incomplete,1
+7,resolution,Done,,1
+7,status,Resolved,Closed,775
+7,status,Open,In Progress,734
+7,status,Open,Resolved,587
+7,status,In Progress,Resolved,454
+7,status,Closed,Reopened,218
+7,status,Closed,Closed,193
+7,status,In Progress,In Review,154
+7,status,Reopened,Resolved,149
+7,status,Resolved,Reopened,142
+7,status,Reopened,Closed,135
+7,status,In Review,Resolved,124
+7,status,Open,Closed,111
+7,status,In Progress,Open,108
+7,status,In Progress,In  Review,71
+7,status,In  Review,Resolved,68
+7,status,Reopened,In Progress,56
+7,status,In Review,In QE Test,38
+7,status,In QE Test,Resolved,34
+7,status,Reopened,In Review,9
+7,status,In QE Test,In Review,4
+7,status,In Review,In Progress,4
+7,status,Open,Open,4
+7,status,In Progress,Closed,4
+7,status,In  Review,In Progress,3
+7,status,Resolved,Resolved,2
+7,status,Reopened,In  Review,1
+7,status,In Review,Open,1
+8,resolution,,Fixed,4508
+8,resolution,,Won't Fix,1051
+8,resolution,Fixed,,806
+8,resolution,,Duplicate,455
+8,resolution,,Invalid,436
+8,resolution,,Cannot Reproduce,412
+8,resolution,,Needs more info,280
+8,resolution,Needs more info,,117
+8,resolution,Cannot Reproduce,,66
+8,resolution,,Hold,51
+8,resolution,Invalid,,39
+8,resolution,Duplicate,,25
+8,resolution,Won't Fix,,24
+8,resolution,Hold,,18
+8,resolution,,Closed/Win,15
+8,resolution,,Not Our Bug,10
+8,resolution,,Fixed - in QA,8
+8,resolution,,Incomplete,6
+8,resolution,Invalid,Fixed,4
+8,resolution,Incomplete,,4
+8,resolution,Fixed,Invalid,4
+8,resolution,Fixed,Duplicate,2
+8,resolution,Fixed - in QA,,1
+8,resolution,Fixed,Hold,1
+8,resolution,Won't Fix,Duplicate,1
+8,resolution,,Won't Do,1
+8,resolution,Invalid,Hold,1
+8,status,Open,Resolved,5165
+8,status,Resolved,Closed,4951
+8,status,Closed,Closed,1640
+8,status,Open,In Progress,1098
+8,status,Resolved,Reopened,798
+8,status,Reopened,Resolved,700
+8,status,In Progress,Resolved,675
+8,status,In Progress,Open,349
+8,status,Open,Closed,312
+8,status,Closed,Reopened,305
+8,status,In Progress,Closed,199
+8,status,Reopened,Closed,182
+8,status,Reopened,In Progress,129
+8,status,Resolved,Resolved,28
+8,status,In Progress,In Review,4
+8,status,In Review,Resolved,3
+8,status,In Review,In  Review,1
+9,resolution,,Fixed,462
+9,resolution,Fixed,,68
+9,resolution,,Cannot Reproduce,51
+9,resolution,,Duplicate,43
+9,resolution,,Invalid,36
+9,resolution,,Won't Fix,26
+9,resolution,,Won't Do,14
+9,resolution,,Done,13
+9,resolution,Cannot Reproduce,,9
+9,resolution,,Not Our Bug,7
+9,resolution,,Hold,6
+9,resolution,,Needs more info,5
+9,resolution,Invalid,,4
+9,resolution,Won't Fix,,3
+9,resolution,Cannot Reproduce,Fixed,1
+9,resolution,Done,,1
+9,resolution,Duplicate,,1
+9,resolution,Hold,,1
+9,resolution,Not Our Bug,,1
+9,status,Resolved,Closed,344
+9,status,Open,In Progress,325
+9,status,In Progress,In  Review,198
+9,status,In  Review,Resolved,179
+9,status,Open,Resolved,154
+9,status,Open,Closed,145
+9,status,In Review,Resolved,119
+9,status,In Progress,In Review,106
+9,status,Resolved,Reopened,55
+9,status,Reopened,Resolved,47
+9,status,In Progress,Open,35
+9,status,Closed,Reopened,33
+9,status,Closed,Closed,32
+9,status,In Progress,Resolved,19
+9,status,In  Review,In Progress,16
+9,status,Reopened,In Progress,13
+9,status,Reopened,In  Review,12
+9,status,Reopened,In Review,6
+9,status,In Review,In Progress,6
+10,resolution,,Fixed,257
+10,resolution,Fixed,,9
+10,resolution,,Invalid,9
+10,resolution,,Won't Fix,8
+10,resolution,,Won't Do,8
+10,resolution,,Cannot Reproduce,7
+10,resolution,,Duplicate,5
+10,resolution,Cannot Reproduce,,3
+10,resolution,,Hold,1
+10,resolution,,Done,1
+10,resolution,Hold,,1
+10,resolution,Fixed,Done,1
+10,status,Open,In Progress,246
+10,status,In Progress,Resolved,153
+10,status,Open,Resolved,73
+10,status,In Progress,In Review,59
+10,status,In Review,Resolved,56
+10,status,In Progress,Open,36
+10,status,Resolved,Closed,12
+10,status,Resolved,Reopened,8
+10,status,Open,Closed,7
+10,status,Reopened,Resolved,7
+10,status,Closed,Reopened,5
+10,status,Reopened,In Progress,5
+10,status,In Review,In Progress,3
+11,resolution,,Fixed,2481
+11,resolution,,Duplicate,139
+11,resolution,Fixed,,130
+11,resolution,,Won't Fix,92
+11,resolution,,Invalid,83
+11,resolution,,Cannot Reproduce,48
+11,resolution,,Won't Do,40
+11,resolution,,Done,40
+11,resolution,,Needs more info,19
+11,resolution,Invalid,,16
+11,resolution,Won't Fix,,10
+11,resolution,Duplicate,,9
+11,resolution,Cannot Reproduce,,8
+11,resolution,,Fixed - in QA,8
+11,resolution,Needs more info,,7
+11,resolution,,Hold,6
+11,resolution,Fixed - in QA,Fixed,5
+11,resolution,,Not Our Bug,3
+11,resolution,Not Our Bug,,2
+11,resolution,Done,,2
+11,resolution,Invalid,Cannot Reproduce,1
+11,resolution,Fixed,Won't Fix,1
+11,resolution,Duplicate,Closed/Win,1
+11,resolution,Won't Do,,1
+11,status,Resolved,Closed,2226
+11,status,Open,In Progress,1756
+11,status,In Progress,Resolved,1218
+11,status,Open,Resolved,662
+11,status,Open,Closed,505
+11,status,In Review,Resolved,399
+11,status,In Progress,In Review,389
+11,status,Closed,Closed,288
+11,status,In Progress,Open,121
+11,status,Resolved,Reopened,92
+11,status,Closed,Reopened,92
+11,status,Reopened,Resolved,91
+11,status,Reopened,In Progress,40
+11,status,In Progress,In  Review,37
+11,status,Reopened,Closed,33
+11,status,In  Review,Resolved,33
+11,status,In Progress,Closed,17
+11,status,Reopened,In Review,13
+11,status,In Review,In Progress,6
+11,status,To Do,Open,4
+11,status,In Review,In  Review,3
+11,status,Reopened,In  Review,2
+11,status,Open,To Do,2
+11,status,Resolved,Open,1
+11,status,In Progress,Reviewed,1
+11,status,In QA Testing,Ready for Production,1
+11,status,Ready for Production,Resolved,1
+11,status,Resolved,Resolved,1
+11,status,Reviewed,In QA Testing,1
+12,resolution,,Fixed,14444
+12,resolution,Fixed,,3183
+12,resolution,,Invalid,2884
+12,resolution,,Cannot Reproduce,1497
+12,resolution,,Duplicate,1480
+12,resolution,,Won't Fix,1252
+12,resolution,,Fixed - in QA,918
+12,resolution,Fixed - in QA,Fixed,885
+12,resolution,,Needs more info,460
+12,resolution,,Not Our Bug,363
+12,resolution,Cannot Reproduce,,306
+12,resolution,Invalid,,299
+12,resolution,,Done,267
+12,resolution,,Won't Do,238
+12,resolution,,Hold,235
+12,resolution,Needs more info,,207
+12,resolution,Duplicate,,146
+12,resolution,Won't Fix,,135
+12,resolution,Fixed - in QA,,67
+12,resolution,Not Our Bug,,62
+12,resolution,Fixed,Fixed - in QA,38
+12,resolution,Hold,,38
+12,resolution,Needs more info,Fixed,32
+12,resolution,Needs more info,Fixed - in QA,32
+12,resolution,,Incomplete,30
+12,resolution,Done,,27
+12,resolution,Needs more info,Invalid,26
+12,resolution,Incomplete,,22
+12,resolution,,Closed/Win,21
+12,resolution,Fixed,Done,19
+12,resolution,Fixed,Invalid,19
+12,resolution,Closed/Win,,18
+12,resolution,Fixed - in QA,Needs more info,16
+12,resolution,Won't Fix,Invalid,14
+12,resolution,Fixed,Duplicate,9
+12,resolution,Invalid,Fixed,9
+12,resolution,Invalid,Fixed - in QA,7
+12,resolution,Needs more info,Hold,6
+12,resolution,Fixed,Cannot Reproduce,6
+12,resolution,Cannot Reproduce,Fixed,5
+12,resolution,Won't Do,,5
+12,resolution,Needs more info,Cannot Reproduce,5
+12,resolution,Duplicate,Invalid,4
+12,resolution,Duplicate,Fixed,4
+12,resolution,Hold,Invalid,4
+12,resolution,Cannot Reproduce,Invalid,4
+12,resolution,Hold,Needs more info,3
+12,resolution,Fixed,Won't Fix,3
+12,resolution,Needs more info,Duplicate,3
+12,resolution,Closed/Win,Fixed,2
+12,resolution,Fixed - in QA,Duplicate,2
+12,resolution,Fixed,Needs more info,2
+12,resolution,Fixed,Hold,2
+12,resolution,Hold,Fixed,2
+12,resolution,Fixed - in QA,Invalid,2
+12,resolution,Not Our Bug,Invalid,2
+12,resolution,,approved,1
+12,resolution,Duplicate,Won't Fix,1
+12,resolution,Duplicate,Fixed - in QA,1
+12,resolution,Duplicate,Done,1
+12,resolution,Fixed - in QA,Won't Fix,1
+12,resolution,Done,Invalid,1
+12,resolution,Hold,Duplicate,1
+12,resolution,Cannot Reproduce,Duplicate,1
+12,resolution,Hold,Fixed - in QA,1
+12,resolution,Fixed,Not Our Bug,1
+12,resolution,Cannot Reproduce,Needs more info,1
+12,resolution,Incomplete,Duplicate,1
+12,resolution,Invalid,Closed/Win,1
+12,resolution,Invalid,Needs more info,1
+12,resolution,Invalid,Won't Fix,1
+12,resolution,Not Our Bug,Fixed,1
+12,resolution,Won't Fix,Duplicate,1
+12,resolution,Won't Fix,Not Our Bug,1
+12,resolution,approved,,1
+12,status,Resolved,Closed,17194
+12,status,Open,Resolved,9034
+12,status,Open,In Progress,8960
+12,status,Closed,Closed,4830
+12,status,In Progress,Resolved,3774
+12,status,In Progress,In Review,3394
+12,status,Open,Closed,3070
+12,status,In Review,Resolved,2758
+12,status,Closed,Reopened,2598
+12,status,Resolved,Reopened,1933
+12,status,Reopened,Resolved,1793
+12,status,In Progress,In  Review,1726
+12,status,In  Review,Resolved,1648
+12,status,Reopened,Closed,1617
+12,status,In Progress,Open,1012
+12,status,Resolved,Resolved,892
+12,status,Reopened,In Progress,731
+12,status,In Review,In QE Test,598
+12,status,In QE Test,Resolved,574
+12,status,In Review,In Progress,203
+12,status,Resolved,Open,198
+12,status,Reopened,In Review,124
+12,status,In  Review,In Progress,116
+12,status,Reopened,In  Review,83
+12,status,In Progress,Closed,77
+12,status,In Review,In  Review,29
+12,status,In QE Test,In Review,19
+12,status,Resolved,In Progress,4
+13,resolution,,Fixed,4849
+13,resolution,Fixed,,1421
+13,resolution,,Duplicate,606
+13,resolution,,Invalid,428
+13,resolution,,Cannot Reproduce,408
+13,resolution,,Won't Fix,316
+13,resolution,,Needs more info,279
+13,resolution,Needs more info,,192
+13,resolution,Cannot Reproduce,,105
+13,resolution,,Not Our Bug,81
+13,resolution,Invalid,,62
+13,resolution,,Hold,60
+13,resolution,Duplicate,,44
+13,resolution,Won't Fix,,39
+13,resolution,Hold,,14
+13,resolution,Not Our Bug,,9
+13,resolution,,Done,9
+13,resolution,,Incomplete,4
+13,resolution,Done,,2
+13,resolution,Fixed,Invalid,2
+13,resolution,Incomplete,,2
+13,resolution,Needs more info,Cannot Reproduce,1
+13,resolution,,Won't Do,1
+13,resolution,Needs more info,Invalid,1
+13,resolution,Fixed,Duplicate,1
+13,resolution,,Fixed - in QA,1
+13,status,Resolved,Closed,4893
+13,status,Open,In Progress,2597
+13,status,Open,Resolved,2390
+13,status,Closed,Closed,2219
+13,status,In Progress,Resolved,2148
+13,status,Resolved,Reopened,1015
+13,status,Reopened,Resolved,921
+13,status,Closed,Reopened,875
+13,status,Reopened,Closed,572
+13,status,Open,Closed,468
+13,status,In Progress,In Review,365
+13,status,In Review,Resolved,360
+13,status,Reopened,In Progress,345
+13,status,In Progress,Open,250
+13,status,In  Review,Resolved,177
+13,status,In Progress,In  Review,174
+13,status,Reopened,In  Review,8
+13,status,In Review,In Progress,7
+13,status,In Progress,Closed,5
+13,status,Reopened,In Review,4
+13,status,In  Review,In Progress,3
+13,status,In QA Testing,Ready for Production,1
+13,status,Code Reviewed,In QA Testing,1
+13,status,In Progress,In Code Review,1
+13,status,Ready for Production,Resolved,1
+13,status,In Code Review,Code Reviewed,1
+13,status,In Review,In  Review,1
+14,resolution,,Fixed,6426
+14,resolution,,Timed out,2133
+14,resolution,,Duplicate,1036
+14,resolution,,Obsolete,650
+14,resolution,,Answered,536
+14,resolution,,Won't Fix,346
+14,resolution,Fixed,Done,303
+14,resolution,Fixed,,269
+14,resolution,,Handled by Support,255
+14,resolution,,Won't Do,218
+14,resolution,,Cannot Reproduce,146
+14,resolution,,Invalid,144
+14,resolution,,Not a bug,140
+14,resolution,,Tracked Elsewhere,99
+14,resolution,,Resolved Locally,94
+14,resolution,,Done,42
+14,resolution,,Unsolved Mysteries,39
+14,resolution,Answered,,32
+14,resolution,,Incomplete,31
+14,resolution,,Support Request,29
+14,resolution,Done,,27
+14,resolution,Duplicate,,23
+14,resolution,Won't Fix,,23
+14,resolution,Handled by Support,,22
+14,resolution,Obsolete,,16
+14,resolution,Tracked Elsewhere,,14
+14,resolution,Cannot Reproduce,,14
+14,resolution,Not a bug,,13
+14,resolution,Invalid,,12
+14,resolution,Obsolete,Done,12
+14,resolution,Timed out,,9
+14,resolution,Duplicate,Done,6
+14,resolution,Duplicate,Tracked Elsewhere,5
+14,resolution,Won't Fix,Done,4
+14,resolution,Timed out,Done,3
+14,resolution,Answered,Done,3
+14,resolution,Resolved Locally,,3
+14,resolution,Cannot Reproduce,Done,3
+14,resolution,,Deployed,3
+14,resolution,Tracked Elsewhere,Done,2
+14,resolution,Tracked Elsewhere,Duplicate,1
+14,resolution,Not a bug,Done,1
+14,resolution,,Incorrectly Filed,1
+14,resolution,Fixed,Duplicate,1
+14,resolution,Won't Fix,Duplicate,1
+14,resolution,Fixed,Tracked Elsewhere,1
+14,resolution,Won't Do,,1
+14,resolution,Won't Do,Done,1
+14,resolution,Won't Do,Answered,1
+14,resolution,Answered,Duplicate,1
+14,resolution,Incorrectly Filed,,1
+14,resolution,Duplicate,Fixed,1
+14,resolution,Fixed,Won't Do,1
+14,resolution,Unsolved Mysteries,,1
+14,status,Resolved,Closed,5830
+14,status,RESOLVED,Closed,5053
+14,status,Open,Resolved,4941
+14,status,Open,In Progress,3374
+14,status,Needs Triage,Open,2476
+14,status,Open,Gathering Interest,2192
+14,status,Gathering Interest,Not Being Considered,1950
+14,status,In Progress,To be reviewed,1929
+14,status,To be reviewed,Resolved,1876
+14,status,Not Being Considered,Gathering Interest,1864
+14,status,Needs Triage,Resolved,1462
+14,status,Gathering Interest,Closed,1458
+14,status,In Progress,Resolved,1268
+14,status,Needs Triage,Gathering Interest,1002
+14,status,Open,Needs Triage,974
+14,status,Gathering Interest,Resolved,591
+14,status,Needs Triage,Gathering Impact,527
+14,status,Closed,RESOLVED,395
+14,status,Closed,Resolved,298
+14,status,In Progress,Open,275
+14,status,Open,Closed,240
+14,status,Resolved,Needs Triage,240
+14,status,Gathering Impact,Closed,213
+14,status,Gathering Interest,Reviewing,174
+14,status,Deployed to Cloud,Resolved,170
+14,status,Open,Deployed to Cloud,170
+14,status,Reviewing,Gathering Interest,156
+14,status,Awaiting Review,Open,156
+14,status,Resolved,Open,151
+14,status,In Progress,Waiting for Release,144
+14,status,Waiting for Release,Closed,132
+14,status,Reopened,Resolved,106
+14,status,Open,Verified,97
+14,status,Closed,Reopened,94
+14,status,Verified,In Progress,81
+14,status,Gathering Impact,Long Term Backlog,77
+14,status,Gathering Interest,Future Consideration,77
+14,status,Gathering Interest,Under Consideration,74
+14,status,Accepted,Open,73
+14,status,Gathering Interest,In Progress,73
+14,status,Under Consideration,Gathering Interest,62
+14,status,To be reviewed,In Progress,61
+14,status,Needs Triage,Short Term Backlog,61
+14,status,Needs Triage,Long Term Backlog,60
+14,status,Open,Needs Verification,55
+14,status,Future Consideration,Gathering Interest,54
+14,status,Resolved,Reopened,52
+14,status,Implemented,Resolved,45
+14,status,Needs Triage,In Progress,44
+14,status,Open,Implemented,43
+14,status,Accepted,Resolved,43
+14,status,In Progress,Closed,40
+14,status,Open,Short Term Roadmap,39
+14,status,Short Term Backlog,In Progress,38
+14,status,Awaiting Review,Resolved,31
+14,status,Implemented,To be reviewed,30
+14,status,Long Term Roadmap,Accepted,29
+14,status,In Progress,Accepted,28
+14,status,Awaiting Review,Short Term Roadmap,27
+14,status,Awaiting Review,Long Term Roadmap,27
+14,status,Gathering Impact,Short Term Backlog,25
+14,status,Short Term Roadmap,Open,25
+14,status,Needs Triage,Closed,25
+14,status,In Progress,Implemented,24
+14,status,Needs Verification,Verified,22
+14,status,Open - untriaged,Open,22
+14,status,Needs Verification,Resolved,21
+14,status,Verified,Resolved,21
+14,status,Not Being Considered,Resolved,20
+14,status,Gathering Interest,Needs Triage,19
+14,status,Short Term Roadmap,Accepted,19
+14,status,Short Term Roadmap,Resolved,19
+14,status,Resolved,Resolved,17
+14,status,Long Term Backlog,In Progress,17
+14,status,Reopened,Closed,15
+14,status,Reopened,In Progress,15
+14,status,In Progress,In Review,15
+14,status,Open,Long Term Roadmap,14
+14,status,In Review,Waiting for Release,13
+14,status,Verified,Accepted,12
+14,status,Needs Verification,Accepted,12
+14,status,Short Term Backlog,Long Term Backlog,11
+14,status,Short Term Backlog,Closed,11
+14,status,Under Consideration,In Progress,10
+14,status,To be reviewed,Accepted,10
+14,status,Resolved,Gathering Interest,10
+14,status,Long Term Roadmap,Resolved,8
+14,status,Reviewing,Under Consideration,8
+14,status,To be reviewed,Closed,8
+14,status,Reopened,Open,7
+14,status,Gathering Impact,In Progress,7
+14,status,Open,Open - untriaged,7
+14,status,Future Consideration,In Progress,7
+14,status,Closed,Gathering Interest,6
+14,status,Long Term Roadmap,Open,6
+14,status,Waiting for Release,RESOLVED,6
+14,status,Under Consideration,Resolved,6
+14,status,Open,Accepted,6
+14,status,Long Term Backlog,Short Term Backlog,5
+14,status,Short Term Backlog,Gathering Impact,5
+14,status,Not Being Considered,Closed,5
+14,status,Reviewing,Resolved,4
+14,status,New,Open,4
+14,status,Reviewing,Future Consideration,4
+14,status,Awaiting Review,Closed,4
+14,status,Closed,Needs Triage,4
+14,status,Reopened,Implemented,4
+14,status,Reviewing,Reviewing,3
+14,status,New,Needs Triage,3
+14,status,Open - untriaged,Needs Triage,3
+14,status,Long Term Backlog,Closed,3
+14,status,Gathering Interest,Open,3
+14,status,Verified,Implemented,3
+14,status,Reviewing,In Progress,3
+14,status,Short Term Roadmap,Long Term Roadmap,3
+14,status,Under Consideration,Future Consideration,3
+14,status,To be reviewed,Open,2
+14,status,Gathering Interest,Gathering Impact,2
+14,status,Gathering Interest,RESOLVED,2
+14,status,Future Consideration,Resolved,2
+14,status,In Progress,Reviewing,2
+14,status,In Progress,Under Consideration,2
+14,status,Needs Verification,In Progress,2
+14,status,Reviewing,Not Being Considered,2
+14,status,Short Term Roadmap,Implemented,2
+14,status,To be reviewed,Reopened,2
+14,status,Verified,Short Term Roadmap,2
+14,status,Waiting for Release,In Progress,2
+14,status,Short Term Backlog,Needs Triage,1
+14,status,Open,Future Consideration,1
+14,status,Waiting for Release,Gathering Impact,1
+14,status,Short Term Roadmap,In Progress,1
+14,status,On Hold,Accepted,1
+14,status,Not Being Considered,Reviewing,1
+14,status,New,Resolved,1
+14,status,To Do,Needs Triage,1
+14,status,Needs Verification,Open,1
+14,status,Needs Verification,Needs Triage,1
+14,status,Accepted,Verified,1
+14,status,Gathering Impact,Gathering Interest,1
+14,status,Accepted,Needs Triage,1
+14,status,Long Term Roadmap,Short Term Roadmap,1
+14,status,Future Consideration,Under Consideration,1
+14,status,Implemented,Reopened,1
+14,status,Future Consideration,Needs Triage,1
+14,status,Closed,Open,1
+14,status,Under Consideration,Reviewing,1
+14,status,In Progress,Gathering Interest,1
+14,status,Verified,Awaiting Review,1
+14,status,Long Term Backlog,Gathering Impact,1
+14,status,In Progress,Short Term Backlog,1
+14,status,Verified,Open,1
+14,status,Closed,Closed,1
+14,status,Waiting for Release,In Review,1
+14,status,In Review,Closed,1
+14,status,Reopened,Verified,1
+14,status,Reopened,Needs Verification,1
+14,status,Open - untriaged,Accepted,1
+14,status,Open,On Hold,1
+15,resolution,,Fixed,870
+15,resolution,,Won't Fix,510
+15,resolution,,Duplicate,64
+15,resolution,,Obsolete,32
+15,resolution,Fixed,,31
+15,resolution,,Cannot Reproduce,18
+15,resolution,,Not a bug,16
+15,resolution,,Invalid,15
+15,resolution,Won't Fix,,12
+15,resolution,,Tracked Elsewhere,12
+15,resolution,,Handled by Support,7
+15,resolution,Cannot Reproduce,,3
+15,resolution,Not a bug,,3
+15,resolution,,Answered,3
+15,resolution,Obsolete,,2
+15,resolution,,Resolved Locally,2
+15,resolution,,Timed out,2
+15,resolution,,Unsolved Mysteries,1
+15,resolution,Handled by Support,,1
+15,resolution,,Incomplete,1
+15,resolution,Tracked Elsewhere,,1
+15,resolution,,Support Request,1
+15,status,Open,Closed,776
+15,status,RESOLVED,Closed,751
+15,status,Closed,Resolved,751
+15,status,Resolved,Closed,587
+15,status,Open,In Progress,501
+15,status,To be reviewed,Resolved,305
+15,status,Open,Implemented,265
+15,status,Implemented,Resolved,234
+15,status,Implemented,To be reviewed,191
+15,status,In Progress,To be reviewed,151
+15,status,In Progress,Implemented,147
+15,status,In Progress,Closed,122
+15,status,In Progress,Open,56
+15,status,In Progress,Resolved,36
+15,status,To be reviewed,Closed,30
+15,status,Closed,Reopened,29
+15,status,Reopened,Closed,26
+15,status,Open,Resolved,14
+15,status,Resolved,Reopened,13
+15,status,Reopened,Implemented,13
+15,status,Closed,Open,11
+15,status,Open,Needs Verification,9
+15,status,Open,Verified,8
+15,status,Reopened,In Progress,6
+15,status,To be reviewed,Reopened,6
+15,status,Verified,Resolved,5
+15,status,Needs Verification,Resolved,5
+15,status,Reopened,Open,5
+15,status,Implemented,Reopened,4
+15,status,Verified,Implemented,4
+15,status,Needs Verification,Verified,3
+15,status,Verified,In Progress,2
+15,status,Needs Verification,In Progress,2
+15,status,Needs Triage,Open,1
+15,status,Reopened,Needs Verification,1
+15,status,To be reviewed,In Progress,1
+15,status,Reopened,Resolved,1
+16,resolution,,Fixed,2196
+16,resolution,,Duplicate,313
+16,resolution,,Obsolete,234
+16,resolution,,Won't Fix,174
+16,resolution,,Not a bug,93
+16,resolution,Fixed,,82
+16,resolution,,Cannot Reproduce,77
+16,resolution,,Timed out,66
+16,resolution,,Handled by Support,65
+16,resolution,,Answered,55
+16,resolution,,Support Request,44
+16,resolution,,Invalid,42
+16,resolution,,Tracked Elsewhere,37
+16,resolution,,Done,27
+16,resolution,Won't Fix,,11
+16,resolution,Duplicate,,11
+16,resolution,,Incomplete,10
+16,resolution,,Resolved Locally,9
+16,resolution,,Unsolved Mysteries,8
+16,resolution,Cannot Reproduce,,6
+16,resolution,Handled by Support,,5
+16,resolution,Obsolete,,5
+16,resolution,,Won't Do,5
+16,resolution,Not a bug,,4
+16,resolution,Answered,,2
+16,resolution,Won't Fix,Duplicate,1
+16,resolution,Duplicate,Obsolete,1
+16,resolution,Done,Fixed,1
+16,resolution,Tracked Elsewhere,,1
+16,resolution,Timed out,,1
+16,resolution,Support Request,,1
+16,resolution,Resolved Locally,,1
+16,resolution,Invalid,,1
+16,resolution,,Deployed,1
+16,resolution,Incomplete,,1
+16,resolution,,Incorrectly Filed,1
+16,status,Open,Resolved,1726
+16,status,RESOLVED,Closed,1632
+16,status,Resolved,Closed,1563
+16,status,Open,In Progress,808
+16,status,In Progress,Technical Review,564
+16,status,Technical Review,Resolved,536
+16,status,Open,Verified,500
+16,status,Open,Needs Verification,446
+16,status,Open,Closed,389
+16,status,Open,Gathering Interest,329
+16,status,Closed,Resolved,325
+16,status,In Progress,Resolved,312
+16,status,Verified,Under Consideration,162
+16,status,Needs Verification,Gathering Interest,160
+16,status,Verified,In Progress,160
+16,status,Awaiting Review,Open,142
+16,status,Needs Verification,Needs Triage,128
+16,status,Closed,RESOLVED,127
+16,status,Needs Verification,Resolved,107
+16,status,Verified,Long Term Backlog,96
+16,status,Verified,Resolved,90
+16,status,Needs Triage,Long Term Backlog,82
+16,status,Resolved,Open,66
+16,status,In Progress,Closed,62
+16,status,Needs Verification,Verified,54
+16,status,In Progress,Open,50
+16,status,Needs Triage,Short Term Backlog,43
+16,status,Awaiting Review,Resolved,41
+16,status,Verified,Closed,39
+16,status,Needs Triage,Closed,38
+16,status,Resolved,Reopened,36
+16,status,Open,Needs Triage,32
+16,status,Needs Triage,Gathering Interest,32
+16,status,Reopened,Resolved,29
+16,status,Under Consideration,Future Consideration,26
+16,status,Long Term Backlog,Short Term Backlog,22
+16,status,In Progress,Waiting for Release,20
+16,status,Technical Review,In Progress,19
+16,status,Closed,Reopened,18
+16,status,Waiting for Release,Closed,18
+16,status,Needs Verification,Closed,17
+16,status,New,Open,16
+16,status,Needs Triage,In Progress,16
+16,status,Gathering Interest,In Progress,14
+16,status,Long Term Backlog,Closed,14
+16,status,Short Term Backlog,Long Term Backlog,12
+16,status,Reopened,Open,12
+16,status,Technical Review,Open,12
+16,status,Verified,Needs Verification,11
+16,status,Short Term Backlog,Closed,11
+16,status,In Progress,Needs Verification,11
+16,status,Reopened,Closed,10
+16,status,Needs Verification,Needs Verification,10
+16,status,Open,Short Term Roadmap,10
+16,status,Short Term Roadmap,Open,10
+16,status,Closed,Open,9
+16,status,In Progress,Verified,9
+16,status,Verified,Verified,7
+16,status,Needs Triage,Gathering Impact,6
+16,status,Gathering Interest,Closed,6
+16,status,Under Consideration,In Progress,6
+16,status,Open,Open,6
+16,status,Short Term Backlog,In Progress,6
+16,status,Closed,Needs Triage,5
+16,status,Closed,Closed,5
+16,status,Technical Review,Closed,5
+16,status,Awaiting Review,Closed,5
+16,status,Verified,Technical Review,5
+16,status,Long Term Backlog,In Progress,4
+16,status,Needs Verification,Open,4
+16,status,Needs Triage,Open,4
+16,status,In Progress,In Progress,4
+16,status,Needs Verification,In Progress,4
+16,status,Gathering Interest,Under Consideration,3
+16,status,Ready for Development,Open,3
+16,status,Verified,Open,2
+16,status,Reopened,Verified,2
+16,status,Open,Technical Review,2
+16,status,Verified,Needs Triage,1
+16,status,Awaiting Review,Long Term Roadmap,1
+16,status,Gathering Interest,Future Consideration,1
+16,status,Needs Triage,Resolved,1
+16,status,Needs Triage,Needs Verification,1
+16,status,Long Term Backlog,Needs Triage,1
+16,status,Gathering Impact,Short Term Backlog,1
+16,status,Needs Verification,Technical Review,1
+16,status,Future Consideration,Long Term Backlog,1
+16,status,Closed,Verified,1
+16,status,In Progress,In Review,1
+16,status,Closed,Gathering Interest,1
+16,status,Long Term Roadmap,Open,1
+16,status,Awaiting Review,Short Term Roadmap,1
+16,status,In Review,Closed,1
+16,status,Open,Open - untriaged,1
+16,status,Gathering Interest,Resolved,1
+16,status,Gathering Interest,Needs Triage,1
+16,status,Needs Triage,Under Consideration,1
+16,status,Open - untriaged,Open,1
+16,status,Reopened,In Progress,1
+16,status,Waiting for Release,Resolved,1
+16,status,Resolved,Resolved,1
+16,status,Resolved,Technical Review,1
+16,status,Resolved,Verified,1
+16,status,Short Term Roadmap,Resolved,1
+16,status,Waiting for Release,Short Term Backlog,1
+16,status,Technical Review,Waiting for Release,1
+16,status,Under Consideration,Closed,1
+16,status,Under Consideration,RESOLVED,1
+16,status,Under Consideration,Resolved,1
+16,status,Verified,Gathering Interest,1
+17,resolution,,Fixed,2907
+17,resolution,,Timed out,821
+17,resolution,Timed out,,397
+17,resolution,,Answered,372
+17,resolution,Fixed,,327
+17,resolution,,Duplicate,288
+17,resolution,,Obsolete,280
+17,resolution,,Won't Fix,262
+17,resolution,,Handled by Support,127
+17,resolution,,Not a bug,99
+17,resolution,,Cannot Reproduce,84
+17,resolution,,Invalid,75
+17,resolution,,Tracked Elsewhere,37
+17,resolution,,Support Request,36
+17,resolution,Won't Fix,,22
+17,resolution,Duplicate,,18
+17,resolution,,Incomplete,16
+17,resolution,,Resolved Locally,15
+17,resolution,Answered,,12
+17,resolution,,Unsolved Mysteries,11
+17,resolution,Not a bug,,11
+17,resolution,Cannot Reproduce,,10
+17,resolution,Obsolete,,9
+17,resolution,Invalid,,7
+17,resolution,,Won't Do,6
+17,resolution,Handled by Support,,5
+17,resolution,,Done,4
+17,resolution,Tracked Elsewhere,,3
+17,resolution,Fixed,Incomplete,2
+17,resolution,Incomplete,,2
+17,resolution,Unsolved Mysteries,,2
+17,resolution,Support Request,,1
+17,resolution,,Incorrectly Filed,1
+17,resolution,Duplicate,Fixed,1
+17,resolution,Done,Fixed,1
+17,resolution,Incomplete,Fixed,1
+17,resolution,Incomplete,Invalid,1
+17,resolution,Fixed,Invalid,1
+17,status,Needs Triage,Open,3054
+17,status,Closed,Resolved,2194
+17,status,Open,Closed,1880
+17,status,RESOLVED,Closed,1752
+17,status,Open,In Progress,1648
+17,status,Needs Triage,Closed,1204
+17,status,To be reviewed,Closed,1059
+17,status,In Progress,To be reviewed,820
+17,status,Resolved,Closed,580
+17,status,In Progress,Quality Review,436
+17,status,Quality Review,To be reviewed,435
+17,status,Open,Needs Triage,420
+17,status,Resolved,Not Being Considered,393
+17,status,Open,Gathering Impact,371
+17,status,Open,Gathering Interest,366
+17,status,Gathering Impact,Closed,280
+17,status,To be reviewed,Resolved,244
+17,status,Gathering Interest,Not Being Considered,237
+17,status,In Progress,Closed,235
+17,status,Closed,Open,223
+17,status,Closed,Reopened,214
+17,status,Open,Implemented,212
+17,status,Implemented,To be reviewed,190
+17,status,Reopened,Closed,188
+17,status,In Progress,Open,151
+17,status,Open,Resolved,113
+17,status,Implemented,Resolved,99
+17,status,To be reviewed,Quality Review,78
+17,status,In Progress,Resolved,76
+17,status,Gathering Interest,Reviewing,69
+17,status,In Progress,Implemented,64
+17,status,Quality Review,Closed,56
+17,status,To be reviewed,In Progress,50
+17,status,Reviewing,Not Being Considered,44
+17,status,Needs Triage,Gathering Impact,37
+17,status,Reopened,In Progress,34
+17,status,Gathering Impact,Long Term Backlog,31
+17,status,Open,Needs Verification,24
+17,status,Resolved,Open,24
+17,status,Quality Review,In Progress,23
+17,status,Gathering Interest,Under Consideration,22
+17,status,Gathering Interest,In Progress,14
+17,status,To be reviewed,Reopened,14
+17,status,Gathering Interest,Closed,13
+17,status,Under Consideration,In Progress,13
+17,status,Needs Verification,Verified,10
+17,status,Closed,Needs Triage,10
+17,status,Verified,Implemented,9
+17,status,Reopened,Implemented,9
+17,status,Needs Verification,Needs Triage,9
+17,status,Open,Verified,9
+17,status,Open,Open - untriaged,8
+17,status,Gathering Interest,Resolved,8
+17,status,Verified,Resolved,7
+17,status,Closed,Closed,7
+17,status,Reviewing,Future Consideration,5
+17,status,Needs Verification,Resolved,5
+17,status,Implemented,Reopened,5
+17,status,Open - untriaged,Open,5
+17,status,Reopened,Open,5
+17,status,Resolved,Reopened,5
+17,status,Under Consideration,Future Consideration,5
+17,status,New,Open,4
+17,status,Gathering Impact,In Progress,4
+17,status,Gathering Impact,Short Term Backlog,4
+17,status,In Progress,Waiting for Release,3
+17,status,Gathering Interest,Future Consideration,3
+17,status,In Progress,Under Consideration,3
+17,status,Open - untriaged,Needs Triage,3
+17,status,Verified,Open,3
+17,status,Reviewing,Under Consideration,3
+17,status,Under Consideration,Resolved,3
+17,status,Under Consideration,Closed,3
+17,status,Gathering Interest,Needs Triage,2
+17,status,Gathering Interest,Open,2
+17,status,Reopened,Resolved,2
+17,status,New,Needs Triage,2
+17,status,Needs Triage,Long Term Backlog,2
+17,status,Needs Triage,Gathering Interest,2
+17,status,Waiting for Release,Closed,2
+17,status,Reviewing,In Progress,2
+17,status,In Progress,Gathering Impact,2
+17,status,Gathering Impact,Gathering Interest,2
+17,status,Not Being Considered,Reviewing,2
+17,status,Awaiting Review,Open,1
+17,status,Not Being Considered,Closed,1
+17,status,Reviewing,Gathering Interest,1
+17,status,Long Term Backlog,Short Term Backlog,1
+17,status,Needs Triage,New,1
+17,status,Reviewing,Resolved,1
+17,status,In Progress,Gathering Interest,1
+17,status,Short Term Backlog,In Progress,1
+17,status,Short Term Backlog,Long Term Backlog,1
+17,status,To Do,Open,1
+17,status,Needs Triage,Short Term Backlog,1
+17,status,Needs Triage,Under Consideration,1
+17,status,In Progress,Reviewing,1
+17,status,Open,Reviewing,1
+17,status,Future Consideration,Under Consideration,1
+17,status,Future Consideration,Reviewing,1
+17,status,Future Consideration,In Progress,1
+17,status,Not Being Considered,Resolved,1
+17,status,Long Term Backlog,Closed,1
+17,status,Gathering Interest,RESOLVED,1
+17,status,Long Term Backlog,Gathering Impact,1
+17,status,Waiting for Release,In Progress,1
+17,status,Long Term Backlog,In Progress,1
+17,status,Not Being Considered,Under Consideration,1
+18,resolution,,Fixed,10944
+18,resolution,,Won't Fix,6042
+18,resolution,,Won't Do,5409
+18,resolution,,Duplicate,4429
+18,resolution,,Timed out,3126
+18,resolution,,Answered,1929
+18,resolution,,Obsolete,1049
+18,resolution,Fixed,,852
+18,resolution,,Not a bug,649
+18,resolution,,Handled by Support,588
+18,resolution,,Invalid,581
+18,resolution,,Tracked Elsewhere,562
+18,resolution,,Cannot Reproduce,525
+18,resolution,,Support Request,512
+18,resolution,,Resolved Locally,297
+18,resolution,Won't Fix,,217
+18,resolution,,Fixed [1],209
+18,resolution,Duplicate,,150
+18,resolution,,Done,149
+18,resolution,,Incomplete,117
+18,resolution,Answered,,97
+18,resolution,Cannot Reproduce,,81
+18,resolution,Not a bug,,61
+18,resolution,Won't Do,,59
+18,resolution,Tracked Elsewhere,,49
+18,resolution,Obsolete,,48
+18,resolution,,Deployed,45
+18,resolution,Handled by Support,,43
+18,resolution,,Duplicate [3],37
+18,resolution,Invalid,,31
+18,resolution,,Unsolved Mysteries,28
+18,resolution,Fixed [1],,26
+18,resolution,Incomplete,,20
+18,resolution,Support Request,,20
+18,resolution,Timed out,,15
+18,resolution,,Answered [9],15
+18,resolution,,Cannot Reproduce [5],14
+18,resolution,Resolved Locally,,13
+18,resolution,,Incorrectly Filed,11
+18,resolution,Unsolved Mysteries,,11
+18,resolution,,Won't Fix [2],9
+18,resolution,,Invalid [6],8
+18,resolution,,Resolved Locally [7],7
+18,resolution,Won't Fix,Fixed,6
+18,resolution,,Handled by Support [8],5
+18,resolution,Incorrectly Filed,,4
+18,resolution,Done,,4
+18,resolution,,Incomplete [4],3
+18,resolution,Fixed,Duplicate,3
+18,resolution,Deployed,,3
+18,resolution,Won't Fix,Tracked Elsewhere,2
+18,resolution,Timed out,Fixed,2
+18,resolution,Won't Fix [2],,2
+18,resolution,,Spam,2
+18,resolution,Won't Do,Fixed,1
+18,resolution,Cannot Reproduce,Fixed,1
+18,resolution,Resolved Locally [7],,1
+18,resolution,Fixed,Won't Fix,1
+18,resolution,Fixed,Tracked Elsewhere,1
+18,resolution,Fixed,Invalid,1
+18,resolution,Duplicate,Tracked Elsewhere,1
+18,resolution,Done,Fixed,1
+18,resolution,Answered,Won't Fix,1
+18,status,Resolved,Closed,28105
+18,status,Closed,Resolved,16834
+18,status,RESOLVED,Closed,16065
+18,status,Open,Resolved,14878
+18,status,Open,Verified,6887
+18,status,Open,Gathering Interest,6857
+18,status,Open,Closed,5421
+18,status,Gathering Interest,Resolved,3264
+18,status,New,Open,3138
+18,status,Verified,Resolved,2985
+18,status,Verified,Gathering Impact,2486
+18,status,Awaiting Development,In Progress,2215
+18,status,New,Resolved,1896
+18,status,Gathering Interest,Closed,1675
+18,status,Open,Needs Triage,1470
+18,status,Open,Awaiting Development,1425
+18,status,Open,Needs Verification,1390
+18,status,In Progress,Awaiting Quality Review,1344
+18,status,Awaiting Quality Review,Quality Review,1339
+18,status,Needs Triage,Gathering Impact,1216
+18,status,Verified,Awaiting Development,1178
+18,status,In Progress,Resolved,1120
+18,status,Awaiting Soak,Soaking,1006
+18,status,Soaking,Resolved,994
+18,status,Awaiting Deployment,Deployment,983
+18,status,Deployment,Resolved,970
+18,status,Quality Review,Awaiting Deployment,958
+18,status,Open,In Progress,829
+18,status,Gathering Impact,Closed,807
+18,status,Resolved,Open,787
+18,status,Awaiting Review,Open,736
+18,status,Awaiting Review,Resolved,672
+18,status,Needs Verification,Resolved,657
+18,status,Needs Triage,Closed,609
+18,status,Awaiting Development,Open,564
+18,status,In Progress,Technical Review,540
+18,status,Verified,Open,524
+18,status,Technical Review,Awaiting Soak,510
+18,status,Needs Verification,Verified,509
+18,status,Resolved,Reopened,471
+18,status,Reopened,Resolved,399
+18,status,In Progress,Awaiting Development,320
+18,status,ToDo,ToDo,282
+18,status,In Progress,Waiting for Release,257
+18,status,Waiting for Release,Closed,249
+18,status,Closed,Open,218
+18,status,Closed,Reopened,213
+18,status,Needs Verification,Needs Triage,204
+18,status,Open - untriaged,Open,192
+18,status,Verified,Awaiting Soak,168
+18,status,Open,Awaiting Soak,168
+18,status,Awaiting Quality Review,In Progress,167
+18,status,Quality Review,Awaiting Quality Review,160
+18,status,Quality Review,Awaiting Soak,154
+18,status,Open - untriaged,New,148
+18,status,Awaiting Review,Closed,142
+18,status,Quality Review,In Progress,139
+18,status,Gathering Impact,In Progress,136
+18,status,Quality Review,Resolved,130
+18,status,In Progress,Open,127
+18,status,Reopened,Closed,116
+18,status,Verified,In Progress,113
+18,status,Awaiting Release,Resolved,103
+18,status,Needs Triage,In Progress,99
+18,status,In Progress,Closed,99
+18,status,Gathering Interest,Reviewing,87
+18,status,Gathering Interest,In Progress,82
+18,status,Awaiting Soak,In Progress,82
+18,status,In Progress,Quality Review,81
+18,status,Open,Quality Review,77
+18,status,Awaiting Development,Awaiting Soak,76
+18,status,Reopened,Open,73
+18,status,Open,Open - untriaged,66
+18,status,Awaiting Deployment,Quality Review,62
+18,status,Open,Awaiting Deployment,61
+18,status,Needs Verification,Open,59
+18,status,Reopened,Verified,57
+18,status,In Progress,In Review,55
+18,status,To Do,Open,55
+18,status,Awaiting Development,Short Term Backlog,49
+18,status,In Review,Waiting for Release,48
+18,status,Closed,Needs Triage,48
+18,status,In Progress,Awaiting Release,44
+18,status,Gathering Interest,Needs Triage,43
+18,status,Waiting for Release,Resolved,39
+18,status,Short Term Backlog,Gathering Impact,37
+18,status,Short Term Roadmap,Open,37
+18,status,Awaiting Review,New,36
+18,status,Reviewing,Future Consideration,35
+18,status,Resolved,Awaiting Release,35
+18,status,Under Consideration,In Progress,34
+18,status,Short Term Backlog,In Progress,34
+18,status,In QA Review,In Progress,33
+18,status,In Progress,ToDo,31
+18,status,Open,Short Term Roadmap,30
+18,status,Verified,New,29
+18,status,Quality Review,Verified,29
+18,status,ToDo,In Progress,29
+18,status,Reopened,In Progress,28
+18,status,Reviewing,Not Being Considered,28
+18,status,Gathering Interest,Under Consideration,27
+18,status,Resolved,Gathering Interest,27
+18,status,Needs Triage,Gathering Interest,26
+18,status,Gathering Impact,Short Term Backlog,26
+18,status,Technical Review,In Progress,26
+18,status,Gathering Impact,Long Term Backlog,21
+18,status,In Progress,In QA Review,20
+18,status,Closed,Closed,19
+18,status,Soaking,Awaiting Soak,18
+18,status,ToDo,In QA Review,18
+18,status,Verified,Awaiting Release,17
+18,status,Needs Triage,Short Term Backlog,17
+18,status,Awaiting Development,Awaiting Deployment,16
+18,status,Done,ToDo,15
+18,status,Reopened,Needs Verification,14
+18,status,Needs Triage,Open,14
+18,status,In Progress,Verified,14
+18,status,Gathering Interest,Not Being Considered,14
+18,status,Gathering Impact,Needs Triage,13
+18,status,Short Term Backlog,Closed,13
+18,status,Reviewing,Under Consideration,13
+18,status,Open,Awaiting Release,13
+18,status,Reviewing,In Progress,13
+18,status,Closed,Gathering Interest,13
+18,status,Awaiting Soak,Quality Review,12
+18,status,Long Term Roadmap,Open,12
+18,status,Verified,Awaiting Deployment,11
+18,status,Long Term Backlog,In Progress,11
+18,status,Awaiting Review,Short Term Roadmap,11
+18,status,Gathering Impact,Gathering Interest,10
+18,status,ToDo,Open,10
+18,status,Waiting for Release,RESOLVED,9
+18,status,Awaiting Release,Waiting for Release,9
+18,status,Needs Triage,Resolved,9
+18,status,In Progress,Gathering Impact,9
+18,status,Gathering Interest,Future Consideration,8
+18,status,Deployment,Awaiting Deployment,8
+18,status,Resolved,Resolved,8
+18,status,ToDo,Done,8
+18,status,Open,Long Term Roadmap,7
+18,status,In Review,Closed,7
+18,status,In QA Review,In QA Review,7
+18,status,In QA Review,Done,7
+18,status,In Progress,Reviewing,7
+18,status,Gathering Interest,Open,7
+18,status,Open - untriaged,Accepted,6
+18,status,Open,To Do,6
+18,status,Reviewing,Resolved,6
+18,status,Waiting for Release,Gathering Impact,6
+18,status,Gathering Impact,Resolved,6
+18,status,Gathering Interest,RESOLVED,6
+18,status,Open - untriaged,Closed,5
+18,status,Accepted,Open,5
+18,status,Long Term Backlog,Gathering Impact,5
+18,status,New,Verified,5
+18,status,Resolved,Needs Triage,5
+18,status,Needs Triage,Long Term Backlog,4
+18,status,Untriaged,Open,4
+18,status,Open,Selected for Development,4
+18,status,New,Open - untriaged,4
+18,status,To Do,Verified,4
+18,status,Under Consideration,Resolved,4
+18,status,Gathering Interest,Verified,3
+18,status,Not Being Considered,Resolved,3
+18,status,Gathering Impact,Gathering Impact,3
+18,status,Awaiting Development,Awaiting Release,3
+18,status,Not Being Considered,Under Consideration,3
+18,status,Future Consideration,In Progress,3
+18,status,Closed,Reviewing,3
+18,status,In Progress,Short Term Backlog,3
+18,status,Awaiting Review,Long Term Roadmap,3
+18,status,Awaiting Soak,Awaiting Release,3
+18,status,To Do,Done,3
+18,status,Short Term Roadmap,Resolved,3
+18,status,To Do,In Progress,3
+18,status,Selected for Development,Open,3
+18,status,Reviewing,Gathering Interest,3
+18,status,Technical Review,Quality Review,3
+18,status,Short Term Roadmap,Long Term Roadmap,3
+18,status,Awaiting Quality Review,Awaiting Quality Review,2
+18,status,Awaiting Merge,In Progress,2
+18,status,Awaiting Development,New,2
+18,status,Future Consideration,Under Consideration,2
+18,status,Waiting for QA,In QA Review,2
+18,status,Needs Triage,New,2
+18,status,Technical Review,Awaiting Quality Review,2
+18,status,New,Needs Verification,2
+18,status,New,Awaiting Development,2
+18,status,Needs Verification,New,2
+18,status,Long Term Roadmap,Resolved,2
+18,status,Quality Review,Awaiting Merge,2
+18,status,Gathering Interest,Gathering Impact,2
+18,status,Reopened,Short Term Roadmap,2
+18,status,ToDo,Waiting for QA,2
+18,status,Not Being Considered,In Progress,2
+18,status,Future Consideration,Resolved,2
+18,status,Long Term Backlog,Closed,2
+18,status,Under Consideration,Reviewing,2
+18,status,Open,Reopened,2
+18,status,Short Term Backlog,Long Term Backlog,2
+18,status,In Progress,Under Consideration,2
+18,status,Untriaged,Needs Triage,2
+18,status,Untriaged,To Do,2
+18,status,Done,Open,2
+18,status,Backlog,Needs Triage,2
+18,status,Awaiting Release,In Progress,2
+18,status,Done,Closed,1
+18,status,Draft,Published,1
+18,status,Done,Verified,1
+18,status,Done,In Progress,1
+18,status,Under Consideration,Closed,1
+18,status,Under Consideration,Future Consideration,1
+18,status,Under Consideration,Not Being Considered,1
+18,status,Under Review,In Progress,1
+18,status,Untriaged,Done,1
+18,status,Untriaged,Gathering Interest,1
+18,status,Verified,Awaiting Review,1
+18,status,Verified,Gathering Interest,1
+18,status,Waiting for Release,In Review,1
+18,status,Open,Open,1
+18,status,Open,On Hold,1
+18,status,Open,Accepted,1
+18,status,On Hold,Open,1
+18,status,Not Being Considered,Reviewing,1
+18,status,Open,Technical Review,1
+18,status,Open,Untriaged,1
+18,status,Not Being Considered,Closed,1
+18,status,Open - untriaged,Needs Verification,1
+18,status,Open - untriaged,Verified,1
+18,status,Needs Verification,Closed,1
+18,status,Needs Verification,Awaiting Development,1
+18,status,Needs Triage,Waiting for Release,1
+18,status,Needs Triage,Verified,1
+18,status,Needs Triage,Open - untriaged,1
+18,status,Needs Triage,Needs Verification,1
+18,status,Reopened,Long Term Roadmap,1
+18,status,Needs Triage,Backlog,1
+18,status,Reopened,New,1
+18,status,Reopened,Open - untriaged,1
+18,status,Long Term Backlog,Short Term Backlog,1
+18,status,Reopened,To Do,1
+18,status,In Review,In Progress,1
+18,status,Resolved,Future Consideration,1
+18,status,Waiting for Release,Reviewing,1
+18,status,In Progress,New,1
+18,status,In Progress,Needs Triage,1
+18,status,In Progress,Long Term Backlog,1
+18,status,Resolved - pending deploy,Soaking,1
+18,status,In Progress,In Progress,1
+18,status,Reviewing,Gathering Impact,1
+18,status,In Progress,Done,1
+18,status,Reviewing,Open,1
+18,status,Done,Resolved,1
+18,status,Selected for Development,Blocked/Awaiting External,1
+18,status,Awaiting Quality Review,Technical Review,1
+18,status,Awaiting Release,Done,1
+18,status,Awaiting Review,Verified,1
+18,status,Short Term Backlog,Needs Triage,1
+18,status,Short Term Backlog,Resolved,1
+18,status,Backlog,Blocked,1
+18,status,Blocked,Needs Triage,1
+18,status,Blocked/Awaiting External,Open,1
+18,status,Closed,Under Consideration,1
+18,status,Accepted,New,1
+18,status,Technical Review,Open,1
+18,status,To Do,Closed,1
+18,status,To Do,Gathering Interest,1
+18,status,To Do,New,1
+18,status,Future Consideration,Reviewing,1
+18,status,Accepted,Resolved - pending deploy,1
+19,resolution,,Fixed,3184
+19,resolution,,Answered,1103
+19,resolution,,Duplicate,1049
+19,resolution,,Won't Fix,618
+19,resolution,,Timed out,424
+19,resolution,,Obsolete,406
+19,resolution,,Tracked Elsewhere,197
+19,resolution,,Support Request,191
+19,resolution,,Not a bug,175
+19,resolution,,Cannot Reproduce,150
+19,resolution,,Invalid,137
+19,resolution,Fixed,,128
+19,resolution,,Handled by Support,53
+19,resolution,,Done,42
+19,resolution,Answered,,26
+19,resolution,,Won't Do,25
+19,resolution,Duplicate,,24
+19,resolution,,Resolved Locally,18
+19,resolution,Timed out,,18
+19,resolution,Won't Fix,,16
+19,resolution,,Incomplete,16
+19,resolution,Not a bug,,15
+19,resolution,,Unsolved Mysteries,14
+19,resolution,Cannot Reproduce,,8
+19,resolution,Tracked Elsewhere,,8
+19,resolution,,Deployed,7
+19,resolution,Obsolete,,5
+19,resolution,,Incorrectly Filed,4
+19,resolution,Won't Fix,Fixed,2
+19,resolution,Fixed,Won't Fix,2
+19,resolution,Invalid,,2
+19,resolution,Unsolved Mysteries,,2
+19,resolution,Answered,Done,1
+19,resolution,Support Request,,1
+19,resolution,Support Request,Fixed,1
+19,resolution,Obsolete,Won't Fix,1
+19,resolution,,Spam,1
+19,resolution,Invalid,Won't Fix,1
+19,resolution,Invalid,Fixed,1
+19,resolution,Incorrectly Filed,,1
+19,resolution,Incomplete,,1
+19,resolution,Fixed,Duplicate,1
+19,resolution,Done,,1
+19,status,Resolved,Closed,5692
+19,status,RESOLVED,Closed,3683
+19,status,Closed,Resolved,3600
+19,status,Open,Resolved,3587
+19,status,Open,Gathering Interest,2955
+19,status,Open,In Progress,1585
+19,status,In Progress,Awaiting Quality Review,1462
+19,status,Awaiting Quality Review,Quality Review,1396
+19,status,Open,Closed,1343
+19,status,Open,Verified,982
+19,status,Quality Review,Awaiting Deployment,733
+19,status,Awaiting Deployment,Resolved,721
+19,status,Quality Review,Resolved,424
+19,status,Verified,Gathering Impact,416
+19,status,Verified,Resolved,370
+19,status,Gathering Impact,Closed,358
+19,status,In Progress,Resolved,341
+19,status,Done,Resolved,302
+19,status,Closed,Done,289
+19,status,Awaiting Development,In Progress,283
+19,status,In Progress,Open,227
+19,status,Open,Awaiting Development,212
+19,status,Quality Review,In Progress,189
+19,status,Resolved,Open,146
+19,status,Verified,Awaiting Development,145
+19,status,Needs Triage,Gathering Impact,141
+19,status,Open,Needs Verification,133
+19,status,Awaiting Quality Review,In Progress,106
+19,status,Awaiting Soak,Soaking,102
+19,status,New,Open,100
+19,status,Soaking,Resolved,100
+19,status,Needs Triage,Closed,98
+19,status,Needs Triage,Long Term Backlog,88
+19,status,In Progress,Closed,74
+19,status,Gathering Interest,Open,73
+19,status,Long Term Backlog,Closed,69
+19,status,Gathering Interest,Closed,67
+19,status,Verified,Long Term Backlog,63
+19,status,Needs Triage,Short Term Backlog,61
+19,status,In Progress,Technical Review,58
+19,status,Open - untriaged,Open,58
+19,status,Needs Verification,Verified,57
+19,status,Technical Review,Awaiting Soak,55
+19,status,Closed,Open,54
+19,status,In Progress,Quality Review,54
+19,status,Quality Review,Awaiting Quality Review,49
+19,status,Awaiting Soak,Resolved,49
+19,status,Needs Triage,In Progress,46
+19,status,Waiting for Release,Closed,46
+19,status,Needs Verification,Resolved,44
+19,status,Quality Review,Awaiting Soak,44
+19,status,Open,Needs Triage,43
+19,status,Short Term Backlog,Closed,43
+19,status,Verified,Open,38
+19,status,Verified,Awaiting Soak,35
+19,status,Awaiting Development,Open,33
+19,status,Short Term Backlog,In Progress,33
+19,status,In Progress,Waiting for Release,32
+19,status,Open,Awaiting Soak,31
+19,status,Resolved,Reopened,29
+19,status,Needs Verification,Open,27
+19,status,Closed,Needs Triage,25
+19,status,Gathering Impact,Short Term Backlog,23
+19,status,Awaiting Quality Review,Resolved,23
+19,status,Awaiting Development,Resolved,21
+19,status,Quality Review,Open,19
+19,status,Reopened,Resolved,19
+19,status,Gathering Impact,In Progress,19
+19,status,In Progress,Done,18
+19,status,Awaiting Development,Short Term Backlog,17
+19,status,Gathering Impact,Needs Triage,15
+19,status,Verified,Future Consideration,14
+19,status,To Do,Open,14
+19,status,ToDo,In Progress,14
+19,status,Awaiting Deployment,Awaiting Quality Review,13
+19,status,Awaiting Soak,In Progress,13
+19,status,Design in Progress,Awaiting Design Review,11
+19,status,Gathering Interest,Future Consideration,11
+19,status,Awaiting Development,Waiting for Release,11
+19,status,Closed,Closed,11
+19,status,Gathering Interest,In Progress,10
+19,status,Gathering Interest,Needs Triage,10
+19,status,Open,Design in Progress,9
+19,status,Awaiting Development,Awaiting Soak,8
+19,status,Needs Triage,Open,8
+19,status,Resolved,Awaiting Deployment,8
+19,status,Design Backlog,Design in Progress,7
+19,status,Reopened,In Progress,7
+19,status,Long Term Backlog,Short Term Backlog,7
+19,status,Open,Design Backlog,7
+19,status,Awaiting Design Review,Awaiting Development,7
+19,status,Needs Verification,Awaiting Development,7
+19,status,Testing Notes,In Progress,7
+19,status,New,Resolved,6
+19,status,In Progress,In Review,6
+19,status,Gathering Impact,Long Term Backlog,6
+19,status,In Progress,Short Term Backlog,6
+19,status,In Progress,Awaiting Release,5
+19,status,Open,Selected for Development,5
+19,status,Selected for Development,Open,5
+19,status,Short Term Backlog,Long Term Backlog,5
+19,status,Open,Open - untriaged,5
+19,status,Open - untriaged,Needs Verification,5
+19,status,Done,In Progress,5
+19,status,Awaiting Deployment,Quality Review,5
+19,status,Testing Notes,Open,5
+19,status,Long Term Backlog,In Progress,4
+19,status,In Progress,Awaiting Development,4
+19,status,Design in Progress,Design Backlog,4
+19,status,Design Backlog,Open,4
+19,status,Reopened,Open,4
+19,status,Awaiting Release,Closed,4
+19,status,Awaiting Review,Open,4
+19,status,In Review,Waiting for Release,4
+19,status,Short Term Backlog,Needs Triage,4
+19,status,Awaiting Soak,Open,3
+19,status,Awaiting Soak,Testing Notes,3
+19,status,In Review,Closed,3
+19,status,Needs Verification,Testing Notes,3
+19,status,Awaiting Soak,Waiting for Release,3
+19,status,In Progress,Gathering Impact,3
+19,status,Open,Testing Notes,3
+19,status,Awaiting Design Review,Open,3
+19,status,Awaiting Soak,Quality Review,3
+19,status,ToDo,ToDo,3
+19,status,Needs Triage,Gathering Interest,3
+19,status,Design in Progress,Open,3
+19,status,Closed,Reopened,3
+19,status,Gathering Impact,Gathering Interest,3
+19,status,In Progress,Needs Triage,3
+19,status,ToDo,Done,2
+19,status,Long Term Backlog,Gathering Impact,2
+19,status,Long Term Backlog,Gathering Interest,2
+19,status,Needs Verification,Blocked/Awaiting External,2
+19,status,Needs Verification,Needs Triage,2
+19,status,Gathering Interest,Gathering Interest,2
+19,status,Closed,Gathering Interest,2
+19,status,Gathering Interest,Gathering Impact,2
+19,status,Blocked/Awaiting External,Open,2
+19,status,Gathering Interest,Reviewing,2
+19,status,Done,ToDo,2
+19,status,Gathering Interest,Not Being Considered,2
+19,status,Awaiting Design Review,Design in Progress,2
+19,status,Open,Open,2
+19,status,Short Term Backlog,Gathering Impact,2
+19,status,Soaking,Waiting for Release,2
+19,status,Technical Review,In Progress,2
+19,status,Testing Notes,Testing Notes,2
+19,status,In Progress,Long Term Backlog,2
+19,status,Open - untriaged,New,1
+19,status,Open - untriaged,Accepted,1
+19,status,Open,Gathering Impact,1
+19,status,In Progress,Awaiting Design Review,1
+19,status,Open,Awaiting Release,1
+19,status,In Progress,Testing Notes,1
+19,status,Technical Review,In Review,1
+19,status,Accepted,Open,1
+19,status,Needs Triage,Under Consideration,1
+19,status,In Progress,In Progress,1
+19,status,Future Consideration,Gathering Interest,1
+19,status,Waiting for Release,Gathering Impact,1
+19,status,Needs Triage,Needs Verification,1
+19,status,Gathering Impact,Future Consideration,1
+19,status,Awaiting Development,Testing Notes,1
+19,status,Closed,In Progress,1
+19,status,Awaiting Soak,Awaiting Quality Review,1
+19,status,Long Term Backlog,Needs Triage,1
+19,status,Verified,In Progress,1
+19,status,Reviewing,Gathering Interest,1
+19,status,Resolved,Awaiting Soak,1
+19,status,Reopened,Closed,1
+19,status,Gathering Interest,Under Consideration,1
+19,status,Quality Review,Testing Notes,1
+20,resolution,,Fixed,3956
+20,resolution,,Duplicate,1413
+20,resolution,,Answered,1310
+20,resolution,,Won't Fix,1225
+20,resolution,,Obsolete,590
+20,resolution,,Timed out,561
+20,resolution,,Won't Do,559
+20,resolution,,<USER>Request,353
+20,resolution,,Not a bug,318
+20,resolution,,Tracked Elsewhere,257
+20,resolution,,Cannot Reproduce,251
+20,resolution,Fixed,,203
+20,resolution,,Handled by <USER>,158
+20,resolution,,Invalid,152
+20,resolution,Duplicate,,44
+20,resolution,Timed out,,42
+20,resolution,,Resolved Locally,41
+20,resolution,Answered,,31
+20,resolution,,Done,24
+20,resolution,,Unsolved Mysteries,22
+20,resolution,,Incomplete,19
+20,resolution,Won't Fix,,18
+20,resolution,Not a bug,,18
+20,resolution,Cannot Reproduce,,15
+20,resolution,,Incorrectly Filed,11
+20,resolution,Obsolete,,10
+20,resolution,,Documented,9
+20,resolution,Handled by Support,,8
+20,resolution,Tracked Elsewhere,,7
+20,resolution,Fixed,Won't Fix,7
+20,resolution,,Deployed,6
+20,resolution,Invalid,,5
+20,resolution,Fixed,Duplicate,5
+20,resolution,Fixed,Obsolete,4
+20,resolution,Support Request,,4
+20,resolution,Fixed,Cannot Reproduce,3
+20,resolution,Documented,,3
+20,resolution,Fixed,Handled by <USER>,2
+20,resolution,,To Review,1
+20,resolution,Fixed,Documented,1
+20,resolution,Done,,1
+20,resolution,Incorrectly Filed,,1
+20,resolution,Unsolved Mysteries,,1
+20,resolution,Answered,Done,1
+20,resolution,Tracked Elsewhere,Duplicate,1
+20,resolution,Resolved Locally,,1
+20,resolution,Obsolete,Fixed,1
+20,resolution,Won't Fix,Fixed,1
+20,resolution,Handled by Support,Fixed,1
+20,status,Resolved,Closed,9743
+20,status,Open,Resolved,6282
+20,status,Closed,Resolved,5997
+20,status,RESOLVED,Closed,5004
+20,status,Open,In Progress,1795
+20,status,Open,Gathering Interest,1599
+20,status,In Progress,Awaiting Quality Review,1507
+20,status,Awaiting Quality Review,Quality Review,1453
+20,status,Open,Closed,1421
+20,status,Quality Review,Awaiting Deployment,645
+20,status,Awaiting Deployment,Resolved,628
+20,status,Quality Review,Resolved,616
+20,status,Gathering Interest,Resolved,569
+20,status,Gathering Interest,Closed,523
+20,status,Open,Verified,493
+20,status,In Progress,Resolved,477
+20,status,Awaiting Development,In Progress,359
+20,status,Needs Triage,Gathering Impact,340
+20,status,Open,Awaiting Development,326
+20,status,Open,Needs Triage,321
+20,status,In Progress,Open,304
+20,status,Verified,Gathering Impact,279
+20,status,Quality Review,In Progress,201
+20,status,Resolved,Open,191
+20,status,Open,Needs Verification,160
+20,status,In Progress,Quality Review,143
+20,status,New,Open,113
+20,status,Awaiting Quality Review,In Progress,111
+20,status,Verified,Resolved,100
+20,status,Awaiting Soak,Soaking,98
+20,status,Soaking,Resolved,97
+20,status,Waiting for Release,Closed,96
+20,status,Resolved,Reopened,91
+20,status,Awaiting Soak,Resolved,90
+20,status,Closed,Open,88
+20,status,Verified,Awaiting Development,87
+20,status,Needs Triage,Closed,86
+20,status,In Progress,Waiting for Release,85
+20,status,Reopened,Resolved,75
+20,status,Quality Review,Awaiting Soak,67
+20,status,Gathering Impact,In Progress,64
+20,status,Awaiting Development,Open,60
+20,status,In Progress,Technical Review,59
+20,status,Technical Review,Awaiting Soak,58
+20,status,Open - untriaged,Open,52
+20,status,Gathering Impact,Closed,51
+20,status,Quality Review,Awaiting Quality Review,50
+20,status,Needs Verification,Verified,50
+20,status,Open,Awaiting Soak,49
+20,status,Needs Verification,Awaiting Development,46
+20,status,Verified,Open,44
+20,status,Awaiting Development,Resolved,38
+20,status,Needs Verification,Resolved,30
+20,status,In Review,Waiting for Release,28
+20,status,Closed,Reopened,28
+20,status,In Progress,In Review,26
+20,status,Gathering Interest,In Progress,25
+20,status,Verified,Awaiting Soak,25
+20,status,Quality Review,Open,25
+20,status,Needs Verification,Open,25
+20,status,Gathering Interest,Reviewing,24
+20,status,Reopened,In Progress,21
+20,status,Awaiting Review,Open,21
+20,status,Closed,Needs Triage,21
+20,status,Awaiting Release,Resolved,20
+20,status,Needs Triage,In Progress,19
+20,status,In Progress,Closed,18
+20,status,To Do,Open,16
+20,status,Needs Triage,Long Term Backlog,14
+20,status,Short Term Backlog,In Progress,13
+20,status,In Progress,Awaiting Development,13
+20,status,Gathering Impact,Long Term Backlog,12
+20,status,Reopened,Open,12
+20,status,Needs Verification,Needs Triage,12
+20,status,Awaiting Deployment,Awaiting Quality Review,12
+20,status,Design in Progress,Awaiting Design Review,11
+20,status,Reopened,Closed,11
+20,status,Reviewing,Future Consideration,11
+20,status,Closed,Done,11
+20,status,Gathering Interest,Needs Triage,10
+20,status,Done,Closed,10
+20,status,Testing Notes,In Progress,10
+20,status,Open,Design in Progress,10
+20,status,Awaiting Development,Awaiting Soak,10
+20,status,Awaiting Release,Waiting for Release,9
+20,status,Gathering Impact,Short Term Backlog,9
+20,status,Verified,Awaiting Release,8
+20,status,Needs Triage,Open,8
+20,status,Long Term Backlog,In Progress,8
+20,status,Awaiting Soak,In Progress,8
+20,status,Under Consideration,In Progress,7
+20,status,Awaiting Quality Review,Resolved,7
+20,status,Awaiting Deployment,Quality Review,7
+20,status,Awaiting Design Review,Awaiting Development,7
+20,status,Awaiting Soak,Awaiting Release,7
+20,status,New,Resolved,7
+20,status,Design Backlog,Design in Progress,7
+20,status,Open,Design Backlog,7
+20,status,Selected for Development,Open,6
+20,status,Resolved,Awaiting Deployment,6
+20,status,Needs Triage,Short Term Backlog,6
+20,status,Open,Selected for Development,6
+20,status,Gathering Interest,Future Consideration,6
+20,status,Awaiting Development,Short Term Backlog,6
+20,status,Open - untriaged,Needs Verification,5
+20,status,Open,Open - untriaged,5
+20,status,Open,Open,5
+20,status,Reviewing,Not Being Considered,5
+20,status,Testing Notes,Open,5
+20,status,In Progress,Awaiting Release,5
+20,status,Gathering Interest,Under Consideration,5
+20,status,Resolved,Awaiting Release,5
+20,status,Short Term Backlog,Closed,5
+20,status,Long Term Backlog,Short Term Backlog,4
+20,status,Long Term Backlog,Gathering Impact,4
+20,status,Reviewing,Under Consideration,4
+20,status,Short Term Backlog,Gathering Impact,4
+20,status,Open,Testing Notes,4
+20,status,Design in Progress,Open,4
+20,status,Waiting for Release,Resolved,4
+20,status,Closed,Closed,4
+20,status,Design in Progress,Design Backlog,4
+20,status,Design Backlog,Open,4
+20,status,Needs Verification,Testing Notes,3
+20,status,Open,Gathering Impact,3
+20,status,Technical Review,In Progress,3
+20,status,Future Consideration,Under Consideration,3
+20,status,Awaiting Soak,Testing Notes,3
+20,status,Awaiting Design Review,Open,3
+20,status,Awaiting Soak,Open,3
+20,status,Awaiting Soak,Quality Review,3
+20,status,Needs Triage,Gathering Interest,3
+20,status,Reviewing,In Progress,3
+20,status,Under Consideration,Future Consideration,2
+20,status,In Progress,Testing Notes,2
+20,status,Closed,Gathering Interest,2
+20,status,Awaiting Design Review,Design in Progress,2
+20,status,Long Term Backlog,Closed,2
+20,status,Awaiting Development,Awaiting Release,2
+20,status,Gathering Interest,Open,2
+20,status,Needs Triage,Needs Verification,2
+20,status,Gathering Impact,Needs Triage,2
+20,status,Needs Verification,Blocked/Awaiting External,2
+20,status,Future Consideration,In Progress,2
+20,status,Deployment,Resolved,2
+20,status,Awaiting Development,Testing Notes,2
+20,status,Gathering Interest,Not Being Considered,2
+20,status,Awaiting Deployment,Deployment,2
+20,status,Open,Awaiting Release,2
+20,status,Awaiting Soak,Awaiting Quality Review,2
+20,status,Blocked/Awaiting External,Open,2
+20,status,Quality Review,Technical Review,2
+20,status,Resolved,Awaiting Soak,2
+20,status,Testing Notes,Testing Notes,2
+20,status,Waiting for Release,Gathering Impact,2
+20,status,Waiting for Release,In Review,2
+20,status,RESOLVED,Gathering Interest,1
+20,status,Quality Review,Testing Notes,1
+20,status,Short Term Backlog,Needs Triage,1
+20,status,Soaking,Awaiting Soak,1
+20,status,Open - untriaged,New,1
+20,status,Needs Verification,Gathering Impact,1
+20,status,In Progress,To be reviewed,1
+20,status,Done,Open,1
+20,status,In Progress,Short Term Backlog,1
+20,status,Waiting for Release,RESOLVED,1
+20,status,To Do,Gathering Interest,1
+20,status,In Progress,Reviewing,1
+20,status,To be reviewed,In Progress,1
+20,status,Gathering Interest,Gathering Impact,1
+20,status,Future Consideration,Resolved,1
+20,status,Under Consideration,Reviewing,1
+20,status,Awaiting Review,Closed,1
+20,status,Gathering Impact,Gathering Interest,1
+20,status,Gathering Impact,Resolved,1
+20,status,In Progress,Gathering Interest,1
+20,status,Verified,In Progress,1
+20,status,In Progress,Future Consideration,1
+20,status,Awaiting Review,Resolved,1
+20,status,In Progress,Awaiting Design Review,1
+20,status,Gathering Interest,Verified,1
+20,status,Waiting for Release,Short Term Backlog,1
+20,status,Reviewing,RESOLVED,1
+20,status,Reviewing,Gathering Interest,1
+20,status,Resolved,Gathering Interest,1
+21,resolution,,Fixed,2134
+21,resolution,,Timed out,1768
+21,resolution,,Duplicate,554
+21,resolution,,Won't Fix,270
+21,resolution,Fixed,,216
+21,resolution,,Cannot Reproduce,151
+21,resolution,,Obsolete,147
+21,resolution,,Tracked Elsewhere,143
+21,resolution,,Not a bug,90
+21,resolution,,Done,78
+21,resolution,,Answered,62
+21,resolution,,Invalid,60
+21,resolution,,Support Request,58
+21,resolution,Duplicate,,35
+21,resolution,,Won't Do,25
+21,resolution,Timed out,,20
+21,resolution,Won't Fix,,19
+21,resolution,Cannot Reproduce,,19
+21,resolution,,Handled by Support,19
+21,resolution,Not a bug,,17
+21,resolution,Handled by Support,,17
+21,resolution,,Incorrectly Filed,14
+21,resolution,Tracked Elsewhere,,12
+21,resolution,,Incomplete,10
+21,resolution,,Deployed,8
+21,resolution,Answered,,7
+21,resolution,Obsolete,,6
+21,resolution,Support Request,,5
+21,resolution,Fixed,Duplicate,5
+21,resolution,Done,,4
+21,resolution,,Resolved Locally,4
+21,resolution,Fixed,Invalid,2
+21,resolution,Invalid,,2
+21,resolution,Fixed,Obsolete,2
+21,resolution,,Unsolved Mysteries,2
+21,resolution,Won't Fix,Duplicate,1
+21,resolution,Deployed,Won't Do,1
+21,resolution,Fixed,Cannot Reproduce,1
+21,resolution,Duplicate,Tracked Elsewhere,1
+21,resolution,Duplicate,Not a bug,1
+21,resolution,,Unresolved,1
+21,resolution,Timed out,Duplicate,1
+21,resolution,,Declined,1
+21,resolution,Won't Do,,1
+21,status,RESOLVED,Closed,8094
+21,status,Resolved,Closed,6218
+21,status,Needs Triage,Gathering Impact,3342
+21,status,Needs Verification,Gathering Interest,2855
+21,status,Needs Verification,Open,2780
+21,status,Open,Needs Triage,2619
+21,status,Gathering Impact,Closed,1867
+21,status,Open,Gathering Interest,1577
+21,status,Open,In Progress,1005
+21,status,Open,Resolved,930
+21,status,Closed,Closed,735
+21,status,Closed,Resolved,732
+21,status,Triage,Open,678
+21,status,New,Open,606
+21,status,Needs Verification,Resolved,586
+21,status,Awaiting Merge,Awaiting Release,413
+21,status,In Progress,Technical Review,368
+21,status,Awaiting Release,Resolved,299
+21,status,In Progress,Closed,281
+21,status,Open,Closed,273
+21,status,Under Review,Closed,243
+21,status,Needs Triage,Long Term Backlog,238
+21,status,In Progress,Resolved,233
+21,status,Quality Review,Awaiting Merge,227
+21,status,Open,Needs Verification,222
+21,status,In Progress,Under Review,208
+21,status,Open,Open,206
+21,status,Resolved,Open,196
+21,status,Needs Triage,Short Term Backlog,193
+21,status,Technical Review,Awaiting Quality Review,174
+21,status,Technical Review,Awaiting Merge,173
+21,status,Waiting for Release,Closed,166
+21,status,Triage,In Progress,144
+21,status,New,Resolved,140
+21,status,Triage,Closed,131
+21,status,In Progress,Open,121
+21,status,Awaiting Quality Review,Quality Review,113
+21,status,Released to Cloud,Resolved,109
+21,status,Needs Verification,Verified,107
+21,status,Short Term Backlog,In Progress,107
+21,status,In Progress,Waiting for Release,106
+21,status,Gathering Impact,Short Term Backlog,106
+21,status,Gathering Impact,In Progress,103
+21,status,In Progress,In Review,101
+21,status,Awaiting Release,Released to Cloud,97
+21,status,Needs Triage,In Progress,95
+21,status,Gathering Interest,Closed,89
+21,status,Open,Technical Review,86
+21,status,Needs Triage,Closed,80
+21,status,Technical Review,Quality Review,76
+21,status,Awaiting Quality Review,Awaiting Merge,75
+21,status,In Review,Waiting for Release,71
+21,status,Verified,Open,71
+21,status,In Progress,Quality Review,66
+21,status,Closed,Needs Triage,66
+21,status,Under Review,In Progress,59
+21,status,Closed,Under Review,53
+21,status,Gathering Impact,Long Term Backlog,52
+21,status,Awaiting Merge,Resolved,51
+21,status,Open,Under Review,46
+21,status,Closed,Open,45
+21,status,Short Term Backlog,Closed,42
+21,status,Gathering Impact,Needs Triage,35
+21,status,Triage,Triage,35
+21,status,Needs Verification,Needs Triage,32
+21,status,Open - untriaged,Open,30
+21,status,In Progress,Awaiting Quality Review,26
+21,status,Long Term Backlog,Short Term Backlog,26
+21,status,In Review,Closed,22
+21,status,Open,Triage,21
+21,status,Verified,Under Consideration,21
+21,status,Released to Server,Open,19
+21,status,Verified,Resolved,19
+21,status,Long Term Backlog,In Progress,18
+21,status,Technical Review,Resolved,17
+21,status,Quality Review,Resolved,16
+21,status,Gathering Interest,In Progress,16
+21,status,Gathering Interest,Under Consideration,16
+21,status,Short Term Backlog,Gathering Impact,15
+21,status,Long Term Backlog,Closed,15
+21,status,In Review,In Progress,12
+21,status,Long Term Backlog,Gathering Impact,12
+21,status,In Progress,Short Term Backlog,11
+21,status,Short Term Backlog,Long Term Backlog,11
+21,status,Technical Review,In Progress,11
+21,status,Awaiting Release,Open,10
+21,status,Quality Review,Technical Review,10
+21,status,Technical Review,Open,10
+21,status,Gathering Interest,Open,9
+21,status,Under Consideration,In Progress,9
+21,status,Awaiting Release,Waiting for Release,8
+21,status,In Progress,Gathering Impact,8
+21,status,Technical Review,In Review,8
+21,status,Closed,Gathering Interest,8
+21,status,New,In Progress,7
+21,status,Verified,Needs Verification,7
+21,status,Gathering Interest,Future Consideration,7
+21,status,To Do,Open,7
+21,status,Gathering Interest,Needs Triage,7
+21,status,Gathering Interest,Reviewing,7
+21,status,Awaiting Release,Awaiting Release,7
+21,status,Awaiting Quality Review,Resolved,6
+21,status,Open - untriaged,New,6
+21,status,Under Consideration,Reviewing,5
+21,status,Reviewing,Under Consideration,5
+21,status,Gathering Impact,Gathering Interest,5
+21,status,In Progress,Long Term Backlog,5
+21,status,Quality Review,Open,5
+21,status,Awaiting Merge,Waiting for Release,5
+21,status,Waiting for Release,In Progress,4
+21,status,Under Review,Open,4
+21,status,In Progress,In Progress,4
+21,status,Waiting for Support,Open,4
+21,status,Needs Verification,Needs Verification,4
+21,status,Needs Triage,Open,4
+21,status,Needs Triage,Gathering Interest,4
+21,status,New,Needs Triage,4
+21,status,Reviewing,Gathering Interest,3
+21,status,Gathering Interest,Not Being Considered,3
+21,status,Awaiting Merge,Quality Review,3
+21,status,Waiting for Support,Triage,3
+21,status,Open,Open - untriaged,3
+21,status,Under Review,Under Review,3
+21,status,Awaiting Merge,Open,3
+21,status,Awaiting Merge,In Progress,3
+21,status,Future Consideration,In Progress,3
+21,status,New,Gathering Impact,3
+21,status,Waiting for Release,In Review,3
+21,status,Open - untriaged,Accepted,3
+21,status,Reviewing,In Progress,3
+21,status,Open,Verified,2
+21,status,In Review,Gathering Impact,2
+21,status,Long Term Backlog,Gathering Interest,2
+21,status,In Progress,Reviewing,2
+21,status,In Progress,Needs Triage,2
+21,status,Needs Verification,Open - untriaged,2
+21,status,Awaiting Quality Review,In Review,2
+21,status,Awaiting Quality Review,Technical Review,2
+21,status,New,Needs Verification,2
+21,status,Accepted,New,2
+21,status,Gathering Interest,Needs Verification,2
+21,status,Gathering Interest,Gathering Interest,2
+21,status,Escalated,Open,2
+21,status,Awaiting Quality Review,Open,2
+21,status,Open - untriaged,Needs Verification,2
+21,status,Short Term Backlog,Gathering Interest,2
+21,status,Technical Review,Technical Review,2
+21,status,Waiting for Support,Waiting for Customer,2
+21,status,Under Consideration,Closed,2
+21,status,Under Consideration,Gathering Interest,2
+21,status,Waiting for Customer,Waiting for Support,2
+21,status,Waiting for Dev Spt,Open,2
+21,status,Waiting for Support,Escalated,2
+21,status,To Do,Triage,1
+21,status,RESOLVED,RESOLVED,1
+21,status,Quality Review,In Review,1
+21,status,Open,Waiting for Support,1
+21,status,Waiting for Release,Short Term Backlog,1
+21,status,Triage,Waiting for Dev Spt,1
+21,status,Triage,Waiting for Support,1
+21,status,In Progress,Gathering Interest,1
+21,status,Under Consideration,Future Consideration,1
+21,status,Waiting for Support,In Progress,1
+21,status,Open,Waiting for Dev Spt,1
+21,status,Under Consideration,RESOLVED,1
+21,status,Awaiting Quality Review,In Progress,1
+21,status,Not Being Considered,Gathering Interest,1
+21,status,New,Open - untriaged,1
+21,status,New,Gathering Interest,1
+21,status,Under Review,Resolved,1
+21,status,Gathering Interest,RESOLVED,1
+21,status,Untriaged,Open,1
+21,status,Verified,Awaiting Development,1
+21,status,Needs Triage,Needs Verification,1
+21,status,Awaiting Development,In Progress,1
+21,status,Closed,Reviewing,1
+21,status,Accepted,Resolved - pending deploy,1
+21,status,In Review,Long Term Backlog,1
+21,status,Gathering Interest,Gathering Impact,1
+21,status,Closed,Triage,1
+21,status,Long Term Backlog,Needs Triage,1
+21,status,Future Consideration,Under Consideration,1
+21,status,Waiting for Release,Long Term Backlog,1
+21,status,Short Term Backlog,Needs Triage,1
+21,status,Reviewing,Closed,1
+21,status,Resolved - pending deploy,Resolved,1
+21,status,Resolved,Reopened,1
+21,status,Waiting for Release,Needs Triage,1
+21,status,To Do,In Progress,1
+21,status,Reopened,In Progress,1
+22,resolution,,Fixed,12517
+22,resolution,,Won't Fix,6416
+22,resolution,,Duplicate,4395
+22,resolution,,Won't Do,3216
+22,resolution,,Timed out,2321
+22,resolution,,Obsolete,2163
+22,resolution,,Support Request,1991
+22,resolution,,Answered,1940
+22,resolution,,Cannot Reproduce,944
+22,resolution,,Handled by Support,931
+22,resolution,Fixed,,927
+22,resolution,Handled by Support,,916
+22,resolution,,Not a bug,830
+22,resolution,,Tracked Elsewhere,575
+22,resolution,,Invalid,539
+22,resolution,Won't Fix,,199
+22,resolution,,Resolved Locally,198
+22,resolution,Duplicate,,196
+22,resolution,,Fixed [1],131
+22,resolution,Cannot Reproduce,,118
+22,resolution,Answered,,116
+22,resolution,,Done,93
+22,resolution,Timed out,,79
+22,resolution,Not a bug,,77
+22,resolution,Obsolete,,70
+22,resolution,,Incomplete,57
+22,resolution,Tracked Elsewhere,,55
+22,resolution,,Unsolved Mysteries,49
+22,resolution,Support Request,,48
+22,resolution,Answered,Support Request,36
+22,resolution,Invalid,,35
+22,resolution,Won't Do,,35
+22,resolution,Resolved Locally,,32
+22,resolution,,Duplicate [3],10
+22,resolution,Done,,10
+22,resolution,,Cannot Reproduce [5],9
+22,resolution,,Invalid [6],7
+22,resolution,Incomplete,,6
+22,resolution,,Resolved Locally [7],6
+22,resolution,,Won't Fix [2],5
+22,resolution,,Deployed,5
+22,resolution,,Incorrectly Filed,4
+22,resolution,Resolved Locally,Support Request,4
+22,resolution,Duplicate,Support Request,3
+22,resolution,Fixed,Done,3
+22,resolution,Fixed,Duplicate,3
+22,resolution,Fixed [1],,3
+22,resolution,Unsolved Mysteries,,3
+22,resolution,Handled by Support,Support Request,3
+22,resolution,Done,Fixed,3
+22,resolution,Won't Fix,Support Request,2
+22,resolution,Won't Do,Duplicate,2
+22,resolution,Tracked Elsewhere,Support Request,2
+22,resolution,Fixed,Support Request,2
+22,resolution,Invalid,Support Request,1
+22,resolution,Incorrectly Filed,,1
+22,resolution,,Spam,1
+22,resolution,Fixed,Tracked Elsewhere,1
+22,resolution,Fixed,Not a bug,1
+22,resolution,Duplicate [3],,1
+22,resolution,,Answered [9],1
+22,resolution,Duplicate,Fixed,1
+22,resolution,Won't Fix,Duplicate,1
+22,resolution,Timed out,Support Request,1
+22,resolution,Timed out,Duplicate,1
+22,resolution,Obsolete,Not a bug,1
+22,resolution,Not a bug,Invalid,1
+22,status,Resolved,Closed,21832
+22,status,Open,Resolved,18156
+22,status,RESOLVED,Closed,13869
+22,status,New,Open,7977
+22,status,New,Resolved,5112
+22,status,Closed,Resolved,4058
+22,status,Open,Closed,3762
+22,status,Open,Gathering Impact,3370
+22,status,Open,In Progress,3257
+22,status,Open,Needs Verification,2978
+22,status,Needs Verification,Resolved,2777
+22,status,Needs Verification,Open,2746
+22,status,Needs Verification,Gathering Interest,2408
+22,status,Open,Technical Review,2311
+22,status,Technical Review,Quality Review,2245
+22,status,Quality Review,Resolved,2017
+22,status,Resolved,Open,1921
+22,status,New,Needs Verification,1805
+22,status,Gathering Interest,Resolved,1528
+22,status,In Progress,Technical Review,1446
+22,status,Technical Review,Awaiting Quality Review,878
+22,status,In Progress,Resolved,813
+22,status,Quality Review,Awaiting Merge,812
+22,status,Gathering Impact,Closed,782
+22,status,Awaiting Quality Review,Quality Review,699
+22,status,Awaiting Merge,Resolved,683
+22,status,Needs Triage,Gathering Impact,643
+22,status,Gathering Impact,Resolved,624
+22,status,Awaiting Merge,Awaiting Release,525
+22,status,Needs Triage,Long Term Backlog,458
+22,status,Open,Implemented,407
+22,status,Open,Gathering Interest,388
+22,status,In Progress,Quality Review,377
+22,status,In Progress,Open,352
+22,status,Implemented,Resolved,348
+22,status,Closed,Open,346
+22,status,In Progress,In Review,299
+22,status,Closed,Reopened,296
+22,status,Technical Review,Awaiting Merge,282
+22,status,Verified,Open,279
+22,status,Open,Verified,271
+22,status,In Progress,Under Review,271
+22,status,Needs Triage,Short Term Backlog,263
+22,status,Needs Verification,Verified,252
+22,status,Implemented,To be reviewed,248
+22,status,Quality Review,Open,248
+22,status,Waiting for Release,Closed,246
+22,status,Under Review,Resolved,229
+22,status,Short Term Backlog,In Progress,228
+22,status,In Review,Awaiting Merge,224
+22,status,Awaiting Release,Resolved,221
+22,status,Gathering Impact,Long Term Backlog,217
+22,status,Resolved,Reopened,213
+22,status,Technical Review,Open,211
+22,status,Reopened,Closed,201
+22,status,To be reviewed,Resolved,195
+22,status,Quality Review,Ready for Web Release,191
+22,status,Ready for Web Release,Resolved,189
+22,status,Gathering Impact,Short Term Backlog,185
+22,status,Released to Server,Resolved,176
+22,status,Awaiting Release,Released to Server,173
+22,status,In Progress,Closed,171
+22,status,Technical Review,Resolved,167
+22,status,Awaiting Quality Review,Awaiting Merge,153
+22,status,Awaiting Merge,Waiting for Release,141
+22,status,Reopened,Resolved,139
+22,status,Verified,Resolved,125
+22,status,Short Term Backlog,Long Term Backlog,125
+22,status,Needs Triage,Closed,123
+22,status,In Progress,Waiting for Release,123
+22,status,Reopened,Implemented,120
+22,status,Awaiting Release,Released to Cloud,107
+22,status,Resolved,Resolved,105
+22,status,Open - untriaged,Open,101
+22,status,Closed,Needs Triage,99
+22,status,New,In Progress,99
+22,status,Released to Cloud,Resolved,97
+22,status,Long Term Backlog,Short Term Backlog,83
+22,status,Gathering Interest,Closed,76
+22,status,Reopened,Open,75
+22,status,Ready for Development,In Progress,72
+22,status,Awaiting Merge,Closed,66
+22,status,Awaiting Quality Review,Resolved,66
+22,status,In Progress,Awaiting Quality Review,65
+22,status,Gathering Impact,In Progress,59
+22,status,Gathering Interest,Not Being Considered,58
+22,status,Needs Triage,In Progress,54
+22,status,Verified,Implemented,52
+22,status,Gathering Interest,Future Consideration,49
+22,status,Done,Resolved,47
+22,status,Gathering Interest,Under Consideration,47
+22,status,Open - untriaged,New,46
+22,status,Gathering Interest,Reviewing,44
+22,status,Short Term Backlog,Closed,44
+22,status,To be reviewed,Reopened,43
+22,status,Under Review,In Progress,43
+22,status,Quality Review,Technical Review,42
+22,status,Short Term Backlog,Gathering Impact,42
+22,status,Gathering Interest,In Progress,42
+22,status,Under Consideration,In Progress,39
+22,status,Technical Review,In Progress,39
+22,status,Verified,Needs Verification,38
+22,status,In Review,Waiting for Release,38
+22,status,To Do,Done,37
+22,status,Verified,Reviewing,36
+22,status,Open,Open - untriaged,36
+22,status,Short Term Backlog,Ready for Development,35
+22,status,Open,To Do,35
+22,status,Long Term Backlog,Closed,34
+22,status,In Progress,Implemented,33
+22,status,Reviewing,Future Consideration,30
+22,status,Long Term Backlog,In Progress,30
+22,status,Waiting for Release,Resolved,29
+22,status,Needs Verification,Needs Triage,29
+22,status,In Progress,Short Term Backlog,29
+22,status,In Progress,Ready for Development,24
+22,status,Reviewing,In Progress,24
+22,status,Needs Triage,Ready for Development,23
+22,status,New,Needs Triage,23
+22,status,In Review,Closed,23
+22,status,Reopened,In Progress,23
+22,status,Needs Triage,Resolved,22
+22,status,Gathering Interest,Needs Triage,21
+22,status,Closed,Closed,21
+22,status,Resolved,Gathering Interest,21
+22,status,Reviewing,Not Being Considered,21
+22,status,In Progress,Reviewing,20
+22,status,Quality Review,Awaiting Quality Review,19
+22,status,Awaiting Merge,Quality Review,18
+22,status,Needs Triage,Gathering Interest,17
+22,status,Awaiting Quality Review,Technical Review,17
+22,status,Awaiting Merge,Done,17
+22,status,Open,Needs Triage,17
+22,status,Ready for Development,Short Term Backlog,17
+22,status,Awaiting Release,Open,17
+22,status,Awaiting Merge,Open,16
+22,status,Long Term Backlog,Gathering Impact,14
+22,status,Awaiting Quality Review,Open,13
+22,status,Closed,Gathering Interest,13
+22,status,Released to Cloud,Open,12
+22,status,Resolved,Needs Triage,12
+22,status,Waiting for Release,RESOLVED,12
+22,status,Implemented,Reopened,11
+22,status,Awaiting Quality Review,In Progress,11
+22,status,Reviewing,Under Consideration,11
+22,status,Done,Closed,11
+22,status,Awaiting Release,Waiting for Release,10
+22,status,Gathering Impact,Ready for Development,10
+22,status,Open,Design Backlog,10
+22,status,In Review,Done,10
+22,status,To be reviewed,Technical Review,10
+22,status,In Review,Resolved,9
+22,status,Reviewing,Resolved,9
+22,status,Awaiting Merge,In Review,9
+22,status,Design Backlog,Open,9
+22,status,Quality Review,In Progress,9
+22,status,In Review,In Progress,9
+22,status,Awaiting Release,Awaiting Release,8
+22,status,Waiting for Release,Awaiting Merge,8
+22,status,To Do,In Progress,8
+22,status,To Do,Open,8
+22,status,Technical Review,In Review,8
+22,status,Gathering Interest,Open,7
+22,status,Under Consideration,Reviewing,7
+22,status,Under Consideration,Closed,7
+22,status,In Progress,Long Term Backlog,7
+22,status,Short Term Backlog,Resolved,7
+22,status,Needs Triage,Open,7
+22,status,New,Short Term Backlog,6
+22,status,Gathering Interest,RESOLVED,6
+22,status,Future Consideration,Under Consideration,6
+22,status,Reviewing,Closed,6
+22,status,Gathering Interest,Gathering Impact,6
+22,status,Technical Review,Done,6
+22,status,Awaiting Merge,In Progress,5
+22,status,Future Consideration,In Progress,5
+22,status,Open - untriaged,Needs Verification,5
+22,status,Long Term Backlog,Ready for Development,5
+22,status,Waiting for Release,In Progress,5
+22,status,Implemented,Technical Review,5
+22,status,Ready for Development,Closed,5
+22,status,New,Open - untriaged,4
+22,status,New,Gathering Interest,4
+22,status,In Progress,Under Consideration,4
+22,status,In Progress,Verified,4
+22,status,Reopened,Needs Verification,4
+22,status,Open,Long Term Backlog,4
+22,status,Open,Open,4
+22,status,Awaiting Review,Open,4
+22,status,Done,Open,4
+22,status,Open,Short Term Backlog,3
+22,status,Waiting for Release,Short Term Backlog,3
+22,status,In Review,Gathering Impact,3
+22,status,Reopened,Verified,3
+22,status,Done,Awaiting Release,3
+22,status,In Progress,Gathering Impact,3
+22,status,Done,Technical Review,3
+22,status,Under Consideration,Resolved,3
+22,status,Done,Waiting for Release,3
+22,status,Done,Released to Server,3
+22,status,In Review,Short Term Backlog,3
+22,status,Under Consideration,Short Term Backlog,3
+22,status,Open - untriaged,Closed,3
+22,status,Gathering Interest,Needs Verification,3
+22,status,Long Term Backlog,Resolved,2
+22,status,New,Closed,2
+22,status,New,Long Term Backlog,2
+22,status,In Progress,Future Consideration,2
+22,status,Not Being Considered,Closed,2
+22,status,Not Being Considered,Under Consideration,2
+22,status,In Progress,Done,2
+22,status,Open,Done,2
+22,status,In Progress,Awaiting Development,2
+22,status,Open,Reopened,2
+22,status,Ready for Development,Gathering Impact,2
+22,status,Ready for Development,Open,2
+22,status,Ready for Web Release,In Progress,2
+22,status,Define,To Do,2
+22,status,Awaiting Development,In Progress,2
+22,status,Gathering Impact,Gathering Interest,2
+22,status,Future Consideration,Not Being Considered,2
+22,status,Future Consideration,Resolved,2
+22,status,Reviewing,RESOLVED,2
+22,status,Awaiting Quality Review,Done,2
+22,status,Closed,Open - untriaged,2
+22,status,To Do,Define,2
+22,status,Waiting for Release,In Review,2
+22,status,Resolved,Released to Cloud,1
+22,status,In Review,Long Term Backlog,1
+22,status,Needs Triage,Open - untriaged,1
+22,status,Released to Server,Open,1
+22,status,Long Term Backlog,In Review,1
+22,status,Waiting for Release,Long Term Backlog,1
+22,status,Documentation,Done,1
+22,status,Waiting for Release,Not Being Considered,1
+22,status,Reviewing,Ready for Development,1
+22,status,Documentation,Technical Review,1
+22,status,Ready for Development,Long Term Backlog,1
+22,status,Needs Triage,Not Being Considered,1
+22,status,Waiting for Release,Ready for Development,1
+22,status,Short Term Backlog,Gathering Interest,1
+22,status,Done,Awaiting Merge,1
+22,status,RESOLVED,RESOLVED,1
+22,status,RESOLVED,Gathering Interest,1
+22,status,Done,Awaiting Quality Review,1
+22,status,Short Term Backlog,Short Term Backlog,1
+22,status,Short Term Backlog,Under Consideration,1
+22,status,Done,Define,1
+22,status,Done,Documentation,1
+22,status,Technical Review,Define,1
+22,status,Done,Done,1
+22,status,Done,In Progress,1
+22,status,Quality Review,In Review,1
+22,status,Done,To Do,1
+22,status,Accepted,Open,1
+22,status,Open - untriaged,Accepted,1
+22,status,Technical Review,Technical Review,1
+22,status,In Review,Reviewing,1
+22,status,Gathering Interest,Short Term Backlog,1
+22,status,To Do,Gathering Interest,1
+22,status,Gathering Interest,Waiting for Release,1
+22,status,To Do,New,1
+22,status,In Progress,Awaiting Merge,1
+22,status,To Do,Technical Review,1
+22,status,Open,Awaiting Merge,1
+22,status,Open,Awaiting Development,1
+22,status,Not Being Considered,Resolved,1
+22,status,ToDo,Open,1
+22,status,Triage,Open,1
+22,status,Triage,Triage,1
+22,status,Not Being Considered,In Progress,1
+22,status,Not Being Considered,Gathering Impact,1
+22,status,Under Consideration,Needs Triage,1
+22,status,Under Consideration,Not Being Considered,1
+22,status,New,Released to Cloud,1
+22,status,New,Ready for Development,1
+22,status,In Progress,In Progress,1
+22,status,In Progress,New,1
+22,status,New,Gathering Impact,1
+22,status,New,Done,1
+22,status,Needs Verification,Under Review,1
+22,status,In Progress,To Do,1
+22,status,Needs Verification,Open - untriaged,1
+22,status,Needs Verification,New,1
+22,status,Awaiting Quality Review,In Review,1
+22,status,Awaiting Quality Review,Documentation,1
+22,status,Awaiting Development,Open,1
+22,status,Define,Done,1
+22,status,Gathering Impact,Not Being Considered,1
+22,status,Resolved,Done,1
+22,status,Resolved,Future Consideration,1
+22,status,Define,Technical Review,1
+22,status,Design Backlog,Resolved,1
+22,status,Needs Verification,Gathering Impact,1
+23,resolution,,Done,777
+23,resolution,Done,,38
+23,status,To Do,In Progress,520
+23,status,In Progress,In Review,303
+23,status,In Review,Done,223
+23,status,In Progress,Done,186
+23,status,In Review,Complete,143
+23,status,To Do,Complete,92
+23,status,To Do,Done,82
+23,status,To Do,In Review,73
+23,status,In Progress,Complete,51
+23,status,In Progress,In Progress,48
+23,status,In Review,In Progress,25
+23,status,Done,In Review,19
+23,status,In Review,In Review,13
+23,status,To Do,To Do,11
+23,status,Done,In Progress,11
+23,status,Done,Done,10
+23,status,In Progress,To Do,10
+23,status,In Review,To Do,6
+23,status,Complete,Complete,4
+23,status,Complete,In Review,4
+23,status,Complete,In Progress,2
+23,status,Done,To Do,1
+23,status,Backlog,To Do,1
+23,status,Complete,To Do,1
+24,resolution,,Done,10905
+24,resolution,,Won't Do,1402
+24,resolution,Done,,517
+24,resolution,,Duplicate,466
+24,resolution,,Invalid,322
+24,resolution,,Invalid: Works as Expected,219
+24,resolution,,Invalid: Environment Issue,65
+24,resolution,,Invalid: Test Error,36
+24,resolution,Won't Do,,23
+24,resolution,Duplicate,,20
+24,resolution,Invalid: Works as Expected,,15
+24,resolution,,Invalid: Not Supported,15
+24,resolution,Invalid,Done,14
+24,resolution,Done,Won't Do,10
+24,resolution,Invalid,,7
+24,resolution,Invalid: Environment Issue,,6
+24,resolution,Duplicate,Won't Do,3
+24,resolution,,Cannot Reproduce,3
+24,resolution,Cannot Reproduce,Done,2
+24,resolution,Won't Do,Invalid,1
+24,resolution,Invalid: Works as Expected,Duplicate,1
+24,resolution,Done,Invalid: Works as Expected,1
+24,resolution,Cannot Reproduce,,1
+24,resolution,Invalid: Test Error,,1
+24,resolution,Invalid: Not Supported,,1
+24,resolution,Invalid,Won't Do,1
+24,resolution,Invalid,Duplicate,1
+24,resolution,Duplicate,Invalid,1
+24,resolution,Duplicate,Done,1
+24,status,To Do,In Progress,7757
+24,status,Done,Closed,6098
+24,status,In Progress,In CR Review,4619
+24,status,In CR Review,Closed,4555
+24,status,In Review,Done,3089
+24,status,Backlog,To Do,2241
+24,status,To Do,Done,2130
+24,status,In Progress,In Review,1708
+24,status,To Do,In Review,1601
+24,status,Unverified,To Do,1248
+24,status,In Progress,Done,1048
+24,status,To Do,Closed,1016
+24,status,Backlog,Closed,491
+24,status,In Progress,To Do,426
+24,status,Unverified,Closed,390
+24,status,In Progress,Closed,314
+24,status,To Do,Backlog,250
+24,status,In CR Review,In Progress,195
+24,status,In Progress,In Progress,181
+24,status,In Review,In CR Review,150
+24,status,To Do,Unverified,126
+24,status,Unverified,Returned,120
+24,status,Done,To Do,118
+24,status,Closed,To Do,105
+24,status,In Review,In Progress,102
+24,status,Done,In Progress,95
+24,status,Done,In Review,88
+24,status,Invalid,Closed,83
+24,status,Returned,Closed,81
+24,status,Invalid,Invalid,78
+24,status,Closed,In Progress,77
+24,status,To Do,Invalid,68
+24,status,Done,Done,67
+24,status,To Do,To Do,66
+24,status,Duplicate,Closed,65
+24,status,To Do,Duplicate,59
+24,status,Duplicate,Duplicate,59
+24,status,Closed,In CR Review,55
+24,status,Backlog,Done,52
+24,status,In Review,In Review,47
+24,status,Unverified,Done,44
+24,status,Returned,Unverified,42
+24,status,In CR Review,In CR Review,38
+24,status,Unverified,Backlog,36
+24,status,In Progress,Backlog,34
+24,status,Closed,Closed,30
+24,status,Backlog,In Progress,30
+24,status,To Do,Returned,28
+24,status,To Do,Monitor / On Hold,27
+24,status,In Review,To Do,25
+24,status,Backlog,Unverified,24
+24,status,Monitor / On Hold,Done,23
+24,status,Invalid,Done,22
+24,status,In Review,Backlog,19
+24,status,In Progress,Invalid,12
+24,status,Monitor / On Hold,Returned,11
+24,status,Returned,Done,11
+24,status,Closed,Backlog,10
+24,status,In Review,Invalid,10
+24,status,Done,Backlog,9
+24,status,Duplicate,Done,9
+24,status,Backlog,In Review,9
+24,status,Monitor / On Hold,Monitor / On Hold,8
+24,status,Unverified,In Progress,8
+24,status,Done,Duplicate,7
+24,status,Returned,Returned,7
+24,status,Done,Invalid,6
+24,status,Backlog,Invalid,6
+24,status,In Progress,Monitor / On Hold,6
+24,status,Blocked,In Progress,5
+24,status,Returned,Invalid,5
+24,status,In Review,Monitor / On Hold,5
+24,status,Done,Unverified,4
+24,status,Monitor / On Hold,Unverified,4
+24,status,Returned,To Do,4
+24,status,In Progress,Unverified,4
+24,status,In Progress,Duplicate,4
+24,status,Closed,Unverified,4
+24,status,In Progress,Blocked,4
+24,status,Unverified,Invalid,4
+24,status,Monitor / On Hold,In Progress,3
+24,status,To Do,Blocked,3
+24,status,Invalid,To Do,3
+24,status,In Review,Returned,3
+24,status,In Review,Duplicate,3
+24,status,Monitor / On Hold,In Review,3
+24,status,In Review,Unverified,3
+24,status,Returned,In Progress,3
+24,status,Done,Monitor / On Hold,2
+24,status,Backlog,Monitor / On Hold,2
+24,status,Invalid,In Progress,2
+24,status,Invalid,Duplicate,2
+24,status,Unverified,Monitor / On Hold,2
+24,status,In Progress,Returned,2
+24,status,Monitor / On Hold,Invalid,2
+24,status,Invalid,Monitor / On Hold,2
+24,status,Blocked,To Do,1
+24,status,Done,Returned,1
+24,status,Backlog,Duplicate,1
+24,status,In Review,Blocked,1
+24,status,Duplicate,To Do,1
+24,status,Returned,Duplicate,1
+24,status,Duplicate,In Progress,1
+24,status,Duplicate,Backlog,1
+24,status,Backlog,Returned,1
+24,status,Blocked,Blocked,1
+24,status,Returned,Backlog,1
+24,status,Monitor / On Hold,To Do,1
+24,status,New,Unverified,1
+24,status,Blocked,Invalid,1
+24,status,Blocked,In Review,1
+24,status,Returned,Monitor / On Hold,1
+24,status,Backlog,In CR Review,1
+25,resolution,,Done,1413
+25,resolution,,Invalid,300
+25,resolution,,Won't Do,205
+25,resolution,,Deferred,29
+25,resolution,,Duplicate,13
+25,resolution,,Invalid: Environment Issue,8
+25,resolution,Won't Do,,4
+25,resolution,,Cannot Reproduce,3
+25,resolution,,Invalid: Works as Expected,3
+25,resolution,Done,,2
+25,resolution,Invalid,,2
+25,resolution,Done,Invalid,1
+25,resolution,Duplicate,,1
+25,resolution,Invalid: Works as Expected,,1
+25,status,New,In Progress,1064
+25,status,Done,Done,1042
+25,status,In Progress,Code Review,787
+25,status,Code Review,To Test,559
+25,status,To Test,Done,442
+25,status,In Progress,To Test,290
+25,status,New,Complete,289
+25,status,Invalid,Done,284
+25,status,New,Invalid,251
+25,status,Customer Validation,Done,232
+25,status,To Test,Customer Validation,227
+25,status,To Develop,In Progress,176
+25,status,Code Review,Done,160
+25,status,To Test,Complete,137
+25,status,To Test,To Develop,130
+25,status,New,Done,129
+25,status,Won't Fix,Done,122
+25,status,New,To Test,112
+25,status,In Progress,Done,110
+25,status,New,Won't Fix,87
+25,status,In Progress,To Develop,81
+25,status,Code Review,In Progress,70
+25,status,New,Code Review,67
+25,status,To Test,In Progress,62
+25,status,Code Review,Complete,62
+25,status,In Progress,Complete,39
+25,status,In Progress,In Progress,38
+25,status,To Develop,To Test,37
+25,status,In Progress,New,29
+25,status,Customer Validation,To Test,26
+25,status,To Test,Code Review,21
+25,status,New,New,19
+25,status,To Test,To Test,18
+25,status,Done,To Test,18
+25,status,To Do,New,17
+25,status,In Progress,Customer Validation,16
+25,status,To Test,Invalid,16
+25,status,New,To Develop,14
+25,status,Code Review,Customer Validation,14
+25,status,Code Review,To Develop,14
+25,status,In Progress,Won't Fix,13
+25,status,To Develop,Complete,12
+25,status,Complete,To Develop,12
+25,status,Done,In Progress,11
+25,status,Done,To Develop,11
+25,status,To Develop,Done,11
+25,status,To Develop,Code Review,10
+25,status,To Test,Won't Fix,10
+25,status,To Develop,Customer Validation,9
+25,status,Code Review,Code Review,9
+25,status,Icebox,Done,8
+25,status,Done,Customer Validation,8
+25,status,In Progress,Invalid,8
+25,status,Customer Validation,To Develop,7
+25,status,Invalid,Won't Fix,7
+25,status,New,Customer Validation,6
+25,status,New,Icebox,6
+25,status,Customer Validation,Invalid,6
+25,status,Customer Validation,Won't Fix,5
+25,status,Icebox,Invalid,5
+25,status,Complete,Complete,4
+25,status,Done,Invalid,4
+25,status,In Progress,Icebox,4
+25,status,To Develop,Won't Fix,4
+25,status,Won't Fix,To Develop,4
+25,status,Done,Code Review,4
+25,status,Code Review,Invalid,3
+25,status,Code Review,Icebox,3
+25,status,Complete,To Test,3
+25,status,New,To Do,3
+25,status,Code Review,New,3
+25,status,Customer Validation,Code Review,2
+25,status,Code Review,Won't Fix,2
+25,status,In Progress,Design,2
+25,status,Done,Won't Fix,2
+25,status,Customer Validation,Complete,2
+25,status,Done,New,2
+25,status,To Develop,To Develop,2
+25,status,To Do,To Develop,2
+25,status,Won't Fix,Invalid,2
+25,status,Invalid,To Test,1
+25,status,Design,Done,1
+25,status,Invalid,To Develop,1
+25,status,Invalid,In Progress,1
+25,status,Invalid,Customer Validation,1
+25,status,In Progress,To Do,1
+25,status,To Test,Icebox,1
+25,status,Design,To Develop,1
+25,status,Done,Icebox,1
+25,status,To Test,New,1
+25,status,Customer Validation,In Progress,1
+25,status,Icebox,To Test,1
+25,status,Design,In Progress,1
+25,status,Won't Fix,Design,1
+25,status,Icebox,To Develop,1
+25,status,Won't Fix,In Progress,1
+25,status,Won't Fix,Won't Fix,1
+25,status,To Develop,New,1
+25,status,To Do,In Progress,1
+26,resolution,,Done,1242
+26,resolution,Done,Invalid,72
+26,resolution,Done,,39
+26,resolution,,Won't Do,30
+26,resolution,,Invalid,16
+26,resolution,,Duplicate,16
+26,resolution,,Deferred,14
+26,resolution,,Cannot Reproduce,7
+26,resolution,,Invalid: Works as Expected,6
+26,resolution,,Invalid: Environment Issue,2
+26,resolution,Done,Won't Do,1
+26,resolution,Invalid,Duplicate,1
+26,resolution,Won't Do,,1
+26,status,To Do,In Progress,605
+26,status,Validate,Done,412
+26,status,In Progress,Review,363
+26,status,Review,Validate,348
+26,status,To Do,To Develop,234
+26,status,To Do,Done,182
+26,status,New,In Progress,171
+26,status,To Test,Complete,162
+26,status,In Progress,Code Review,144
+26,status,Code Review,To Test,131
+26,status,In Review,Done,113
+26,status,Review,Done,104
+26,status,To Do,Review,102
+26,status,In Progress,In Review,98
+26,status,To Develop,Complete,96
+26,status,Invalid,Done,92
+26,status,To Do,Invalid,80
+26,status,In Progress,Done,75
+26,status,In Progress,Validate,61
+26,status,In Progress,To Do,55
+26,status,To Do,Validate,48
+26,status,Code Review,Complete,34
+26,status,New,Complete,33
+26,status,To Develop,In Progress,32
+26,status,In Progress,Complete,30
+26,status,Review,In Progress,28
+26,status,New,To Do,26
+26,status,To Do,In Review,24
+26,status,New,Code Review,23
+26,status,In Progress,To Test,23
+26,status,In Progress,In Progress,21
+26,status,Validate,In Progress,20
+26,status,Invalid,Invalid,18
+26,status,Validate,To Do,14
+26,status,New,To Test,13
+26,status,In Progress,New,12
+26,status,In Review,In Progress,11
+26,status,Done,Review,10
+26,status,Validate,Review,7
+26,status,Complete,Complete,7
+26,status,Done,Validate,7
+26,status,In Review,Review,7
+26,status,Validate,Invalid,7
+26,status,Done,In Review,7
+26,status,In Progress,To Develop,7
+26,status,Complete,To Develop,6
+26,status,Review,Code Review,6
+26,status,Done,To Do,5
+26,status,Done,Done,5
+26,status,Code Review,In Progress,5
+26,status,To Do,To Do,5
+26,status,Validate,To Test,4
+26,status,New,New,4
+26,status,To Test,Code Review,4
+26,status,To Develop,Code Review,4
+26,status,In Progress,Invalid,3
+26,status,Done,Invalid,3
+26,status,To Test,To Develop,3
+26,status,Done,In Progress,3
+26,status,Complete,In Progress,3
+26,status,Customer Validation,Complete,3
+26,status,Code Review,New,3
+26,status,To Develop,To Test,2
+26,status,Invalid,Review,2
+26,status,Done,To Develop,2
+26,status,New,Customer Validation,2
+26,status,New,To Develop,2
+26,status,Review,In Review,2
+26,status,Review,To Do,2
+26,status,To Develop,To Develop,2
+26,status,To Test,In Progress,2
+26,status,Validate,Validate,2
+26,status,To Develop,Design,1
+26,status,Review,Review,1
+26,status,Review,Invalid,1
+26,status,Complete,To Test,1
+26,status,In Review,In Review,1
+26,status,To Test,Customer Validation,1
+26,status,To Test,Done,1
+26,status,Design,Complete,1
+26,status,Code Review,Code Review,1
+26,status,Unverified,New,1
+26,status,Customer Validation,To Test,1
+26,status,Design,Code Review,1
+26,status,Code Review,Customer Validation,1
+26,status,Complete,Code Review,1
+26,status,Code Review,Design,1
+26,status,To Develop,New,1
+26,status,To Develop,Done,1
+27,resolution,,Done,1178
+27,resolution,Done,,21
+27,status,To Do,In Progress,932
+27,status,In Progress,Done,709
+27,status,To Do,Backlog,404
+27,status,To Do,Done,175
+27,status,In Review,Done,161
+27,status,In Progress,In Review,160
+27,status,To Do,In Review,81
+27,status,Backlog,Planning,81
+27,status,In Review,Complete,65
+27,status,Planning,To Do,59
+27,status,In Progress,To Do,54
+27,status,In Progress,Complete,32
+27,status,In Progress,In Progress,27
+27,status,Backlog,In Progress,26
+27,status,Backlog,Complete,19
+27,status,To Do,Complete,16
+27,status,Planning,Backlog,16
+27,status,Done,In Progress,12
+27,status,Done,Done,12
+27,status,In Review,In Progress,11
+27,status,To Do,To Do,9
+27,status,In Progress,Backlog,9
+27,status,In Review,In Review,8
+27,status,Backlog,To Do,5
+27,status,Complete,Complete,5
+27,status,Planning,In Progress,4
+27,status,In Review,To Do,4
+27,status,Done,In Review,4
+27,status,Backlog,In Review,4
+27,status,Planning,Planning,3
+27,status,Planning,In Review,3
+27,status,To Do,Planning,3
+27,status,Done,To Do,2
+27,status,Planning,Complete,2
+27,status,Complete,In Progress,2
+27,status,In Review,Backlog,1
+27,status,Complete,Backlog,1
+27,status,Complete,In Review,1
+27,status,In Progress,Planning,1
+28,resolution,,Done,23042
+28,resolution,Done,,473
+28,resolution,Won't Do,Done,1
+28,status,To Do,In Progress,15360
+28,status,Reviewed,Done,8667
+28,status,In Review,Reviewed,8622
+28,status,In Progress,In Review,8083
+28,status,In Progress,Done,6364
+28,status,To Do,Done,3627
+28,status,To Do,In Review,2104
+28,status,To Do,Won't Fix,1835
+28,status,In Review,Done,1084
+28,status,To Do,Invalid,956
+28,status,In Progress,To Do,533
+28,status,In Review,In Progress,352
+28,status,Review,In Progress,316
+28,status,Admin Review,In Progress,314
+28,status,In Review,Review Complete,266
+28,status,In Progress,Reviewed,255
+28,status,Review Complete,Done,255
+28,status,Reviewed,In Review,196
+28,status,Done,In Progress,153
+28,status,In Progress,In Progress,149
+28,status,In Review,In Review,148
+28,status,In Progress,Won't Fix,146
+28,status,Done,To Do,145
+28,status,Unplanned,To Do,117
+28,status,To Do,To Do,94
+28,status,Done,Done,90
+28,status,Reviewed,Reviewed,82
+28,status,Invalid,To Do,75
+28,status,To Do,Reviewed,63
+28,status,In Progress,Invalid,49
+28,status,Won't Fix,Done,47
+28,status,Reviewed,In Progress,41
+28,status,Done,In Review,40
+28,status,Done,Reviewed,37
+28,status,Won't Fix,Invalid,27
+28,status,In Review,To Do,27
+28,status,In Review,Won't Fix,25
+28,status,Unplanned,In Progress,25
+28,status,In Review,Invalid,23
+28,status,Won't Fix,To Do,23
+28,status,Done,Won't Fix,18
+28,status,Won't Fix,In Progress,17
+28,status,Reviewed,Won't Fix,17
+28,status,In Progress,Ready for Review,15
+28,status,Done,Invalid,15
+28,status,Reviewed,Invalid,14
+28,status,Ready for Review,In Review,13
+28,status,Review Complete,In Review,13
+28,status,Reviewed,To Do,12
+28,status,Invalid,In Progress,11
+28,status,Invalid,Done,11
+28,status,To Do,Ready for Review,8
+28,status,Ready to Merge,Done,8
+28,status,In Progress,Unplanned,7
+28,status,Done,Review Complete,7
+28,status,Open,In Progress,6
+28,status,Ready for Review,Ready to Merge,6
+28,status,Admin Review,Won't Fix,6
+28,status,Won't Fix,Won't Fix,5
+28,status,Won't Fix,In Review,4
+28,status,To Do,Review Complete,4
+28,status,In Review,Ready to Merge,4
+28,status,Invalid,Invalid,4
+28,status,Review Complete,Review Complete,4
+28,status,Resolved,Done,3
+28,status,In Progress,Review Complete,3
+28,status,In Progress,Ready to Merge,3
+28,status,Reviewed,Resolved,3
+28,status,Invalid,Reviewed,2
+28,status,Review Complete,To Do,2
+28,status,To Do,Admin Review,2
+28,status,Review Complete,In Progress,2
+28,status,Admin Review,Done,2
+28,status,Review,Review,2
+28,status,Ready to Merge,Ready to Merge,2
+28,status,Ready for Review,In Progress,2
+28,status,Proposed,To Do,2
+28,status,Invalid,Won't Fix,2
+28,status,To Do,QA Review,1
+28,status,Admin Review,Invalid,1
+28,status,Proposed,In Progress,1
+28,status,Proposed Task,To Do,1
+28,status,Review Complete,Won't Fix,1
+28,status,Blocked,To Do,1
+28,status,Admin Review,Admin Review,1
+28,status,Ready to Merge,In Review,1
+28,status,Ready for Review,To Do,1
+28,status,To Do,Blocked,1
+28,status,Ready to Merge,In Progress,1
+28,status,Done,Admin Review,1
+28,status,Review,Done,1
+28,status,Ready for Review,Done,1
+29,resolution,,Fixed,696
+29,resolution,,Done,79
+29,resolution,,Won't Fix,57
+29,resolution,,Duplicate,48
+29,resolution,,Cannot Reproduce,17
+29,resolution,,Won't Do,13
+29,resolution,,Answered,11
+29,resolution,Fixed,,8
+29,resolution,,Ready for Test,4
+29,resolution,Done,,3
+29,resolution,Won't Fix,,2
+29,resolution,Fixed,Won't Fix,2
+29,resolution,Answered,Fixed,1
+29,resolution,Ready for Test,Fixed,1
+29,resolution,,Ready for Release,1
+29,status,Received,Open,500
+29,status,Open,In Progress,411
+29,status,In Progress,Closed,356
+29,status,Open,Closed,328
+29,status,Received,Closed,197
+29,status,Open,Selected for Development,63
+29,status,In Progress,Open,54
+29,status,Selected for Development,In Progress,44
+29,status,In Progress,In Review,41
+29,status,In Review,Closed,41
+29,status,Closed,Reopened,17
+29,status,Selected for Development,Open,15
+29,status,Reopened,Closed,14
+29,status,Closed,Open,8
+29,status,In Review,In Review,6
+29,status,In Progress,Selected for Development,6
+29,status,Selected for Development,In Review,4
+29,status,In Progress,In Progress,4
+29,status,In Review,In Progress,3
+29,status,Open,In Review,3
+29,status,Resolved,Closed,2
+29,status,Selected for Development,Closed,2
+29,status,Closed,Closed,2
+29,status,Open,Resolved,2
+29,status,Closed,In Review,2
+29,status,Reopened,Open,2
+29,status,Selected for Development,Selected for Development,1
+29,status,Open,Community Sprint,1
+29,status,Reopened,In Progress,1
+29,status,In Review,Selected for Development,1
+29,status,In Review,Open,1
+29,status,Community Sprint,Selected for Development,1
+30,resolution,,Fixed,516
+30,resolution,,Done,429
+30,resolution,,Won't Fix,138
+30,resolution,,Gone away,137
+30,resolution,,Duplicate,105
+30,resolution,,Incomplete,66
+30,resolution,,Works as Designed,49
+30,resolution,,Cannot Reproduce,35
+30,resolution,Fixed,,24
+30,resolution,,Won't Do,16
+30,resolution,,Declined,15
+30,resolution,Won't Fix,,10
+30,resolution,Duplicate,,6
+30,resolution,Done,,6
+30,resolution,,Community Answered,5
+30,resolution,Works as Designed,,5
+30,resolution,Gone away,,4
+30,resolution,Cannot Reproduce,,3
+30,resolution,Incomplete,,2
+30,resolution,Gone away,Done,1
+30,resolution,Fixed,Done,1
+30,resolution,Incomplete,Fixed,1
+30,resolution,Won't Do,,1
+30,status,Needs Triage,Ready for Work,486
+30,status,Needs Triage,Closed,418
+30,status,Needs Triage,Open,402
+30,status,Ready for Work,In Progress,399
+30,status,In Code Review,Closed,348
+30,status,In Progress,Closed,306
+30,status,In Progress,In Code Review,271
+30,status,Open,Closed,221
+30,status,Ready for Work,Closed,162
+30,status,Needs Triage,In Progress,112
+30,status,Open,In Progress,84
+30,status,Needs Triage,Debugging With Submitter,52
+30,status,Open,Open,43
+30,status,Ready for Work,Needs Triage,41
+30,status,Open,Ready for Work,39
+30,status,Debugging With Submitter,Closed,37
+30,status,Open,Needs Triage,36
+30,status,Ready for Work,In Code Review,36
+30,status,Closed,Open,36
+30,status,Needs Triage,In Code Review,26
+30,status,Open,In Code Review,22
+30,status,Ready for Work,Open,22
+30,status,Waiting (Blocked),Closed,15
+30,status,Needs Triage,Waiting (Blocked),15
+30,status,In Progress,Ready for Work,15
+30,status,In Progress,Open,14
+30,status,In Progress,Waiting (Blocked),13
+30,status,Debugging With Submitter,Open,13
+30,status,In Progress,In Progress,10
+30,status,Waiting (Blocked),In Progress,10
+30,status,Closed,In Progress,10
+30,status,Open,Debugging With Submitter,9
+30,status,Debugging With Submitter,Needs Triage,9
+30,status,Ready for Work,Waiting (Blocked),9
+30,status,Waiting (Blocked),Ready for Work,8
+30,status,Closed,Closed,8
+30,status,Open,Waiting (Blocked),8
+30,status,In Code Review,In Progress,7
+30,status,Waiting (Blocked),Open,7
+30,status,Open,Scoping,6
+30,status,In Code Review,Ready for Work,5
+30,status,Closed,Needs Triage,5
+30,status,Needs Triage,Needs Triage,5
+30,status,Closed,Ready for Work,5
+30,status,Closed,In Code Review,5
+30,status,Ready for Work,Debugging With Submitter,4
+30,status,Waiting (Blocked),In Code Review,4
+30,status,In Progress,Debugging With Submitter,3
+30,status,Debugging With Submitter,In Progress,3
+30,status,Waiting (Blocked),Needs Triage,3
+30,status,Ready for Work,Ready for Work,3
+30,status,In Code Review,Waiting (Blocked),3
+30,status,Scoping,Open,2
+30,status,Investigating,Needs Triage,2
+30,status,Closed,Reopened,2
+30,status,In Progress,Needs Triage,2
+30,status,Investigating,In Code Review,2
+30,status,Needs Design,Needs Design Approval,2
+30,status,Needs Triage,Investigating,2
+30,status,Open,Needs Scope,2
+30,status,Ready for Work,Designing,2
+30,status,Reopened,Needs Triage,2
+30,status,Needs Triage,Resolved,1
+30,status,Needs Triage,Needs Scope,1
+30,status,Open,Resolved,1
+30,status,Needs Triage,Backlog,1
+30,status,In Code Review,Investigating,1
+30,status,Open,Waiting For User Input,1
+30,status,In Code Review,Needs Triage,1
+30,status,In Code Review,Open,1
+30,status,Waiting for Reporter,Needs Triage,1
+30,status,Needs Scope,Closed,1
+30,status,Needs Design Approval,Needs Design,1
+30,status,Needs Design Approval,In Progress,1
+30,status,Needs Design,Ready for Work,1
+30,status,Needs Scope Approval,Needs Design,1
+30,status,Backlog,Needs Triage,1
+30,status,Reopened,In Progress,1
+30,status,Won't Fix,Reopened,1
+30,status,Resolved,Closed,1
+30,status,Scoping,Needs Design,1
+30,status,Scoping,Needs Triage,1
+30,status,Needs Scope,Scoping,1
+30,status,Scoping,Ready for Work,1
+30,status,In Progress,Won't Fix,1
+30,status,Waiting (Blocked),Debugging With Submitter,1
+30,status,Debugging With Submitter,Debugging With Submitter,1
+30,status,In Progress,Resolved,1
+30,status,Designing,In Progress,1
+30,status,Designing,Ready for Work,1
+30,status,Needs Scope,Needs Scope Approval,1
+30,status,Needs Verification,Needs Triage,1
+30,status,Waiting For User Input,Waiting for Reporter,1
+30,status,Needs Verification,Investigating,1
+31,resolution,,Fixed,1158
+31,resolution,,Works as Designed,163
+31,resolution,,Won't Fix,159
+31,resolution,,Done,115
+31,resolution,,Duplicate,103
+31,resolution,,Gone away,76
+31,resolution,Fixed,,51
+31,resolution,,Incomplete,27
+31,resolution,,Community Answered,20
+31,resolution,,Won't Do,19
+31,resolution,Done,,13
+31,resolution,,Cannot Reproduce,13
+31,resolution,Fixed,Done,8
+31,resolution,Gone away,,7
+31,resolution,Works as Designed,,5
+31,resolution,Fixed,Works as Designed,3
+31,resolution,Won't Fix,,3
+31,resolution,Incomplete,,2
+31,resolution,Community Answered,,1
+31,resolution,Duplicate,,1
+31,resolution,Fixed,Gone away,1
+31,resolution,Gone away,Cannot Reproduce,1
+31,status,Open,In Progress,1024
+31,status,In Progress,In Code Review,785
+31,status,Resolved,Closed,636
+31,status,Needs Triage,Open,602
+31,status,In Code Review,Resolved,519
+31,status,Open,Closed,426
+31,status,In Code Review,Closed,341
+31,status,In Progress,Closed,165
+31,status,Needs Triage,Closed,142
+31,status,In Progress,Resolved,95
+31,status,In Progress,Open,91
+31,status,Needs Triage,Scheduled,84
+31,status,Open,In Code Review,84
+31,status,Scheduled,Open,79
+31,status,Resolved,Reopened,73
+31,status,Needs Triage,Waiting (Blocked),63
+31,status,Open,Scheduled,62
+31,status,Reopened,Resolved,61
+31,status,Scheduled,In Progress,46
+31,status,Open,Open,45
+31,status,Waiting (Blocked),Closed,40
+31,status,Open,Resolved,40
+31,status,Waiting (Blocked),Open,39
+31,status,Closed,Reopened,37
+31,status,Needs Triage,Investigating,37
+31,status,Needs Triage,In Progress,29
+31,status,Closed,Open,28
+31,status,Scheduled,Closed,27
+31,status,Reopened,In Progress,26
+31,status,Open,Waiting (Blocked),25
+31,status,Needs Triage,Debugging With Submitter,24
+31,status,Investigating,Closed,24
+31,status,Needs Triage,In Code Review,21
+31,status,In Code Review,Waiting (Blocked),20
+31,status,Reopened,Closed,20
+31,status,Waiting (Blocked),Scheduled,19
+31,status,In Code Review,In Progress,19
+31,status,Debugging With Submitter,Closed,18
+31,status,Scheduled,In Code Review,13
+31,status,Closed,Closed,12
+31,status,Open,Investigating,11
+31,status,Investigating,Open,11
+31,status,In Progress,Waiting (Blocked),11
+31,status,Waiting (Blocked),Needs Triage,11
+31,status,Open,Needs Scope,11
+31,status,In Progress,Scheduled,10
+31,status,Open,Needs Triage,10
+31,status,In Code Review,Open,10
+31,status,Waiting for Reporter,Closed,10
+31,status,Waiting for Reporter,Investigating,9
+31,status,Waiting (Blocked),In Progress,9
+31,status,Debugging With Submitter,Open,9
+31,status,Needs Scope,Open,8
+31,status,Scheduled,Investigating,8
+31,status,Needs Triage,Waiting for Reporter,7
+31,status,Resolved,Needs Triage,6
+31,status,Closed,In Progress,6
+31,status,Investigating,In Progress,6
+31,status,Investigating,Waiting for Reporter,6
+31,status,Investigating,Scheduled,6
+31,status,Scheduled,Waiting for Reporter,5
+31,status,Investigating,Waiting (Blocked),5
+31,status,Closed,In Code Review,5
+31,status,Investigating,In Code Review,5
+31,status,Scheduled,Waiting (Blocked),4
+31,status,Waiting (Blocked),In Code Review,4
+31,status,Scheduled,Scheduled,3
+31,status,In Progress,Needs Triage,3
+31,status,Closed,Waiting (Blocked),3
+31,status,Reopened,Open,3
+31,status,In Code Review,In Code Review,2
+31,status,Needs Spec/POC Approval,In Progress,2
+31,status,Needs Spec/POC,Needs Spec/POC Approval,2
+31,status,Needs Scope Approval,Needs Spec/POC,2
+31,status,Waiting (Blocked),Waiting (Blocked),2
+31,status,Needs Scope,Needs Scope Approval,2
+31,status,Waiting (Blocked),Debugging With Submitter,2
+31,status,Open,Debugging With Submitter,2
+31,status,In Code Review,Needs Triage,2
+31,status,In Code Review,Scheduled,1
+31,status,Open,Needs Reviewer,1
+31,status,Debugging With Submitter,In Progress,1
+31,status,In Progress,Debugging With Submitter,1
+31,status,Needs Reviewer,Open,1
+31,status,Needs Scope,Closed,1
+31,status,In Progress,Waiting for Reporter,1
+31,status,Debugging With Submitter,Waiting (Blocked),1
+31,status,Waiting for Support,Open,1
+31,status,In Progress,In Progress,1
+31,status,Waiting for Triage,Needs Triage,1
+31,status,Needs Scope,Scheduled,1
+31,status,Closed,Needs Triage,1
+31,status,Investigating,Needs Triage,1
+31,status,In Progress,Investigating,1
+31,status,Needs Triage,Needs Triage,1
+31,status,Scheduled,Needs Triage,1
+31,status,Needs Triage,Needs Scope,1
+32,resolution,,Fixed,2340
+32,resolution,,Works as Designed,374
+32,resolution,,Won't Fix,346
+32,resolution,,Duplicate,239
+32,resolution,,Done,176
+32,resolution,Fixed,,164
+32,resolution,,Cannot Reproduce,67
+32,resolution,,Gone away,53
+32,resolution,,Incomplete,38
+32,resolution,Works as Designed,,20
+32,resolution,,Won't Do,17
+32,resolution,,Community Answered,14
+32,resolution,Duplicate,,10
+32,resolution,Won't Fix,,9
+32,resolution,Cannot Reproduce,,5
+32,resolution,Fixed,Works as Designed,4
+32,resolution,Works as Designed,Fixed,4
+32,resolution,Done,,4
+32,resolution,Incomplete,,4
+32,resolution,Gone away,,3
+32,resolution,,Declined,2
+32,resolution,Fixed,Incomplete,1
+32,resolution,Works as Designed,Duplicate,1
+32,resolution,Won't Fix,Fixed,1
+32,resolution,Won't Do,,1
+32,resolution,Fixed,Won't Fix,1
+32,resolution,Done,Fixed,1
+32,status,In Progress,In Code Review,1507
+32,status,Resolved,Closed,1173
+32,status,Open,In Progress,1007
+32,status,Open,Closed,856
+32,status,In Code Review,Closed,790
+32,status,In Code Review,Resolved,689
+32,status,Scheduled,In Progress,509
+32,status,Open,Resolved,488
+32,status,Needs Triage,Open,387
+32,status,Needs Triage,Scheduled,343
+32,status,Needs Triage,Closed,270
+32,status,Open,Scheduled,248
+32,status,In Progress,Closed,221
+32,status,Needs Triage,In Progress,160
+32,status,Needs Triage,Investigating,144
+32,status,In Code Review,In Progress,132
+32,status,Investigating,Closed,116
+32,status,In Progress,Open,96
+32,status,Resolved,Reopened,84
+32,status,Waiting for Reporter,Investigating,80
+32,status,In Progress,Resolved,70
+32,status,Reopened,In Progress,66
+32,status,Closed,Reopened,64
+32,status,Scheduled,Closed,57
+32,status,Investigating,Waiting for Reporter,56
+32,status,Needs Triage,Waiting (Blocked),55
+32,status,Needs Triage,Debugging With Submitter,50
+32,status,Scheduled,Open,48
+32,status,Scheduled,In Code Review,47
+32,status,Needs Triage,Waiting for Reporter,46
+32,status,Reopened,Resolved,46
+32,status,Resolved,Needs Triage,45
+32,status,Needs Triage,In Code Review,41
+32,status,In Progress,Scheduled,34
+32,status,Debugging With Submitter,Closed,32
+32,status,Waiting (Blocked),Open,32
+32,status,Waiting for Reporter,Closed,31
+32,status,Investigating,Scheduled,29
+32,status,Open,Needs Triage,28
+32,status,Reopened,Closed,27
+32,status,Investigating,Open,24
+32,status,Closed,Open,24
+32,status,Closed,In Progress,23
+32,status,Waiting (Blocked),In Progress,23
+32,status,Investigating,In Progress,22
+32,status,In Code Review,In Code Review,21
+32,status,Waiting (Blocked),Scheduled,18
+32,status,Open,In Code Review,16
+32,status,Open,Patch Submitted,16
+32,status,In Progress,Waiting (Blocked),15
+32,status,Open,Waiting (Blocked),14
+32,status,Patch Submitted,In Progress,13
+32,status,Waiting (Blocked),Needs Triage,13
+32,status,Open,Investigating,12
+32,status,Debugging With Submitter,Investigating,11
+32,status,In Code Review,Waiting (Blocked),11
+32,status,Scheduled,Waiting (Blocked),11
+32,status,Open,Open,11
+32,status,Waiting (Blocked),Closed,11
+32,status,In Code Review,Scheduled,11
+32,status,Closed,In Code Review,11
+32,status,Investigating,In Code Review,10
+32,status,Closed,Closed,9
+32,status,Patch Submitted,Resolved,9
+32,status,Waiting (Blocked),In Code Review,8
+32,status,Investigating,Needs Triage,7
+32,status,Open,Debugging With Submitter,7
+32,status,Scheduled,Needs Triage,7
+32,status,Closed,Scheduled,7
+32,status,Scheduled,Investigating,6
+32,status,Open,Needs Scope,6
+32,status,Investigating,Waiting (Blocked),6
+32,status,Needs Scope,Open,5
+32,status,Reopened,Open,5
+32,status,Closed,Investigating,5
+32,status,Needs Triage,Blocked,5
+32,status,Debugging With Submitter,Needs Triage,5
+32,status,In Progress,Investigating,5
+32,status,In Code Review,Open,5
+32,status,Scheduled,Scheduled,4
+32,status,Debugging With Submitter,In Code Review,4
+32,status,Waiting For User Input,Open,4
+32,status,Open,Waiting For User Input,4
+32,status,Open,Waiting for Reporter,4
+32,status,Debugging With Submitter,Open,4
+32,status,Blocked,Waiting (Blocked),4
+32,status,In Progress,Patch Submitted,4
+32,status,Waiting for Triage,Needs Triage,3
+32,status,Open,Blocked,3
+32,status,In Progress,Waiting for Reporter,3
+32,status,Needs Triage,Needs Scope,3
+32,status,Reopened,Patch Submitted,3
+32,status,In Progress,In Progress,3
+32,status,In Code Review,Needs Triage,3
+32,status,Blocked,Needs Triage,3
+32,status,Waiting (Blocked),Investigating,3
+32,status,In Code Review,Investigating,2
+32,status,Needs Scope,Scheduled,2
+32,status,Waiting for Reporter,Open,2
+32,status,Scheduled,Waiting for Reporter,2
+32,status,Waiting (Blocked),Debugging With Submitter,2
+32,status,Needs Triage,Needs Triage,2
+32,status,Investigating,Investigating,2
+32,status,Waiting (Blocked),Waiting (Blocked),2
+32,status,Waiting (Blocked),Waiting for Reporter,2
+32,status,Needs Scope,In Progress,2
+32,status,Needs Verification,Investigating,2
+32,status,Debugging With Submitter,Waiting (Blocked),2
+32,status,Closed,Waiting for Reporter,2
+32,status,Blocked,Designing,1
+32,status,Closed,Waiting (Blocked),1
+32,status,Waiting For User Input,Investigating,1
+32,status,Reopened,Needs Triage,1
+32,status,Debugging With Submitter,In Progress,1
+32,status,Waiting for Reporter,Scheduled,1
+32,status,Designing,Open,1
+32,status,Patch Submitted,Open,1
+32,status,Investigating,Waiting For User Input,1
+32,status,Closed,Needs Triage,1
+32,status,Debugging With Submitter,Debugging With Submitter,1
+32,status,In Code Review,Waiting for Reporter,1
+32,status,In Progress,Needs Triage,1
+33,resolution,,Fixed,29182
+33,resolution,,Duplicate,5596
+33,resolution,,Won't Fix,3332
+33,resolution,,Works as Designed,2519
+33,resolution,,Gone away,2076
+33,resolution,,Done,1962
+33,resolution,Fixed,,1804
+33,resolution,,Incomplete,901
+33,resolution,,Cannot Reproduce,607
+33,resolution,,Won't Do,376
+33,resolution,Duplicate,,247
+33,resolution,Won't Fix,,187
+33,resolution,Works as Designed,,163
+33,resolution,Done,,161
+33,resolution,Gone away,,110
+33,resolution,,Community Answered,85
+33,resolution,Cannot Reproduce,,64
+33,resolution,Incomplete,,62
+33,resolution,Community Answered,,8
+33,resolution,,Declined,8
+33,resolution,Won't Do,,7
+33,resolution,Fixed,Duplicate,6
+33,resolution,Fixed,Gone away,6
+33,resolution,Done,Incomplete,4
+33,resolution,Fixed,Done,3
+33,resolution,Fixed,Incomplete,3
+33,resolution,Works as Designed,Done,3
+33,resolution,Done,Works as Designed,2
+33,resolution,Duplicate,Won't Fix,2
+33,resolution,Duplicate,Done,2
+33,resolution,Won't Fix,Works as Designed,2
+33,resolution,Incomplete,Done,2
+33,resolution,Gone away,Done,2
+33,resolution,Gone away,Won't Fix,2
+33,resolution,Fixed,Works as Designed,2
+33,resolution,Duplicate,Fixed,1
+33,resolution,Done,Won't Fix,1
+33,resolution,Done,Gone away,1
+33,resolution,Done,Fixed,1
+33,resolution,Fixed,Won't Fix,1
+33,resolution,Community Answered,Done,1
+33,resolution,Works as Designed,Duplicate,1
+33,resolution,Gone away,Incomplete,1
+33,resolution,Cannot Reproduce,Duplicate,1
+33,resolution,Incomplete,Duplicate,1
+33,resolution,Incomplete,Works as Designed,1
+33,resolution,Gone away,Cannot Reproduce,1
+33,resolution,Won't Fix,Duplicate,1
+33,resolution,Won't Fix,Fixed,1
+33,resolution,Won't Fix,Gone away,1
+33,resolution,Gone away,Duplicate,1
+33,resolution,Works as Designed,Fixed,1
+33,resolution,Works as Designed,Incomplete,1
+33,status,Resolved,Closed,19951
+33,status,Open,In Progress,16662
+33,status,In Progress,In Code Review,13604
+33,status,Needs Scheduling,Open,13433
+33,status,Needs Verification,Needs Scheduling,13335
+33,status,Open,Closed,10493
+33,status,Open,Resolved,10235
+33,status,In Code Review,Closed,9395
+33,status,Open,In Code Review,8920
+33,status,In Code Review,Resolved,8691
+33,status,Open,Open,7731
+33,status,Open,Waiting For User Input,3079
+33,status,Waiting For User Input,Open,2871
+33,status,In Progress,Open,2577
+33,status,In Code Review,Needs Merge,2477
+33,status,Needs Merge,Closed,1861
+33,status,In Code Review,In Progress,1819
+33,status,Closed,Closed,1607
+33,status,Closed,Open,1396
+33,status,Open,Needs Scheduling,1365
+33,status,In Progress,Resolved,1269
+33,status,Investigating,Waiting For User Input,1174
+33,status,In Progress,Closed,1169
+33,status,Needs Scheduling,Investigating,1146
+33,status,Resolved,Open,1100
+33,status,Resolved,Resolved,964
+33,status,Waiting For User Input,Investigating,893
+33,status,Needs Verification,Investigating,875
+33,status,Investigating,Needs Scheduling,843
+33,status,Investigating,Closed,836
+33,status,Needs Scheduling,Closed,796
+33,status,Needs Merge,Resolved,569
+33,status,Open,Investigating,472
+33,status,Waiting For User Input,Closed,417
+33,status,Investigating,In Progress,410
+33,status,In Code Review,In Code Review,387
+33,status,Needs Verification,Closed,318
+33,status,Waiting For User Input,Resolved,280
+33,status,Reopened,Resolved,211
+33,status,Resolved,Reopened,206
+33,status,In Progress,In Progress,188
+33,status,In Progress,Waiting For User Input,158
+33,status,Needs Triage,Open,157
+33,status,In Progress,Blocked,145
+33,status,Needs Merge,Open,137
+33,status,Closed,Reopened,112
+33,status,Open,Blocked,109
+33,status,Blocked,In Progress,89
+33,status,Blocked,Open,88
+33,status,Open,Needs Merge,80
+33,status,Blocked,Closed,73
+33,status,Open,Needs Reviewer,70
+33,status,In Code Review,Waiting For User Input,69
+33,status,Investigating,Needs Verification,63
+33,status,In Code Review,Blocked,58
+33,status,Reopened,Open,56
+33,status,Open,Needs Verification,49
+33,status,Reopened,Closed,41
+33,status,Blocked,In Code Review,35
+33,status,Needs Triage,Needs Verification,33
+33,status,Needs Scheduling,Needs Verification,33
+33,status,Needs Reviewer,In Code Review,31
+33,status,Needs Reviewer,In Progress,25
+33,status,In Progress,Needs Merge,23
+33,status,Needs Verification,Needs Verification,23
+33,status,Waiting For User Input,Waiting For User Input,20
+33,status,Needs Reviewer,Open,14
+33,status,Needs Scheduling,Needs Scheduling,13
+33,status,Investigating,Investigating,11
+33,status,Reopened,In Progress,9
+33,status,In Progress,Needs Verification,8
+33,status,Waiting for Customer,In Progress,7
+33,status,Needs Triage,Investigating,7
+33,status,Closed,Needs Verification,5
+33,status,Waiting for Triage,Open,3
+33,status,Waiting for Verification,Open,3
+33,status,Investigating,Open,3
+33,status,In Progress,Waiting for Customer,3
+33,status,Open,Waiting for Customer,3
+33,status,Open,Waiting for Verification,2
+33,status,Researching,In Progress,2
+33,status,In Progress,Waiting for Verification,2
+33,status,Needs Triage,In Progress,2
+33,status,Waiting for Reporter,Researching,2
+33,status,In Code Review,Open,2
+33,status,Waiting (Blocked),In Progress,2
+33,status,In Code Review,Needs Verification,2
+33,status,Waiting for Customer,Waiting for Customer,2
+33,status,Waiting for bug fix,Open,1
+33,status,Dry Run,In Code Review,1
+33,status,Debugging With Submitter,Closed,1
+33,status,Debugging,Open,1
+33,status,Debugging,In Progress,1
+33,status,Backlog,Open,1
+33,status,Needs Triage,Accepted,1
+33,status,Needs Triage,Closed,1
+33,status,Needs Triage,Debugging,1
+33,status,Needs Triage,Debugging With Submitter,1
+33,status,In Review,Stuck,1
+33,status,Accepted,Waiting for Reporter,1
+33,status,In Review,Open,1
+33,status,Investigating,Needs Triage,1
+33,status,In Progress,Waiting for Reporter,1
+33,status,Needs Merge,In Code Review,1
+33,status,In Progress,Waiting (Blocked),1
+33,status,In Code Review,Completed,1
+33,status,Needs Triage,Needs Scheduling,1
+33,status,Needs Triage,Researching,1
+33,status,Needs Triage,Waiting (Blocked),1
+33,status,Needs Triage,Waiting for Reporter,1
+33,status,Needs Verification,In Progress,1
+33,status,Needs Verification,Open,1
+33,status,New,Needs Scheduling,1
+33,status,New,Open,1
+33,status,Open,To Do,1
+33,status,Open,Waiting (Blocked),1
+33,status,Open,Waiting for bug fix,1
+33,status,Open,abstract,1
+33,status,Reopened,Waiting for Customer,1
+33,status,Request Submitted,In Progress,1
+33,status,Requested,Open,1
+33,status,Researching,Waiting for Reporter,1
+33,status,Stuck,In Review,1
+33,status,To Do,In Review,1
+33,status,To Do,Open,1
+33,status,Waiting (Blocked),Debugging,1
+33,status,Waiting for Reporter,Investigating,1
+33,status,Waiting for Reporter,Needs Verification,1
+33,status,Waiting for Verification,Resolved,1
+34,resolution,,Fixed,31737
+34,resolution,,Won't Fix,5820
+34,resolution,,Duplicate,5392
+34,resolution,,Not a bug,4526
+34,resolution,,Cannot Reproduce,2980
+34,resolution,,Inactive,1953
+34,resolution,Fixed,,1677
+34,resolution,,Deferred,1009
+34,resolution,,Incomplete,551
+34,resolution,,Done,437
+34,resolution,Cannot Reproduce,,250
+34,resolution,Duplicate,,212
+34,resolution,Not a bug,,211
+34,resolution,,Won't Do,181
+34,resolution,Won't Fix,,159
+34,resolution,Deferred,,84
+34,resolution,Inactive,,59
+34,resolution,Incomplete,,17
+34,resolution,Done,,8
+34,resolution,Won't Do,,7
+34,resolution,Deferred,Won't Fix,3
+34,resolution,Duplicate,Won't Fix,3
+34,resolution,Fixed,Won't Fix,3
+34,resolution,Cannot Reproduce,Fixed,2
+34,resolution,Cannot Reproduce,Won't Fix,2
+34,resolution,Won't Fix,Cannot Reproduce,1
+34,resolution,Deferred,Duplicate,1
+34,resolution,Cannot Reproduce,Duplicate,1
+34,resolution,Deferred,Not a bug,1
+34,resolution,Fixed,Duplicate,1
+34,resolution,Cannot Reproduce,Not a bug,1
+34,resolution,Duplicate,Cannot Reproduce,1
+34,resolution,Deferred,Fixed,1
+34,status,Open,Closed,20441
+34,status,Waiting for integration review,Integration review in progress,19848
+34,status,Waiting for testing,Testing in progress,19668
+34,status,Waiting for peer review,Peer review in progress,17259
+34,status,Integration review in progress,Waiting for testing,17217
+34,status,Testing in progress,Tested,17125
+34,status,Tested,Closed,16643
+34,status,Resolved,Closed,12276
+34,status,Waiting for integration review,Waiting for integration review,11563
+34,status,Development in progress,Waiting for peer review,11394
+34,status,Peer review in progress,Development in progress,11316
+34,status,Open,Resolved,10958
+34,status,Open,Waiting for peer review,9416
+34,status,Open,Development in progress,8881
+34,status,Development in progress,Waiting for integration review,7296
+34,status,Open,Open,6877
+34,status,Peer review in progress,Waiting for integration review,6555
+34,status,Waiting for peer review,Waiting for integration review,2793
+34,status,Testing in progress,Problem during testing,2395
+34,status,Reopened,Reopened,2310
+34,status,Problem during testing,Waiting for testing,2303
+34,status,Open,Waiting for integration review,2078
+34,status,Integration review in progress,Reopened,2064
+34,status,Development in progress,Closed,1856
+34,status,Open,In Progress,1724
+34,status,In Progress,Open,1661
+34,status,Closed,Reopened,1540
+34,status,Waiting for peer review,Development in progress,1505
+34,status,Development in progress,Open,1469
+34,status,In Progress,Resolved,1381
+34,status,Reopened,Closed,1344
+34,status,Reopened,Waiting for integration review,1339
+34,status,Resolved,Reopened,1087
+34,status,Reopened,Resolved,1034
+34,status,Waiting for integration review,Reopened,1018
+34,status,Reopened,Waiting for peer review,947
+34,status,Integration review in progress,Waiting for integration review,905
+34,status,Reopened,Development in progress,863
+34,status,Ready for review,Closed,536
+34,status,Open,Peer review in progress,480
+34,status,Tested,Problem during testing,468
+34,status,Problem during testing,Integration review in progress,356
+34,status,Development in progress,Peer review in progress,355
+34,status,Open,Ready for review,315
+34,status,Waiting for peer review,Waiting for peer review,297
+34,status,In Progress,Ready for review,293
+34,status,Peer review in progress,Reopened,256
+34,status,In Progress,Closed,246
+34,status,Development in progress,Development in progress,207
+34,status,Problem during testing,Reopened,203
+34,status,Testing in progress,Waiting for testing,147
+34,status,Reopened,In Progress,135
+34,status,Waiting for peer review,Open,130
+34,status,Reopened,Peer review in progress,116
+34,status,Integration review in progress,Integration review in progress,106
+34,status,Waiting for integration review,Closed,102
+34,status,Ready for review,Reopened,100
+34,status,Peer review in progress,Peer review in progress,63
+34,status,Peer review in progress,Open,61
+34,status,Reopened,Ready for review,45
+34,status,Waiting for review,Closed,28
+34,status,To Do,Open,25
+34,status,Resolved,Ready for review,11
+34,status,Tested,Tested,10
+34,status,Waiting for testing,Waiting for testing,9
+34,status,Waiting for peer review,Waiting for review,5
+34,status,Backlog,Open,5
+34,status,Integration review in progress,Waiting for security testing,5
+34,status,Waiting for security testing,Security testing in progress,5
+34,status,Open,Waiting for review,4
+34,status,Security test failed,Reopened,3
+34,status,Security testing in progress,Waiting for release,3
+34,status,Integration review in progress,Open,3
+34,status,Security testing in progress,Security test failed,2
+34,status,Reopened,Waiting for review,2
+34,status,Waiting for release,Waiting for testing,2
+34,status,Waiting for review,Reopened,2
+34,status,New,Open,1
+34,status,Waiting for release,Security test failed,1
+34,status,Open,Selected for development,1
+34,status,Development in progress,Waiting for review,1
+34,status,Selected for development,Development in progress,1
+34,status,Development in progress,Resolved,1
+34,status,Testing in progress,Testing in progress,1
+34,status,Problem during testing,Problem during testing,1
+35,resolution,,Completed,293
+35,resolution,,Fixed,282
+35,resolution,,Done,132
+35,resolution,,Won't Fix or Usage Issue,86
+35,resolution,,Duplicate,55
+35,resolution,Fixed,,30
+35,resolution,,Cannot Reproduce,30
+35,resolution,Completed,,23
+35,resolution,,Won't Do,22
+35,resolution,,Abandoned,12
+35,resolution,Won't Fix or Usage Issue,,8
+35,resolution,,Incomplete,8
+35,resolution,Duplicate,,7
+35,resolution,Done,,6
+35,resolution,,Rejected,5
+35,resolution,Cannot Reproduce,,3
+35,resolution,,Works as Designed,3
+35,resolution,Won't Do,,2
+35,resolution,Cannot Reproduce,Completed,1
+35,resolution,Completed,Done,1
+35,resolution,Completed,Duplicate,1
+35,resolution,Done,Won't Do,1
+35,status,Resolved,Closed,340
+35,status,Open,In Progress,322
+35,status,In Progress,Resolved,231
+35,status,New,In Progress,222
+35,status,Open,Closed,158
+35,status,In Progress,Code Review,139
+35,status,In Progress,Done,129
+35,status,New,Done,87
+35,status,Code Review,Resolved,75
+35,status,Open,Resolved,67
+35,status,TO DO,Open,50
+35,status,In Progress,New,40
+35,status,TO DO,In Progress,39
+35,status,Closed,Done,37
+35,status,To Be Reviewed,Closed,36
+35,status,Closed,Reopened,32
+35,status,Code Review,Done,31
+35,status,Development Complete,To Be Reviewed,30
+35,status,In Progress,Development Complete,29
+35,status,In Progress,Open,28
+35,status,TO DO,Closed,25
+35,status,In Validation,Done,23
+35,status,Reopened,Resolved,18
+35,status,Reopened,In Progress,16
+35,status,Resolved,Reopened,16
+35,status,To Do,In Progress,15
+35,status,To Do,Closed,15
+35,status,Resolved,Open,14
+35,status,Reopened,Closed,14
+35,status,In Progress,To Be Reviewed,13
+35,status,Code Review,In Validation,12
+35,status,TO DO,New,11
+35,status,Code Review,In Progress,11
+35,status,In Progress,In Validation,11
+35,status,Closed,Open,10
+35,status,In Progress,Closed,10
+35,status,Done,New,9
+35,status,In Progress,Accepted,9
+35,status,Code Review,Closed,8
+35,status,Accepted,In Progress,7
+35,status,To Be Reviewed,Resolved,6
+35,status,Resolved,In Progress,5
+35,status,Open,New,5
+35,status,In Progress,Pending 3rd-Party,4
+35,status,Accepted,Closed,4
+35,status,New,Accepted,4
+35,status,Pending 3rd-Party,In Progress,3
+35,status,Pending 3rd-Party,Open,2
+35,status,To Be Reviewed,In Progress,2
+35,status,Accepted,Triaged,2
+35,status,Done,Closed,2
+35,status,To Do,Done,2
+35,status,Accepted,Resolved,2
+35,status,Triaged,In Progress,2
+35,status,Open,Pending 3rd-Party,2
+35,status,Pending 3rd-Party,Resolved,2
+35,status,Code Review,Open,1
+35,status,Assessed,In Progress,1
+35,status,TO DO,Pending 3rd-Party,1
+35,status,TO DO,To Be Reviewed,1
+35,status,In Progress,Triaged,1
+35,status,Pending 3rd-Party,Development Complete,1
+35,status,Waiting for Assessment approval,Assessed,1
+35,status,In Progress,TO DO,1
+35,status,Assessment,Waiting for Assessment approval,1
+35,status,Closed,Closed,1
+35,status,Done,Accepted,1
+35,status,Code Review,Code Review,1
+35,status,Resolved,Pending 3rd-Party,1
+35,status,Open,Assessment,1
+35,status,Open,Accepted,1
+35,status,New,Open,1
+36,resolution,,Fixed,7441
+36,resolution,,Won't Fix or Usage Issue,2071
+36,resolution,,Completed,1531
+36,resolution,Fixed,,1055
+36,resolution,,Duplicate,433
+36,resolution,,Won't Do,335
+36,resolution,Completed,Done,333
+36,resolution,,Done,280
+36,resolution,,Cannot Reproduce,204
+36,resolution,,Incomplete,181
+36,resolution,Fixed,Done,170
+36,resolution,,Won't Fix,144
+36,resolution,Won't Fix or Usage Issue,,105
+36,resolution,Completed,,78
+36,resolution,Duplicate,,32
+36,resolution,Cannot Reproduce,,29
+36,resolution,Won't Fix or Usage Issue,Works as Designed,27
+36,resolution,Done,,21
+36,resolution,Won't Do,,13
+36,resolution,Completed,Fixed,12
+36,resolution,Won't Fix,,9
+36,resolution,,Rejected,9
+36,resolution,Incomplete,,5
+36,resolution,,Abandoned,5
+36,resolution,,Works as Designed,4
+36,resolution,Won't Do,Works as Designed,1
+36,resolution,Works as Designed,Won't Do,1
+36,resolution,Won't Fix or Usage Issue,Incomplete,1
+36,resolution,,Declined,1
+36,resolution,Won't Fix or Usage Issue,Won't Do,1
+36,resolution,Won't Do,Completed,1
+36,resolution,Incomplete,Won't Fix or Usage Issue,1
+36,status,Open,Closed,5384
+36,status,Open,In Progress,3157
+36,status,In Progress,Closed,2578
+36,status,Closed,Done,2112
+36,status,TO DO,In Progress,1312
+36,status,Closed,Reopened,1262
+36,status,In Progress,Resolved,1133
+36,status,Reopened,Closed,1100
+36,status,TO DO,Closed,1002
+36,status,TO DO,Open,765
+36,status,Resolved,Closed,611
+36,status,In Progress,Open,586
+36,status,New,In Progress,495
+36,status,In Progress,Done,444
+36,status,TO DO,New,418
+36,status,Open,Pending 3rd-Party,375
+36,status,New,Done,364
+36,status,Pending 3rd-Party,Open,331
+36,status,To Be Merged,Closed,282
+36,status,In Progress,To Be Merged,257
+36,status,Open,Resolved,214
+36,status,Reopened,In Progress,136
+36,status,In Progress,TO DO,99
+36,status,TO DO,Pending 3rd-Party,85
+36,status,Pending 3rd-Party,TO DO,78
+36,status,Resolved,Done,77
+36,status,Pending 3rd-Party,Closed,54
+36,status,In Progress,New,53
+36,status,To Do,In Progress,49
+36,status,To Do,Closed,46
+36,status,Reopened,To Be Merged,42
+36,status,In Progress,Code Review,32
+36,status,Open,New,29
+36,status,Accepted,In Progress,25
+36,status,Closed,Open,22
+36,status,New,Accepted,20
+36,status,To Be Merged,Reopened,17
+36,status,Resolved,Reopened,16
+36,status,Done,New,16
+36,status,Resolved,Open,14
+36,status,Open,Open,13
+36,status,Pending 3rd-Party,To Do,10
+36,status,Code Review,Resolved,10
+36,status,To Do,Pending 3rd-Party,10
+36,status,Code Review,In Progress,10
+36,status,In Progress,Accepted,9
+36,status,Open,Scoped,8
+36,status,Reopened,Pending 3rd-Party,7
+36,status,In Validation,Done,7
+36,status,Reopened,Open,7
+36,status,Done,Closed,6
+36,status,Code Review,In Validation,6
+36,status,Resolved,In Progress,6
+36,status,New,Open,6
+36,status,Accepted,Resolved,5
+36,status,Open,TO DO,4
+36,status,Pending 3rd-Party,In Progress,4
+36,status,Scoped,Open,4
+36,status,Scoped,In Progress,4
+36,status,Open.,In Progress,3
+36,status,Code Review,Open,3
+36,status,Code Review,New,3
+36,status,Accepted,Closed,3
+36,status,Reopened,New,2
+36,status,In Progress,In Progress,2
+36,status,Open,Accepted,2
+36,status,In Progress,In Validation,2
+36,status,To Be Reviewed,In Progress,2
+36,status,In Backlog,Closed,2
+36,status,Closed,Closed,2
+36,status,In Backlog,In Progress,2
+36,status,WAD,Closed,1
+36,status,New,Resolved,1
+36,status,New,New,1
+36,status,Done,Accepted,1
+36,status,In Progress,To Do,1
+36,status,Open,WAD,1
+36,status,In Progress,To Be Reviewed,1
+36,status,Open,To Be Reviewed,1
+36,status,Reopened,Resolved,1
+36,status,In Validation,In Progress,1
+36,status,Resolved,New,1
+36,status,TO DO,Accepted,1
+36,status,To Be Reviewed,Open,1
+36,status,To Do,Open,1
+42,resolution,,Complete,3321
+42,resolution,,Unresolved,3172
+42,resolution,,Won't Fix,1835
+42,resolution,Unresolved,,1747
+42,resolution,,Cannot Reproduce,963
+42,resolution,Complete,,931
+42,resolution,Unresolved,Complete,874
+42,resolution,,Duplicate,366
+42,resolution,Unresolved,Won't Fix,299
+42,resolution,Done,,242
+42,resolution,Un-Resolved,Done,229
+42,resolution,Unresolved,Cannot Reproduce,178
+42,resolution,,Won't Do,152
+42,resolution,Cannot Reproduce,,137
+42,resolution,Won't Fix,,130
+42,resolution,Unresolved,Duplicate,102
+42,resolution,Un-Resolved,,92
+42,resolution,Unresolved,Won't Do,70
+42,resolution,,Done,53
+42,resolution,Duplicate,,33
+42,resolution,Unresolved,Done,27
+42,resolution,Un-Resolved,Complete,17
+42,resolution,Complete,Won't Fix,14
+42,resolution,Cannot Reproduce,Complete,14
+42,resolution,Complete,Unresolved,13
+42,resolution,Complete,Duplicate,11
+42,resolution,Complete,Cannot Reproduce,9
+42,resolution,Won't Fix,Complete,6
+42,resolution,Won't Fix,Unresolved,6
+42,resolution,Cannot Reproduce,Unresolved,6
+42,resolution,Won't Do,,6
+42,resolution,Won't Fix,Duplicate,4
+42,resolution,Cannot Reproduce,Duplicate,3
+42,resolution,Complete,Won't Do,3
+42,resolution,Won't Fix,Cannot Reproduce,3
+42,resolution,Duplicate,Unresolved,3
+42,resolution,Duplicate,Won't Fix,2
+42,resolution,Duplicate,Complete,2
+42,resolution,Done,Won't Fix,2
+42,resolution,Done,Complete,2
+42,resolution,Won't Do,Cannot Reproduce,2
+42,resolution,Complete,Done,2
+42,resolution,Won't Do,Complete,1
+42,resolution,Un-Resolved,Won't Fix,1
+42,resolution,Done,Cannot Reproduce,1
+42,resolution,Done,Duplicate,1
+42,resolution,Won't Fix,Done,1
+42,status,Resolved,Closed,6320
+42,status,Open,In Progress,3517
+42,status,Open,Resolved,3328
+42,status,Planned Development,Open,2794
+42,status,In Progress,Resolved,1599
+42,status,Pull Request Submitted,Resolved,1496
+42,status,Resolved,Reopened,1288
+42,status,In Progress,Open,1219
+42,status,In Progress,Pull Request Submitted,1113
+42,status,Open,Closed,949
+42,status,In Review,Resolved,861
+42,status,Reopened,In Progress,733
+42,status,Reopened,Resolved,702
+42,status,In Progress,In Review,593
+42,status,Open,Pull Request Submitted,571
+42,status,Triaged,Open,486
+42,status,Closed,Reopened,459
+42,status,Resolved,In Review,423
+42,status,Reopened,Closed,303
+42,status,Pull Request Submitted,In Progress,183
+42,status,In Review,In Progress,149
+42,status,Open,Planned Development,92
+42,status,In Progress,Closed,58
+42,status,Requires More Info,Open,18
+42,status,Backlog,Open,9
+42,status,Writing,Resolved,5
+42,status,Triaged,Resolved,4
+42,status,Information Provided,Open,4
+42,status,Resolved,Automation,4
+42,status,Open,Writing,3
+42,status,Open,Triaged,3
+42,status,Automation,Closed,3
+42,status,Reopened,Writing,3
+42,status,In Review,Writing,2
+42,status,Writing,Pull Request Submitted,2
+42,status,Resolved,Triaged,2
+42,status,Closed,Automation,1
+42,status,Open,Planned,1
+42,status,Triage,Open,1
+42,status,Planned,Open,1
+43,resolution,,Fixed,6284
+43,resolution,,Won't Fix,1782
+43,resolution,,Duplicate,671
+43,resolution,,Gone away,433
+43,resolution,Fixed,,430
+43,resolution,,Works as Designed,189
+43,resolution,,Done,174
+43,resolution,,Won't Do,106
+43,resolution,,Cannot Reproduce,68
+43,resolution,,Incomplete,67
+43,resolution,,Declined,47
+43,resolution,Duplicate,,26
+43,resolution,Won't Fix,,20
+43,resolution,Works as Designed,,19
+43,resolution,Cannot Reproduce,,13
+43,resolution,Done,,11
+43,resolution,Gone away,,11
+43,resolution,Incomplete,,5
+43,resolution,Won't Do,,3
+43,resolution,Fixed,Gone away,2
+43,resolution,Gone away,Won't Fix,2
+43,resolution,Works as Designed,Fixed,1
+43,resolution,Fixed,Duplicate,1
+43,resolution,,Community Answered,1
+43,status,Needs Triage,Open,5318
+43,status,In Code Review,Closed,3453
+43,status,Open,In Progress,3332
+43,status,In Progress,In Code Review,2930
+43,status,Needs Triage,Closed,1909
+43,status,Open,Closed,1854
+43,status,Open,In Code Review,1294
+43,status,Open,Open,1181
+43,status,In Code Review,Resolved,1054
+43,status,Open,Resolved,574
+43,status,Needs Triage,In Progress,523
+43,status,In Progress,Closed,472
+43,status,Needs Triage,In Code Review,356
+43,status,In Progress,Open,354
+43,status,Resolved,Closed,281
+43,status,Closed,Open,220
+43,status,Closed,In Code Review,213
+43,status,In Progress,Resolved,197
+43,status,Waiting (Blocked),Closed,165
+43,status,In Progress,Waiting (Blocked),158
+43,status,In Code Review,In Progress,157
+43,status,Open,Waiting (Blocked),155
+43,status,In Code Review,Waiting (Blocked),128
+43,status,Needs Triage,Debugging,124
+43,status,Waiting (Blocked),In Progress,119
+43,status,Debugging,Open,110
+43,status,Waiting (Blocked),Open,103
+43,status,Waiting (Blocked),In Code Review,77
+43,status,Needs Triage,Resolved,72
+43,status,Open,Debugging,70
+43,status,Resolved,Open,67
+43,status,In Code Review,In Code Review,67
+43,status,In Progress,In Progress,63
+43,status,Waiting For User Input,Open,59
+43,status,Resolved,Resolved,58
+43,status,In Progress,Needs Triage,56
+43,status,Debugging,Closed,50
+43,status,In Code Review,Open,50
+43,status,Open,Waiting For User Input,49
+43,status,Closed,In Progress,42
+43,status,Open,Needs Triage,38
+43,status,Needs Verification,Needs Scheduling,35
+43,status,Needs Triage,Waiting (Blocked),33
+43,status,Needs Scheduling,Open,32
+43,status,Debugging,In Progress,28
+43,status,Closed,Closed,23
+43,status,In Progress,Debugging,22
+43,status,Waiting (Blocked),Resolved,20
+43,status,Deployed,Closed,19
+43,status,Debugging,Waiting (Blocked),19
+43,status,Debugging,In Code Review,13
+43,status,Closed,Waiting (Blocked),13
+43,status,In Progress,Waiting For User Input,12
+43,status,Open,Needs Design,10
+43,status,Waiting (Blocked),Debugging,9
+43,status,Open,Blocked,8
+43,status,Blocked,Closed,8
+43,status,In Code Review,Waiting For User Input,7
+43,status,In Code Review,Deployed,7
+43,status,In Code Review,Blocked,7
+43,status,Debugging,Resolved,6
+43,status,Closed,Resolved,6
+43,status,Waiting For User Input,Resolved,6
+43,status,Blocked,In Progress,6
+43,status,Needs Design,Open,5
+43,status,Needs Triage,Needs Design,5
+43,status,Open,Needs Mockup,4
+43,status,Debugging,Needs Triage,4
+43,status,Open,Deployed,4
+43,status,Closed,Deployed,4
+43,status,In Code Review,Needs Triage,4
+43,status,Needs Mockup,Open,4
+43,status,Resolved,Reopened,3
+43,status,Needs Scheduling,Needs Triage,3
+43,status,Needs Triage,Needs Triage,3
+43,status,In Code Review,Debugging,3
+43,status,Closed,Needs Triage,3
+43,status,Blocked,Open,3
+43,status,Closed,Debugging,3
+43,status,Reopened,In Progress,3
+43,status,Resolved,In Code Review,3
+43,status,Resolved,In Progress,3
+43,status,Waiting (Blocked),Needs Triage,3
+43,status,Blocked,Blocked,2
+43,status,In Progress,Needs Design,2
+43,status,Needs Design,In Progress,2
+43,status,In Progress,Deployed,2
+43,status,Needs Design,Closed,2
+43,status,Investigating,Open,2
+43,status,Waiting (Blocked),Deployed,2
+43,status,Waiting (Blocked),Waiting (Blocked),2
+43,status,Open,Investigating,2
+43,status,In Progress,Blocked,2
+43,status,Closed,Reopened,1
+43,status,Deployed,Resolved,1
+43,status,Waiting (Blocked),Request Submitted,1
+43,status,Blocked,In Code Review,1
+43,status,Needs Design,Debugging,1
+43,status,New,In Progress,1
+43,status,Waiting For User Input,Blocked,1
+43,status,Needs Triage,Needs Scheduling,1
+43,status,Investigating,In Progress,1
+43,status,In Code Review,Needs Design,1
+43,status,Waiting For User Input,Waiting (Blocked),1
+43,status,Needs Triage,Deployed,1
+43,status,Deployed,Open,1
+43,status,Debugging,Needs Design,1
+43,status,Waiting For User Input,Investigating,1
+43,status,Reopened,Open,1
+43,status,Request Submitted,Request Submitted,1
+43,status,Request Submitted,Waiting (Blocked),1
+43,status,Needs Scheduling,Debugging,1
+43,status,Resolved,Deployed,1
+44,resolution,,Fixed,1947
+44,resolution,,Obsolete,1264
+44,resolution,,Won't Fix,1092
+44,resolution,,Duplicate,703
+44,resolution,,Invalid,280
+44,resolution,,Cannot Reproduce,278
+44,resolution,,Not a bug,153
+44,resolution,Fixed,,149
+44,resolution,,Timed out,116
+44,resolution,,Tracked Elsewhere,112
+44,resolution,,Answered,71
+44,resolution,Won't Fix,,36
+44,resolution,Duplicate,,36
+44,resolution,Cannot Reproduce,,30
+44,resolution,,Won't Do,22
+44,resolution,,Done,21
+44,resolution,Tracked Elsewhere,,16
+44,resolution,Not a bug,,15
+44,resolution,Obsolete,,14
+44,resolution,,Incomplete,13
+44,resolution,,Deployed,13
+44,resolution,Invalid,,12
+44,resolution,,Support Request,12
+44,resolution,Timed out,,10
+44,resolution,,Handled by Support,9
+44,resolution,,Incorrectly Filed,7
+44,resolution,Won't Fix,Fixed,6
+44,resolution,Timed out,Won't Fix,5
+44,resolution,Answered,,5
+44,resolution,,Spam,5
+44,resolution,,Resolved Locally,4
+44,resolution,Done,,4
+44,resolution,Fixed,Duplicate,3
+44,resolution,Incorrectly Filed,,2
+44,resolution,Won't Fix,Obsolete,2
+44,resolution,Support Request,,2
+44,resolution,Obsolete,Won't Fix,2
+44,resolution,Handled by Support,,2
+44,resolution,Done,Fixed,2
+44,resolution,Duplicate,Won't Fix,2
+44,resolution,Tracked Elsewhere,Not a bug,1
+44,resolution,Tracked Elsewhere,Fixed,1
+44,resolution,Fixed,Answered,1
+44,resolution,Incomplete,,1
+44,resolution,Won't Do,,1
+44,resolution,Not a bug,Fixed,1
+44,status,RESOLVED,Closed,7478
+44,status,Open,Gathering Interest,7274
+44,status,Closed,Resolved,5944
+44,status,Resolved,Closed,4549
+44,status,Open,Verified,2396
+44,status,Verified,Gathering Impact,2203
+44,status,Gathering Impact,Closed,1653
+44,status,Open,Closed,1002
+44,status,Open,Resolved,925
+44,status,Verified,Resolved,924
+44,status,Needs Triage,Gathering Impact,841
+44,status,Open,Needs Verification,480
+44,status,Verified,Awaiting Development,425
+44,status,Awaiting Development,In Progress,401
+44,status,Awaiting Soak,Soaking,347
+44,status,Soaking,Resolved,338
+44,status,Needs Verification,Needs Triage,291
+44,status,Needs Triage,Closed,273
+44,status,In Progress,Resolved,264
+44,status,Resolved,Open,199
+44,status,Verified,Open,199
+44,status,Needs Triage,Long Term Backlog,169
+44,status,Verified,Under Consideration,160
+44,status,Verified,Awaiting Soak,141
+44,status,Needs Verification,Resolved,137
+44,status,In Progress,Technical Review,134
+44,status,Needs Verification,Verified,131
+44,status,Open,Awaiting Development,126
+44,status,Technical Review,Awaiting Soak,123
+44,status,Needs Triage,Short Term Backlog,119
+44,status,In Progress,Closed,117
+44,status,Gathering Interest,Closed,112
+44,status,Open,Needs Triage,95
+44,status,Open - untriaged,Open,90
+44,status,Gathering Impact,Short Term Backlog,89
+44,status,Awaiting Deployment,Deployment,83
+44,status,Deployment,Resolved,81
+44,status,Short Term Backlog,Closed,78
+44,status,Awaiting Development,Awaiting Soak,75
+44,status,Awaiting Development,Open,68
+44,status,Closed,Needs Triage,68
+44,status,Short Term Backlog,In Progress,67
+44,status,Needs Triage,In Progress,66
+44,status,Awaiting Soak,In Progress,66
+44,status,Gathering Interest,Resolved,61
+44,status,Gathering Impact,In Progress,60
+44,status,Awaiting Quality Review,Quality Review,59
+44,status,Awaiting Development,Short Term Backlog,59
+44,status,In Progress,Awaiting Quality Review,58
+44,status,Waiting for Release,Closed,56
+44,status,Open,Awaiting Soak,55
+44,status,Closed,Open,55
+44,status,Gathering Impact,Long Term Backlog,55
+44,status,Gathering Interest,Open,54
+44,status,In Progress,Waiting for Release,47
+44,status,Quality Review,Awaiting Deployment,46
+44,status,Gathering Interest,Needs Triage,38
+44,status,Closed,Closed,34
+44,status,Open,In Progress,33
+44,status,Gathering Interest,RESOLVED,32
+44,status,Open,Awaiting Deployment,31
+44,status,Long Term Backlog,Closed,27
+44,status,Gathering Interest,Future Consideration,27
+44,status,In Progress,In Review,27
+44,status,Needs Verification,Gathering Interest,21
+44,status,Long Term Backlog,Short Term Backlog,20
+44,status,In Progress,Awaiting Development,20
+44,status,Gathering Interest,In Progress,18
+44,status,New,Open,16
+44,status,In Review,Waiting for Release,14
+44,status,Short Term Backlog,Long Term Backlog,13
+44,status,Gathering Interest,Under Consideration,13
+44,status,Short Term Backlog,Gathering Impact,12
+44,status,In Review,Closed,12
+44,status,Gathering Impact,Needs Triage,12
+44,status,Needs Triage,Gathering Interest,11
+44,status,Untriaged,Open,11
+44,status,Technical Review,In Progress,9
+44,status,Open,Open - untriaged,9
+44,status,Verified,Awaiting Deployment,9
+44,status,Quality Review,Awaiting Soak,9
+44,status,Gathering Interest,Not Being Considered,9
+44,status,Needs Triage,Open,8
+44,status,To Do,Open,8
+44,status,Long Term Backlog,Gathering Impact,8
+44,status,Quality Review,Awaiting Quality Review,7
+44,status,Verified,Gathering Interest,7
+44,status,Long Term Backlog,In Progress,7
+44,status,Under Consideration,Resolved,7
+44,status,Awaiting Release,Closed,6
+44,status,Soaking,Awaiting Soak,6
+44,status,Under Consideration,Closed,6
+44,status,Awaiting Deployment,Quality Review,6
+44,status,Awaiting Quality Review,In Progress,6
+44,status,Awaiting Development,Under Consideration,6
+44,status,Gathering Impact,Open,5
+44,status,In Progress,Short Term Backlog,4
+44,status,In Progress,RESOLVED,4
+44,status,Gathering Interest,Reviewing,4
+44,status,Closed,Gathering Interest,4
+44,status,Open - untriaged,Closed,4
+44,status,Under Consideration,In Progress,4
+44,status,Untriaged,To Do,4
+44,status,Quality Review,In Progress,3
+44,status,Under Consideration,Reviewing,3
+44,status,Resolved,Gathering Interest,3
+44,status,Reviewing,In Progress,3
+44,status,In Progress,Awaiting Release,3
+44,status,In Progress,Reviewing,3
+44,status,Gathering Impact,Gathering Interest,3
+44,status,Closed,Open - untriaged,3
+44,status,Closed,In Progress,3
+44,status,Long Term Backlog,Open,3
+44,status,In Progress,Needs Triage,3
+44,status,Open,Gathering Impact,3
+44,status,Open,Awaiting Release,3
+44,status,Open - untriaged,Accepted,3
+44,status,Awaiting Soak,Awaiting Soak,2
+44,status,Gathering Interest,Gathering Impact,2
+44,status,Gathering Interest,Gathering Interest,2
+44,status,Short Term Backlog,Needs Triage,2
+44,status,Open - untriaged,Gathering Interest,2
+44,status,Reviewing,Gathering Interest,2
+44,status,Soaking,Waiting for Release,2
+44,status,Gathering Interest,Needs Verification,2
+44,status,Technical Review,In Review,2
+44,status,Open - untriaged,Verified,2
+44,status,Accepted,Verified,2
+44,status,In Progress,Long Term Backlog,2
+44,status,Reviewing,Resolved,2
+44,status,Waiting for Release,In Progress,2
+44,status,Open,Open,2
+44,status,Deployment,Awaiting Deployment,2
+44,status,Needs Triage,Needs Verification,2
+44,status,Awaiting Soak,Waiting for Release,2
+44,status,Untriaged,Gathering Interest,1
+44,status,Untriaged,Needs Verification,1
+44,status,Waiting for Release,In Review,1
+44,status,Verified,Verified,1
+44,status,New,Open - untriaged,1
+44,status,Not Being Considered,Closed,1
+44,status,Needs Verification,Open,1
+44,status,Needs Triage,Verified,1
+44,status,Open,To Do,1
+44,status,Needs Triage,Open - untriaged,1
+44,status,Waiting for Release,Gathering Impact,1
+44,status,Open - untriaged,Needs Verification,1
+44,status,Long Term Backlog,Needs Triage,1
+44,status,Closed,Future Consideration,1
+44,status,Awaiting Development,Awaiting Deployment,1
+44,status,Reopened,Needs Verification,1
+44,status,Reopened,Open,1
+44,status,Reopened,Resolved,1
+44,status,In Progress,Not Being Considered,1
+44,status,Implemented,Reopened,1
+44,status,Resolved,Reopened,1
+44,status,Resolved,Resolved,1
+44,status,Reviewing,Closed,1
+44,status,Reviewing,Open,1
+44,status,Closed,Reopened,1
+44,status,Awaiting Development,Waiting for Release,1
+44,status,Short Term Backlog,Gathering Interest,1
+44,status,Accepted,Open,1
+44,status,Backlog,Open,1
+44,status,In Progress,Implemented,1
+44,status,Soaking,In Progress,1
+44,status,In Progress,Gathering Impact,1
+44,status,In Progress,Open,1
+44,status,To Do,In Progress,1
+44,status,Under Consideration,Gathering Interest,1
+44,status,Under Consideration,Open,1
+44,status,Under Consideration,RESOLVED,1

@@ -1,0 +1,321 @@
+project_id,status,done,instances,rule
+1,done,True,983,exact terminal whitelist; ambiguous excluded
+1,unknown,,230,exact terminal whitelist; ambiguous excluded
+1,in pr,False,47,exact terminal whitelist; ambiguous excluded
+1,in progress,False,181,exact terminal whitelist; ambiguous excluded
+1,to do,False,27,exact terminal whitelist; ambiguous excluded
+2,unknown,,41,exact terminal whitelist; ambiguous excluded
+2,resolved,True,13,exact terminal whitelist; ambiguous excluded
+2,waiting for review,False,3,exact terminal whitelist; ambiguous excluded
+2,investigating,False,3,exact terminal whitelist; ambiguous excluded
+2,in progress,False,8,exact terminal whitelist; ambiguous excluded
+2,closed,True,2,exact terminal whitelist; ambiguous excluded
+2,open,False,12,exact terminal whitelist; ambiguous excluded
+2,done,True,15,exact terminal whitelist; ambiguous excluded
+2,to do,False,2,exact terminal whitelist; ambiguous excluded
+3,closed,True,381,exact terminal whitelist; ambiguous excluded
+3,to be tested,False,29,exact terminal whitelist; ambiguous excluded
+3,testing in progress,False,12,exact terminal whitelist; ambiguous excluded
+3,unknown,,8,exact terminal whitelist; ambiguous excluded
+3,waiting for review,False,20,exact terminal whitelist; ambiguous excluded
+3,open,False,35,exact terminal whitelist; ambiguous excluded
+3,ready for development,False,6,exact terminal whitelist; ambiguous excluded
+3,in progress,False,24,exact terminal whitelist; ambiguous excluded
+3,done,True,11,exact terminal whitelist; ambiguous excluded
+3,in development,False,6,exact terminal whitelist; ambiguous excluded
+3,ready to groom,False,1,exact terminal whitelist; ambiguous excluded
+4,in progress,False,207,exact terminal whitelist; ambiguous excluded
+4,reviewable,False,501,exact terminal whitelist; ambiguous excluded
+4,unknown,,58,exact terminal whitelist; ambiguous excluded
+4,resolved,True,534,exact terminal whitelist; ambiguous excluded
+4,accepted,,156,exact terminal whitelist; ambiguous excluded
+4,closed,True,9,exact terminal whitelist; ambiguous excluded
+4,open,False,16,exact terminal whitelist; ambiguous excluded
+4,reopened,False,1,exact terminal whitelist; ambiguous excluded
+5,closed,True,209,exact terminal whitelist; ambiguous excluded
+5,resolved,True,78,exact terminal whitelist; ambiguous excluded
+5,in progress,False,50,exact terminal whitelist; ambiguous excluded
+5,unknown,,162,exact terminal whitelist; ambiguous excluded
+5,open,False,12,exact terminal whitelist; ambiguous excluded
+5,reopened,False,1,exact terminal whitelist; ambiguous excluded
+6,done,True,49,exact terminal whitelist; ambiguous excluded
+6,in review,False,29,exact terminal whitelist; ambiguous excluded
+6,unknown,,20,exact terminal whitelist; ambiguous excluded
+6,in progress,False,33,exact terminal whitelist; ambiguous excluded
+6,to do,False,10,exact terminal whitelist; ambiguous excluded
+7,unknown,,35,exact terminal whitelist; ambiguous excluded
+7,resolved,True,77,exact terminal whitelist; ambiguous excluded
+7,in review,False,7,exact terminal whitelist; ambiguous excluded
+7,in  review,False,3,exact terminal whitelist; ambiguous excluded
+7,closed,True,8,exact terminal whitelist; ambiguous excluded
+7,open,False,4,exact terminal whitelist; ambiguous excluded
+7,in progress,False,9,exact terminal whitelist; ambiguous excluded
+7,reopened,False,1,exact terminal whitelist; ambiguous excluded
+8,resolved,True,8,exact terminal whitelist; ambiguous excluded
+8,unknown,,7,exact terminal whitelist; ambiguous excluded
+8,in review,False,1,exact terminal whitelist; ambiguous excluded
+8,closed,True,1,exact terminal whitelist; ambiguous excluded
+8,in progress,False,1,exact terminal whitelist; ambiguous excluded
+9,unknown,,89,exact terminal whitelist; ambiguous excluded
+9,closed,True,29,exact terminal whitelist; ambiguous excluded
+9,resolved,True,39,exact terminal whitelist; ambiguous excluded
+9,in  review,False,38,exact terminal whitelist; ambiguous excluded
+9,in review,False,8,exact terminal whitelist; ambiguous excluded
+9,open,False,4,exact terminal whitelist; ambiguous excluded
+9,in progress,False,3,exact terminal whitelist; ambiguous excluded
+9,reopened,False,5,exact terminal whitelist; ambiguous excluded
+10,unknown,,15,exact terminal whitelist; ambiguous excluded
+10,open,False,5,exact terminal whitelist; ambiguous excluded
+10,closed,True,3,exact terminal whitelist; ambiguous excluded
+10,in progress,False,6,exact terminal whitelist; ambiguous excluded
+10,resolved,True,11,exact terminal whitelist; ambiguous excluded
+11,in progress,False,300,exact terminal whitelist; ambiguous excluded
+11,closed,True,245,exact terminal whitelist; ambiguous excluded
+11,resolved,True,189,exact terminal whitelist; ambiguous excluded
+11,unknown,,324,exact terminal whitelist; ambiguous excluded
+11,reopened,False,10,exact terminal whitelist; ambiguous excluded
+11,in review,False,24,exact terminal whitelist; ambiguous excluded
+11,open,False,13,exact terminal whitelist; ambiguous excluded
+11,in  review,False,6,exact terminal whitelist; ambiguous excluded
+12,in review,False,742,exact terminal whitelist; ambiguous excluded
+12,resolved,True,866,exact terminal whitelist; ambiguous excluded
+12,closed,True,405,exact terminal whitelist; ambiguous excluded
+12,in qe test,False,111,exact terminal whitelist; ambiguous excluded
+12,unknown,,679,exact terminal whitelist; ambiguous excluded
+12,in  review,False,167,exact terminal whitelist; ambiguous excluded
+12,in progress,False,256,exact terminal whitelist; ambiguous excluded
+12,open,False,157,exact terminal whitelist; ambiguous excluded
+12,reopened,False,88,exact terminal whitelist; ambiguous excluded
+13,closed,True,113,exact terminal whitelist; ambiguous excluded
+13,unknown,,416,exact terminal whitelist; ambiguous excluded
+13,resolved,True,460,exact terminal whitelist; ambiguous excluded
+13,in progress,False,106,exact terminal whitelist; ambiguous excluded
+13,in  review,False,58,exact terminal whitelist; ambiguous excluded
+13,in review,False,27,exact terminal whitelist; ambiguous excluded
+13,open,False,63,exact terminal whitelist; ambiguous excluded
+13,reopened,False,31,exact terminal whitelist; ambiguous excluded
+14,resolved,True,12,exact terminal whitelist; ambiguous excluded
+14,in progress,False,8,exact terminal whitelist; ambiguous excluded
+14,open,False,3,exact terminal whitelist; ambiguous excluded
+14,to be reviewed,False,5,exact terminal whitelist; ambiguous excluded
+14,unknown,,5,exact terminal whitelist; ambiguous excluded
+14,needs triage,False,1,exact terminal whitelist; ambiguous excluded
+15,closed,True,38,exact terminal whitelist; ambiguous excluded
+15,unknown,,30,exact terminal whitelist; ambiguous excluded
+15,in progress,False,14,exact terminal whitelist; ambiguous excluded
+15,to be reviewed,False,8,exact terminal whitelist; ambiguous excluded
+15,resolved,True,14,exact terminal whitelist; ambiguous excluded
+15,open,False,4,exact terminal whitelist; ambiguous excluded
+16,resolved,True,37,exact terminal whitelist; ambiguous excluded
+16,technical review,False,16,exact terminal whitelist; ambiguous excluded
+16,in progress,False,9,exact terminal whitelist; ambiguous excluded
+16,unknown,,7,exact terminal whitelist; ambiguous excluded
+16,verified,False,2,exact terminal whitelist; ambiguous excluded
+16,open,False,3,exact terminal whitelist; ambiguous excluded
+17,open,False,33,exact terminal whitelist; ambiguous excluded
+17,quality review,False,7,exact terminal whitelist; ambiguous excluded
+17,in progress,False,10,exact terminal whitelist; ambiguous excluded
+17,unknown,,4,exact terminal whitelist; ambiguous excluded
+17,closed,True,80,exact terminal whitelist; ambiguous excluded
+17,long term backlog,False,2,exact terminal whitelist; ambiguous excluded
+17,resolved,True,9,exact terminal whitelist; ambiguous excluded
+17,under consideration,False,6,exact terminal whitelist; ambiguous excluded
+17,to be reviewed,False,13,exact terminal whitelist; ambiguous excluded
+17,short term backlog,False,10,exact terminal whitelist; ambiguous excluded
+17,gathering impact,False,1,exact terminal whitelist; ambiguous excluded
+18,resolved,True,69,exact terminal whitelist; ambiguous excluded
+18,unknown,,39,exact terminal whitelist; ambiguous excluded
+18,verified,False,48,exact terminal whitelist; ambiguous excluded
+18,needs verification,False,9,exact terminal whitelist; ambiguous excluded
+18,awaiting development,False,11,exact terminal whitelist; ambiguous excluded
+18,closed,True,12,exact terminal whitelist; ambiguous excluded
+18,open,False,12,exact terminal whitelist; ambiguous excluded
+18,awaiting soak,False,11,exact terminal whitelist; ambiguous excluded
+18,in progress,False,6,exact terminal whitelist; ambiguous excluded
+18,soaking,False,4,exact terminal whitelist; ambiguous excluded
+18,technical review,False,7,exact terminal whitelist; ambiguous excluded
+19,closed,True,2,exact terminal whitelist; ambiguous excluded
+19,in progress,False,10,exact terminal whitelist; ambiguous excluded
+19,resolved,True,160,exact terminal whitelist; ambiguous excluded
+19,unknown,,16,exact terminal whitelist; ambiguous excluded
+19,awaiting deployment,False,6,exact terminal whitelist; ambiguous excluded
+19,awaiting quality review,False,3,exact terminal whitelist; ambiguous excluded
+19,open,False,9,exact terminal whitelist; ambiguous excluded
+19,quality review,False,2,exact terminal whitelist; ambiguous excluded
+20,resolved,True,196,exact terminal whitelist; ambiguous excluded
+20,unknown,,19,exact terminal whitelist; ambiguous excluded
+20,in progress,False,9,exact terminal whitelist; ambiguous excluded
+20,open,False,10,exact terminal whitelist; ambiguous excluded
+20,awaiting quality review,False,3,exact terminal whitelist; ambiguous excluded
+20,awaiting deployment,False,6,exact terminal whitelist; ambiguous excluded
+20,quality review,False,2,exact terminal whitelist; ambiguous excluded
+20,closed,True,2,exact terminal whitelist; ambiguous excluded
+21,gathering impact,False,15,exact terminal whitelist; ambiguous excluded
+21,resolved,True,18,exact terminal whitelist; ambiguous excluded
+21,waiting for release,False,9,exact terminal whitelist; ambiguous excluded
+21,in review,False,5,exact terminal whitelist; ambiguous excluded
+21,in progress,False,89,exact terminal whitelist; ambiguous excluded
+21,awaiting release,False,6,exact terminal whitelist; ambiguous excluded
+21,closed,True,108,exact terminal whitelist; ambiguous excluded
+21,short term backlog,False,9,exact terminal whitelist; ambiguous excluded
+21,under review,False,37,exact terminal whitelist; ambiguous excluded
+21,open,False,60,exact terminal whitelist; ambiguous excluded
+21,awaiting merge,False,1,exact terminal whitelist; ambiguous excluded
+21,technical review,False,8,exact terminal whitelist; ambiguous excluded
+21,long term backlog,False,2,exact terminal whitelist; ambiguous excluded
+21,unknown,,14,exact terminal whitelist; ambiguous excluded
+21,triage,False,1,exact terminal whitelist; ambiguous excluded
+21,quality review,False,1,exact terminal whitelist; ambiguous excluded
+21,awaiting quality review,False,2,exact terminal whitelist; ambiguous excluded
+21,released to cloud,,3,exact terminal whitelist; ambiguous excluded
+22,under review,False,34,exact terminal whitelist; ambiguous excluded
+22,short term backlog,False,30,exact terminal whitelist; ambiguous excluded
+22,resolved,True,252,exact terminal whitelist; ambiguous excluded
+22,in review,False,28,exact terminal whitelist; ambiguous excluded
+22,awaiting merge,False,51,exact terminal whitelist; ambiguous excluded
+22,in progress,False,150,exact terminal whitelist; ambiguous excluded
+22,closed,True,55,exact terminal whitelist; ambiguous excluded
+22,ready for development,False,5,exact terminal whitelist; ambiguous excluded
+22,gathering impact,False,20,exact terminal whitelist; ambiguous excluded
+22,reviewing,False,7,exact terminal whitelist; ambiguous excluded
+22,unknown,,55,exact terminal whitelist; ambiguous excluded
+22,waiting for release,False,26,exact terminal whitelist; ambiguous excluded
+22,technical review,False,47,exact terminal whitelist; ambiguous excluded
+22,to do,False,2,exact terminal whitelist; ambiguous excluded
+22,future consideration,False,1,exact terminal whitelist; ambiguous excluded
+22,done,True,4,exact terminal whitelist; ambiguous excluded
+22,long term backlog,False,4,exact terminal whitelist; ambiguous excluded
+22,gathering interest,False,1,exact terminal whitelist; ambiguous excluded
+22,awaiting release,False,71,exact terminal whitelist; ambiguous excluded
+22,open,False,182,exact terminal whitelist; ambiguous excluded
+22,quality review,False,23,exact terminal whitelist; ambiguous excluded
+22,awaiting quality review,False,18,exact terminal whitelist; ambiguous excluded
+22,reopened,False,5,exact terminal whitelist; ambiguous excluded
+22,released to server,,15,exact terminal whitelist; ambiguous excluded
+22,released to cloud,,7,exact terminal whitelist; ambiguous excluded
+22,needs verification,False,1,exact terminal whitelist; ambiguous excluded
+22,under consideration,False,2,exact terminal whitelist; ambiguous excluded
+22,not being considered,False,3,exact terminal whitelist; ambiguous excluded
+23,complete,True,67,exact terminal whitelist; ambiguous excluded
+23,in progress,False,62,exact terminal whitelist; ambiguous excluded
+23,done,True,109,exact terminal whitelist; ambiguous excluded
+23,in review,False,32,exact terminal whitelist; ambiguous excluded
+23,unknown,,53,exact terminal whitelist; ambiguous excluded
+23,to do,False,1,exact terminal whitelist; ambiguous excluded
+24,unknown,,164,exact terminal whitelist; ambiguous excluded
+24,in review,False,36,exact terminal whitelist; ambiguous excluded
+24,backlog,False,5,exact terminal whitelist; ambiguous excluded
+24,done,True,77,exact terminal whitelist; ambiguous excluded
+24,in progress,False,80,exact terminal whitelist; ambiguous excluded
+24,to do,False,11,exact terminal whitelist; ambiguous excluded
+24,closed,True,1,exact terminal whitelist; ambiguous excluded
+25,done,True,361,exact terminal whitelist; ambiguous excluded
+25,in progress,False,152,exact terminal whitelist; ambiguous excluded
+25,code review,False,65,exact terminal whitelist; ambiguous excluded
+25,unknown,,149,exact terminal whitelist; ambiguous excluded
+25,complete,True,83,exact terminal whitelist; ambiguous excluded
+25,to develop,False,42,exact terminal whitelist; ambiguous excluded
+25,to test,False,102,exact terminal whitelist; ambiguous excluded
+25,won't fix,False,8,exact terminal whitelist; ambiguous excluded
+25,invalid,False,21,exact terminal whitelist; ambiguous excluded
+25,new,False,5,exact terminal whitelist; ambiguous excluded
+25,icebox,False,1,exact terminal whitelist; ambiguous excluded
+25,customer validation,False,10,exact terminal whitelist; ambiguous excluded
+26,review,False,35,exact terminal whitelist; ambiguous excluded
+26,done,True,258,exact terminal whitelist; ambiguous excluded
+26,validate,False,31,exact terminal whitelist; ambiguous excluded
+26,in progress,False,64,exact terminal whitelist; ambiguous excluded
+26,code review,False,20,exact terminal whitelist; ambiguous excluded
+26,complete,True,79,exact terminal whitelist; ambiguous excluded
+26,to test,False,22,exact terminal whitelist; ambiguous excluded
+26,unknown,,74,exact terminal whitelist; ambiguous excluded
+26,new,False,2,exact terminal whitelist; ambiguous excluded
+26,to develop,False,4,exact terminal whitelist; ambiguous excluded
+26,design,False,2,exact terminal whitelist; ambiguous excluded
+26,to do,False,23,exact terminal whitelist; ambiguous excluded
+26,invalid,False,98,exact terminal whitelist; ambiguous excluded
+26,in review,False,5,exact terminal whitelist; ambiguous excluded
+27,done,True,354,exact terminal whitelist; ambiguous excluded
+27,unknown,,163,exact terminal whitelist; ambiguous excluded
+27,in progress,False,192,exact terminal whitelist; ambiguous excluded
+27,in review,False,23,exact terminal whitelist; ambiguous excluded
+27,to do,False,13,exact terminal whitelist; ambiguous excluded
+28,unknown,,2303,exact terminal whitelist; ambiguous excluded
+28,in progress,False,1758,exact terminal whitelist; ambiguous excluded
+28,reviewed,False,279,exact terminal whitelist; ambiguous excluded
+28,done,True,2420,exact terminal whitelist; ambiguous excluded
+28,won't fix,False,197,exact terminal whitelist; ambiguous excluded
+28,in review,False,508,exact terminal whitelist; ambiguous excluded
+28,to do,False,239,exact terminal whitelist; ambiguous excluded
+28,invalid,False,101,exact terminal whitelist; ambiguous excluded
+28,review complete,False,8,exact terminal whitelist; ambiguous excluded
+29,closed,True,16,exact terminal whitelist; ambiguous excluded
+29,unknown,,5,exact terminal whitelist; ambiguous excluded
+30,closed,True,314,exact terminal whitelist; ambiguous excluded
+30,in progress,False,164,exact terminal whitelist; ambiguous excluded
+30,in code review,False,63,exact terminal whitelist; ambiguous excluded
+30,open,False,79,exact terminal whitelist; ambiguous excluded
+30,unknown,,57,exact terminal whitelist; ambiguous excluded
+30,debugging with submitter,False,23,exact terminal whitelist; ambiguous excluded
+30,waiting (blocked),False,10,exact terminal whitelist; ambiguous excluded
+30,ready for work,False,79,exact terminal whitelist; ambiguous excluded
+30,needs triage,False,1,exact terminal whitelist; ambiguous excluded
+31,closed,True,126,exact terminal whitelist; ambiguous excluded
+31,open,False,21,exact terminal whitelist; ambiguous excluded
+31,in progress,False,29,exact terminal whitelist; ambiguous excluded
+31,waiting (blocked),False,5,exact terminal whitelist; ambiguous excluded
+31,in code review,False,34,exact terminal whitelist; ambiguous excluded
+31,unknown,,91,exact terminal whitelist; ambiguous excluded
+31,resolved,True,63,exact terminal whitelist; ambiguous excluded
+31,reopened,False,1,exact terminal whitelist; ambiguous excluded
+32,resolved,True,82,exact terminal whitelist; ambiguous excluded
+32,open,False,11,exact terminal whitelist; ambiguous excluded
+32,closed,True,32,exact terminal whitelist; ambiguous excluded
+32,unknown,,24,exact terminal whitelist; ambiguous excluded
+32,in code review,False,14,exact terminal whitelist; ambiguous excluded
+32,in progress,False,13,exact terminal whitelist; ambiguous excluded
+32,reopened,False,2,exact terminal whitelist; ambiguous excluded
+34,waiting for integration review,False,66,exact terminal whitelist; ambiguous excluded
+34,development in progress,False,115,exact terminal whitelist; ambiguous excluded
+34,closed,True,219,exact terminal whitelist; ambiguous excluded
+34,waiting for peer review,False,51,exact terminal whitelist; ambiguous excluded
+34,waiting for testing,False,6,exact terminal whitelist; ambiguous excluded
+34,unknown,,51,exact terminal whitelist; ambiguous excluded
+34,integration review in progress,False,16,exact terminal whitelist; ambiguous excluded
+34,open,False,18,exact terminal whitelist; ambiguous excluded
+34,peer review in progress,False,18,exact terminal whitelist; ambiguous excluded
+34,reopened,False,17,exact terminal whitelist; ambiguous excluded
+34,testing in progress,False,4,exact terminal whitelist; ambiguous excluded
+34,tested,False,17,exact terminal whitelist; ambiguous excluded
+35,new,False,19,exact terminal whitelist; ambiguous excluded
+35,in progress,False,41,exact terminal whitelist; ambiguous excluded
+35,done,True,77,exact terminal whitelist; ambiguous excluded
+35,unknown,,94,exact terminal whitelist; ambiguous excluded
+35,closed,True,103,exact terminal whitelist; ambiguous excluded
+35,development complete,False,1,exact terminal whitelist; ambiguous excluded
+35,code review,False,3,exact terminal whitelist; ambiguous excluded
+35,to be reviewed,False,1,exact terminal whitelist; ambiguous excluded
+35,resolved,True,41,exact terminal whitelist; ambiguous excluded
+35,triaged,False,1,exact terminal whitelist; ambiguous excluded
+35,accepted,,5,exact terminal whitelist; ambiguous excluded
+35,open,False,11,exact terminal whitelist; ambiguous excluded
+35,pending 3rd-party,False,1,exact terminal whitelist; ambiguous excluded
+35,reopened,False,1,exact terminal whitelist; ambiguous excluded
+36,resolved,True,280,exact terminal whitelist; ambiguous excluded
+36,unknown,,492,exact terminal whitelist; ambiguous excluded
+36,closed,True,836,exact terminal whitelist; ambiguous excluded
+36,done,True,224,exact terminal whitelist; ambiguous excluded
+36,new,False,83,exact terminal whitelist; ambiguous excluded
+36,in progress,False,242,exact terminal whitelist; ambiguous excluded
+36,open,False,111,exact terminal whitelist; ambiguous excluded
+36,to do,False,35,exact terminal whitelist; ambiguous excluded
+36,reopened,False,2,exact terminal whitelist; ambiguous excluded
+36,pending 3rd-party,False,6,exact terminal whitelist; ambiguous excluded
+36,accepted,,2,exact terminal whitelist; ambiguous excluded
+36,code review,False,1,exact terminal whitelist; ambiguous excluded
+44,resolved,True,10,exact terminal whitelist; ambiguous excluded
+44,verified,False,7,exact terminal whitelist; ambiguous excluded
+44,unknown,,7,exact terminal whitelist; ambiguous excluded
+44,closed,True,4,exact terminal whitelist; ambiguous excluded
+44,open,False,5,exact terminal whitelist; ambiguous excluded
+44,in progress,False,2,exact terminal whitelist; ambiguous excluded

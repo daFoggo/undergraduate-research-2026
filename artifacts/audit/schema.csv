@@ -1,0 +1,97 @@
+table_name,column_name,data_type
+affected_version,issue_id,integer
+affected_version,affected_version_id,integer
+change_log,id,integer
+change_log,field,character varying
+change_log,from_value,text
+change_log,to_value,text
+change_log,from_string,text
+change_log,to_string,text
+change_log,change_type,character varying
+change_log,creation_date,timestamp with time zone
+change_log,author_id,integer
+change_log,issue_id,integer
+comment,id,integer
+comment,comment,text
+comment,comment_text,text
+comment,comment_code,text
+comment,creation_date,timestamp with time zone
+comment,author_id,integer
+comment,issue_id,integer
+component,id,integer
+component,jira_id,integer
+component,name,character varying
+component,description,character varying
+component,project_id,integer
+fix_version,issue_id,integer
+fix_version,fix_version_id,integer
+issue,id,integer
+issue,jira_id,integer
+issue,issue_key,character varying
+issue,url,character varying
+issue,title,character varying
+issue,description,text
+issue,description_text,text
+issue,description_code,text
+issue,type,character varying
+issue,priority,character varying
+issue,status,character varying
+issue,resolution,character varying
+issue,creation_date,timestamp with time zone
+issue,estimation_date,timestamp with time zone
+issue,resolution_date,timestamp with time zone
+issue,last_updated,timestamp with time zone
+issue,story_point,double precision
+issue,timespent,double precision
+issue,in_progress_minutes,double precision
+issue,total_effort_minutes,double precision
+issue,resolution_time_minutes,double precision
+issue,title_changed_after_estimation,smallint
+issue,description_changed_after_estimation,smallint
+issue,story_point_changed_after_estimation,smallint
+issue,pull_request_url,character varying
+issue,creator_id,integer
+issue,reporter_id,integer
+issue,assignee_id,integer
+issue,project_id,integer
+issue,sprint_id,integer
+issue_component,issue_id,integer
+issue_component,component_id,integer
+issue_link,id,integer
+issue_link,issue_id,integer
+issue_link,name,character varying
+issue_link,description,character varying
+issue_link,direction,character varying
+issue_link,target_issue_id,integer
+project,id,integer
+project,project_key,character varying
+project,name,character varying
+project,url,character varying
+project,description,character varying
+project,start_date,timestamp with time zone
+project,last_update_date,timestamp with time zone
+project,sp_field_id,character varying
+project,repository_id,integer
+repository,id,integer
+repository,name,character varying
+repository,description,character varying
+repository,url,character varying
+sprint,id,integer
+sprint,jiraid,integer
+sprint,name,character varying
+sprint,state,character varying
+sprint,start_date,timestamp with time zone
+sprint,end_date,timestamp with time zone
+sprint,activated_date,timestamp with time zone
+sprint,complete_date,timestamp with time zone
+sprint,project_id,integer
+user,id,integer
+user,project_id,integer
+version,id,integer
+version,jira_id,integer
+version,name,character varying
+version,description,character varying
+version,archived,smallint
+version,released,smallint
+version,release_date,timestamp with time zone
+version,project_id,integer

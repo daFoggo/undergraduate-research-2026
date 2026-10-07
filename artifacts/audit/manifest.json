@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-07T20:02:47.481932+00:00",
+  "queries": {
+    "schema": "SELECT table_name,column_name,data_type FROM information_schema.columns WHERE table_schema='tawos_raw' ORDER BY table_name,ordinal_position",
+    "project_sprints": "SELECT p.id,p.project_key,p.repository_id,count(s.id) sprints,\n        count(s.id) FILTER (WHERE upper(s.state)='CLOSED' AND s.end_date>s.start_date) valid_closed,\n        min(s.start_date) first_start,max(s.end_date) last_end,\n        count(s.id) FILTER (WHERE extract(epoch FROM s.end_date-s.start_date)/86400 NOT BETWEEN 1 AND 60) unusual_duration,\n        count(s.id) FILTER (WHERE abs(extract(epoch FROM s.activated_date-s.start_date))>86400) activated_diff_gt_day\n        FROM tawos_raw.project p LEFT JOIN tawos_raw.sprint s ON s.project_id=p.id GROUP BY p.id ORDER BY p.id",
+    "status_values": "SELECT i.project_id,c.field,c.from_string,c.to_string,count(*) n\n        FROM tawos_raw.change_log c JOIN tawos_raw.issue i ON i.id=c.issue_id\n        WHERE c.field IN ('status','resolution') GROUP BY 1,2,3,4 ORDER BY 1,2,5 DESC",
+    "membership_coverage": "WITH tokens AS (\n        SELECT DISTINCT i.project_id,trim(token) token FROM tawos_raw.change_log c\n        JOIN tawos_raw.issue i ON i.id=c.issue_id\n        CROSS JOIN LATERAL regexp_split_to_table(coalesce(c.from_value,'')||','||coalesce(c.to_value,''),',') token\n        WHERE c.field='Sprint' AND trim(token)<>''), matches AS (\n        SELECT t.project_id,t.token,count(s.id) match_count FROM tokens t\n        LEFT JOIN tawos_raw.sprint s ON s.project_id=t.project_id AND s.jiraid::text=t.token GROUP BY 1,2)\n        SELECT project_id,count(*) tokens,count(*) FILTER (WHERE match_count=1) matched,\n        count(*) FILTER (WHERE match_count=0) unmatched,count(*) FILTER (WHERE match_count>1) ambiguous\n        FROM matches GROUP BY 1 ORDER BY 1",
+    "field_counts": "SELECT field,change_type,count(*) n FROM tawos_raw.change_log GROUP BY 1,2 ORDER BY 3 DESC",
+    "sprint_sample": "SELECT c.id,c.issue_id,i.project_id,c.creation_date,c.from_value,c.to_value,c.from_string,c.to_string\n        FROM tawos_raw.change_log c JOIN tawos_raw.issue i ON i.id=c.issue_id\n        WHERE c.field='Sprint' ORDER BY c.id LIMIT 100",
+    "source_manifest": "SELECT * FROM research.dataset_imports"
+  },
+  "outputs": {
+    "schema": 96,
+    "project_sprints": 39,
+    "status_values": 4565,
+    "membership_coverage": 39,
+    "field_counts": 448,
+    "sprint_sample": 100,
+    "source_manifest": 1
+  },
+  "finished_at": "2026-10-07T20:02:49.791179+00:00"
+}

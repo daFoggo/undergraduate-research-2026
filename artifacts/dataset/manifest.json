@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-10-07T20:08:42.357841+00:00",
+  "rows": 88588,
+  "instances": 22147,
+  "sha256": "a491b23cc03f0777e8a8b33a19cbcfe1843aa6b019e2634fc8a90b38e61d084f",
+  "fields_observed": [
+    "Sprint",
+    "status",
+    "resolution",
+    "priority",
+    "issuetype",
+    "assignee",
+    "Story Points"
+  ],
+  "cohort": "explicit last Sprint.to_value at or before Start_Date",
+  "outcome": "last observed status.to_string at or before End_Date; unknown excluded",
+  "done_statuses": [
+    "closed",
+    "complete",
+    "done",
+    "resolved"
+  ],
+  "ambiguous_excluded": [
+    "accepted",
+    "deployed",
+    "deployed to cloud",
+    "implemented",
+    "released to cloud",
+    "released to server",
+    "wad"
+  ],
+  "notes": [
+    "No final issue field is used as historical feature.",
+    "No status before first observed status event: unknown.",
+    "Event counts count only selected fields, not all issue activity.",
+    "Dataset eligibility is checked before model training."
+  ]
+}

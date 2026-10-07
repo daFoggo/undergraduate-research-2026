@@ -1,0 +1,13 @@
+{
+  "snapshots": 88588,
+  "labeled_instances": 22147,
+  "commitments_with_membership": 28746,
+  "unknown_outcomes": 6599,
+  "label_coverage": 0.7704376261045015,
+  "eligible_projects": 14,
+  "sample_audits": 765,
+  "checks_passed": true,
+  "manual_business_workflow_audit": false,
+  "inter_rater_agreement": null,
+  "scope": "SQL/replay consistency, chronology, label availability, forward feature provenance; no human ground truth confirmation"
+}

@@ -1,0 +1,766 @@
+project,issue_id,sprint_id,y,sql_status,membership_ok,label_ok,reverse_corroborated,cancelled,removed
+APIKIT,383945,4133,0,Done,True,True,,False,False
+APIKIT,384589,4180,0,Closed,True,True,,True,False
+APIKIT,384390,4136,0,Resolved,True,True,True,False,False
+APIKIT,384298,4096,0,Closed,True,True,,False,False
+APIKIT,384131,4093,0,Resolved,True,True,True,False,False
+APIKIT,384588,4168,0,Closed,True,True,,False,False
+APIKIT,384136,4117,0,Closed,True,True,,True,False
+APIKIT,384306,4128,0,Resolved,True,True,True,False,False
+APIKIT,384374,4098,0,Closed,True,True,,False,False
+APIKIT,384039,4116,0,Closed,True,True,True,False,False
+APIKIT,384038,4095,0,Done,True,True,,False,False
+APIKIT,384310,4128,0,Closed,True,True,,False,False
+APIKIT,383963,4075,0,Done,True,True,,False,False
+APIKIT,384155,4086,0,Resolved,True,True,,False,False
+APIKIT,384175,4108,0,Closed,True,True,,False,False
+APIKIT,384180,4133,0,Closed,True,True,,False,False
+APIKIT,383966,4083,0,Done,True,True,,False,False
+APIKIT,384129,4107,0,Closed,True,True,,False,False
+APIKIT,383903,4075,0,Done,True,True,,False,False
+APIKIT,384209,4100,0,Done,True,True,,False,False
+APIKIT,384162,4116,0,Closed,True,True,,False,False
+APIKIT,384217,4097,0,Done,True,True,,False,False
+APIKIT,384468,4148,0,Closed,True,True,,False,False
+APIKIT,384337,4073,0,Closed,True,True,,False,False
+APIKIT,384270,4124,0,Done,True,True,,False,False
+APIKIT,384593,4181,1,In Progress,True,True,True,False,False
+APIKIT,384324,4097,1,Code Review,True,True,True,False,False
+APIKIT,383973,4103,1,In Progress,True,True,True,False,False
+APIKIT,383901,4099,1,New,True,True,True,False,True
+APIKIT,383901,4117,1,New,True,True,True,False,True
+APIKIT,384146,4079,1,In Progress,True,True,True,False,False
+APIKIT,384047,4095,1,In Progress,True,True,True,False,False
+APIKIT,384372,4110,1,Open,True,True,True,False,True
+APIKIT,383945,4073,1,New,True,True,True,False,True
+APIKIT,383994,4075,1,In Progress,True,True,True,False,False
+APIKIT,384146,4094,1,In Progress,True,True,True,False,False
+APIKIT,384008,4078,1,New,True,True,,False,True
+APIKIT,384372,4104,1,Open,True,True,True,False,True
+APIKIT,384372,4099,1,Open,True,True,True,False,True
+APIKIT,384372,4095,1,Open,True,True,True,False,True
+APIKIT,384372,4134,1,Open,True,True,True,False,True
+APIKIT,383984,4079,1,Code Review,True,True,True,False,False
+APIKIT,384152,4136,1,In Progress,True,True,True,False,False
+APIKIT,384427,4144,1,New,True,True,True,False,False
+APIKIT,384085,4118,1,In Progress,True,True,True,False,False
+APIKIT,384379,4126,1,In Progress,True,True,True,False,False
+APIKIT,384480,4115,1,Open,True,True,True,False,True
+APIKIT,384145,4093,1,In Progress,True,True,True,False,False
+APIKIT,384036,4116,1,To Be Reviewed,True,True,True,False,False
+APIKIT,383994,4117,1,New,True,True,True,False,True
+APIKIT,383994,4099,1,In Progress,True,True,True,False,True
+APIKIT,383994,4101,1,In Progress,True,True,True,False,True
+APIKIT,384001,4076,1,New,True,True,True,False,True
+APIKIT,384008,4089,1,New,True,True,,False,True
+COMPASS,250041,3363,0,Closed,True,True,,False,False
+COMPASS,250055,3363,0,Closed,True,True,,False,False
+COMPASS,250496,3308,0,Closed,True,True,,False,False
+COMPASS,249854,3347,0,Closed,True,True,,False,False
+COMPASS,249248,3315,0,Closed,True,True,,False,False
+COMPASS,249127,3312,0,Closed,True,True,,False,False
+COMPASS,249132,3311,0,Closed,True,True,,False,False
+COMPASS,249309,3322,0,Closed,True,True,,False,False
+COMPASS,250175,3331,0,Closed,True,True,,False,False
+COMPASS,249042,3309,0,Closed,True,True,True,False,False
+COMPASS,249519,3332,0,Closed,True,True,,False,False
+COMPASS,250217,3370,0,Closed,True,True,True,False,False
+COMPASS,249334,3322,0,Closed,True,True,,True,False
+COMPASS,249523,3308,0,Closed,True,True,,False,False
+COMPASS,249281,3320,0,Closed,True,True,,False,False
+COMPASS,248911,3303,0,Closed,True,True,,False,False
+COMPASS,249184,3315,0,Closed,True,True,,False,False
+COMPASS,250454,3337,0,Closed,True,True,,False,False
+COMPASS,249442,3327,0,Closed,True,True,,False,False
+COMPASS,250084,3365,0,Closed,True,True,,False,False
+COMPASS,249837,3308,0,Closed,True,True,,False,False
+COMPASS,250116,3365,0,Closed,True,True,,False,False
+COMPASS,250334,3359,0,Closed,True,True,,False,False
+COMPASS,249129,3312,0,Closed,True,True,,False,False
+COMPASS,249151,3313,0,Closed,True,True,,False,False
+COMPASS,250043,3359,1,In Progress,True,True,True,False,False
+COMPASS,249554,3333,1,Open,True,True,True,False,False
+COMPASS,248849,3299,1,Open,True,True,True,False,False
+COMPASS,249742,3338,1,In Code Review,True,True,True,False,False
+COMPASS,250040,3362,1,In Progress,True,True,True,False,False
+COMPASS,249726,3333,1,In Progress,True,True,True,False,False
+COMPASS,248859,3299,1,Open,True,True,True,False,False
+COMPASS,249844,3344,1,Ready for Work,True,True,True,False,False
+COMPASS,249222,3313,1,In Progress,True,True,True,False,False
+COMPASS,250029,3359,1,In Code Review,True,True,True,False,False
+COMPASS,250020,3359,1,In Progress,True,True,True,False,False
+COMPASS,249796,3342,1,In Progress,True,True,True,False,False
+COMPASS,249028,3304,1,Open,True,True,True,False,False
+COMPASS,250037,3342,1,In Progress,True,True,True,False,False
+COMPASS,250413,3334,1,In Progress,True,True,True,False,False
+COMPASS,250244,3336,1,Open,True,True,True,False,False
+COMPASS,249125,3309,1,Debugging With Submitter,True,True,True,False,False
+COMPASS,249850,3345,1,In Progress,True,True,True,False,False
+COMPASS,249332,3322,1,Open,True,True,True,False,False
+COMPASS,249041,3304,1,Open,True,True,True,False,False
+COMPASS,249298,3321,1,In Progress,True,True,True,False,False
+COMPASS,249778,3343,1,Ready for Work,True,True,True,False,False
+COMPASS,249212,3317,1,In Progress,True,True,True,False,False
+COMPASS,250438,3351,1,Open,True,True,True,False,False
+COMPASS,249917,3344,1,In Progress,True,True,True,False,False
+COMPASS,248909,3303,0,Closed,True,True,,True,False
+COMPASS,248921,3303,0,Closed,True,True,,True,False
+COMPASS,248937,3305,1,Debugging With Submitter,True,True,True,False,True
+COMPASS,248952,3306,0,Closed,True,True,,True,False
+COMPASS,248966,3306,0,Closed,True,True,,True,False
+CONFCLOUD,139583,1587,0,Closed,True,True,True,False,False
+CONFCLOUD,140235,1612,0,Closed,True,True,True,False,False
+CONFCLOUD,142501,1681,0,Resolved,True,True,True,False,False
+CONFCLOUD,140237,1642,0,Closed,True,True,True,False,False
+CONFCLOUD,139471,1589,0,Closed,True,True,True,True,False
+CONFCLOUD,139460,1580,0,Closed,True,True,True,False,False
+CONFCLOUD,139414,1623,0,Closed,True,True,True,False,False
+CONFCLOUD,142632,1687,0,Resolved,True,True,True,False,False
+CONFCLOUD,139637,1573,0,Closed,True,True,True,False,False
+CONFCLOUD,137423,1530,0,Closed,True,True,,False,False
+CONFCLOUD,139464,1604,0,Closed,True,True,True,False,False
+CONFCLOUD,139829,1602,0,Closed,True,True,True,False,False
+CONFCLOUD,139515,1579,0,Closed,True,True,True,False,False
+CONFCLOUD,139646,1591,0,Closed,True,True,True,False,False
+CONFCLOUD,139756,1582,0,Closed,True,True,True,False,False
+CONFCLOUD,139537,1617,0,Closed,True,True,True,True,False
+CONFCLOUD,142892,1704,0,Resolved,True,True,True,False,False
+CONFCLOUD,139458,1602,0,Closed,True,True,True,False,False
+CONFCLOUD,140140,1580,0,Closed,True,True,True,False,False
+CONFCLOUD,139649,1609,0,Closed,True,True,True,False,False
+CONFCLOUD,140173,1609,0,Closed,True,True,True,False,False
+CONFCLOUD,137033,1518,0,Closed,True,True,,False,False
+CONFCLOUD,139809,1582,0,Closed,True,True,True,False,False
+CONFCLOUD,139859,1612,0,Closed,True,True,True,False,False
+CONFCLOUD,139493,1593,0,Closed,True,True,True,False,False
+CONFCLOUD,139343,1637,1,In Progress,True,True,True,False,False
+CONFCLOUD,140044,1636,1,In Progress,True,True,True,False,False
+CONFCLOUD,139493,1611,1,Under Review,True,True,True,False,False
+CONFCLOUD,139537,1623,1,Under Review,True,True,True,False,False
+CONFCLOUD,139412,1597,1,In Progress,True,True,True,False,False
+CONFCLOUD,139599,1596,1,Under Review,True,True,True,False,False
+CONFCLOUD,140101,1591,1,Open,True,True,True,False,False
+CONFCLOUD,137498,1537,1,In Review,True,True,True,False,False
+CONFCLOUD,137676,1542,1,Open,True,True,True,False,False
+CONFCLOUD,139523,1604,1,In Progress,True,True,True,False,False
+CONFCLOUD,139537,1589,1,Under Review,True,True,True,False,False
+CONFCLOUD,142213,1661,1,Open,True,True,True,False,False
+CONFCLOUD,138323,1525,1,Short Term Backlog,True,True,True,False,False
+CONFCLOUD,136708,1529,1,Gathering Impact,True,True,,False,False
+CONFCLOUD,140140,1600,1,In Progress,True,True,True,False,False
+CONFCLOUD,143390,1717,1,Open,True,True,True,False,False
+CONFCLOUD,136355,1519,1,In Review,True,True,True,False,False
+CONFCLOUD,139489,1607,1,In Progress,True,True,True,False,False
+CONFCLOUD,150674,1657,1,In Progress,True,True,True,False,False
+CONFCLOUD,143353,1723,1,Awaiting Release,True,True,True,False,False
+CONFCLOUD,139882,1587,1,Open,True,True,True,False,False
+CONFCLOUD,149812,1529,1,Short Term Backlog,True,True,,False,False
+CONFCLOUD,139578,1593,1,In Progress,True,True,True,False,False
+CONFCLOUD,139413,1588,1,Open,True,True,True,False,False
+CONFCLOUD,140101,1576,1,Open,True,True,True,False,False
+CONFCLOUD,140021,1623,0,Closed,True,True,True,True,False
+CONFCLOUD,143489,1655,1,Open,True,True,True,False,True
+CONFCLOUD,141183,1528,1,In Progress,True,True,True,False,True
+CONFSERVER,177301,2401,0,Resolved,True,True,True,True,False
+CONFSERVER,176894,2408,0,Resolved,True,True,True,False,False
+CONFSERVER,176629,2404,0,Resolved,True,True,True,False,False
+CONFSERVER,177255,2423,0,Resolved,True,True,True,False,False
+CONFSERVER,165449,2188,0,Resolved,True,True,True,False,False
+CONFSERVER,177670,2425,0,Resolved,True,True,True,False,False
+CONFSERVER,161765,2105,0,Closed,True,True,True,False,False
+CONFSERVER,176288,2391,0,Resolved,True,True,True,True,False
+CONFSERVER,164162,2150,0,Resolved,True,True,True,False,False
+CONFSERVER,168031,2130,0,Resolved,True,True,True,False,False
+CONFSERVER,164096,2156,0,Resolved,True,True,True,False,False
+CONFSERVER,162577,2086,0,Resolved,True,True,True,False,False
+CONFSERVER,164816,2170,0,Resolved,True,True,True,False,True
+CONFSERVER,177112,2156,0,Resolved,True,True,True,False,False
+CONFSERVER,166532,2218,0,Resolved,True,True,True,True,True
+CONFSERVER,179670,2474,0,Resolved,True,True,True,False,False
+CONFSERVER,159971,1964,0,Closed,True,True,,False,False
+CONFSERVER,169638,2113,0,Resolved,True,True,True,False,False
+CONFSERVER,165259,2183,0,Resolved,True,True,True,False,False
+CONFSERVER,177960,2425,0,Resolved,True,True,True,False,False
+CONFSERVER,176005,2382,0,Resolved,True,True,True,False,False
+CONFSERVER,166728,2199,0,Resolved,True,True,True,False,False
+CONFSERVER,165423,2181,0,Resolved,True,True,True,False,False
+CONFSERVER,163776,2096,0,Resolved,True,True,True,False,False
+CONFSERVER,176980,2399,0,Resolved,True,True,True,False,False
+CONFSERVER,166684,2198,1,Awaiting Merge,True,True,True,False,False
+CONFSERVER,162021,2071,1,Awaiting Merge,True,True,True,False,False
+CONFSERVER,165117,2168,1,Under Review,True,True,True,False,False
+CONFSERVER,179670,2325,1,Open,True,True,True,False,False
+CONFSERVER,167878,2233,1,Awaiting Release,True,True,True,False,False
+CONFSERVER,170294,2074,1,In Progress,True,True,True,False,False
+CONFSERVER,174527,2354,1,Open,True,True,True,False,False
+CONFSERVER,168095,2226,1,Awaiting Release,True,True,True,False,False
+CONFSERVER,167615,2135,1,Open,True,True,True,False,False
+CONFSERVER,160808,2020,1,Long Term Backlog,True,True,,False,True
+CONFSERVER,182292,2483,1,Open,True,True,True,False,False
+CONFSERVER,179289,2178,1,In Progress,True,True,True,False,False
+CONFSERVER,163979,2119,1,In Progress,True,True,True,False,False
+CONFSERVER,166180,2139,1,In Progress,True,True,True,False,False
+CONFSERVER,163634,2147,1,In Review,True,True,True,False,False
+CONFSERVER,178813,2296,1,Quality Review,True,True,True,False,False
+CONFSERVER,180532,1986,1,In Review,True,True,True,False,False
+CONFSERVER,170186,2271,1,Open,True,True,True,False,False
+CONFSERVER,178832,2462,1,Open,True,True,True,False,False
+CONFSERVER,160399,2008,1,Technical Review,True,True,True,False,False
+CONFSERVER,165293,2166,1,Open,True,True,True,False,False
+CONFSERVER,165199,2175,1,Open,True,True,True,False,False
+CONFSERVER,161707,2050,1,Waiting for Release,True,True,True,False,False
+CONFSERVER,165460,2181,1,Open,True,True,True,False,False
+CONFSERVER,162896,2100,1,Open,True,True,True,False,False
+CONFSERVER,159660,1997,1,Short Term Backlog,True,True,True,False,True
+CONFSERVER,159755,1979,1,Short Term Backlog,True,True,True,False,True
+CONFSERVER,159852,2015,1,Short Term Backlog,True,True,True,False,True
+CONFSERVER,160210,1978,0,Closed,True,True,,True,False
+CONFSERVER,160639,1983,1,Future Consideration,True,True,,False,True
+DM,243238,3202,0,Done,True,True,,False,False
+DM,237088,3139,0,Done,True,True,,False,False
+DM,246870,3251,0,Done,True,True,,False,False
+DM,241675,3188,0,Done,True,True,,False,False
+DM,244043,3201,0,Done,True,True,,False,False
+DM,232716,3061,0,Done,True,True,,False,False
+DM,243781,3187,0,Done,True,True,,False,False
+DM,240859,3145,0,Done,True,True,,False,False
+DM,246784,3161,0,Done,True,True,,False,False
+DM,244311,3222,0,Done,True,True,,False,False
+DM,232131,3061,0,Done,True,True,,False,False
+DM,234505,3100,0,Done,True,True,,False,False
+DM,245220,3225,0,Done,True,True,,False,False
+DM,236680,3125,0,Done,True,True,,False,False
+DM,240777,3181,0,Done,True,True,,False,False
+DM,233644,3078,0,Done,True,True,,False,False
+DM,241421,3186,0,Done,True,True,,False,False
+DM,231010,3040,0,Done,True,True,,False,False
+DM,244471,3222,0,Done,True,True,,False,False
+DM,247185,3260,0,Done,True,True,,False,False
+DM,245164,3232,0,Done,True,True,,False,False
+DM,234361,3099,0,Done,True,True,,False,False
+DM,241453,3170,0,Done,True,True,,False,False
+DM,238914,3156,0,Done,True,True,,False,False
+DM,246532,3255,0,Done,True,True,,False,False
+DM,239897,3167,1,In Progress,True,True,True,False,False
+DM,246343,3252,1,In Progress,True,True,True,False,False
+DM,239949,3158,1,In Progress,True,True,True,False,False
+DM,225893,2934,1,In Progress,True,True,True,False,False
+DM,228771,2932,1,In Progress,True,True,True,False,False
+DM,245978,3237,1,Won't Fix,True,True,,True,False
+DM,234722,3054,1,Won't Fix,True,True,,True,False
+DM,242549,3164,1,In Progress,True,True,True,False,False
+DM,243209,3213,1,In Review,True,True,True,False,False
+DM,246743,3222,1,Invalid,True,True,,True,False
+DM,239263,3148,1,In Progress,True,True,True,False,False
+DM,244271,3173,1,In Progress,True,True,True,False,False
+DM,229620,2991,1,In Review,True,True,True,False,False
+DM,237028,3078,1,In Progress,True,True,True,False,False
+DM,238552,3128,1,In Progress,True,True,True,False,False
+DM,235666,3105,1,In Progress,True,True,True,False,False
+DM,244326,3202,1,To Do,True,True,True,False,True
+DM,225005,2916,1,In Progress,True,True,True,False,False
+DM,244994,3224,1,In Progress,True,True,True,False,False
+DM,233910,2941,1,To Do,True,True,True,False,False
+DM,236731,3126,1,Won't Fix,True,True,,True,True
+DM,236338,3116,1,In Progress,True,True,True,False,False
+DM,234740,3114,1,In Progress,True,True,True,False,False
+DM,232343,3069,1,In Progress,True,True,True,False,False
+DM,245658,3236,1,In Progress,True,True,True,False,False
+DM,232290,3059,1,Won't Fix,True,True,,True,False
+DM,232384,3059,1,Won't Fix,True,True,,True,False
+DM,247558,3279,1,In Progress,True,True,True,False,True
+DM,232466,3076,1,In Progress,True,True,True,False,True
+DM,232467,3076,1,In Progress,True,True,True,False,True
+INDY,206360,2727,0,Done,True,True,True,False,False
+INDY,206108,2719,0,Done,True,True,True,False,False
+INDY,205736,2701,0,Done,True,True,True,False,False
+INDY,206243,2724,0,Done,True,True,True,False,False
+INDY,206397,2724,0,Done,True,True,True,False,False
+INDY,206121,2691,0,Complete,True,True,,True,False
+INDY,206376,2728,0,Done,True,True,True,False,False
+INDY,207411,2741,0,Done,True,True,True,False,False
+INDY,205209,2683,0,Complete,True,True,,False,False
+INDY,206208,2712,0,Done,True,True,True,False,False
+INDY,205620,2706,0,Done,True,True,True,False,False
+INDY,206546,2731,0,Done,True,True,True,False,False
+INDY,206107,2719,0,Done,True,True,True,False,False
+INDY,206584,2737,0,Done,True,True,True,False,False
+INDY,206560,2727,0,Done,True,True,True,False,False
+INDY,206554,2728,0,Done,True,True,True,False,False
+INDY,207335,2746,0,Done,True,True,True,False,False
+INDY,206646,2731,0,Done,True,True,True,False,False
+INDY,206146,2719,0,Done,True,True,True,False,False
+INDY,205575,2705,0,Done,True,True,True,False,False
+INDY,207239,2746,0,Done,True,True,True,False,False
+INDY,205705,2708,0,Done,True,True,True,False,False
+INDY,206472,2730,0,Done,True,True,True,False,False
+INDY,206008,2716,0,Done,True,True,True,False,False
+INDY,206978,2740,0,Done,True,True,True,False,False
+INDY,207349,2745,1,In Progress,True,True,True,False,False
+INDY,205298,2687,1,In Progress,True,True,True,False,False
+INDY,201130,2530,1,In Progress,True,True,True,False,False
+INDY,206619,2736,1,Invalid,True,True,True,True,False
+INDY,206613,2732,1,To Test,True,True,True,False,False
+INDY,205337,2692,1,In Progress,True,True,True,False,False
+INDY,205145,2532,1,In Progress,True,True,True,False,False
+INDY,205371,2688,1,In Progress,True,True,True,False,False
+INDY,206534,2733,1,To Test,True,True,True,False,False
+INDY,207347,2744,1,Code Review,True,True,True,False,False
+INDY,207081,2735,1,To Test,True,True,True,False,True
+INDY,206246,2724,1,To Test,True,True,True,False,False
+INDY,206896,2733,1,To Test,True,True,True,False,False
+INDY,206941,2740,1,Customer Validation,True,True,True,False,False
+INDY,205312,2691,1,To Test,True,True,True,False,False
+INDY,206487,2730,1,In Progress,True,True,True,False,False
+INDY,207241,2745,1,In Progress,True,True,True,False,False
+INDY,205329,2692,1,In Progress,True,True,True,False,False
+INDY,206961,2739,1,In Progress,True,True,True,False,False
+INDY,205751,2710,1,In Progress,True,True,True,False,False
+INDY,205596,2704,1,In Progress,True,True,True,False,False
+INDY,205884,2713,1,Code Review,True,True,True,False,True
+INDY,206122,2688,1,In Progress,True,True,True,False,False
+INDY,207109,2735,1,To Develop,True,True,True,False,False
+INDY,205327,2687,1,Code Review,True,True,True,False,False
+INDY,206454,2725,1,In Progress,True,True,True,False,True
+INDY,205237,2684,1,In Progress,True,True,True,False,True
+INDY,205237,2683,0,Complete,True,True,,True,False
+INDY,205238,2684,1,In Progress,True,True,,False,True
+INDY,205301,2688,0,Complete,True,True,,False,True
+IS,203921,2614,0,Done,True,True,,False,False
+IS,203331,2592,0,Done,True,True,,False,False
+IS,203008,2571,0,Complete,True,True,,False,False
+IS,203927,2615,0,Done,True,True,,False,False
+IS,203820,2613,0,Done,True,True,,False,False
+IS,203664,2604,0,Done,True,True,,False,False
+IS,203418,2591,0,Done,True,True,,False,False
+IS,203483,2589,0,Done,True,True,,False,False
+IS,203785,2612,0,Done,True,True,,False,False
+IS,203283,2588,0,Done,True,True,,False,False
+IS,204030,2613,0,Done,True,True,,False,False
+IS,204102,2618,0,Done,True,True,,False,False
+IS,203100,2577,0,Complete,True,True,,False,False
+IS,203150,2581,0,Complete,True,True,,False,False
+IS,204032,2621,0,Done,True,True,,False,False
+IS,203996,2622,0,Done,True,True,,False,False
+IS,202953,2561,0,Complete,True,True,,False,False
+IS,203321,2592,0,Done,True,True,,False,False
+IS,204025,2623,0,Done,True,True,,False,False
+IS,204325,2626,0,Done,True,True,,False,False
+IS,203072,2573,0,Complete,True,True,,False,False
+IS,203778,2603,0,Done,True,True,,False,False
+IS,204152,2628,0,Done,True,True,,False,False
+IS,203178,2583,0,Done,True,True,,False,False
+IS,202996,2568,0,Complete,True,True,,False,False
+IS,204007,2617,1,To Do,True,True,True,False,False
+IS,203242,2587,1,In Progress,True,True,True,False,False
+IS,203775,2610,1,Review,True,True,True,False,False
+IS,203630,2588,1,In Progress,True,True,True,False,False
+IS,203334,2588,1,Validate,True,True,True,False,False
+IS,204163,2626,1,In Progress,True,True,True,False,False
+IS,202954,2565,1,In Progress,True,True,True,False,False
+IS,203264,2587,1,To Do,True,True,True,False,False
+IS,204231,2618,1,In Progress,True,True,True,False,False
+IS,203937,2616,1,Validate,True,True,True,False,False
+IS,203889,2613,1,Invalid,True,True,True,True,False
+IS,203007,2571,1,To Test,True,True,True,False,False
+IS,204293,2610,1,Invalid,True,True,True,True,False
+IS,202850,2556,1,To Test,True,True,True,False,False
+IS,204065,2616,1,Validate,True,True,True,False,False
+IS,204293,2616,1,Invalid,True,True,True,True,False
+IS,203702,2606,1,Invalid,True,True,True,True,False
+IS,203737,2606,1,To Do,True,True,True,False,True
+IS,203858,2611,1,To Do,True,True,True,False,True
+IS,204195,2624,1,To Do,True,True,True,False,True
+IS,203079,2575,1,In Progress,True,True,True,False,False
+IS,204192,2613,1,Invalid,True,True,True,True,False
+IS,203725,2594,1,Invalid,True,True,True,True,False
+IS,203921,2615,1,Review,True,True,True,False,False
+IS,202868,2557,1,Code Review,True,True,,False,False
+IS,202916,2562,0,Complete,True,True,,True,False
+IS,202945,2561,0,Complete,True,True,,False,True
+IS,202967,2565,0,Complete,True,True,,True,False
+IS,203000,2568,1,To Develop,True,True,,False,True
+IS,203034,2572,0,Complete,True,True,,True,False
+MESOS,20810,428,0,Resolved,True,True,True,False,False
+MESOS,20515,429,0,Resolved,True,True,True,False,False
+MESOS,17927,405,0,Resolved,True,True,,False,False
+MESOS,20918,430,0,Resolved,True,True,True,False,False
+MESOS,17842,404,0,Resolved,True,True,,False,False
+MESOS,15320,337,0,Resolved,True,True,,False,False
+MESOS,14617,268,0,Resolved,True,True,,False,False
+MESOS,15577,349,0,Resolved,True,True,,False,True
+MESOS,18200,406,0,Resolved,True,True,,False,False
+MESOS,15171,340,0,Resolved,True,True,,False,False
+MESOS,19968,423,0,Resolved,True,True,,False,False
+MESOS,22709,474,0,Resolved,True,True,True,False,False
+MESOS,21416,428,0,Resolved,True,True,True,False,False
+MESOS,20356,426,0,Resolved,True,True,True,False,False
+MESOS,20037,424,0,Resolved,True,True,,False,False
+MESOS,19296,418,0,Resolved,True,True,,False,False
+MESOS,18247,404,0,Resolved,True,True,,False,False
+MESOS,17461,400,0,Resolved,True,True,,False,False
+MESOS,20269,425,0,Resolved,True,True,True,False,False
+MESOS,15355,344,0,Resolved,True,True,,False,False
+MESOS,20736,430,0,Resolved,True,True,,False,False
+MESOS,20414,427,0,Resolved,True,True,True,False,False
+MESOS,21560,443,0,Resolved,True,True,,False,False
+MESOS,15858,370,0,Resolved,True,True,,False,False
+MESOS,22682,473,0,Resolved,True,True,,False,False
+MESOS,20709,425,1,Reviewable,True,True,True,False,False
+MESOS,20018,424,1,Reviewable,True,True,True,False,False
+MESOS,22441,461,1,In Progress,True,True,True,False,False
+MESOS,20209,424,1,In Progress,True,True,True,False,True
+MESOS,14656,273,1,In Progress,True,True,True,False,False
+MESOS,19743,422,1,Reviewable,True,True,True,False,False
+MESOS,21584,432,1,Reviewable,True,True,True,False,False
+MESOS,22733,472,1,In Progress,True,True,True,False,False
+MESOS,23359,489,1,In Progress,True,True,True,False,True
+MESOS,20516,427,1,Reviewable,True,True,True,False,False
+MESOS,22574,467,1,Reviewable,True,True,True,False,False
+MESOS,22313,465,1,Reviewable,True,True,True,False,False
+MESOS,20026,418,1,In Progress,True,True,True,False,False
+MESOS,20438,424,1,Reviewable,True,True,True,False,False
+MESOS,20892,432,1,In Progress,True,True,True,False,False
+MESOS,22589,465,1,Reviewable,True,True,True,False,False
+MESOS,14641,270,1,Reviewable,True,True,True,False,False
+MESOS,15219,347,1,In Progress,True,True,True,False,False
+MESOS,23397,474,1,Reviewable,True,True,True,False,False
+MESOS,22329,427,1,In Progress,True,True,,False,False
+MESOS,22329,422,1,In Progress,True,True,,False,False
+MESOS,15860,370,1,Reviewable,True,True,,False,True
+MESOS,23315,477,1,In Progress,True,True,True,False,False
+MESOS,22489,465,1,Reviewable,True,True,True,False,False
+MESOS,15791,357,1,Reviewable,True,True,True,False,False
+MESOS,15859,370,1,Reviewable,True,True,,False,True
+MESOS,20649,428,0,Resolved,True,True,True,True,False
+MESOS,17411,369,1,Reviewable,True,True,True,False,True
+MESOS,15362,347,1,In Progress,True,True,True,False,True
+MULE,388182,4287,0,Resolved,True,True,,False,False
+MULE,388449,4374,0,Closed,True,True,True,False,False
+MULE,388581,4379,0,Closed,True,True,,False,False
+MULE,389327,4285,0,Resolved,True,True,True,False,False
+MULE,385175,4235,0,Done,True,True,,False,False
+MULE,384806,4208,0,Resolved,True,True,,False,False
+MULE,387824,4349,0,Closed,True,True,,False,False
+MULE,384953,4204,0,Closed,True,True,,False,False
+MULE,388080,4338,0,Closed,True,True,,False,False
+MULE,387652,4343,0,Closed,True,True,,False,False
+MULE,390788,4472,0,Closed,True,True,True,False,False
+MULE,386817,4278,0,Closed,True,True,,False,False
+MULE,384944,4213,0,Done,True,True,,False,False
+MULE,390182,4448,0,Closed,True,True,,False,False
+MULE,388450,4374,0,Closed,True,True,True,False,False
+MULE,385396,4233,0,Resolved,True,True,,False,False
+MULE,385984,4285,0,Done,True,True,,False,False
+MULE,390646,4442,0,Closed,True,True,True,False,False
+MULE,389759,4436,0,Closed,True,True,,True,False
+MULE,385522,4215,0,Closed,True,True,,True,False
+MULE,386376,4233,0,Resolved,True,True,,False,False
+MULE,385717,4265,0,Closed,True,True,,True,False
+MULE,384889,4213,0,Done,True,True,,False,False
+MULE,388486,4373,0,Closed,True,True,,False,False
+MULE,388161,4365,0,Closed,True,True,True,False,False
+MULE,387235,4304,1,New,True,True,True,False,True
+MULE,387771,4348,1,In Progress,True,True,True,False,False
+MULE,385417,4253,1,In Progress,True,True,True,False,False
+MULE,388756,4387,1,In Progress,True,True,True,False,False
+MULE,387234,4298,1,New,True,True,True,False,True
+MULE,386768,4296,1,Open,True,True,True,False,True
+MULE,389128,4409,1,In Progress,True,True,True,False,False
+MULE,388749,4383,1,In Progress,True,True,True,False,False
+MULE,386704,4292,1,Open,True,True,True,False,True
+MULE,389219,4393,1,In Progress,True,True,True,False,False
+MULE,387243,4273,1,In Progress,True,True,True,False,False
+MULE,387648,4298,1,New,True,True,,False,True
+MULE,387409,4278,1,In Progress,True,True,True,False,False
+MULE,389813,4437,1,Open,True,True,True,False,True
+MULE,387233,4293,1,In Progress,True,True,True,False,False
+MULE,384966,4213,1,In Progress,True,True,True,False,False
+MULE,386847,4290,1,New,True,True,,False,True
+MULE,390786,4472,1,In Progress,True,True,True,False,False
+MULE,387205,4304,1,New,True,True,True,False,False
+MULE,388027,4260,1,Open,True,True,True,False,False
+MULE,388485,4368,1,TO DO,True,True,True,False,True
+MULE,389624,4433,1,In Progress,True,True,True,False,False
+MULE,387096,4311,1,In Progress,True,True,True,False,True
+MULE,387265,4304,1,New,True,True,True,False,True
+MULE,389033,4403,1,In Progress,True,True,True,False,False
+MULE,384787,4197,0,Done,True,True,,True,False
+MULE,386472,4273,0,Done,True,True,,True,False
+MULE,387634,4290,1,Open,True,True,True,False,True
+MULE,387492,4304,1,Open,True,True,True,False,True
+MULE,386637,4282,1,New,True,True,True,False,True
+NEXUS,8197,235,0,Closed,True,True,,False,False
+NEXUS,8152,233,0,Closed,True,True,,False,False
+NEXUS,8035,230,0,Closed,True,True,True,False,False
+NEXUS,8928,260,0,Closed,True,True,,False,False
+NEXUS,7576,220,0,Closed,True,True,,False,False
+NEXUS,8749,252,0,Closed,True,True,,False,False
+NEXUS,7168,201,0,Closed,True,True,,False,False
+NEXUS,8681,237,0,Closed,True,True,,False,False
+NEXUS,8088,230,0,Closed,True,True,,False,False
+NEXUS,6866,180,0,Done,True,True,,False,False
+NEXUS,8022,229,0,Closed,True,True,,True,False
+NEXUS,8505,248,0,Closed,True,True,,False,False
+NEXUS,7994,230,0,Closed,True,True,,False,False
+NEXUS,8105,233,0,Closed,True,True,,False,False
+NEXUS,6589,163,0,Done,True,True,,False,False
+NEXUS,6609,166,0,Closed,True,True,,False,False
+NEXUS,7154,197,0,Closed,True,True,,False,False
+NEXUS,9306,243,0,Closed,True,True,,True,False
+NEXUS,6613,159,0,Closed,True,True,,False,False
+NEXUS,7989,230,0,Closed,True,True,,True,False
+NEXUS,8194,235,0,Closed,True,True,,False,False
+NEXUS,6645,159,0,Closed,True,True,,False,False
+NEXUS,8134,234,0,Closed,True,True,,False,False
+NEXUS,8012,230,0,Closed,True,True,,False,False
+NEXUS,9009,262,0,Closed,True,True,,False,False
+NEXUS,8115,233,1,In Progress,True,True,True,False,False
+NEXUS,8694,253,1,Waiting for Review,True,True,True,False,False
+NEXUS,6954,188,1,In Progress,True,True,True,False,True
+NEXUS,8210,235,1,Waiting for Review,True,True,True,False,False
+NEXUS,7863,226,1,To Be Tested,True,True,True,False,False
+NEXUS,8183,228,1,Open,True,True,True,False,False
+NEXUS,8331,237,1,To Be Tested,True,True,True,False,False
+NEXUS,8066,231,1,Open,True,True,True,False,True
+NEXUS,6859,169,1,Waiting for Review,True,True,True,False,False
+NEXUS,6948,176,1,Open,True,True,True,False,True
+NEXUS,8746,213,1,Open,True,True,True,False,False
+NEXUS,6983,160,1,Open,True,True,True,False,True
+NEXUS,8227,233,1,Waiting for Review,True,True,True,False,False
+NEXUS,9052,262,1,To Be Tested,True,True,True,False,False
+NEXUS,8797,257,1,To Be Tested,True,True,True,False,False
+NEXUS,7774,198,1,In Progress,True,True,True,False,False
+NEXUS,5268,128,1,Waiting for Review,True,True,True,False,False
+NEXUS,6056,132,1,In Development,True,True,True,False,False
+NEXUS,8193,235,1,To Be Tested,True,True,True,False,False
+NEXUS,8326,218,1,In Progress,True,True,True,False,False
+NEXUS,8832,256,1,Testing In Progress,True,True,True,False,False
+NEXUS,6891,171,1,Waiting for Review,True,True,True,False,False
+NEXUS,8719,252,1,Open,True,True,True,False,True
+NEXUS,6658,163,1,Waiting for Review,True,True,True,False,False
+NEXUS,8185,235,1,In Progress,True,True,True,False,False
+NEXUS,8953,261,1,Open,True,True,True,False,True
+NEXUS,6901,180,1,Ready for Development,True,True,True,False,True
+NEXUS,6901,181,1,Ready for Development,True,True,True,False,True
+NEXUS,6935,174,1,Open,True,True,True,False,True
+NEXUS,8178,228,1,Open,True,True,True,False,True
+TIDOC,38726,990,0,Resolved,True,True,,False,False
+TIDOC,38785,1023,0,Closed,True,True,,False,False
+TIDOC,38293,948,0,Closed,True,True,,True,True
+TIDOC,38737,1016,0,Resolved,True,True,True,False,False
+TIDOC,39144,1057,0,Resolved,True,True,True,False,False
+TIDOC,40060,1067,0,Resolved,True,True,True,False,False
+TIDOC,40043,1062,0,Resolved,True,True,True,False,False
+TIDOC,39373,1065,0,Resolved,True,True,True,False,False
+TIDOC,39087,1052,0,Resolved,True,True,True,False,False
+TIDOC,39295,1056,0,Resolved,True,True,True,False,False
+TIDOC,39431,1068,0,Resolved,True,True,True,False,False
+TIDOC,38159,917,0,Closed,True,True,,False,False
+TIDOC,38247,939,0,Closed,True,True,,False,False
+TIDOC,39520,1070,0,Closed,True,True,,False,False
+TIDOC,38715,990,0,Resolved,True,True,,False,False
+TIDOC,39288,1056,0,Closed,True,True,True,False,False
+TIDOC,39421,1068,0,Resolved,True,True,True,False,False
+TIDOC,39582,1044,0,Closed,True,True,,False,False
+TIDOC,38040,867,0,Closed,True,True,,False,False
+TIDOC,39492,1070,0,Resolved,True,True,True,False,False
+TIDOC,40799,1067,0,Closed,True,True,,False,False
+TIDOC,39524,1070,0,Resolved,True,True,True,False,False
+TIDOC,38624,996,0,Resolved,True,True,True,False,False
+TIDOC,38329,948,0,Closed,True,True,,False,False
+TIDOC,38616,993,0,Resolved,True,True,True,False,False
+TIDOC,38162,911,1,In Progress,True,True,True,False,False
+TIDOC,38099,887,1,In Progress,True,True,True,False,False
+TIDOC,38104,894,1,In Progress,True,True,True,False,True
+TIDOC,38817,990,1,In Progress,True,True,True,False,False
+TIDOC,39249,1060,1,In Review,True,True,True,False,False
+TIDOC,38529,983,1,In Progress,True,True,True,False,False
+TIDOC,39312,1060,1,In Review,True,True,True,False,False
+TIDOC,38162,915,1,In Progress,True,True,True,False,False
+TIDOC,38110,895,1,In Progress,True,True,True,False,False
+TIDOC,39481,1072,1,In Progress,True,True,True,False,False
+TIDOC,38483,950,1,In Progress,True,True,True,False,True
+TIDOC,38234,867,1,In Progress,True,True,,False,True
+TIDOC,38237,933,1,In Progress,True,True,True,False,False
+TIDOC,38561,991,1,In Progress,True,True,True,False,False
+TIDOC,38023,863,1,In Progress,True,True,True,False,False
+TIDOC,38494,978,1,In Progress,True,True,True,False,False
+TIDOC,38412,960,1,In Progress,True,True,True,False,False
+TIDOC,38234,911,1,In Progress,True,True,,False,True
+TIDOC,38181,877,1,In Progress,True,True,True,False,True
+TIDOC,38260,935,1,In Review,True,True,True,False,False
+TIDOC,38452,950,1,In Progress,True,True,True,False,True
+TIDOC,38093,887,1,In Progress,True,True,True,False,False
+TIDOC,38637,996,1,In Progress,True,True,True,False,False
+TIDOC,38436,970,1,In Progress,True,True,True,False,True
+TIDOC,38561,989,1,In Progress,True,True,True,False,True
+TIDOC,38065,877,1,In Progress,True,True,True,False,True
+TIDOC,38065,878,1,In Progress,True,True,True,False,True
+TIDOC,38066,874,0,Resolved,True,True,,False,True
+TIDOC,38067,997,1,In Progress,True,True,True,False,True
+TIDOC,38071,877,1,In Progress,True,True,True,False,True
+TIMOB,403335,4705,0,Closed,True,True,,False,False
+TIMOB,408129,4860,0,Resolved,True,True,True,True,False
+TIMOB,405781,4797,0,Resolved,True,True,True,False,False
+TIMOB,403259,4704,0,Closed,True,True,,False,False
+TIMOB,415314,4965,0,Resolved,True,True,True,False,False
+TIMOB,409597,4838,0,Resolved,True,True,True,True,False
+TIMOB,409623,4929,0,Resolved,True,True,True,False,False
+TIMOB,411198,4952,0,Resolved,True,True,True,False,False
+TIMOB,406921,4783,0,Resolved,True,True,True,True,False
+TIMOB,409663,4895,0,Resolved,True,True,True,False,False
+TIMOB,406763,4829,0,Resolved,True,True,True,False,False
+TIMOB,410687,4945,0,Resolved,True,True,True,False,False
+TIMOB,413713,4965,0,Closed,True,True,True,False,False
+TIMOB,402936,4690,0,Closed,True,True,,False,False
+TIMOB,404102,4731,0,Resolved,True,True,True,False,False
+TIMOB,418691,4694,0,Resolved,True,True,,False,False
+TIMOB,408176,4878,0,Closed,True,True,,False,False
+TIMOB,409801,4945,0,Closed,True,True,,False,False
+TIMOB,409433,4933,0,Closed,True,True,True,False,False
+TIMOB,405958,4804,0,Resolved,True,True,True,True,False
+TIMOB,409991,4934,0,Resolved,True,True,,False,False
+TIMOB,409509,4931,0,Resolved,True,True,True,False,False
+TIMOB,407380,4850,0,Closed,True,True,,False,False
+TIMOB,402895,4687,0,Resolved,True,True,True,False,True
+TIMOB,403840,4723,0,Closed,True,True,,False,False
+TIMOB,403807,4697,1,In Progress,True,True,True,False,False
+TIMOB,405765,4699,1,In Review,True,True,True,False,False
+TIMOB,404860,4746,1,In Review,True,True,True,False,False
+TIMOB,409969,4940,1,Open,True,True,True,False,False
+TIMOB,414291,4828,1,In Progress,True,True,True,False,False
+TIMOB,403523,4702,1,In Review,True,True,True,False,False
+TIMOB,404273,4701,1,In Review,True,True,True,False,False
+TIMOB,402822,4678,1,In QE Test,True,True,True,False,True
+TIMOB,404781,4744,1,In Review,True,True,True,False,False
+TIMOB,414216,4922,1,Open,True,True,True,False,False
+TIMOB,403232,4691,1,In Review,True,True,True,False,False
+TIMOB,407629,4797,1,Reopened,True,True,True,False,False
+TIMOB,406408,4821,1,Reopened,True,True,True,False,False
+TIMOB,411063,4746,1,In Review,True,True,True,False,False
+TIMOB,412374,4922,1,In Review,True,True,True,False,False
+TIMOB,403654,4717,1,In Review,True,True,True,False,False
+TIMOB,408388,4699,1,In Review,True,True,True,False,False
+TIMOB,406467,4790,1,In Progress,True,True,True,False,True
+TIMOB,406106,4808,1,In  Review,True,True,True,False,False
+TIMOB,404289,4696,1,In Review,True,True,True,False,False
+TIMOB,404343,4733,1,In Review,True,True,True,False,False
+TIMOB,408199,4849,1,Reopened,True,True,True,False,False
+TIMOB,409969,4939,1,Open,True,True,True,False,False
+TIMOB,409301,4910,1,In Progress,True,True,True,False,False
+TIMOB,404970,4756,1,In Review,True,True,True,False,False
+TIMOB,402652,4671,0,Resolved,True,True,,False,True
+TIMOB,402932,4687,0,Resolved,True,True,True,False,True
+TIMOB,404313,4688,1,In QE Test,True,True,True,False,True
+TIMOB,404956,4760,0,Resolved,True,True,True,True,False
+TIMOB,405985,4798,0,Resolved,True,True,True,True,False
+TISTUD,397668,4621,0,Resolved,True,True,True,False,False
+TISTUD,397881,4604,0,Resolved,True,True,,False,False
+TISTUD,396775,4540,0,Resolved,True,True,,False,False
+TISTUD,399475,4630,0,Resolved,True,True,True,False,False
+TISTUD,397959,4632,0,Resolved,True,True,True,False,False
+TISTUD,397947,4634,0,Resolved,True,True,True,False,False
+TISTUD,398907,4658,0,Closed,True,True,,False,False
+TISTUD,399235,4664,0,Resolved,True,True,True,False,False
+TISTUD,398136,4639,0,Resolved,True,True,True,False,False
+TISTUD,397437,4593,0,Resolved,True,True,True,True,False
+TISTUD,397016,4567,0,Resolved,True,True,True,False,False
+TISTUD,399288,4664,0,Resolved,True,True,True,False,False
+TISTUD,398971,4658,0,Resolved,True,True,True,False,False
+TISTUD,398309,4641,0,Resolved,True,True,True,False,False
+TISTUD,397948,4629,0,Resolved,True,True,True,False,False
+TISTUD,397032,4570,0,Resolved,True,True,True,False,False
+TISTUD,398150,4633,0,Resolved,True,True,True,False,False
+TISTUD,398348,4646,0,Resolved,True,True,True,False,False
+TISTUD,398072,4615,0,Closed,True,True,,False,False
+TISTUD,397786,4625,0,Closed,True,True,,False,False
+TISTUD,398776,4656,0,Resolved,True,True,True,False,False
+TISTUD,397122,4582,0,Resolved,True,True,True,False,False
+TISTUD,398508,4637,0,Resolved,True,True,True,False,False
+TISTUD,397400,4589,0,Resolved,True,True,True,False,False
+TISTUD,397818,4625,0,Closed,True,True,,False,False
+TISTUD,397040,4572,1,In  Review,True,True,True,False,False
+TISTUD,397435,4598,1,In  Review,True,True,True,False,False
+TISTUD,396685,4522,1,In Progress,True,True,True,False,True
+TISTUD,397113,4581,1,In Progress,True,True,True,False,False
+TISTUD,397073,4570,1,Open,True,True,True,False,True
+TISTUD,396717,4531,1,In Progress,True,True,True,False,False
+TISTUD,397608,4616,1,In  Review,True,True,True,False,False
+TISTUD,396974,4567,1,In Progress,True,True,True,False,False
+TISTUD,397054,4570,1,In  Review,True,True,True,False,False
+TISTUD,401503,4639,1,Open,True,True,True,False,False
+TISTUD,397873,4627,1,Reopened,True,True,True,False,True
+TISTUD,397435,4606,1,In Progress,True,True,True,False,False
+TISTUD,396787,4542,1,In Progress,True,True,,False,True
+TISTUD,397156,4565,1,In Progress,True,True,True,False,False
+TISTUD,399722,4641,1,In Review,True,True,True,False,False
+TISTUD,399639,4656,1,Reopened,True,True,True,False,True
+TISTUD,397098,4577,1,In Progress,True,True,True,False,False
+TISTUD,397519,4603,1,In Progress,True,True,True,False,False
+TISTUD,397519,4604,1,In Progress,True,True,True,False,True
+TISTUD,397466,4589,1,In Progress,True,True,,False,True
+TISTUD,397486,4606,1,In  Review,True,True,True,False,False
+TISTUD,397019,4566,1,Reopened,True,True,True,False,True
+TISTUD,396663,4520,1,In Review,True,True,True,False,False
+TISTUD,397010,4556,1,In Progress,True,True,True,False,False
+TISTUD,399639,4657,1,Reopened,True,True,True,False,True
+TISTUD,396786,4536,0,Closed,True,True,,True,False
+TISTUD,396798,4522,1,In Progress,True,True,True,False,True
+TISTUD,397624,4602,1,In Progress,True,True,True,False,True
+TISTUD,397624,4600,1,In Progress,True,True,True,False,True
+XD,858,18,0,Done,True,True,,False,False
+XD,2802,40,0,Done,True,True,,False,False
+XD,606,9,0,Done,True,True,,False,False
+XD,3298,55,0,Done,True,True,,False,False
+XD,3604,61,0,Done,True,True,,False,False
+XD,3325,56,0,Done,True,True,,False,False
+XD,3071,53,0,Done,True,True,,False,False
+XD,1755,20,0,Done,True,True,,False,False
+XD,564,12,0,Done,True,True,,False,False
+XD,2408,43,0,Done,True,True,,False,False
+XD,264,7,0,Done,True,True,,False,False
+XD,581,5,0,Done,True,True,,False,True
+XD,3650,62,0,Done,True,True,,False,False
+XD,2881,35,0,Done,True,True,,False,False
+XD,378,8,0,Done,True,True,,False,True
+XD,2501,36,0,Done,True,True,,False,False
+XD,2972,51,0,Done,True,True,,False,False
+XD,1987,35,0,Done,True,True,,False,False
+XD,2217,41,0,Done,True,True,,False,False
+XD,2258,40,0,Done,True,True,,False,False
+XD,2417,36,0,Done,True,True,,True,False
+XD,1053,21,0,Done,True,True,,False,False
+XD,1011,18,0,Done,True,True,,False,False
+XD,2445,44,0,Done,True,True,,False,False
+XD,3709,63,0,Done,True,True,,False,False
+XD,948,19,1,In Progress,True,True,,False,True
+XD,345,6,1,In Progress,True,True,True,False,True
+XD,1080,24,1,In PR,True,True,True,False,True
+XD,3518,58,1,To Do,True,True,True,False,False
+XD,516,11,1,In Progress,True,True,True,False,True
+XD,1514,30,1,In Progress,True,True,True,False,True
+XD,420,9,1,In PR,True,True,True,False,True
+XD,3751,64,1,In Progress,True,True,True,False,False
+XD,270,7,1,In Progress,True,True,True,False,True
+XD,3524,59,1,In Progress,True,True,True,False,False
+XD,1720,33,1,In Progress,True,True,True,False,False
+XD,1708,31,1,In Progress,True,True,True,False,True
+XD,1080,23,1,In PR,True,True,True,False,True
+XD,1283,25,1,In PR,True,True,True,False,True
+XD,2341,42,1,In Progress,True,True,True,False,True
+XD,3743,65,1,To Do,True,True,True,False,True
+XD,1157,23,1,In PR,True,True,True,False,True
+XD,124,4,1,In PR,True,True,True,False,False
+XD,516,10,1,In PR,True,True,True,False,False
+XD,217,6,1,In PR,True,True,True,False,True
+XD,971,21,1,In Progress,True,True,,False,True
+XD,2716,48,1,In Progress,True,True,True,False,False
+XD,345,7,1,In Progress,True,True,True,False,True
+XD,524,12,1,In Progress,True,True,True,False,True
+XD,706,16,1,In PR,True,True,True,False,True
+XD,291,4,0,Done,True,True,,False,True
+XD,292,4,0,Done,True,True,,False,True
+XD,127,5,0,Done,True,True,,False,True
+XD,153,5,0,Done,True,True,,False,True
+XD,161,5,1,In PR,True,True,True,False,True

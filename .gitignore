@@ -11,4 +11,6 @@ data/raw/
 data/processed/
 postgres-data/
 *.log
-
+artifacts/models/
+artifacts/predictions/
+catboost_info/
