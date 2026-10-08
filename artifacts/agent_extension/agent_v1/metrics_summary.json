@@ -1,0 +1,32 @@
+{
+  "A0": {
+    "total_scenarios": 10,
+    "completed": 10,
+    "pass_rate": 1.0,
+    "grounding_fidelity": 1.0,
+    "numeric_fidelity": 1.0,
+    "safety_fidelity": 1.0,
+    "avg_latency_s": 0.0,
+    "total_cost_usd": 0.0
+  },
+  "A1": {
+    "total_scenarios": 10,
+    "completed": 10,
+    "pass_rate": 1.0,
+    "grounding_fidelity": 1.0,
+    "numeric_fidelity": 1.0,
+    "safety_fidelity": 1.0,
+    "avg_latency_s": 1.638,
+    "total_cost_usd": 0.0
+  },
+  "A2": {
+    "total_scenarios": 10,
+    "completed": 10,
+    "pass_rate": 1.0,
+    "grounding_fidelity": 1.0,
+    "numeric_fidelity": 1.0,
+    "safety_fidelity": 1.0,
+    "avg_latency_s": 2.3846999999999996,
+    "total_cost_usd": 0.0
+  }
+}

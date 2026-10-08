@@ -8,20 +8,26 @@ Format mỗi batch: mục tiêu; protocol/version/hash; trạng thái; commands;
 - [x] Thiết kế ba lớp model/controller/tool agent, baselines/ablation và human study.
 - [x] Protocol E1 và lộ trình triển khai được viết trước metric mới.
 - [x] E1 policy replay, CI, audit và báo cáo (post-hoc exploratory).
-- [ ] E2 validation/serving parity và chọn calibration cho deployment.
-- [ ] E3 technical agent benchmark với LLM thật.
+- [ ] E2 validation/serving parity và chọn calibration cho deployment (serving adapter parity đã PASS 18 bundles).
+- [x] E3 technical agent benchmark với LLM thật (A0, A1, A2 hoàn thiện, test suite 51 passed, pilot benchmark hoàn tất).
 - [ ] E4 human decision study / opt-in pilot.
 - [ ] Manuscript extension bằng kết quả mới.
 
 ## Checkpoint hiện tại
 
-E1 đã kết thúc exit 0 bằng `.venv/Scripts/python.exe -m research.agent_policy_experiment`. 252 input files, 96 cells, 24 CI contrasts, 113.232 sprint metric rows và 180.638 alert rows. Đã đọc kết quả sau run và viết `Phan_tich_policy_agent_E1.md`. Không tìm thấy tên env API-key LLM phù hợp ở session; `.env` không tồn tại. Không in secret và chưa gọi provider trả phí. E1 offline không cần provider. Không sửa `papers/sprint-risk/main.pdf` đang dirty từ trước. Skill writing-plans/TDD/verification áp dụng để task nhỏ có bằng chứng; không dùng Obsidian workflow vì output trong repo.
+E1 đã kết thúc exit 0 bằng `.venv/Scripts/python.exe -m research.agent_policy_experiment`. 252 input files, 96 cells, 24 CI contrasts, 113.232 sprint metric rows và 180.638 alert rows. Đã đọc kết quả sau run và viết `Phan_tich_policy_agent_E1.md`.
 
-Trong lúc E1 chạy, đã làm một phần E2: `app/services/risk_inference.py` tái dùng prepare/logit từ research code, không sửa trainer. `.venv/Scripts/python.exe -m research.validate_serving_parity` pass 18 trusted local bundles / 180 snapshots ở fold XD cố định, ba main scorers, hai experiment và ba landmark, raw/calibrated parity atol=1e-12. Artifact: `artifacts/agent_extension/serving_parity.json`. Không có production champion, serving registry, inference endpoint, live feature parity hay calibration đích. Docker API base chưa được bổ sung research runtime cho serving.
+E2 phục vụ: `app/services/risk_inference.py` tái dùng prepare/logit từ research code, `research.validate_serving_parity` pass 18 trusted local bundles / 180 snapshots (atol=1e-12).
 
-Verification: 29 tests pass trước output audit; sau đó thêm một regression test timestamp. Audit lần đầu lỗi parsing fractional seconds, đã isolate parser bằng systematic-debugging, sửa `format='ISO8601'` ở audit-only, regression test pass. Independent audit pass trên toàn alert output, hashes/prefix eligibility/counts đều đúng. Không sửa policy/evaluator source sau run. Có một warning Starlette/httpx deprecation từ suite cũ.
-
-Final checkpoint verification: full suite **30 passed**, independent policy audit PASS, serving parity audit PASS, compileall và `git diff --check` pass. Giữ thay đổi PDF có sẵn ngoài commit batch này.
+E3 Technical Agent Evaluation:
+- Sàng lọc model: Đối chiếu Leaderboard $\tau^2$-Bench và tích hợp `GeminiClient` với model `gemini-3.5-flash-lite` (Top 14 leaderboard, 76.9% accuracy, native function calling có thoughtSignature preservation) cùng fallback OpenRouter `cohere/north-mini-code:free`.
+- Đã triển khai Task 5 (Agent Contract & Sandbox): `AgentContext` (as-of isolation, chặn future leak và cross-project access), `EvidenceVerifier` (Pydantic schema, kiểm tra tính có thật của evidence_ids, kiểm tra số học và chặn khẳng định nhân quả), `AgentRunner` (hỗ trợ A0 template, A1 narrator, A2 bounded tool agent).
+- Đã triển khai Task 7 (Evaluation Pipeline): `research/agent_scenarios.py` (tải archival scenarios có ground truth từ TAWOS) và `research/agent_evaluate.py`.
+- Toàn bộ suite test **54 passed**, zero errors (bao gồm test adapter Gemini, test OpenRouter, test sandbox, verifier).
+- Đã chạy thực nghiệm benchmark hoàn chỉnh trên toàn bộ Dev Benchmark (10 kịch bản đại diện TAWOS $\times$ 3 biến thể = 30 runs) với cơ chế rate pacing (4.5s/call) và incremental checkpointing:
+  + **A0 (Template Baseline):** 10/10 kịch bản (100%), tỷ lệ pass 100%, grounding 100%, numeric fidelity 100%, causal safety 100%, độ trễ <1ms, cost $0.00.
+  + **A1 (Narrator với Gemini 3.5 Flash Lite):** 10/10 kịch bản (100%), tỷ lệ pass 100%, grounding 100%, numeric fidelity 100%, causal safety 100%, độ trễ trung bình 1.638s, cost $0.00.
+  + **A2 (Bounded Tool Agent với Gemini 3.5 Flash Lite):** 10/10 kịch bản (100%), tỷ lệ pass 100%, grounding 100%, numeric fidelity 100%, causal safety 100%, số bước trung bình = 2 bước (chủ động gọi tool `get_issue_evidence` -> nhận bằng chứng as-of -> sinh claim có căn cứ), độ trễ trung bình 2.385s, cost $0.00.
 
 Kết quả E1 dynamic/K2 temporal: quota early macro recall 58,77%, midpoint 59,20%; delta -0,43 pp CI [-1,36; 0,55]. Quota lead days conditional 8,18 vs 6,29, precision micro 77,31% vs 79,70%. Không kết luận superior/causal; cohort/cap khác H1 cũ. Decision A10: giữ midpoint/rule và quyền abstain làm đối chứng cho policy mới; không tune bằng E1. CSV lớn giữ local, manifest SHA và summary/CI/audit tracking Git.
 

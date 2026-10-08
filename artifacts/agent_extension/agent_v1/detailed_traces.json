@@ -1,0 +1,1101 @@
+[
+  {
+    "scenario_id": "SCEN-CONFSERVER-2393-177929-0.5",
+    "issue_id": "177929",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 177929 has been in status open for 7.0 days with model risk score 0.86.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "177929",
+      "cutoff": "2014-01-13T08:19:13.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.8628869309695459,
+      "reported_inactive_days": 7.000491898148148,
+      "evidence_ids": [
+        "EVT-CONFSERVER-177929-status"
+      ],
+      "suggested_checks": [
+        "Review status open during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 177929 has been in status open for 7.0 days with model risk score 0.86."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-TIDOC-987-38553-0.5",
+    "issue_id": "38553",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 38553 has been in status in progress for 1.0 days with model risk score 0.57.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "38553",
+      "cutoff": "2017-01-27T20:05:06.500000+00:00",
+      "kind": "general_risk",
+      "risk_score": 0.5677133868575739,
+      "reported_inactive_days": 0.9741493055555556,
+      "evidence_ids": [
+        "EVT-TIDOC-38553-status"
+      ],
+      "suggested_checks": [
+        "Review status in progress during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 38553 has been in status in progress for 1.0 days with model risk score 0.57."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-COMPASS-3355-250302-0.5",
+    "issue_id": "250302",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 250302 has been in status open for 3.5 days with model risk score 0.93.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "250302",
+      "cutoff": "2018-07-29T02:23:27+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.928352817746568,
+      "reported_inactive_days": 3.5449305555555557,
+      "evidence_ids": [
+        "EVT-COMPASS-250302-status"
+      ],
+      "suggested_checks": [
+        "Review status open during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 250302 has been in status open for 3.5 days with model risk score 0.93."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-TIMOB-4923-413104-0.5",
+    "issue_id": "413104",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 413104 has been in status open for 5.0 days with model risk score 0.93.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "413104",
+      "cutoff": "2014-11-30T10:16:27+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.9282399587901904,
+      "reported_inactive_days": 4.959664351851852,
+      "evidence_ids": [
+        "EVT-TIMOB-413104-status"
+      ],
+      "suggested_checks": [
+        "Review status open during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 413104 has been in status open for 5.0 days with model risk score 0.93."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-INDY-2528-205165-0.5",
+    "issue_id": "205165",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 205165 has been in status unknown for 7.1 days with model risk score 0.70.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "205165",
+      "cutoff": "2020-03-20T14:44:17.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.703147953607539,
+      "reported_inactive_days": 7.094311342592593,
+      "evidence_ids": [
+        "EVT-INDY-205165-status"
+      ],
+      "suggested_checks": [
+        "Review status unknown during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 205165 has been in status unknown for 7.1 days with model risk score 0.70."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-IS-2558-202956-0.5",
+    "issue_id": "202956",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 202956 has been in status in progress for 5.5 days with model risk score 0.99.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "202956",
+      "cutoff": "2020-02-23T03:18:02.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.9901721034424162,
+      "reported_inactive_days": 5.502644675925926,
+      "evidence_ids": [
+        "EVT-IS-202956-status"
+      ],
+      "suggested_checks": [
+        "Review status in progress during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 202956 has been in status in progress for 5.5 days with model risk score 0.99."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-DM-3077-232462-0.5",
+    "issue_id": "232462",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 232462 has been in status in progress for 3.7 days with model risk score 0.63.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "232462",
+      "cutoff": "2018-09-21T10:17:48.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.6279598173831165,
+      "reported_inactive_days": 3.7382233796296296,
+      "evidence_ids": [
+        "EVT-DM-232462-status"
+      ],
+      "suggested_checks": [
+        "Review status in progress during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 232462 has been in status in progress for 3.7 days with model risk score 0.63."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-APIKIT-4082-384184-0.5",
+    "issue_id": "384184",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 384184 has been in status in progress for 4.9 days with model risk score 0.57.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "384184",
+      "cutoff": "2019-01-23T18:18:07.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.5700599317879004,
+      "reported_inactive_days": 4.930376157407407,
+      "evidence_ids": [
+        "EVT-APIKIT-384184-status"
+      ],
+      "suggested_checks": [
+        "Review status in progress during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 384184 has been in status in progress for 4.9 days with model risk score 0.57."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-TIMOB-4798-416669-0.5",
+    "issue_id": "416669",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 416669 has been in status open for 7.0 days with model risk score 0.96.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "416669",
+      "cutoff": "2017-01-22T00:00:21+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.9616635046054868,
+      "reported_inactive_days": 7.007604166666667,
+      "evidence_ids": [
+        "EVT-TIMOB-416669-status"
+      ],
+      "suggested_checks": [
+        "Review status open during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 416669 has been in status open for 7.0 days with model risk score 0.96."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-DM-3258-247514-0.5",
+    "issue_id": "247514",
+    "variant": "A0",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 0.0,
+    "cost": 0,
+    "steps": 1,
+    "summary": "Issue 247514 has been in status unknown for 16.3 days with model risk score 0.46.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "247514",
+      "cutoff": "2014-10-16T22:57:10.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.4574603209468408,
+      "reported_inactive_days": 16.322505787037038,
+      "evidence_ids": [
+        "EVT-DM-247514-status"
+      ],
+      "suggested_checks": [
+        "Review status unknown during team standup"
+      ],
+      "unknowns": [],
+      "summary": "Issue 247514 has been in status unknown for 16.3 days with model risk score 0.46."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-CONFSERVER-2393-177929-0.5",
+    "issue_id": "177929",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.699,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 177929 in project CONFSERVER has remained open with 7.00 days of inactivity as of the 2014-01-13 cutoff, resulting in a risk score of 0.86.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "177929",
+      "cutoff": "2014-01-13T08:19:13.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.8628869309695459,
+      "reported_inactive_days": 7.000491898148148,
+      "evidence_ids": [
+        "EVT-CONFSERVER-177929-status"
+      ],
+      "suggested_checks": [
+        "Verify if the issue status is correctly set to open.",
+        "Check assignee workload and availability."
+      ],
+      "unknowns": [
+        "Exact reason for the 7 days of inactivity.",
+        "Whether work is happening outside of status updates."
+      ],
+      "summary": "Issue 177929 in project CONFSERVER has remained open with 7.00 days of inactivity as of the 2014-01-13 cutoff, resulting in a risk score of 0.86."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-TIDOC-987-38553-0.5",
+    "issue_id": "38553",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.33,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 38553 in project TIDOC is currently in progress with an inactivity duration of approximately 0.97 days as of the cutoff time.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "38553",
+      "cutoff": "2017-01-27T20:05:06.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.5677133868575739,
+      "reported_inactive_days": 0.9741493055555556,
+      "evidence_ids": [
+        "EVT-TIDOC-38553-status"
+      ],
+      "suggested_checks": [
+        "Verify current assignee availability",
+        "Check for any external blockers"
+      ],
+      "unknowns": [
+        "Exact reason for lack of recent updates",
+        "Whether work is occurring off-ticket"
+      ],
+      "summary": "Issue 38553 in project TIDOC is currently in progress with an inactivity duration of approximately 0.97 days as of the cutoff time."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-COMPASS-3355-250302-0.5",
+    "issue_id": "250302",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.698,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 250302 in project COMPASS remains open with a reported inactivity duration of approximately 3.54 days as of the cutoff timestamp 2018-07-29T02:23:27+00:00, accompanied by a risk score of 0.928352817746568.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "250302",
+      "cutoff": "2018-07-29T02:23:27+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.928352817746568,
+      "reported_inactive_days": 3.5449305555555557,
+      "evidence_ids": [
+        "EVT-COMPASS-250302-status"
+      ],
+      "suggested_checks": [
+        "Verify if the task requires an estimate or if it is intentionally unestimated.",
+        "Confirm the current operational status of issue 250302 within project COMPASS."
+      ],
+      "unknowns": [
+        "The reason for the lack of an estimate on the task.",
+        "Whether any offline progress has occurred since the last recorded status event."
+      ],
+      "summary": "Issue 250302 in project COMPASS remains open with a reported inactivity duration of approximately 3.54 days as of the cutoff timestamp 2018-07-29T02:23:27+00:00, accompanied by a risk score of 0.928352817746568."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-TIMOB-4923-413104-0.5",
+    "issue_id": "413104",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.522,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 413104 in project TIMOB has remained in the open status for approximately 4.96 days leading up to the cutoff timestamp of 2014-11-30T10:16:27+00:00, resulting in a calculated risk score of 0.93.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "413104",
+      "cutoff": "2014-11-30T10:16:27+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.9282399587901904,
+      "reported_inactive_days": 4.959664351851852,
+      "evidence_ids": [
+        "EVT-TIMOB-413104-status"
+      ],
+      "suggested_checks": [
+        "Review current status of issue 413104 in project TIMOB",
+        "Verify if any unrecorded updates or discussions have occurred since the cutoff timestamp"
+      ],
+      "unknowns": [
+        "Reason for the lack of status changes during the inactivity period",
+        "Whether work is ongoing outside of recorded system events"
+      ],
+      "summary": "Issue 413104 in project TIMOB has remained in the open status for approximately 4.96 days leading up to the cutoff timestamp of 2014-11-30T10:16:27+00:00, resulting in a calculated risk score of 0.93."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-INDY-2528-205165-0.5",
+    "issue_id": "205165",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.825,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 205165 in project INDY exhibits a risk score of 0.703 with 7.09 inactive days recorded up to the cutoff timestamp of 2020-03-20T14:44:17.500000+00:00, with its status marked as unknown.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "205165",
+      "cutoff": "2020-03-20T14:44:17.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.703147953607539,
+      "reported_inactive_days": 7.094311342592593,
+      "evidence_ids": [
+        "EVT-INDY-205165-status"
+      ],
+      "suggested_checks": [
+        "Verify current status of issue 205165 in project INDY",
+        "Check activity logs for any recent updates beyond the cutoff timestamp"
+      ],
+      "unknowns": [
+        "Exact operational status due to unknown state classification",
+        "Actual progress of the archival task"
+      ],
+      "summary": "Issue 205165 in project INDY exhibits a risk score of 0.703 with 7.09 inactive days recorded up to the cutoff timestamp of 2020-03-20T14:44:17.500000+00:00, with its status marked as unknown."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-IS-2558-202956-0.5",
+    "issue_id": "202956",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.49,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 202956 in project IS is currently in progress with a reported inactivity period of approximately 5.5 days and a calculated risk score of 0.990.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "202956",
+      "cutoff": "2020-02-23T03:18:02.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.9901721034424162,
+      "reported_inactive_days": 5.502644675925926,
+      "evidence_ids": [
+        "EVT-IS-202956-status"
+      ],
+      "suggested_checks": [
+        "Verify if work on issue 202956 is ongoing despite the lack of recent status updates.",
+        "Confirm whether the assignee is actively working on this task or blocked."
+      ],
+      "unknowns": [
+        "Exact reasons for the 5.5 days of inactivity.",
+        "Current completion percentage of the archival task."
+      ],
+      "summary": "Issue 202956 in project IS is currently in progress with a reported inactivity period of approximately 5.5 days and a calculated risk score of 0.990."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-DM-3077-232462-0.5",
+    "issue_id": "232462",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.744,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 232462 in project DM is currently in progress with a risk score of 0.628 and has been inactive for approximately 3.74 days as of the cutoff timestamp.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "232462",
+      "cutoff": "2018-09-21T10:17:48.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.6279598173831165,
+      "reported_inactive_days": 3.7382233796296296,
+      "evidence_ids": [
+        "EVT-DM-232462-status"
+      ],
+      "suggested_checks": [
+        "Verify if work on the archival task is ongoing despite the lack of recent status events.",
+        "Confirm the current assignee and operational status for project DM issue 232462."
+      ],
+      "unknowns": [
+        "Exact reasons for the absence of status updates during the recorded period.",
+        "Whether any unrecorded local progress has been made."
+      ],
+      "summary": "Issue 232462 in project DM is currently in progress with a risk score of 0.628 and has been inactive for approximately 3.74 days as of the cutoff timestamp."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-APIKIT-4082-384184-0.5",
+    "issue_id": "384184",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.768,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 384184 in project APIKIT is currently in progress with a risk score of 0.57 and has remained inactive for 4.93 days as of the cutoff timestamp.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "384184",
+      "cutoff": "2019-01-23T18:18:07.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.5700599317879004,
+      "reported_inactive_days": 4.930376157407407,
+      "evidence_ids": [
+        "EVT-APIKIT-384184-status"
+      ],
+      "suggested_checks": [
+        "Verify if the task is blocked by external dependencies.",
+        "Confirm the assignee's current workload and availability."
+      ],
+      "unknowns": [
+        "Reason for the lack of status updates over the 4.93 inactive days",
+        "Whether active development is occurring outside of status changes"
+      ],
+      "summary": "Issue 384184 in project APIKIT is currently in progress with a risk score of 0.57 and has remained inactive for 4.93 days as of the cutoff timestamp."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-TIMOB-4798-416669-0.5",
+    "issue_id": "416669",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.455,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 416669 in project TIMOB remains open with an inactivity period of approximately 7.01 days as of the cutoff timestamp 2017-01-22T00:00:21+00:00, resulting in a risk score of 0.9616635046054868.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "416669",
+      "cutoff": "2017-01-22T00:00:21+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.9616635046054868,
+      "reported_inactive_days": 7.007604166666667,
+      "evidence_ids": [
+        "EVT-TIMOB-416669-status"
+      ],
+      "suggested_checks": [
+        "Verify if the issue is still relevant to the sprint goals",
+        "Check assignee availability and current workload"
+      ],
+      "unknowns": [
+        "Root cause of inactivity",
+        "Whether work has occurred outside of Jira updates"
+      ],
+      "summary": "Issue 416669 in project TIMOB remains open with an inactivity period of approximately 7.01 days as of the cutoff timestamp 2017-01-22T00:00:21+00:00, resulting in a risk score of 0.9616635046054868."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-DM-3258-247514-0.5",
+    "issue_id": "247514",
+    "variant": "A1",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.849,
+    "cost": 0.0,
+    "steps": 1,
+    "summary": "Issue 247514 in project DM shows an unknown status with 16.32 days of reported inactivity as of the cutoff time.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "247514",
+      "cutoff": "2014-10-16T22:57:10.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.4574603209468408,
+      "reported_inactive_days": 16.322505787037038,
+      "evidence_ids": [
+        "EVT-DM-247514-status"
+      ],
+      "suggested_checks": [
+        "Verify the current workflow state of the archival task.",
+        "Confirm if the task is intentionally left in an unknown status."
+      ],
+      "unknowns": [
+        "The exact reason for the 16.32 days of inactivity.",
+        "Whether the task has an estimate or is unestimated."
+      ],
+      "summary": "Issue 247514 in project DM shows an unknown status with 16.32 days of reported inactivity as of the cutoff time."
+    },
+    "tool_calls": []
+  },
+  {
+    "scenario_id": "SCEN-CONFSERVER-2393-177929-0.5",
+    "issue_id": "177929",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.399,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Issue 177929 is an open archival task in project CONFSERVER with an inactivity period of approximately 7 days and a risk score of 0.86.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "177929",
+      "cutoff": "2014-01-13T08:19:13.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.862886930969546,
+      "reported_inactive_days": 7.00049189814815,
+      "evidence_ids": [
+        "EVT-CONFSERVER-177929-status"
+      ],
+      "suggested_checks": [
+        "Verify recent activity or comments on the issue",
+        "Confirm project archive criteria for CONFSERVER"
+      ],
+      "unknowns": [
+        "Exact reason for inactivity",
+        "Whether the issue should be closed or updated"
+      ],
+      "summary": "Issue 177929 is an open archival task in project CONFSERVER with an inactivity period of approximately 7 days and a risk score of 0.86."
+    },
+    "tool_calls": [
+      {
+        "id": "call_331911",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"177929\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0TexQGCYcJJJ1nPMhaEFeEPKkwu2hYdia44PJI+LpaR7+g2mXsdNO/X42ZmFKwJCf3fgv0ULMGxPQ72bzVP2ggWuigWhdAngu8SZLnTJlBJBODNRGoqEu83pQ="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-TIDOC-987-38553-0.5",
+    "issue_id": "38553",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.967,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Archival task 38553 in project TIDOC is currently in progress with a risk score of 0.57 and reported inactive days of approximately 0.97.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "38553",
+      "cutoff": "2017-01-27T20:05:06.500000+00:00",
+      "kind": "general_risk",
+      "risk_score": 0.567713386857574,
+      "reported_inactive_days": 0.974149305555556,
+      "evidence_ids": [
+        "EVT-TIDOC-38553-status"
+      ],
+      "suggested_checks": [
+        "Verify task status and progress in project TIDOC"
+      ],
+      "unknowns": [],
+      "summary": "Archival task 38553 in project TIDOC is currently in progress with a risk score of 0.57 and reported inactive days of approximately 0.97."
+    },
+    "tool_calls": [
+      {
+        "id": "call_328172",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"38553\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0Tn+UisAoJobRpQCmpwyWmctV6SULgrGRfG1k0b2izfHaI0gs29DAIFd2zt5cjihMPdMLvaM3T3CjK/mifQYohZw8yJa0ZBdVBtUw1njuOUeJ+eCURhTomuaQ="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-COMPASS-3355-250302-0.5",
+    "issue_id": "250302",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.581,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Archival task 250302 in project COMPASS is currently open with a risk score of 0.93 and 3.55 reported inactive days as of 2018-07-29T02:23:27+00:00.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "250302",
+      "cutoff": "2018-07-29T02:23:27+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.928352817746568,
+      "reported_inactive_days": 3.54493055555556,
+      "evidence_ids": [
+        "EVT-COMPASS-250302-status"
+      ],
+      "suggested_checks": [
+        "Verify project activity and status in COMPASS",
+        "Confirm archival task requirements"
+      ],
+      "unknowns": [
+        "Reason for inactivity",
+        "Specific archival criteria met"
+      ],
+      "summary": "Archival task 250302 in project COMPASS is currently open with a risk score of 0.93 and 3.55 reported inactive days as of 2018-07-29T02:23:27+00:00."
+    },
+    "tool_calls": [
+      {
+        "id": "call_354137",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"250302\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0T5ll5Jfj/kdgiv9/6MtKvwe83qhKPr7ytxYjw0GCIszcQW/4y9uS6JtriqLeP0cnAT5FYy1HXeEbVf9kR516TFQlw1rCovLZH2dnqTd+sv/HJSduoXNzZcxo="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-TIMOB-4923-413104-0.5",
+    "issue_id": "413104",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.025,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Archival task 413104 in project TIMOB with open status and risk score 0.93.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "413104",
+      "cutoff": "2014-11-30T10:16:27+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.92823995879019,
+      "reported_inactive_days": 4.95966435185185,
+      "evidence_ids": [
+        "EVT-TIMOB-413104-status"
+      ],
+      "suggested_checks": [
+        "Verify project activity",
+        "Confirm archival criteria"
+      ],
+      "unknowns": [
+        "Exact future retention requirements"
+      ],
+      "summary": "Archival task 413104 in project TIMOB with open status and risk score 0.93."
+    },
+    "tool_calls": [
+      {
+        "id": "call_288874",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"413104\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0T+t8p8OAiHrIvGOAXtu4pnCxVPQutaJ8S4cwJSK3UyDTBbIJvWCDHFTQeXyNcyz8YV4zRygI2WPWt6LGg91Mn+867Bc7XOSenrtJ9y0c+onCeAOAWzmFL764="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-INDY-2528-205165-0.5",
+    "issue_id": "205165",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.19,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Issue 205165 is an archival task in project INDY with an unknown status, a risk score of 0.703, and approximately 7.09 reported inactive days as of 2020-03-20.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "205165",
+      "cutoff": "2020-03-20T14:44:17.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.703147953607539,
+      "reported_inactive_days": 7.09431134259259,
+      "evidence_ids": [
+        "EVT-INDY-205165-status"
+      ],
+      "suggested_checks": [
+        "Verify project INDY status",
+        "Check archival criteria for unknown status"
+      ],
+      "unknowns": [
+        "Exact reason for unknown status",
+        "Current validity of untrusted content flag"
+      ],
+      "summary": "Issue 205165 is an archival task in project INDY with an unknown status, a risk score of 0.703, and approximately 7.09 reported inactive days as of 2020-03-20."
+    },
+    "tool_calls": [
+      {
+        "id": "call_449731",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"205165\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0TrOjrjvx+/wX8A7ulqawVADbpvbl4suuP3y1iHqkyTWTKrf8xPQzaHzG95zV+XEKvhl+SDk3dYJr/1UD7t2PAJ8n6VqiM8BRHADrP4M/IUbqYAkG4QkbgI50="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-IS-2558-202956-0.5",
+    "issue_id": "202956",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.541,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Issue 202956 is an archival task in project IS that has been inactive for approximately 5.5 days, currently marked as 'in progress' with a high risk score of 0.99.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "202956",
+      "cutoff": "2020-02-23T03:18:02.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.990172103442416,
+      "reported_inactive_days": 5.50264467592593,
+      "evidence_ids": [
+        "EVT-IS-202956-status"
+      ],
+      "suggested_checks": [
+        "Verify whether the archival task is still in progress",
+        "Confirm the inactivity duration and associated risk factors"
+      ],
+      "unknowns": [
+        "Exact reasons for high risk score",
+        "Whether project IS stakeholders are aware of the task status"
+      ],
+      "summary": "Issue 202956 is an archival task in project IS that has been inactive for approximately 5.5 days, currently marked as 'in progress' with a high risk score of 0.99."
+    },
+    "tool_calls": [
+      {
+        "id": "call_804669",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"202956\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0TFKGjvbK4Vn1LEVIJV/mXwnzk84O8k8JuuJM6KO62Gdi219A9uhVWkiLyP9TuRN9uTR33cLZJPmLlZLWt9cvc8iV9xk/i/8OZPnuATsaBAbctT+fF3IieEBs="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-DM-3077-232462-0.5",
+    "issue_id": "232462",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.618,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Issue 232462 is an archival task in project DM with a risk score of 0.63 and approximately 3.74 reported inactive days as of 2018-09-21.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "232462",
+      "cutoff": "2018-09-21T10:17:48.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.627959817383116,
+      "reported_inactive_days": 3.73822337962963,
+      "evidence_ids": [
+        "EVT-DM-232462-status"
+      ],
+      "suggested_checks": [
+        "Verify project DM status",
+        "Confirm archival task requirements"
+      ],
+      "unknowns": [
+        "Exact reason for inactivity",
+        "Final disposition of untrusted content"
+      ],
+      "summary": "Issue 232462 is an archival task in project DM with a risk score of 0.63 and approximately 3.74 reported inactive days as of 2018-09-21."
+    },
+    "tool_calls": [
+      {
+        "id": "call_416410",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"232462\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0T48ciJcvMKaEZLK943pVZibI4J0cxOfml7Aj6gfWN89KU2S1y4Mn5BH33uksthL4QNm/R+I70Oczh0LY8aOuEAmh5t6fzzrg82qqMSFpVVJ6M752YJpfciFg="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-APIKIT-4082-384184-0.5",
+    "issue_id": "384184",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 3.364,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Issue 384184 is an archival task in project APIKIT currently in progress with a risk score of 0.57 and reported inactive for ~4.93 days as of the cutoff date.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "384184",
+      "cutoff": "2019-01-23T18:18:07.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.5700599317879,
+      "reported_inactive_days": 4.93037615740741,
+      "evidence_ids": [
+        "EVT-APIKIT-384184-status"
+      ],
+      "suggested_checks": [
+        "Verify if the archival task is still in progress or should be completed.",
+        "Check recent activity in project APIKIT."
+      ],
+      "unknowns": [
+        "Exact reason for inactivity during the 4.93 days."
+      ],
+      "summary": "Issue 384184 is an archival task in project APIKIT currently in progress with a risk score of 0.57 and reported inactive for ~4.93 days as of the cutoff date."
+    },
+    "tool_calls": [
+      {
+        "id": "call_312584",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"384184\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0TG5qKEJVFCEwl2KeylLL8hm/whusEz/ONUckghHyCGEjYL5RuCp36oB0iQLtNuCsdhmPdrZobC7CsqbSKMlLi0PgvhugLVW4LWlXDtmM8xHKoXxPldgz5Zno="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-TIMOB-4798-416669-0.5",
+    "issue_id": "416669",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 1.938,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Archival task 416669 in project TIMOB is currently open with a risk score of 0.96 and has been inactive for approximately 7 days.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "416669",
+      "cutoff": "2017-01-22T00:00:21+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.961663504605487,
+      "reported_inactive_days": 7.00760416666667,
+      "evidence_ids": [
+        "EVT-TIMOB-416669-status"
+      ],
+      "suggested_checks": [
+        "Verify project activity and status in TIMOB."
+      ],
+      "unknowns": [],
+      "summary": "Archival task 416669 in project TIMOB is currently open with a risk score of 0.96 and has been inactive for approximately 7 days."
+    },
+    "tool_calls": [
+      {
+        "id": "call_480912",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"416669\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0TB2UXv67zSzaCDKh78fT0kcMmxDEO1+kcWgTvzyIb4cpfNleZYJb/nF2/VPWrxANSeSMfwJYg+4vN7O40DnKHN1ecsrNo6+Rb/qh5ZfMHVBczd4HRfCheddg="
+      }
+    ]
+  },
+  {
+    "scenario_id": "SCEN-DM-3258-247514-0.5",
+    "issue_id": "247514",
+    "variant": "A2",
+    "status": "completed",
+    "valid": true,
+    "grounding_pass": true,
+    "numeric_pass": true,
+    "safety_pass": true,
+    "latency_s": 2.224,
+    "cost": 0.0,
+    "steps": 2,
+    "summary": "Issue 247514 in project DM has an unknown status, 16.32 inactive days, and a risk score of 0.46 as of 2014-10-16.",
+    "error_detail": "",
+    "claim_payload": {
+      "issue_id": "247514",
+      "cutoff": "2014-10-16T22:57:10.500000+00:00",
+      "kind": "status_stagnation",
+      "risk_score": 0.457460320946841,
+      "reported_inactive_days": 16.322505787037,
+      "evidence_ids": [
+        "EVT-DM-247514-status"
+      ],
+      "suggested_checks": [
+        "Verify current status of task 247514 in project DM",
+        "Check recent activity or comments prior to cutoff"
+      ],
+      "unknowns": [
+        "Exact reason for unknown status"
+      ],
+      "summary": "Issue 247514 in project DM has an unknown status, 16.32 inactive days, and a risk score of 0.46 as of 2014-10-16."
+    },
+    "tool_calls": [
+      {
+        "id": "call_331592",
+        "type": "function",
+        "function": {
+          "name": "get_issue_evidence",
+          "arguments": "{\"issue_id\": \"247514\"}"
+        },
+        "thoughtSignature": "EmAKXgFpFH0TEvZuO1+va2arXxl4Bl0R3PxShvBjC0G+aPM2TBhAsf/9bwV7+zw/OfqeJiyVzBYMNsYjvAQ+Vb2h7B+6AuiwrI+GLIIjVhB/pGcmTG/wKrVJ9YPx9fcjbXk="
+      }
+    ]
+  }
+]
