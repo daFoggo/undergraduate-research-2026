@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{Midpoint results under upward-rounded nominal 20\% budgets. Temporal recall and precision are sprint-macro; cross-project recall and precision are project-macro. False alerts are mean counts per sprint.}\label{tab:02_performance}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Method & \shortstack{Temporal\\recall (\%)} & \shortstack{Temporal\\precision (\%)} & \shortstack{Temporal\\false alerts} & \shortstack{Cross-project\\recall (\%)} & \shortstack{Cross-project\\precision (\%)} & \shortstack{Cross-project\\false alerts} \\
+\midrule
+Frequency & 36.25 & 55.43 & 0.927 & 34.13 & 46.97 & 1.210 \\
+Execution-state rule & 51.23 & 72.28 & 0.486 & 49.69 & 62.50 & 0.801 \\
+Static logistic regression & 44.99 & 66.11 & 0.630 & 43.60 & 57.26 & 0.934 \\
+Static CatBoost & 44.46 & 66.45 & 0.617 & 43.56 & 57.03 & 0.907 \\
+Dynamic CatBoost & 53.36 & 75.32 & 0.423 & 53.52 & 67.08 & 0.646 \\
+Dynamic w/o cohort & 54.23 & 75.28 & 0.416 & 52.80 & 66.49 & 0.659 \\
+\bottomrule
+\end{tabular}
+\end{table}

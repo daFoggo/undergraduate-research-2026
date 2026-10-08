@@ -1,0 +1,25 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=1.2cm},width=0.45\textwidth,height=5.8cm,xmin=0,xmax=1,ymin=0,ymax=1,xlabel={Predicted risk},ylabel={Observed non-completion},tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},legend style={font=\scriptsize,at={(0.02,0.98)},anchor=north west},grid=major,grid style={gray!15}]
+\nextgroupplot[title={Raw}]
+\addplot[gray,dashed,forget plot] coordinates {(0,0) (1,1)};
+\addplot[color=blue,mark=square*,mark size=1.7pt,thick] coordinates {(0.04609813,0.13186813) (0.15061372,0.31094527) (0.25073423,0.45862069) (0.35054220,0.59807074) (0.45019656,0.68586387) (0.55207630,0.65352113) (0.65124504,0.66115702) (0.74421476,0.74338624) (0.84899045,0.83276451) (0.93797254,0.85161290)};
+\addlegendentry{Static}
+\addplot[color=orange,mark=*,mark size=1.7pt,thick] coordinates {(0.01538932,0.01618497) (0.15102918,0.26804124) (0.24921732,0.49152542) (0.35068032,0.53642384) (0.44745683,0.66310160) (0.55119546,0.69026549) (0.65288707,0.76900585) (0.74973011,0.88174807) (0.85537990,0.88290398) (0.95050280,0.89816701)};
+\addlegendentry{Dynamic}
+\addplot[color=teal,mark=triangle*,mark size=1.7pt,thick] coordinates {(0.01291693,0.01162791) (0.15578708,0.34615385) (0.25437055,0.53658537) (0.34726714,0.60427807) (0.45407259,0.68750000) (0.55463594,0.79615385) (0.65010907,0.79885057) (0.75273400,0.84097035) (0.85004056,0.89690722) (0.94911295,0.89058524)};
+\addlegendentry{Dynamic w/o cohort}
+\nextgroupplot[title={Validation sigmoid}]
+\addplot[gray,dashed,forget plot] coordinates {(0,0) (1,1)};
+\addplot[color=blue,mark=square*,mark size=1.7pt,thick] coordinates {(0.06513813,0.00000000) (0.15679251,0.15899582) (0.25870842,0.29496403) (0.34613370,0.38108108) (0.44901034,0.52789700) (0.55583957,0.64062500) (0.65591471,0.61004785) (0.75175531,0.74560000) (0.84672904,0.79615385) (0.93142627,0.89285714)};
+\addlegendentry{Static}
+\addplot[color=orange,mark=*,mark size=1.7pt,thick] coordinates {(0.03241866,0.00382166) (0.14716271,0.16037736) (0.24620120,0.33846154) (0.34585696,0.43269231) (0.45225166,0.62500000) (0.55276624,0.62500000) (0.65287782,0.69014085) (0.75612411,0.77384196) (0.85567534,0.85276074) (0.94202709,0.93292683)};
+\addlegendentry{Dynamic}
+\addplot[color=teal,mark=triangle*,mark size=1.7pt,thick] coordinates {(0.03424465,0.00390625) (0.14885192,0.12500000) (0.24830719,0.32773109) (0.34706056,0.41121495) (0.45078301,0.53906250) (0.55143090,0.67777778) (0.64792567,0.70562771) (0.75583314,0.78820375) (0.85265053,0.85028249) (0.93759853,0.92869565)};
+\addlegendentry{Dynamic w/o cohort}
+\end{groupplot}
+\end{tikzpicture}
+\caption{temporal reliability at the midpoint. Ten fixed bins; bin counts and project-specific diagnostics are retained in the artifacts.}
+\label{fig:calibration-temporal}
+\end{figure}

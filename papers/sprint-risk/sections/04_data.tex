@@ -1,0 +1,37 @@
+\section{Data and Historical Reconstruction}\label{data-and-historical-reconstruction}
+
+\subsection{Source and cohort flow}\label{source-and-cohort-flow}
+
+TAWOS v1.1 contains 458,232 issues from 39 projects, 4,594 sprint records, and 9,253,419 changelog entries \cite{tawosv11}. We retain closed sprints with valid start/end dates, a positive duration between 1 and 60 days, and a start year of at least 2000. These are operational data-quality criteria, not claims about ideal sprint duration.
+
+Sprint changelog values represent sets of Jira sprint identifiers. We map them by \texttt{(project\_\allowbreak{}id,\ jiraid)}, rather than by the dataset's internal sprint primary key. An issue belongs to a reconstructed start cohort when it was created by the archived start time and the last membership event at or before that time contains the target sprint. Issues added later are excluded from that sprint's start cohort. References without a corresponding sprint record are logged rather than guessed.
+
+{\def\LTcaptype{table}
+\input{tables/01_cohort}
+}
+
+Outcome coverage is 77.04\% of membership-supported instances; 6,599 outcomes remain unassessable under the rules. Four landmarks yield 88,588 snapshots across the labeled reconstructed population. Table 1's temporal partitions concern the 14 eligible projects, not all labeled projects.
+
+\subsection{Outcomes, scope changes, and audit rules}\label{outcomes-scope-changes-and-audit-rules}
+
+We replay recorded status transitions forward. Before the first observed status transition, status is \texttt{unknown}; neither the final issue snapshot nor a future event's prior-value field supplies a historical prediction feature. Ambiguous status names, including Accepted, Implemented, Deployed, Released variants, and WAD, are excluded from the primary outcome definition.
+
+We identify inconsistent consecutive membership or status records. A contradiction between an earlier event's new value and a later event's prior value indicates missing or inconsistent history. These checks can identify uncertain intervals and lead to membership exclusion or unassessable outcomes. They are retrospective data-quality checks, not prediction features. Quality filtering can therefore condition the evaluated population on later evidence, a limitation distinct from feature timestamp leakage.
+
+An issue removed after sprint start remains in its start cohort. Reopened issues are labeled by their recorded state at the endpoint: reopening before the end can change the outcome, whereas reopening after the end does not. Cancellation-related and removal flags support sensitivity analysis; the main label still follows the terminal-state rule. A terminal record is a proxy and does not establish that the intended functionality was delivered.
+
+We independently check 765 sampled instances from the eligible projects using SQL queries for membership and endpoint status, including both outcome classes and scope changes. Where available, the prior-value field of a later status event corroborates the endpoint assessment. This verifies consistency between the replay and the source records; it is not a human workflow audit or inter-rater agreement study.
+
+\subsection{Features and temporal integrity}\label{features-and-temporal-integrity}
+
+Static features are fixed at \(t_{0s}\). Dynamic inputs add observations through \(t_{s,\lambda}\). Both use the following groups:
+
+{\def\LTcaptype{table}
+\input{tables/feature_groups}
+}
+
+Selected-field activity covers Sprint, status, resolution, priority, issuetype, assignee, and Story Points; it does not represent all tracker activity or comments. Missing categorical attributes are \texttt{unknown}. We do not substitute final attribute values for initial values lacking timestamped support. This conservative choice limits coverage of the static information that a real team may actually know.
+
+Cohort aggregates are computed before excluding unassessable outcomes, preventing outcome availability from changing the progress features of retained instances. Issue, project, sprint, and user identifiers are not model features. Text, final resolution fields, future changes, and full-lifetime effort totals are excluded. Provenance timestamps are audit fields, not predictors.
+
+Automated checks verify unique issue--sprint--landmark keys, consistent labels across landmarks, prefix timestamps not exceeding the prediction time, and correct cohort aggregation. Tests also verify that modifying or deleting future events does not change issue-prefix features and that changing future labels does not alter cohort aggregates. These checks establish implementation invariants under the archived-date assumptions; they do not prove that archived sprint dates were unchanged throughout execution.

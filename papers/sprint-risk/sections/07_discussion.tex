@@ -1,0 +1,11 @@
+\section{Discussion}\label{discussion}
+
+The primary experiment supports using recorded execution history rather than relying solely on conservatively reconstructed start-time information. However, the operational conclusion is narrower than ``machine learning reliably predicts sprint failure.'' The outcome is a tracker-state proxy, and much of the full-cohort advantage is associated with current completion state. Descriptive CatBoost importance assigns \texttt{dynamic\_\allowbreak{}is\_\allowbreak{}done} mean importance of 27.41\% temporal and 56.44\% cross-project, with \texttt{dynamic\_\allowbreak{}status} contributing 15.58\% and 13.90\%. These correlated feature importances are not causal explanations.
+
+The open-only comparison suggests a smaller remaining gain. It motivates future research on prioritizing ongoing work rather than allowing easy already-completed negatives to dominate a general risk score. A stronger future comparison should combine open-only eligibility with explicitly fixed integer capacity; the present separate sensitivity analyses do not establish performance under that combined setting.
+
+Capacity should be expressed operationally. A team may handle one alert in a two-issue cohort, but such a policy must be described as one alert rather than a strict 20\% allocation. Across organizations, shared handling capacity or capacity carried across sprints may be preferable to independently rounding a percentage in every small cohort. Optimizing such allocation is future work, not a proven property of the replay policy used here.
+
+Calibration also needs a deployment-specific validation window. The favorable temporal result and unfavorable cross-project Brier result do not support a universal probability threshold or universal benefit from sigmoid recalibration. Model versions, data completeness, eligible populations, realized capacity, and alert outcomes should be logged in a pilot.
+
+Finally, learned models should retain strong simple comparators. The inconclusive temporal rule comparison and cumulative-policy contrast limit claims that a more complex ranker is necessary. A prospective pilot can compare a rule and a learned model under the same capacity while measuring handling cost and later delivery outcomes. The present study cannot establish which system changes practitioner behavior or reduces non-completion.

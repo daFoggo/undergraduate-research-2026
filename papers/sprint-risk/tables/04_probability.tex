@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{Midpoint probability results. AP is averaged equally over projects; Brier is pooled over instances.}\label{tab:04_probability}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Setting & Model & \shortstack{AP macro\\project} & Raw Brier & \shortstack{Recalibrated\\Brier} \\
+\midrule
+Temporal & Static CatBoost & 0.6571 & 0.2188 & 0.1894 \\
+Temporal & Dynamic CatBoost & 0.8128 & 0.1279 & 0.1137 \\
+Cross-project & Static CatBoost & 0.6359 & 0.2257 & 0.2241 \\
+Cross-project & Dynamic CatBoost & 0.8035 & 0.1374 & 0.1381 \\
+\bottomrule
+\end{tabular}
+\end{table}

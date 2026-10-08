@@ -1,0 +1,13 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=2.6cm},width=0.40\textwidth,height=7cm,xmin=0,xmax=0.36,ymin=-0.8,ymax=13.8,xlabel={$\Delta$ Recall},tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},xmajorgrids,grid style={gray!15}]
+\nextgroupplot[title={Temporal},ytick={0,1,2,3,4,5,6,7,8,9,10,11,12,13},yticklabels={CONFCLOUD,DM,COMPASS,TIMOB,CONFSERVER,MESOS,APIKIT,NEXUS,TIDOC,IS,TISTUD,XD,INDY,MULE}]
+\addplot[xbar,bar width=6pt,fill=teal!80,draw=teal!80] coordinates {(0.02631579,0) (0.03167901,1) (0.03846154,2) (0.03914169,3) (0.04151515,4) (0.05396825,5) (0.05555556,6) (0.07575758,7) (0.08333333,8) (0.10839161,9) (0.14705882,10) (0.16818182,11) (0.17948718,12) (0.35000000,13)};
+\nextgroupplot[title={Cross-project},ytick={0,1,2,3,4,5,6,7,8,9,10,11,12,13},yticklabels={CONFCLOUD,COMPASS,CONFSERVER,DM,MESOS,TIDOC,TIMOB,IS,INDY,TISTUD,MULE,NEXUS,APIKIT,XD}]
+\addplot[xbar,bar width=6pt,fill=teal!80,draw=teal!80] coordinates {(0.04829545,0) (0.05098336,1) (0.05806932,2) (0.06121430,3) (0.06230468,4) (0.07600151,5) (0.08221298,6) (0.08305195,7) (0.09308188,8) (0.10803571,9) (0.12455345,10) (0.13802083,11) (0.20119048,12) (0.20714200,13)};
+\end{groupplot}
+\end{tikzpicture}
+\caption{Project-level dynamic--static differences at the midpoint. Bars are point estimates, not individual-project confidence intervals.}
+\label{fig:projects}
+\end{figure}

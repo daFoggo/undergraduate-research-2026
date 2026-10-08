@@ -1,0 +1,22 @@
+\section{Introduction}\label{introduction}
+
+Sprint monitoring involves identifying work that may remain unfinished when a planning interval ends. Issue trackers record status transitions, sprint assignments, and other attribute changes that provide a partial trace of execution. A useful warning system must prioritize a limited number of issues at a time when action is still possible. Predictive accuracy alone is therefore insufficient: predictions must be available at the decision time, probabilities must be interpreted cautiously, and alerts must respect an explicit handling capacity.
+
+Three evaluation choices are especially consequential. First, tracker attributes observed at data collection can differ from those available at prediction time. Tu et al.~examine this problem in issue-tracking research \cite{tu2018careful}. Second, a midpoint classifier may distinguish already-completed issues from all other issues without providing comparable improvement on work that remains open. Third, an apparently uniform percentage budget can allocate very different effective fractions across sprints when integer rounding is required.
+
+We investigate these issues through an archival replay study. Our target is \textbf{recorded non-completion at the archived sprint end date}, rather than an independently verified failure to deliver business value. We use TAWOS v1.1 \cite{tawosi2022tawos,tawosv11} and construct issue--sprint instances supported by timestamped membership evidence. We compare information fixed at sprint start against additional execution history available at standardized landmarks. We evaluate chronological transfer, project transfer, calibration, and both single-landmark and cumulative alert policies.
+
+The study makes three empirical contributions:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A reproducible procedure for cohort reconstruction, outcome assessment, prefix feature extraction, and label-availability-aware splitting, with explicit exclusion and provenance artifacts.
+\item
+  Evidence about the incremental value of execution histories, including controls for already-completed work, scope changes, recurring issues, and a strong rule-based comparator.
+\item
+  An analysis of how integer budget allocation and calibration transfer change the interpretation of early-warning performance.
+\end{enumerate}
+
+We do not propose a new learning algorithm or claim state-of-the-art performance. The contribution is an auditable evaluation of a specific decision setting, including results that limit the case for deploying a learned model.

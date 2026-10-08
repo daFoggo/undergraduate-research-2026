@@ -1,0 +1,58 @@
+\section{Experimental Design}\label{experimental-design}
+
+\subsection{Eligibility and splits}\label{eligibility-and-splits}
+
+Projects require at least 50 labeled-cohort sprints, 200 labeled instances, and 30 instances per outcome class. Temporal evaluation additionally requires at least ten test sprints, ten instances per class in training, and five per class in validation and test. Eligibility is determined before observing predictive test performance.
+
+Within each eligible project, sprints are ordered by start date and divided approximately 60/20/20 into training, validation, and test, with identical start timestamps assigned together. Training sprints ending at or after the validation boundary are purged; validation sprints ending at or after the test boundary are likewise purged. This ensures that fitting and recalibration do not require endpoint labels unavailable at the next partition's beginning. Temporal learners are fitted separately per project. All landmarks of an issue--sprint instance retain the same partition.
+
+For cross-project evaluation, each of the 14 projects is held out once. Two of the other 13 projects are selected for validation using the fixed random seed, leaving eleven for training. Neither fitting nor recalibration uses the held-out project's data. This is archival project transfer, not a globally chronological simulation of deployment across organizations.
+
+The same issue can appear in successive sprints. Identifiers are not predictors, and a sensitivity analysis excludes temporal test issue identifiers previously seen in training. This does not remove all dependence between instances or between projects sharing a repository.
+
+\subsection{Methods}\label{methods}
+
+We evaluate six methods:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Frequency:} the training-set non-completion proportion, constant within an evaluation fold before recalibration.
+\item
+  \textbf{Execution-state rule:} a terminal-state score of 0.01; otherwise \(\operatorname{clip}(0.5+0.02d+0.1u,0.01,0.99)\), where \(d\) is days since the latest selected event and \(u\) indicates unknown status. This is a fixed heuristic, not an optimized business rule.
+\item
+  \textbf{Static logistic regression:} start-time inputs, training-only numerical imputation/scaling and categorical one-hot encoding, inverse regularization strength \(C=1\), and up to 2,000 iterations.
+\item
+  \textbf{Static CatBoost:} start-time inputs and cohort size.
+\item
+  \textbf{Dynamic CatBoost:} static inputs plus current prefix information and cohort aggregates.
+\item
+  \textbf{Dynamic CatBoost without cohort context:} the dynamic feature set with cohort-related variables removed, including cohort size and both start/current aggregate fractions.
+\end{enumerate}
+
+The CatBoost methods use 400 trees, depth 5, learning rate 0.05, L2 parameter 5, and seed 20261008. They share the same configuration so that the principal comparison examines input information rather than different learner families. Numerical missing values use CatBoost's native handling. No oversampling or class weighting is applied. These are fixed configurations, not an exhaustive hyperparameter search. The zero-percent landmark is an information control: adding duplicate encodings at that landmark adds no future execution observations, although fitting can still differ.
+
+\subsection{Probability recalibration}\label{probability-recalibration}
+
+For every method and landmark, the base learner is fitted on training data only. A validation-only logistic recalibrator estimates
+
+\[
+\widehat p_{\mathrm{cal}}=\sigma\!\left(a+b\operatorname{logit}(\operatorname{clip}(\widehat p,10^{-6},1-10^{-6}))\right).
+\]
+
+The recalibrator uses \(C=10^6\) and is not constrained to positive slope. If validation lacks at least five observations in each class, the identity mapping is used. Raw and recalibrated scores are retained. In the midpoint primary contrasts, raw and recalibrated ranking produce identical differences; the conclusions therefore do not depend on an inverse midpoint calibrator. Test-set calibration slope/intercept are diagnostic fits only and are not applied back to predictions. Separately identifiable slope/intercept are not reported for constant scores.
+
+\subsection{Metrics, budgets, and uncertainty}\label{metrics-budgets-and-uncertainty}
+
+For an evaluable cohort of \(n_s\) issues, the registered primary allocation is \(K_s^{\uparrow}(q)=\lceil qn_s\rceil\). Issues are ranked by risk with a deterministic, label-independent issue--sprint hash for ties. Sprint recall is \(TP_s/P_s\) when \(P_s>0\); otherwise it is undefined and excluded from the recall mean. Such sprints remain in false-alert and applicable precision summaries. We also evaluate \(K_s^{\downarrow}(q)=\lfloor qn_s\rfloor\), which enforces a strict fractional cap but assigns no alerts to small cohorts. Budgets of 10\%, 20\%, and 30\% are evaluated.
+
+Temporal primary results give equal weight to test sprints with positive outcomes. Cross-project primary comparisons give equal weight to projects after averaging their sprint recalls. We distinguish these from pooled issue-level recall and precision, and report realized budget both as the mean sprint fraction and as total alerts divided by total issues.
+
+Additional probability measures are average precision (AP, not trapezoidal PR area), Brier score, reliability curves with ten fixed bins, and diagnostic calibration slope/intercept. Brier measures probability quality jointly with discrimination; a lower value alone does not establish improved calibration. Paired bootstrap intervals use 2,000 resamples of sprints for temporal comparisons and projects for cross-project comparisons. Landmarks are analyzed separately rather than treated as independent observations from the same instance.
+
+Prespecified sensitivity analyses consider open issues only, strict budget rounding, exclusion of cancellation/removal cases, unseen issue identifiers, and an alternative Closed-only outcome. Closed-only rescoring does not retrain the model for the alternate target. Raw-ranking and project-weighted temporal checks were recorded before computing test metrics. Comparisons against the rule and ablation, and paired cumulative-policy contrasts, were added after viewing the primary results and are explicitly exploratory. We do not adjust those supplementary intervals for multiple comparisons.
+
+\subsection{Cumulative alert replay}\label{cumulative-alert-replay}
+
+At 25\%, 50\%, and 75\%, we allow cumulative quotas of \(\lceil K_s/3\rceil\), \(\lceil2K_s/3\rceil\), and \(K_s\), respectively, where \(K_s=\lceil0.2n_s\rceil\) is the total sprint cap. Previously alerted issues and issues currently recorded as Done are ineligible for another alert. Unused capacity can carry forward. We measure recall, false alerts, and the mean lead time of true alerts within each sprint, averaged over sprints with true alerts. Even the static ranking baseline uses current recorded Done status for this common eligibility filter; cumulative-policy comparisons therefore concern operational ranking policies, not purely static information alone.

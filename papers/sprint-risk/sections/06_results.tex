@@ -1,0 +1,47 @@
+\section{Results}\label{results}
+
+\subsection{Execution history improves midpoint ranking over static inputs}\label{execution-history-improves-midpoint-ranking-over-static-inputs}
+
+{\def\LTcaptype{table}
+\input{tables/02_performance}
+}
+
+The temporal dynamic--static difference is 8.90 percentage points (95\% CI: 6.38--11.70), supporting the locally fixed H1. The interval uses 336 positive-outcome sprints among the 397 temporal test sprints. Dynamic CatBoost finds 682 of 1,883 positive instances using 850 alerts, versus 605 for static CatBoost using the same allocation. Pooled precision increases from 71.18\% to 80.24\%, with false alerts decreasing from 245 to 168.
+
+The cross-project project-macro difference is 9.96 points (CI: 7.53--12.82; 14 projects). Mean project-level differences are positive for all 14 projects in both evaluation settings, but this is not a claim of project-specific statistical significance. At the zero-percent control landmark, the differences are only 0.66 points temporal and 0.67 cross-project, and both intervals include zero.
+
+\input{figures/fig_projects}
+
+\subsection{Integer capacity and open-work eligibility change the apparent gain}\label{integer-capacity-and-open-work-eligibility-change-the-apparent-gain}
+
+{\def\LTcaptype{table}
+\input{tables/03_sensitivity}
+}
+
+Upward rounding gives 207 of 397 temporal test sprints with fewer than five evaluable instances at least one alert. Thus, the nominal 20\% policy uses 41.54\% of issues when averaging fractions equally across sprints, or 25.81\% when aggregating all issues. Cross-project values are 38.55\% and 24.93\%. It would be misleading to describe the primary temporal recall as identifying 53\% of risky issues while alerting only 20\% under a strict cap.
+
+Downward rounding reduces dynamic temporal recall to 18.20\% and cross-project project-macro recall to 22.31\%. Differences over static remain positive, but mean sprint-level utilization is only 8.45\% temporal and 9.85\% cross-project because small cohorts receive no alerts. These are different resource-allocation rules, not alternative estimates of the same unchanged policy.
+
+The open-only analysis reduces the temporal gain from 8.90 to 2.59 points, with 335 positive-outcome sprints in the paired comparison. Its budget is recalculated on the remaining open cohort, so the result is not a controlled decomposition holding every denominator fixed. It nevertheless provides a more demanding operational comparison than distinguishing already-Done issues from unfinished work.
+
+\subsection{Recalibration improves temporal probability quality, but not project transfer}\label{recalibration-improves-temporal-probability-quality-but-not-project-transfer}
+
+{\def\LTcaptype{table}
+\input{tables/04_probability}
+}
+
+Temporal dynamic Brier improves from 0.1279 to 0.1137. Pooled diagnostic intercept/slope change from 0.5736/0.8654 to 0.0902/1.0260, closer to the nominal ideal of zero/one. Cross-project dynamic Brier instead increases slightly, from 0.1374 to 0.1381; equal-project Brier increases from 0.1295 to 0.1339. A pooled calibration plot alone can conceal this project variation.
+
+Temporal pooled dynamic AP increases from 0.8764 to 0.9000 after recalibration, but project-macro AP remains 0.8128. Monotone within-project transformations can reorder scores between projects without improving discrimination inside a project. We therefore do not interpret the pooled AP increase as evidence that recalibration improves within-project ranking. Neither raw nor recalibrated predictions are selected retrospectively as a replacement primary model.
+
+\input{figures/fig_calibration_temporal}
+
+\input{figures/fig_calibration_cross_project}
+
+\subsection{Strong baselines and cumulative policies limit the deployment argument}\label{strong-baselines-and-cumulative-policies-limit-the-deployment-argument}
+
+The fixed execution-state rule attains temporal recall of 51.23\%, compared with 53.36\% for dynamic CatBoost. The exploratory paired difference is 2.13 points (CI: -0.33--4.60), providing insufficient evidence of a temporal recall advantage over this rule. This does not establish equivalence. Cross-project project-macro gain over the rule is 3.83 points (CI: 2.10--5.73), also exploratory. Dynamic CatBoost has higher project-macro AP than the rule: 0.8128 versus 0.7517 temporal and 0.8035 versus 0.6537 cross-project.
+
+Removing cohort context slightly increases temporal recall. The full dynamic model minus this ablation gives -0.87 points (CI: -2.26--0.29); its cross-project difference is +0.72 points (CI: 0.05--1.42). These exploratory results do not justify claiming consistent benefits from aggregate cohort features.
+
+For cumulative alert replay, dynamic temporal recall is 51.56\%, sprint-macro precision is 77.67\%, and mean true-alert lead time is 8.30 days. The paired recall gain over the static-ranking cumulative policy is 1.30 points (CI: -0.46--3.21), inconclusive. Cross-project gain is 1.88 points (CI: 0.60--3.14), exploratory. Earlier warnings therefore do not automatically imply a stronger advantage for the learned dynamic ranker. Lead time concerns detected positives only and cannot describe how early all non-completions were identified.

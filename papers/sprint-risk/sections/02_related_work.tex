@@ -1,0 +1,17 @@
+\section{Background and Related Work}\label{background-and-related-work}
+
+\subsection{Agile issue datasets and effort estimation}\label{agile-issue-datasets-and-effort-estimation}
+
+TAWOS provides descriptive attributes and change histories from Agile open-source projects \cite{tawosi2022tawos,tawosv11}. Its breadth enables questions beyond effort estimation, but a current issue--sprint relation does not itself establish membership at the beginning of a historical sprint. Version identification is also necessary: the introductory paper and the v1.1 repository describe different project counts. We use the latter snapshot and do not combine their populations.
+
+Effort estimation and sprint non-completion prediction have different targets. For example, Bui et al.~study an LLM-based multi-agent approach to Agile effort estimation \cite{bui2025agents}. Predicting an effort estimate does not directly answer whether an issue will be in a recorded terminal state by a sprint endpoint. Consequently, effort-estimation performance measures cannot be treated as comparable baselines for recall under an alert budget.
+
+\subsection{Outcome-oriented predictive monitoring}\label{outcome-oriented-predictive-monitoring}
+
+Outcome-oriented predictive process monitoring predicts a case outcome from a partial execution trace. Teinemaa et al.~organize and benchmark methods for this setting \cite{teinemaa2019outcome}. Our study adopts the prefix-to-outcome perspective, but defines cases as issue--sprint instances with a shared sprint endpoint and a cohort fixed at sprint start. Multiple instances can arise from the same issue across different sprints. Membership changes and reopened issues therefore require handling beyond an issue-level snapshot classifier.
+
+\subsection{Temporal validity, learners, and calibration}\label{temporal-validity-learners-and-calibration}
+
+Time-related misuse of issue-tracking data motivates reconstructing what the recorded history supports at each landmark \cite{tu2018careful}. CatBoost is a tabular learner supporting categorical features \cite{prokhorenkova2018catboost}; we use it as a matched learner for static and dynamic inputs, not as an established best method for this task. Probability calibration is a separate estimation step and must use data outside the base learner's fitting sample \cite{sklearncalibration}. Recalibration learned from other projects may nevertheless fail to transfer to a held-out project.
+
+This related-work discussion is a targeted positioning of the experiment, not a systematic literature review or evidence that no previous study has considered an equivalent task.

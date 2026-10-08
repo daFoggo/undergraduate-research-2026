@@ -1,0 +1,17 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.66\linewidth}@{}}
+\caption{Local artifact map. Paths are relative to the repository root.}\label{tab:artifact_map}\\
+\toprule
+Evidence & Local artifact \\
+\midrule
+Frozen design & Protocol v1; \texttt{artifacts/\allowbreak{}protocol/\allowbreak{}config.json}, \texttt{lock.json} \\
+Source and population & Data card; \texttt{artifacts/\allowbreak{}audit/\allowbreak{}}, \texttt{artifacts/\allowbreak{}dataset/\allowbreak{}} \\
+Temporal/project partitions & \texttt{artifacts/\allowbreak{}protocol/\allowbreak{}temporal\_\allowbreak{}split\_\allowbreak{}manifest.csv}, \texttt{cross\_\allowbreak{}project\_\allowbreak{}split\_\allowbreak{}manifest.csv} \\
+Replay and feature audit & \texttt{research/\allowbreak{}replay.py}, \texttt{research/\allowbreak{}build.py}; \texttt{artifacts/\allowbreak{}validation/\allowbreak{}feature\_\allowbreak{}dictionary.csv}, \texttt{sql\_\allowbreak{}sample\_\allowbreak{}audit.csv} \\
+Fitting and raw/recalibrated predictions & \texttt{research/\allowbreak{}train.py}; \texttt{artifacts/\allowbreak{}models/\allowbreak{}}, \texttt{artifacts/\allowbreak{}predictions/\allowbreak{}}, \texttt{artifacts/\allowbreak{}runs/\allowbreak{}} \\
+Primary/secondary quantitative results & \texttt{artifacts/\allowbreak{}results/\allowbreak{}paired\_\allowbreak{}comparisons.csv}, \texttt{alert\_\allowbreak{}budget\_\allowbreak{}metrics.csv}, \texttt{probability\_\allowbreak{}metrics.csv}, \texttt{sensitivity\_\allowbreak{}metrics.csv} \\
+Explicit post-hoc comparisons & \texttt{artifacts/\allowbreak{}results/\allowbreak{}posthoc\_\allowbreak{}comparisons.csv}, \texttt{budget\_\allowbreak{}population\_\allowbreak{}diagnostics.json} \\
+Sequential policy & \texttt{artifacts/\allowbreak{}results/\allowbreak{}sequential\_\allowbreak{}sprint\_\allowbreak{}metrics.csv}, \texttt{sequential\_\allowbreak{}alert\_\allowbreak{}log.csv} \\
+Runtime and integrity & \texttt{artifacts/\allowbreak{}environment/\allowbreak{}}; \texttt{artifacts/\allowbreak{}validation/\allowbreak{}prediction\_\allowbreak{}validation.json}, \texttt{completion\_\allowbreak{}audit.json} \\
+Commands & Reproduction guide \\
+\bottomrule
+\end{longtable}

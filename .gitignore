@@ -14,3 +14,16 @@ postgres-data/
 artifacts/models/
 artifacts/predictions/
 catboost_info/
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+papers/sprint-risk/build/qa/
+documents/Academic_paper_sprint_risk.pdf
+*.xdv
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.run.xml

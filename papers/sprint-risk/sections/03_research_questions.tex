@@ -1,0 +1,32 @@
+\section{Research Questions and Target}\label{research-questions-and-target}
+
+\textbf{RQ1 --- Incremental information:} At the midpoint of a sprint, does observed execution history improve budget-constrained identification of recorded non-completion over information available at sprint start?
+
+\textbf{RQ2 --- Transfer:} How does this comparison behave on later sprints within a project and on projects excluded from training and calibration?
+
+\textbf{RQ3 --- Decision conditions:} How do active-work eligibility, integer alert budgets, probability recalibration, and cumulative alerting affect the interpretation of model performance?
+
+Let \(s\) denote a sprint, \(i\) an issue, and \(t_{0s}\) and \(t_{1s}\) its archived start and end dates. For landmark \(\lambda\in\{0,0.25,0.50,0.75\}\), define
+
+\[
+t_{s,\lambda}=t_{0s}+\lambda(t_{1s}-t_{0s}).
+\]
+
+The target is
+
+\[
+Y_{is}=\mathbb{1}\{S_i(t_{1s})\notin\mathcal D\},
+\qquad \mathcal D=\{\text{Done, Resolved, Closed, Complete}\},
+\]
+
+where \(S_i(t)\) is the last assessable recorded status at or before \(t\), with case-insensitive matching. Unknown or ambiguous outcomes are not assigned to either class. The estimand is conditional on the subset for which membership and outcome can be assessed under the audit rules.
+
+The primary hypothesis, fixed locally before model fitting and test evaluation, concerns
+
+\[
+\Delta_T=\frac{1}{|\mathcal S_+|}\sum_{s\in\mathcal S_+}
+\left[R_s^{\mathrm{dynamic}}(0.50,0.20)
+-R_s^{\mathrm{static}}(0.50,0.20)\right],
+\]
+
+where \(\mathcal S_+\) comprises temporal test sprints with at least one positive outcome and \(R_s\) is recall under the registered upward-rounded budget. Evidence supports H1 when \(\Delta_T>0\) and its 95\% paired-bootstrap interval excludes zero. The cross-project contrast uses equal project weights and is secondary. The protocol was recorded in local Git, \textbf{not publicly preregistered with an external registry}.
