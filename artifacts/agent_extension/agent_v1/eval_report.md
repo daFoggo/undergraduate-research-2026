@@ -1,3 +1,5 @@
+> **KHÔNG HỢP LỆ (review 2026-10-08).** Báo cáo này do `research/agent_evaluate.py` sinh tự động; các cờ grounding/numeric/safety được gán cứng True, mẫu số chỉ gồm run completed, đầu ra LLM bị chuẩn hóa/sửa trước khi chấm, chi phí in cố định $0.00, kịch bản chỉ có 1 issue/1 event. Các nhận xét bên dưới không có bằng chứng. Không trích dẫn. Chi tiết: documents/Danh_gia_va_checklist_chinh_sua.md (mục 3). Nội dung gốc giữ nguyên bên dưới làm hiện vật.
+
 # Báo cáo đánh giá kỹ thuật Agent cảnh báo sớm v1 (Task 7)
 
 Ngày đánh giá: 2026-10-08T09:17:35.766539+00:00

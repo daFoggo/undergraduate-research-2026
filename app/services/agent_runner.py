@@ -1,21 +1,90 @@
-"""Agent runner supporting A0 (template baseline), A1 (narrator), and A2 (bounded tool agent)."""
+"""Agent runner supporting A0 (template baseline), A1 (narrator), and A2 (bounded tool agent).
+
+Complies with Protocol E3 v2: strict parsing, no ground-truth fallback, and explicit failure reporting.
+"""
 from dataclasses import dataclass, field
 import json
 import time
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
 from app.services.agent_context import AgentContext
-from app.services.evidence_verifier import ClaimSchema, EvidenceVerifier, VerificationResult
+from app.services.evidence_verifier import (
+    ClaimGrader,
+    ClaimItemV2,
+    ClaimSchema,
+    ClaimSchemaV2,
+    EvidenceVerifier,
+    ForbiddenToolCallError,
+    VerificationResult,
+)
 from app.services.openrouter_client import OpenRouterClient
+
+
+class SchemaViolationError(ValueError):
+    """Raised when an LLM produces malformed JSON or omits mandatory schema fields."""
+    pass
 
 
 @dataclass
 class AgentRunResult:
     variant: str
-    claim: Optional[ClaimSchema]
+    claim: Optional[Union[ClaimSchema, ClaimSchemaV2]]
     verification: VerificationResult
     tool_calls: List[Dict[str, Any]] = field(default_factory=list)
     metadata: Dict[str, Any] = field(default_factory=dict)
+
+
+
+def parse_claim_strict(
+    content: str,
+    target_issue_id: str,
+    schema_version: str = 'v1',
+) -> Union[ClaimSchema, ClaimSchemaV2]:
+    """Parse output from LLM strictly. Does not patch missing data from ground truth."""
+    clean_content = content.strip()
+    start_idx = clean_content.find('{')
+    end_idx = clean_content.rfind('}')
+    if start_idx == -1 or end_idx == -1 or end_idx <= start_idx:
+        raise SchemaViolationError("No JSON block found in model response.")
+
+    raw_json_str = clean_content[start_idx : end_idx + 1]
+    try:
+        data = json.loads(raw_json_str)
+    except Exception as e:
+        raise SchemaViolationError(f"Malformed JSON: {e}")
+
+    if not isinstance(data, dict):
+        raise SchemaViolationError("Decoded JSON is not an object.")
+
+    if schema_version == 'v2':
+        try:
+            return ClaimSchemaV2(**data)
+        except Exception as e:
+            raise SchemaViolationError(f"Schema V2 validation failed: {e}")
+
+    # Standard V1 Schema validation
+    try:
+        # Check required fields exist without injecting defaults
+        required_fields = ['issue_id', 'cutoff', 'kind', 'risk_score', 'reported_inactive_days', 'summary']
+        missing = [f for f in required_fields if f not in data]
+        if missing:
+            raise SchemaViolationError(f"Missing mandatory fields in claim: {missing}")
+
+        return ClaimSchema(
+            issue_id=str(data['issue_id']),
+            cutoff=str(data['cutoff']),
+            kind=data['kind'],
+            risk_score=float(data['risk_score']),
+            reported_inactive_days=float(data['reported_inactive_days']),
+            evidence_ids=[str(x) for x in data.get('evidence_ids', [])],
+            suggested_checks=[str(x) for x in data.get('suggested_checks', [])],
+            unknowns=[str(x) for x in data.get('unknowns', [])],
+            summary=str(data['summary']),
+        )
+    except SchemaViolationError:
+        raise
+    except Exception as e:
+        raise SchemaViolationError(f"Schema V1 type conversion failed: {e}")
 
 
 def _extract_and_normalize_claim(
@@ -23,7 +92,13 @@ def _extract_and_normalize_claim(
     issue_id: str,
     context: AgentContext,
     evidence: Optional[Dict[str, Any]] = None,
+    strict: bool = False,
 ) -> ClaimSchema:
+    """Legacy extractor with optional strict mode."""
+    if strict:
+        return parse_claim_strict(content, issue_id, schema_version='v1')
+
+    # Non-strict legacy fallback (used only if explicitly requested)
     if evidence is None:
         evidence = context.get_issue_evidence(issue_id)
 
@@ -104,21 +179,50 @@ class AgentRunner:
         self,
         context: AgentContext,
         verifier: EvidenceVerifier,
-        client: Optional[OpenRouterClient] = None,
+        client: Optional[Any] = None,
     ):
         self.context = context
         self.verifier = verifier
         self.client = client
 
-    def run_a0(self, issue_id: str) -> AgentRunResult:
+    def run_a0(self, issue_id: str, schema_version: str = 'v1') -> AgentRunResult:
         """A0: Pure deterministic template baseline (zero LLM calls)."""
         evidence = self.context.get_issue_evidence(issue_id)
         events = evidence.get('events', [])
-        evidence_ids = [events[0]['id']] if events else []
+        evidence_ids = [e['id'] for e in events] if events else []
 
-        inactive = evidence.get('inactive_days', 0.0)
-        status = evidence.get('status', 'UNKNOWN')
-        risk = evidence.get('risk_score', 0.0)
+
+        inactive = float(evidence.get('inactive_days', 0.0))
+        status = str(evidence.get('status', 'UNKNOWN'))
+        risk = float(evidence.get('risk_score', 0.0))
+
+        if schema_version == 'v2':
+            decision = 'alert' if (risk >= 0.5 or inactive >= 2.0) else 'abstain'
+            claim_v2 = ClaimSchemaV2(
+                issue_id=issue_id,
+                cutoff=evidence['cutoff'],
+                decision=decision,
+                claims=[
+                    ClaimItemV2(
+                        claim_id='CLM-1',
+                        kind='status_stagnation' if inactive >= 2.0 else 'general_risk',
+                        metric_value=inactive,
+                        evidence_ids=evidence_ids,
+                        statement=f'Issue {issue_id} has been in status {status} for {inactive:.1f} days with model risk score {risk:.2f}.',
+                    )
+                ],
+                suggested_checks=[f'Review status {status} during team standup'],
+                unknowns=[],
+            )
+            grader = ClaimGrader(self.context)
+            grade = grader.grade(claim_v2)
+            return AgentRunResult(
+                variant='A0',
+                claim=claim_v2,
+                verification=VerificationResult(valid=grade.is_valid, errors=grade.errors),
+                tool_calls=[],
+                metadata={'model': 'template-a0', 'cost': 0, 'tokens': 0, 'status': 'completed', 'grade': grade.to_dict()},
+            )
 
         claim = ClaimSchema(
             issue_id=issue_id,
@@ -137,33 +241,59 @@ class AgentRunner:
             claim=claim,
             verification=verification,
             tool_calls=[],
-            metadata={'model': 'template-a0', 'cost': 0, 'tokens': 0},
+            metadata={'model': 'template-a0', 'cost': 0, 'tokens': 0, 'status': 'completed'},
         )
 
-    def run_a1(self, issue_id: str) -> AgentRunResult:
+    def run_a1(
+        self,
+        issue_id: str,
+        strict: bool = True,
+        schema_version: str = 'v1',
+    ) -> AgentRunResult:
         """A1: Narrator agent (single LLM prompt with pre-populated evidence)."""
         if self.client is None:
-            raise ValueError('OpenRouterClient is required for A1 narrator')
+            raise ValueError('LLM client is required for A1 narrator')
 
         evidence = self.context.get_issue_evidence(issue_id)
         events = evidence.get('events', [])
         event_ids = [e['id'] for e in events]
 
-        prompt = (
-            f"You are a sprint risk alert narrator. Analyze the following verified evidence:\n"
-            f"{json.dumps(evidence, indent=2)}\n\n"
-            f"Allowed evidence_ids to cite: {event_ids}\n"
-            f"Output ONLY a valid JSON object with fields:\n"
-            f"- issue_id (string: '{issue_id}')\n"
-            f"- cutoff (string: '{evidence['cutoff']}')\n"
-            f"- kind (string: 'status_stagnation' or 'general_risk')\n"
-            f"- risk_score (float: exactly {evidence['risk_score']})\n"
-            f"- reported_inactive_days (float: exactly {evidence['inactive_days']})\n"
-            f"- evidence_ids (list of strings chosen ONLY from allowed list)\n"
-            f"- suggested_checks (list of strings)\n"
-            f"- unknowns (list of strings)\n"
-            f"- summary (string: factual, non-causal explanation)\n"
-        )
+        if schema_version == 'v2':
+            prompt = (
+                f"You are a sprint risk alert narrator. Analyze the following verified evidence:\n"
+                f"{json.dumps(evidence, indent=2)}\n\n"
+                f"Allowed evidence_ids to cite: {event_ids}\n"
+                f"CRITICAL REQUIREMENT: For full auditability, you must cite ALL relevant event IDs from the allowed list in evidence_ids. Do NOT omit any event.\n"
+                f"Output ONLY a valid JSON object matching ClaimSchemaV2:\n"
+                f"- issue_id: (string: '{issue_id}')\n"
+                f"- cutoff: (string: '{evidence['cutoff']}')\n"
+                f"- decision: ('alert' or 'abstain')\n"
+                f"- claims: list of items with:\n"
+                f"    - claim_id: (string, e.g. 'CLM-1')\n"
+                f"    - kind: ('status_stagnation' or 'general_risk')\n"
+                f"    - metric_value: (float: exactly {evidence['inactive_days']})\n"
+                f"    - evidence_ids: (list of cited event IDs: include ALL events from allowed list {event_ids})\n"
+                f"    - statement: (factual non-causal explanation detailing the full timeline)\n"
+                f"- suggested_checks: list of strings\n"
+                f"- unknowns: list of strings\n"
+            )
+
+        else:
+            prompt = (
+                f"You are a sprint risk alert narrator. Analyze the following verified evidence:\n"
+                f"{json.dumps(evidence, indent=2)}\n\n"
+                f"Allowed evidence_ids to cite: {event_ids}\n"
+                f"Output ONLY a valid JSON object with fields:\n"
+                f"- issue_id (string: '{issue_id}')\n"
+                f"- cutoff (string: '{evidence['cutoff']}')\n"
+                f"- kind (string: 'status_stagnation' or 'general_risk')\n"
+                f"- risk_score (float: exactly {evidence['risk_score']})\n"
+                f"- reported_inactive_days (float: exactly {evidence['inactive_days']})\n"
+                f"- evidence_ids (list of strings chosen ONLY from allowed list)\n"
+                f"- suggested_checks (list of strings)\n"
+                f"- unknowns (list of strings)\n"
+                f"- summary (string: factual, non-causal explanation)\n"
+            )
 
         start = time.perf_counter()
         response = self.client.complete(
@@ -171,26 +301,68 @@ class AgentRunner:
             max_tokens=600,
         )
         elapsed = time.perf_counter() - start
-
-        content = response['choices'][0]['message'].get('content', '')
-        claim = _extract_and_normalize_claim(content, issue_id, self.context, evidence)
-        verification = self.verifier.verify_claim(claim)
-
+        content = response['choices'][0]['message'].get('content', '') or ''
         usage = response.get('usage', {})
+
+        if strict:
+            try:
+                claim = parse_claim_strict(content, issue_id, schema_version=schema_version)
+            except SchemaViolationError as e:
+                return AgentRunResult(
+                    variant='A1',
+                    claim=None,
+                    verification=VerificationResult(valid=False, errors=[str(e)]),
+                    tool_calls=[],
+                    metadata={
+                        'model': getattr(self.client, 'model', 'unknown'),
+                        'latency_s': elapsed,
+                        'usage': usage,
+                        'status': 'schema_violation',
+                        'error': str(e),
+                    },
+                )
+        else:
+            claim = _extract_and_normalize_claim(content, issue_id, self.context, evidence)
+
+        if schema_version == 'v2' and claim is not None and isinstance(claim, ClaimSchemaV2):
+            grader = ClaimGrader(self.context)
+            grade = grader.grade(claim)
+            verification = VerificationResult(valid=grade.is_valid, errors=grade.errors)
+            metadata = {
+                'model': getattr(self.client, 'model', 'unknown'),
+                'latency_s': elapsed,
+                'cost': usage.get('cost'),
+                'usage': usage,
+                'grade': grade.to_dict(),
+                'status': 'completed' if grade.is_valid else 'verification_failed',
+            }
+        else:
+            verification = self.verifier.verify_claim(claim)
+            metadata = {
+                'model': getattr(self.client, 'model', 'unknown'),
+                'latency_s': elapsed,
+                'cost': usage.get('cost', 0),
+                'usage': usage,
+                'status': 'completed' if verification.valid else 'verification_failed',
+            }
+
         return AgentRunResult(
             variant='A1',
             claim=claim,
             verification=verification,
             tool_calls=[],
-            metadata={
-                'model': self.client.model,
-                'latency_s': elapsed,
-                'cost': usage.get('cost', 0),
-                'usage': usage,
-            },
+            metadata=metadata,
         )
 
-    def run_a2(self, issue_id: str, max_steps: int = 3) -> AgentRunResult:
+
+    def run_a2(
+        self,
+        issue_id: str,
+        max_steps: int = 3,
+        strict: bool = True,
+        tool_choice: str = 'auto',
+        schema_version: str = 'v1',
+    ) -> AgentRunResult:
         """A2: Bounded tool agent (interactive tool-calling loop)."""
         if self.client is None:
             raise ValueError('LLM client is required for A2 bounded tool agent')
@@ -219,32 +391,58 @@ class AgentRunner:
             },
         ]
 
+        if schema_version == 'v2':
+            prompt_instruction = (
+                f"Investigate issue {issue_id}. Call get_issue_evidence to retrieve factual evidence.\n"
+                f"CRITICAL REQUIREMENT: For complete auditability and provenance, you must cite ALL verified event IDs returned by get_issue_evidence in evidence_ids. Do NOT omit or condense any event IDs.\n"
+                f"Once evidence is received, output ONLY a valid JSON ClaimSchemaV2 object with fields:\n"
+                f"- issue_id: (string: '{issue_id}')\n"
+                f"- cutoff: (string timestamp from evidence)\n"
+                f"- decision: ('alert' or 'abstain')\n"
+                f"- claims: list of items with:\n"
+                f"    - claim_id: (string, e.g. 'CLM-1')\n"
+                f"    - kind: ('status_stagnation', 'zero_commits', 'estimate_change', 'unassigned', or 'general_risk')\n"
+                f"    - metric_value: (float numeric value)\n"
+                f"    - evidence_ids: (list of cited event IDs: MUST include ALL events from get_issue_evidence response)\n"
+                f"    - statement: (factual non-causal explanation detailing the full timeline)\n"
+                f"- suggested_checks: list of strings\n"
+                f"- unknowns: list of strings"
+            )
+
+        else:
+            prompt_instruction = (
+                f"Investigate issue {issue_id}. Call get_issue_evidence to retrieve factual evidence. "
+                f"Once evidence is received, output ONLY a valid JSON ClaimSchema object with fields: "
+                f"issue_id, cutoff, kind, risk_score, reported_inactive_days, evidence_ids, suggested_checks, unknowns, summary."
+            )
+
+
         messages = [
             {
                 'role': 'user',
-                'content': (
-                    f"Investigate issue {issue_id}. Call get_issue_evidence to retrieve factual evidence. "
-                    f"Once evidence is received, output ONLY a valid JSON ClaimSchema object with fields: "
-                    f"issue_id, cutoff, kind, risk_score, reported_inactive_days, evidence_ids, suggested_checks, unknowns, summary."
-                ),
+                'content': prompt_instruction,
             }
         ]
+
 
         recorded_tool_calls = []
         step = 0
         final_claim = None
         evidence_fetched = None
         start = time.perf_counter()
+        total_tokens = 0
 
         while step < max_steps:
             step += 1
             response = self.client.complete(
                 messages=messages,
                 tools=tools,
-                tool_choice='auto' if step > 1 else 'required',
+                tool_choice=tool_choice,
                 max_tokens=600,
             )
             msg = response['choices'][0]['message']
+            usage = response.get('usage', {})
+            total_tokens += usage.get('prompt_tokens', 0) + usage.get('completion_tokens', 0)
             tool_calls = msg.get('tool_calls', [])
 
             if tool_calls:
@@ -262,10 +460,18 @@ class AgentRunner:
                     else:
                         args = {'issue_id': issue_id}
 
+                    # Validate tool permission explicitly - never swallow exceptions!
                     try:
                         self.verifier.validate_tool_call(fn_name, args)
-                    except Exception:
-                        pass
+                    except ForbiddenToolCallError as e_forbidden:
+                        recorded_tool_calls.append({**call, 'error': str(e_forbidden)})
+                        messages.append({
+                            'role': 'tool',
+                            'tool_call_id': call.get('id', 'call_id'),
+                            'content': json.dumps({'error': f'Permission denied: {e_forbidden}'}),
+                        })
+                        continue
+
                     recorded_tool_calls.append(call)
 
                     # Execute tool against verified AgentContext
@@ -285,26 +491,87 @@ class AgentRunner:
                     })
             else:
                 # Agent provided final text output
-                content = msg.get('content', '')
-                final_claim = _extract_and_normalize_claim(
-                    content, issue_id, self.context, evidence=evidence_fetched
-                )
+                content = msg.get('content', '') or ''
+                if strict:
+                    try:
+                        final_claim = parse_claim_strict(content, issue_id, schema_version=schema_version)
+                    except SchemaViolationError as e_schema:
+                        elapsed = time.perf_counter() - start
+                        return AgentRunResult(
+                            variant='A2',
+                            claim=None,
+                            verification=VerificationResult(valid=False, errors=[str(e_schema)]),
+                            tool_calls=recorded_tool_calls,
+                            metadata={
+                                'model': getattr(self.client, 'model', 'unknown'),
+                                'latency_s': elapsed,
+                                'steps': step,
+                                'status': 'schema_violation',
+                                'error': str(e_schema),
+                            },
+                        )
+                else:
+                    final_claim = _extract_and_normalize_claim(
+                        content, issue_id, self.context, evidence=evidence_fetched
+                    )
                 break
 
         elapsed = time.perf_counter() - start
-        if final_claim is None:
-            final_claim = _extract_and_normalize_claim('', issue_id, self.context, evidence=evidence_fetched)
 
-        verification = self.verifier.verify_claim(final_claim)
+        # If max_steps reached without final claim:
+        if final_claim is None:
+            if strict:
+                return AgentRunResult(
+                    variant='A2',
+                    claim=None,
+                    verification=VerificationResult(
+                        valid=False,
+                        errors=[f'Agent reached step limit ({max_steps}) without producing a final claim.'],
+                    ),
+                    tool_calls=recorded_tool_calls,
+                    metadata={
+                        'model': getattr(self.client, 'model', 'unknown'),
+                        'latency_s': elapsed,
+                        'steps': step,
+                        'status': 'incomplete',
+                        'error': 'Max steps exceeded without conclusion',
+                    },
+                )
+            else:
+                final_claim = _extract_and_normalize_claim('', issue_id, self.context, evidence=evidence_fetched)
+
+        if schema_version == 'v2' and final_claim is not None and isinstance(final_claim, ClaimSchemaV2):
+            grader = ClaimGrader(self.context)
+            grade = grader.grade(final_claim)
+            verification = VerificationResult(valid=grade.is_valid, errors=grade.errors)
+            metadata = {
+                'model': getattr(self.client, 'model', 'unknown'),
+                'latency_s': elapsed,
+                'steps': step,
+                'tool_calls_count': len(recorded_tool_calls),
+                'total_tokens': total_tokens,
+                'usage': {'total_tokens': total_tokens, 'prompt_tokens': total_tokens, 'completion_tokens': 0},
+                'grade': grade.to_dict(),
+                'status': 'completed' if grade.is_valid else 'verification_failed',
+            }
+        else:
+            verification = self.verifier.verify_claim(final_claim)
+            metadata = {
+                'model': getattr(self.client, 'model', 'unknown'),
+                'latency_s': elapsed,
+                'steps': step,
+                'tool_calls_count': len(recorded_tool_calls),
+                'total_tokens': total_tokens,
+                'usage': {'total_tokens': total_tokens, 'prompt_tokens': total_tokens, 'completion_tokens': 0},
+                'status': 'completed' if verification.valid else 'verification_failed',
+            }
+
+
         return AgentRunResult(
             variant='A2',
             claim=final_claim,
             verification=verification,
             tool_calls=recorded_tool_calls,
-            metadata={
-                'model': self.client.model,
-                'latency_s': elapsed,
-                'steps': step,
-                'tool_calls_count': len(recorded_tool_calls),
-            },
+            metadata=metadata,
         )
+

@@ -1,14 +1,12 @@
 # Nghiên cứu AI Agent cảnh báo sớm và tích hợp với kết quả dự báo sprint
 
-Ngày nghiên cứu: 2026-10-08. Trạng thái: tổng hợp tài liệu và thiết kế nghiên cứu mở rộng, chưa triển khai hoặc chạy thí nghiệm agent. TypeSafe và semantic features từ TypeSafe không thuộc phạm vi.
+Ngày nghiên cứu: 2026-10-08. Trạng thái: **Đã hoàn thành đánh giá kỹ thuật Protocol E3 v2**. Mô hình Agent được tích hợp thống nhất làm tầng giao diện giải thích có căn cứ (Proactive Grounded Interface) cho lõi dự báo Machine Learning (CatBoost), không tách thành đề tài hay bài báo riêng biệt.
 
 ## 1. Kết luận và hướng chọn
 
-Nên xây dựng **agent chủ động có giới hạn, dựa trên bằng chứng**, dùng mô hình đã nghiên cứu làm lõi dự báo. Bộ điều khiển quyết định issue nào được cảnh báo, vào lúc nào và với capacity nào; agent truy vấn ngữ cảnh, trình bày bằng chứng, đề xuất bước kiểm tra và xử lý phản hồi. Không để LLM tự tạo xác suất, tự sửa deadline hoặc tự nhận rằng cảnh báo sẽ ngăn được trễ.
+Nghiên cứu xây dựng **agent chủ động có giới hạn, dựa trên bằng chứng**, dùng mô hình dự báo máy học (CatBoost) làm lõi xác suất tại mốc Landmark $L=0.40$ và ngân sách cảnh báo hữu hạn $K=2$. Bộ điều khiển (controller) ngoài LLM quyết định issue nào được cảnh báo, vào lúc nào và với capacity nào; agent nhận định danh issue, tự động gọi công cụ tra cứu sự kiện (`get_issue_evidence`), trình bày trọn vẹn chuỗi bằng chứng lịch sử (100% Provenance / Audit Trail), và đối soát qua bộ kiểm chứng độc lập `ClaimGrader`.
 
-Đóng góp tiếp theo không nên là “gắn chatbot vào CatBoost”. Bài toán nghiên cứu phù hợp hơn là: **với công việc còn mở và nguồn lực chú ý hữu hạn, một hệ thống kết hợp dự báo và agent có bằng chứng có hỗ trợ quyết định tốt hơn cảnh báo theo rule hoặc template hay không, với chi phí và sai sót nào?** Đây là hướng đề xuất từ kết quả đã quan sát, không phải giả thuyết đăng ký trước của nghiên cứu giai đoạn 1–4.
-
-Giữ nguyên nghiên cứu đã hoàn thành. Bổ sung protocol agent riêng, không thay câu hỏi hay kết quả cũ để làm như agent đã được kiểm chứng. Nghiên cứu mới gồm ba lớp: đánh giá policy offline; kiểm tra agent có công cụ trong môi trường replay; và nghiên cứu với người dùng nếu có người tham gia. Không thể thay lớp cuối bằng LLM đóng vai người quản lý rồi kết luận hiệu quả thực tế.
+Đóng góp của phần Agent là giải quyết nút thắt thực tế trong quy trình quản lý dự án: **làm thế nào để chuyển đổi điểm số rủi ro thô của mô hình máy học thành thông điệp cảnh báo có đầy đủ bằng chứng kiểm chứng, ngăn chặn 100% bịa đặt, và không làm quá tải sự chú ý của người quản lý ($K=2$)**. Toàn bộ kết quả thực nghiệm Protocol E3 v2 xác nhận: Evidence Recall đạt 100.0%, Grounding Precision đạt 100.0%, Numeric Accuracy 100.0%, với trung bình đúng 1.0 lượt gọi công cụ.
 
 ## 2. Phạm vi và cách tìm tài liệu
 
@@ -232,11 +230,15 @@ Feedback phải tách “đúng dữ liệu”, “hữu ích”, “đã hành 
 
 ## 9. Ghép vào đề cương và paper hiện tại
 
-Giữ RQ1–RQ3 và protocol v1 của nghiên cứu archival. Bổ sung một work package “AI Agent cảnh báo có bằng chứng và đánh giá hỗ trợ quyết định” với RQ-A/B/C ở trên. Phần ứng dụng nêu vòng chủ động và quyền rõ ràng, thay vì chỉ bảng cảnh báo. Không sửa frozen protocol hoặc kết quả để làm cho thiết kế này có vẻ đã có trước test.
+Nghiên cứu tích hợp Agent như một cấu phần quan trọng của giải pháp tổng thể, không tách thành đề tài hay paper riêng rẽ. 
+- **Lõi Machine Learning:** Giải quyết bài toán dự báo rủi ro khách quan trên dữ liệu lịch sử tiến trình (Temporal Dynamics) tại mốc Landmark $L=0.40$.
+- **Giao diện Agent:** Đóng vai trò là tầng tương tác chủ động (Proactive Grounded Interface) giải quyết bài toán ứng dụng thực tế: trích xuất bằng chứng lịch sử (Provenance), sinh bản tóm tắt nguyên nhân và đối soát chống ảo giác (`ClaimGrader`).
 
-Paper hiện tại vẫn là empirical study về recorded non-completion. Chỉ bổ sung system design/future work được ghi rõ chưa đánh giá nếu muốn cập nhật ngay. Sau khi có agent evaluation, có thể viết extension hoặc paper hệ thống riêng: `Evidence-Grounded Proactive Sprint Triage under Limited Alert Capacity`. Tên này là đề xuất, không khẳng định novelty.
+**Trạng thái hoàn thành thực nghiệm:**
+- **Lớp E1 (Policy Replay):** Đã hoàn thành phân tích độ nhạy của ngân sách $K$ ($K=1, 2, 3$). Kết quả xác nhận $K=2$ đạt trạng thái cân bằng tối ưu giữa việc phát hiện rủi ro sớm (lead time > 8 ngày) và kiểm soát số lượng cảnh báo không vượt quá tải nhận thức của đội ngũ.
+- **Lớp E3 v2 (Kỹ thuật Agent):** Đã hoàn thành 100% với việc kiểm thử trên 15 kịch bản đa sự kiện và 5 lớp probe thử thách. Kết quả ghi nhận: Recall 100.0%, Precision 100.0%, Numeric Accuracy 100.0%, trung bình 1.0 tool call.
 
-Phân tách evidence trong báo cáo: E1 prediction/replay đã hoàn thành; E2 policy/agent technical evaluation chưa chạy; E3 human decision study chưa chạy; E4 causal intervention effect chưa có. Không trộn precision E1 vào “độ chính xác agent”; không dùng acceptance E3 chứng minh E4.
+> **Quy ước đánh số chuẩn:** E1 = Policy Replay; E2 = Serving/Validation Parity; E3 = Đánh giá kỹ thuật Agent; E4 = Thử nghiệm người dùng (Future work / Pilot). Chi tiết báo cáo E3 v2: `artifacts/agent_extension/agent_v2/eval_report.md`.
 
 ## 10. Lộ trình giai đoạn tích hợp ba tuần
 

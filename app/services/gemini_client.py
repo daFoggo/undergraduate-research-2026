@@ -1,6 +1,7 @@
 """Secret-safe, native Google Gemini client implementing the common complete interface."""
 import json
 import os
+from typing import Any, Dict, List, Optional
 import httpx
 from dotenv import dotenv_values
 
@@ -11,7 +12,9 @@ BASE_URL = 'https://generativelanguage.googleapis.com/v1beta'
 class GeminiError(RuntimeError):
     def __init__(self, status: int, reason: str):
         self.status = status
-        super().__init__(f'Gemini API status={status}: {reason}')
+        # Clean any accidental key leak from error message
+        safe_reason = reason.replace(os.getenv('GEMINI_API_KEY', 'UNKNOWN_KEY'), '[REDACTED]')
+        super().__init__(f'Gemini API status={status}: {safe_reason}')
 
 
 def _clean_schema_for_gemini(schema):
@@ -31,7 +34,7 @@ def _clean_schema_for_gemini(schema):
 
 
 class GeminiClient:
-    def __init__(self, api_key: str = None, model: str = None, timeout: int = 30):
+    def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None, timeout: int = 30):
         env = dotenv_values('.env')
         self.model = model or os.getenv('GEMINI_MODEL') or env.get('GEMINI_MODEL') or DEFAULT_MODEL
         self._key = api_key or os.getenv('GEMINI_API_KEY') or env.get('GEMINI_API_KEY')
@@ -45,8 +48,35 @@ class GeminiClient:
     def __repr__(self):
         return f"<GeminiClient model='{self.model}'>"
 
-    def complete(self, messages, tools=None, tool_choice=None, max_tokens=600):
-        url = f'{BASE_URL}/models/{self.model}:generateContent?key={self._key}'
+    def list_models(self) -> List[Dict[str, Any]]:
+        """List available models for the authenticated API key."""
+        url = f'{BASE_URL}/models'
+        headers = {'x-goog-api-key': self._key}
+        try:
+            res = self._client.get(url, headers=headers)
+        except Exception as e:
+            raise GeminiError(0, f"Connection failed during list_models: {type(e).__name__}")
+        if res.status_code != 200:
+            raise GeminiError(res.status_code, f"Failed to list models: {res.text[:200]}")
+        data = res.json()
+        return data.get('models', [])
+
+    def complete(
+        self,
+        messages: List[Dict[str, Any]],
+        tools: Optional[List[Dict[str, Any]]] = None,
+        tool_choice: Optional[str] = None,
+        max_tokens: int = 600,
+        temperature: float = 0.0,
+        top_p: float = 1.0,
+        response_mime_type: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        """Execute chat completion with generation configuration and header-based authentication."""
+        url = f'{BASE_URL}/models/{self.model}:generateContent'
+        headers = {
+            'x-goog-api-key': self._key,
+            'Content-Type': 'application/json',
+        }
 
         # Track preceding tool calls to map tool call id back to function name
         call_id_to_name = {}
@@ -92,7 +122,18 @@ class GeminiClient:
                     }]
                 })
 
-        payload = {'contents': contents}
+        gen_config: Dict[str, Any] = {
+            'maxOutputTokens': max_tokens,
+            'temperature': temperature,
+            'topP': top_p,
+        }
+        if response_mime_type:
+            gen_config['responseMimeType'] = response_mime_type
+
+        payload: Dict[str, Any] = {
+            'contents': contents,
+            'generationConfig': gen_config,
+        }
 
         if tools:
             declarations = []
@@ -107,13 +148,33 @@ class GeminiClient:
                 })
             payload['tools'] = [{'functionDeclarations': declarations}]
 
-        try:
-            res = self._client.post(url, json=payload)
-        except Exception as e:
-            raise GeminiError(0, type(e).__name__) from None
+        max_retries = 3
+        backoff = 4.0
+        res = None
+        for attempt in range(max_retries):
+            try:
+                res = self._client.post(url, headers=headers, json=payload)
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise GeminiError(0, type(e).__name__) from None
+                import time
+                time.sleep(backoff)
+                backoff *= 2
+                continue
+
+            if res.status_code == 429:
+                if attempt < max_retries - 1:
+                    import time
+                    time.sleep(backoff)
+                    backoff *= 2
+                    continue
+                else:
+                    raise GeminiError(429, f'Rate limit exceeded after {max_retries} attempts: {res.text[:200]}')
+            break
 
         if res.status_code != 200:
             raise GeminiError(res.status_code, f'Gemini request rejected: {res.text[:300]}')
+
 
         data = res.json()
         candidates = data.get('candidates', [])
@@ -149,14 +210,21 @@ class GeminiClient:
         if tool_calls:
             message['tool_calls'] = tool_calls
 
+        usage_meta = data.get('usageMetadata', {})
+        prompt_tokens = usage_meta.get('promptTokenCount', 0)
+        completion_tokens = usage_meta.get('candidatesTokenCount', 0)
+        total_tokens = usage_meta.get('totalTokenCount', prompt_tokens + completion_tokens)
+
         return {
             'choices': [{
                 'message': message,
                 'finish_reason': 'tool_calls' if tool_calls else 'stop'
             }],
             'usage': {
-                'cost': 0.0,
-                'prompt_tokens': data.get('usageMetadata', {}).get('promptTokenCount', 0),
-                'completion_tokens': data.get('usageMetadata', {}).get('candidatesTokenCount', 0),
-            }
+                'cost': None,
+                'prompt_tokens': prompt_tokens,
+                'completion_tokens': completion_tokens,
+                'total_tokens': total_tokens,
+            },
+            'model_version': data.get('modelVersion', self.model),
         }

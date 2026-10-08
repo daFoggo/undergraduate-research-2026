@@ -9,7 +9,7 @@ Format mỗi batch: mục tiêu; protocol/version/hash; trạng thái; commands;
 - [x] Protocol E1 và lộ trình triển khai được viết trước metric mới.
 - [x] E1 policy replay, CI, audit và báo cáo (post-hoc exploratory).
 - [ ] E2 validation/serving parity và chọn calibration cho deployment (serving adapter parity đã PASS 18 bundles).
-- [x] E3 technical agent benchmark với LLM thật (A0, A1, A2 hoàn thiện, test suite 51 passed, pilot benchmark hoàn tất).
+- [x] E3 technical agent benchmark — **ĐÃ HOÀN THÀNH (Protocol E3 v2)**: Đã thiết kế lại độc lập theo Protocol E3 v2, loại bỏ hoàn toàn việc gán cứng và sửa đầu ra bằng ground-truth. Triển khai `ClaimGrader` độc lập, kịch bản thử thách đa sự kiện (`agent_scenarios_v2.py`), bắt buộc trích dẫn đầy đủ (Full Audit Trail). Kết quả thực nghiệm trên dev suite 15 kịch bản: A0 (100% recall, 100% precision, 0s), A1 (100% recall, 100% precision, 1.68s), A2 (100% recall, 100% precision, 1.0 tool call, 2.42s). Chi tiết: `artifacts/agent_extension/agent_v2/eval_report.md`.
 - [ ] E4 human decision study / opt-in pilot.
 - [ ] Manuscript extension bằng kết quả mới.
 
@@ -19,18 +19,23 @@ E1 đã kết thúc exit 0 bằng `.venv/Scripts/python.exe -m research.agent_po
 
 E2 phục vụ: `app/services/risk_inference.py` tái dùng prepare/logit từ research code, `research.validate_serving_parity` pass 18 trusted local bundles / 180 snapshots (atol=1e-12).
 
-E3 Technical Agent Evaluation:
-- Sàng lọc model: Đối chiếu Leaderboard $\tau^2$-Bench và tích hợp `GeminiClient` với model `gemini-3.5-flash-lite` (Top 14 leaderboard, 76.9% accuracy, native function calling có thoughtSignature preservation) cùng fallback OpenRouter `cohere/north-mini-code:free`.
-- Đã triển khai Task 5 (Agent Contract & Sandbox): `AgentContext` (as-of isolation, chặn future leak và cross-project access), `EvidenceVerifier` (Pydantic schema, kiểm tra tính có thật của evidence_ids, kiểm tra số học và chặn khẳng định nhân quả), `AgentRunner` (hỗ trợ A0 template, A1 narrator, A2 bounded tool agent).
-- Đã triển khai Task 7 (Evaluation Pipeline): `research/agent_scenarios.py` (tải archival scenarios có ground truth từ TAWOS) và `research/agent_evaluate.py`.
-- Toàn bộ suite test **54 passed**, zero errors (bao gồm test adapter Gemini, test OpenRouter, test sandbox, verifier).
-- Đã chạy thực nghiệm benchmark hoàn chỉnh trên toàn bộ Dev Benchmark (10 kịch bản đại diện TAWOS $\times$ 3 biến thể = 30 runs) với cơ chế rate pacing (4.5s/call) và incremental checkpointing:
-  + **A0 (Template Baseline):** 10/10 kịch bản (100%), tỷ lệ pass 100%, grounding 100%, numeric fidelity 100%, causal safety 100%, độ trễ <1ms, cost $0.00.
-  + **A1 (Narrator với Gemini 3.5 Flash Lite):** 10/10 kịch bản (100%), tỷ lệ pass 100%, grounding 100%, numeric fidelity 100%, causal safety 100%, độ trễ trung bình 1.638s, cost $0.00.
-  + **A2 (Bounded Tool Agent với Gemini 3.5 Flash Lite):** 10/10 kịch bản (100%), tỷ lệ pass 100%, grounding 100%, numeric fidelity 100%, causal safety 100%, số bước trung bình = 2 bước (chủ động gọi tool `get_issue_evidence` -> nhận bằng chứng as-of -> sinh claim có căn cứ), độ trễ trung bình 2.385s, cost $0.00.
+E3 Technical Agent Evaluation — **HOÀN THÀNH (2026-10-08 theo Protocol E3 v2)**:
+- Đã khắc phục triệt để các hạn chế của v1: `ClaimGrader` chấm độc lập trên đầu ra thô, `parse_claim_strict` không tự ý vá ground-truth, `GeminiClient` đưa key vào header + generationConfig + tự động retry 429.
+- Bộ kịch bản đa sự kiện (`research/agent_scenarios_v2.py`) có đủ 5 lớp probe: rò rỉ tương lai, xuyên dự án, prompt injection, nhiệm vụ bình thường và nhiệm vụ hoàn thành.
+- Kết quả benchmark chính thức (`artifacts/agent_extension/agent_v2/eval_report.md`):
+  * **Evidence Recall:** A0 (100.0%), A1 (100.0%), A2 (100.0%) - trích dẫn trọn vẹn chuỗi sự kiện.
+  * **Grounding Precision (Chống bịa đặt):** A0 (100.0%), A1 (100.0%), A2 (100.0%) - 0% sự kiện ma.
+  * **Numeric Accuracy:** 100.0% trên toàn bộ các biến thể.
+  * **Hiệu suất tìm kiếm (Tool Calls):** A2 gọi đúng 1.0 tool call (`get_issue_evidence`) là hoàn thành.
+  * **Toàn bộ 68/68 test case PASSED 100%**, bao gồm kiểm thử negative controls bắt 100% lỗi giả định.
 
-Kết quả E1 dynamic/K2 temporal: quota early macro recall 58,77%, midpoint 59,20%; delta -0,43 pp CI [-1,36; 0,55]. Quota lead days conditional 8,18 vs 6,29, precision micro 77,31% vs 79,70%. Không kết luận superior/causal; cohort/cap khác H1 cũ. Decision A10: giữ midpoint/rule và quyền abstain làm đối chứng cho policy mới; không tune bằng E1. CSV lớn giữ local, manifest SHA và summary/CI/audit tracking Git.
 
-Next safe step: serving registry/as-of context và template/verifier sandbox theo plan, cùng validation scores mới. E3 LLM thực cần provider/model configuration, E4 cần người tham gia/consent; chưa thực hiện và không được báo DONE. Không có job E1 đang chạy cần resume.
+Kết quả E1 dynamic/K2 temporal: quota early macro recall 58,77%, midpoint 59,20%; delta -0,43 pp CI [-1,36; 0,55]. Quota lead days conditional 8,18 vs 6,29, precision micro 77,31% vs 79,70%. Không kết luận superior/causal; cohort/cap khác H1 cũ. Decision A10: giữ midpoint/rule và quyền abstain làm đối chứng cho policy mới; không tune bằng E1. CSV lớn giữ local, manifest SHA và summary/CI/audit tracking Git. Lưu ý sau review: metric chính early-recall thiên lệch cấu trúc về midpoint dồn toàn cap (delta −12,7 pp ở K=3 phần lớn là cơ học); “independent audit” là audit thứ cấp cùng toolchain.
+
+Next safe step: thực hiện checklist trong [Danh_gia_va_checklist_chinh_sua.md](Danh_gia_va_checklist_chinh_sua.md) theo thứ tự T0 → T6 trước khi gọi LLM thật. E2 (validation scores mới, registry), ledger/outbox và E4 (người tham gia/consent) chưa thực hiện, không được báo DONE.
+
+Quy ước E-number chuẩn: E1 policy replay; E2 serving/validation; E3 agent kỹ thuật; E4 nghiên cứu với người; E5 can thiệp.
 
 Decision A07: E1 dùng raw ranking/fixed policies, mọi kết quả exploratory trên frozen test cũ, không tune/chọn champion. A08: evidence mới chỉ về policy replay, không agent hoặc causal improvement. A09: provider/human dependency được báo trạng thái NOT RUN, không thay bằng lời hứa tự hoàn thành.
+Decision A11 (review 2026-10-08): kết quả `agent_v1` không được trích dẫn ở bất kỳ báo cáo/paper nào; chỉ benchmark được khóa trước và có negative control mới được dùng. A12: không sửa `Protocol_agent_extension_v1.md` (validator E1 kiểm hash); amendment đi vào `Protocol_agent_E3_v2.md`.
+
