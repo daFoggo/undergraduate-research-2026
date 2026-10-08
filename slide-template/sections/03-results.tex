@@ -1,0 +1,88 @@
+\section{Results}
+
+\begin{frame}{Overview: 3-day live run}
+  \small
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{L{0.13\textwidth}|L{0.08\textwidth}|L{0.22\textwidth}|L{0.2\textwidth}|L{0.2\textwidth}}
+    \textbf{Inquiry} & \textbf{Cases} & \textbf{Status} & \textbf{Avg. duration} & \textbf{Energy} \\
+    \hline
+    Fridge & 48 & 48 annotation-free & 54 min (median) & $\sim$39 Wh / cycle \\
+    Microwave & 5 & 5 complete & 7.0 min & $\sim$99 Wh / use \\
+    TV session & 3 & 3 complete & 19 min & $\sim$41 Wh / session \\
+    Comfort & 0 & no detector yet & -- & -- \\
+  \end{tabular}
+
+  \vspace{0.35cm}
+  \footnotesize Mean, peak, and energy come from the integrated raw events
+  ($E_{\mathrm{cycle}}=\frac{1}{3600}\int_{t_{\mathrm{start}}}^{t_{\mathrm{end}}}P(t)\,dt$).
+\end{frame}
+
+\demoframe{Power dashboard}{overview-3-days-run.png}
+
+\begin{frame}{Meeting Room: a recurring lunch-break routine}
+  \small
+  Occupants turn on the TV to watch YouTube while eating lunch, on three
+  consecutive days between \alert{11:35 and 12:15}.
+
+  \vspace{0.25cm}
+  \scriptsize
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{L{0.07\textwidth}|L{0.12\textwidth}|L{0.07\textwidth}|L{0.075\textwidth}|L{0.075\textwidth}|L{0.095\textwidth}|L{0.13\textwidth}|L{0.17\textwidth}}
+    \textbf{Date} & \textbf{Time} & \textbf{Dur.} & \textbf{Mean} & \textbf{Peak}
+      & \textbf{Energy} & \textbf{Who} & \textbf{What} \\
+    \hline
+    28/09 & 11:46--12:09 & 23 min & 136 W & 139 W & 52.3 Wh & many people & eating and watching YouTube on TV \\
+    29/09 & 11:36--11:52 & 16 min & 133 W & 138 W & 35.6 Wh & 6 people & eating and watching TV \\
+    30/09 & 11:56--12:14 & 18 min & 116 W & 127 W & 34.9 Wh & many people & eating and watching TV on YouTube \\
+  \end{tabular}
+\end{frame}
+
+\demoframe{Extracted cases}{detected-cycle-meeting-room.png}
+
+\demoframe{Real-life event: lunch with the TV on}{annotation-meeting-room-real-life-img.jpg}
+
+\demoframe{Annotation chat}{annotation-chat-meeting-room.png}
+
+\begin{frame}{Kitchen: microwave}
+  \small
+  All 5 uses were annotated \emph{``reheating a meal''}, with peaks around
+  1.2 kW.
+
+  \vspace{0.25cm}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{p{0.13\textwidth}|p{0.17\textwidth}|p{0.11\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}}
+    \textbf{Date} & \textbf{Time} & \textbf{Duration} & \textbf{Peak} & \textbf{Energy} \\
+    \hline
+    28/09 & 11:40--11:47 & 7 min & 1,198 W & 94.9 Wh \\
+    28/09 & 12:05--12:13 & 8 min & 1,208 W & 103.8 Wh \\
+    29/09 & 11:24--11:39 & 15 min & 1,228 W & 211.1 Wh \\
+    30/09 & 11:38--11:41 & 3 min & 1,240 W & 50.3 Wh \\
+    30/09 & 12:00--12:02 & 2 min & 1,219 W & 33.1 Wh \\
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Kitchen: fridge (annotation-free)}
+  \small
+  \alert{48 cycles in $\sim$2.7 days} ($\approx$18 per day), all handled without
+  asking the user.
+
+  \vspace{0.1cm}
+  \small
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{L{0.22\textwidth}|L{0.3\textwidth}}
+    \textbf{Metric} & \textbf{45 regular cycles} \\
+    \hline
+    Duration & 34--93 min (median 54) \\
+    Mean power & 39--103 W (median 43) \\
+    Peak power & 52--139 W \\
+    Cycle energy & 28--79 Wh (median 39) \\
+  \end{tabular}
+
+  \vspace{0.1cm}
+  \footnotesize
+  \begin{alertblock}{Outliers}
+    3 cycles (119, 158, and 305 min) exceed the duration limit and carry the
+    \texttt{duration-over-max} flag.
+  \end{alertblock}
+\end{frame}

@@ -1,0 +1,89 @@
+\section{Next steps}
+
+\begin{frame}{Limitations}
+  \small
+  \begin{enumerate}
+    \item \alert{No timestep resampling \& discretization:} cases are not yet
+          projected onto a 15/30/60-min grid or binned into Low/Medium/High, so
+          $X_T$ for the IL trigger is not built.
+    \item \alert{Appliance-only detection:} the engine supports only
+          \texttt{power\_cycle}; the comfort inquiry produced 0 cases.
+    \item \alert{No cooperative quality control:} users cannot confirm, edit, or
+          reject bot-inferred labels.
+    \item \alert{No occupancy sensors:} without PIR or door contacts,
+          \texttt{who} depends on user input.
+    \item \alert{Abnormally long fridge cycles} (3 of 48) are not yet split or
+          explained.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Future work}
+  \footnotesize
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{block}{Timestep discretization}
+        Resample cases onto a standard grid (15/30/60 min) to build $X_T$, then
+        bin values into Low/Medium/High for the IL trigger.
+      \end{block}
+      \begin{block}{Climate binding}
+        Attach temperature and humidity to each TV interval
+        $[t_{\mathrm{start}}, t_{\mathrm{end}}]$ and add comfort-band rules.
+      \end{block}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{block}{Cooperative QC}
+        Web UI to Confirm / Edit / Reject / Defer bot-filled labels.
+      \end{block}
+      \begin{block}{Occupancy sensing}
+        PIR, door contact, and CO$_2$ to estimate headcount (\texttt{who}).
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\usetikzlibrary{positioning,arrows.meta}
+
+\begin{frame}{Pipeline and roadmap}
+  \centering
+  \begin{tikzpicture}[
+      stage/.style={draw=templateRed, fill=templateRed!7, rounded corners=3pt,
+        minimum width=2.3cm, minimum height=1.25cm, align=center,
+        font=\footnotesize},
+      todo/.style={stage, fill=templateDarkRed, text=white},
+      arr/.style={-{Stealth}, thick, templateRed}]
+    \node[stage] (a) {Raw sensor\\data};
+    \node[stage, right=0.35cm of a] (b) {Cycle detection\\(adaptive thresholds)};
+    \node[stage, right=0.35cm of b] (c) {Case\\$[t_{\mathrm{start}}, t_{\mathrm{end}}]$};
+    \node[todo,  right=0.35cm of c] (d) {Timestep resampling\\\& discretization};
+    \node[stage, right=0.35cm of d] (e) {IL trigger\\+ QC};
+    \draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d); \draw[arr] (d)--(e);
+    \node[below=0.25cm of d, font=\scriptsize, templateDarkRed] {next milestone};
+    \node[below=0.25cm of e, font=\scriptsize] {in progress};
+    \node[below=0.25cm of b, font=\scriptsize] {done};
+  \end{tikzpicture}
+
+  \vspace{0.1cm}
+  \footnotesize
+  \raggedright
+  \begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \alert{Next step, after a case exists:} \emph{temporal resampling}
+          projects cases of different lengths onto a standard time grid
+          (15/30/60 min) to build the analysis matrix $X_T$; \emph{semantic
+          binning} turns numeric values into Low / Medium / High.
+    \item \alert{Why:} the IL trigger (neighbourhood density) needs time-aligned
+          feature vectors to compare cases and decide whether to ask the user.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+  \footnotesize
+  \begin{thebibliography}{9}
+    \setbeamertemplate{bibliography item}[text]
+    \bibitem{otsu} N.~Otsu, ``A threshold selection method from gray-level histograms,'' \emph{IEEE Trans. Syst., Man, Cybern.}, vol.~9, no.~1, pp.~62--66, 1979.
+    \bibitem{neuralnilm} J.~Kelly and W.~Knottenbelt, ``Neural NILM: Deep neural networks applied to energy disaggregation,'' in \emph{Proc. ACM BuildSys}, 2015, pp.~55--64.
+    \bibitem{precioso} D.~Precioso and D.~G\'omez-Ullate, ``Thresholding methods in non-intrusive load monitoring,'' \emph{J. Supercomputing}, vol.~79, pp.~14039--14062, 2023.
+    \bibitem{jumiawi} W.~A.~H.~Jumiawi and A.~El-Zaart, ``Improvement in the between-class variance based on lognormal distribution for accurate image segmentation,'' \emph{Entropy}, 2022.
+    \bibitem{ukdale} J.~Kelly and W.~Knottenbelt, ``The UK-DALE dataset, domestic appliance-level electricity demand and whole-house demand from five UK homes,'' \emph{Scientific Data}, vol.~2, 150007, 2015.
+  \end{thebibliography}
+\end{frame}

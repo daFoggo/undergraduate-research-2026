@@ -1,0 +1,42 @@
+\section{Method}
+
+\begin{frame}{Cycle detection: adaptive ON/OFF thresholds}
+  \small
+  \setlength{\itemsep}{2pt}
+  \begin{itemize}
+    \item \alert{Goal:} find $[t_{\mathrm{start}}, t_{\mathrm{end}}]$ of each
+          appliance cycle from raw power, with no hand-tuned thresholds.
+    \item \alert{Learn thresholds from data:} pick the power level that best
+          separates the OFF (standby) and ON (active) readings\,[1], on
+          $\ln(1+P)$ since power is multiplicative and right-skewed\,[4].
+    \item \alert{Hysteresis:} two thresholds $P_{\mathrm{on}} > P_{\mathrm{off}}$
+          above a noise floor, so a cycle does not flicker around one value.
+    \item \alert{Clean up:} drop too-short cycles, merge short pauses\,[2].
+          Thresholds directly determine the ON/OFF labels\,[3].
+  \end{itemize}
+
+  \vspace{0.15cm}
+  \footnotesize
+  \parbox{0.86\textwidth}{\alert{Why not Median $+\,k\cdot$MAD?} It assumes OFF dominates, but a fridge
+  is ON $\sim$70\% of the time, so the median lands inside ON and cycles are
+  missed.}
+\end{frame}
+
+\begin{frame}{Learned thresholds}
+  \small
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{L{0.16\textwidth}|L{0.22\textwidth}|L{0.14\textwidth}|L{0.16\textwidth}|L{0.2\textwidth}}
+    \textbf{Appliance} & \textbf{$P_{\mathrm{on}}\,/\,P_{\mathrm{off}}$}
+      & \textbf{Max gap} & \textbf{Duration} & \textbf{Source} \\
+    \hline
+    Fridge & $\approx 9.2\,/\,5.2$ W & 0 min & 3--120 min & learned \\
+    Microwave & $\approx 24\,/\,10.8$ W & 2 min & 1--15 min & learned \\
+    TV & $10\,/\,\approx 5.2$ W & 5 min & $\geq 5$ min & UK-DALE profile\,[5] \\
+  \end{tabular}
+
+  \vspace{0.3cm}
+  \footnotesize Learned thresholds are re-estimated on each run, so they vary
+  slightly (fridge $P_{\mathrm{on}}$ 9.1--9.4 W; microwave 24.0 W).
+\end{frame}
+
+\demoframe{Thresholds recorded with a case}{learned-threshold.png}

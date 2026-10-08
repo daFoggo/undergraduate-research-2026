@@ -1,0 +1,39 @@
+\documentclass[aspectratio=169,14pt]{beamer}
+
+\input{theme}
+\RequirePackage{array}
+\RequirePackage[export]{adjustbox}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Full-slide web-demo screenshot. Put the PNG in assets/demo/; until it exists a
+% dashed placeholder shows the expected file name.
+\newcommand{\demoframe}[2]{%
+  \begin{frame}{Demo: #1}
+    \centering
+    \vspace{-0.45cm}
+    \IfFileExists{assets/demo/#2}{%
+      \includegraphics[max width=0.98\linewidth,max height=0.8\textheight,keepaspectratio]{assets/demo/#2}%
+    }{%
+      \begin{tikzpicture}
+        \node[draw=templateRed, dashed, minimum width=0.85\linewidth,
+              minimum height=0.6\textheight, align=center, font=\small,
+              text=templateDarkRed]
+          {Web screenshot here\\\texttt{assets/demo/#2}};
+      \end{tikzpicture}%
+    }%
+  \end{frame}%
+}
+
+\title{AnnoBot -- Experiment Results}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\input{sections/01-setup}
+\input{sections/02-method}
+\input{sections/03-results}
+\input{sections/04-next}
+
+\end{document}

@@ -1,0 +1,78 @@
+\section{Setup}
+
+\begin{frame}{Recap: previous meeting}
+  \begin{itemize}
+    \item \alert{Experiments:} Meeting Room (TV) and, newly added, Kitchen
+          (Fridge, Microwave).
+    \item \alert{Fact $\rightarrow$ Case:} a collection of sensor observations,
+          contextual information, and semantic annotations relevant to the
+          inquiry goal.
+    \item \alert{Signature extraction $\rightarrow$ Cycle detection:} an
+          algorithmic rule that scans sensor traces and returns the temporal
+          boundaries $[t_{\mathrm{start}}, t_{\mathrm{end}}]$ of an active
+          service episode or appliance cycle.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Experiment setup: $E=\langle I, T\rangle$}
+  \small
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{L{0.18\textwidth}|L{0.38\textwidth}|L{0.28\textwidth}}
+    & \textbf{Kitchen} & \textbf{Meeting Room} \\
+    \hline
+    \textbf{Period} & 28/09 -- 28/10/2026 (1 month) & same \\
+    \textbf{Ask window} & 24/7 (testing only; realistically 9h--21h) & same \\
+    \textbf{Budget} & 10 asks/day & 10 asks/day \\
+    \textbf{IL timestep} & 60 minutes & 30 minutes \\
+  \end{tabular}
+
+  \vspace{0.3cm}
+  \footnotesize Timezone: \texttt{Asia/Ho\_Chi\_Minh}.
+\end{frame}
+
+\demoframe{Experiment list}{experiment-list.png}
+
+\begin{frame}{Inquiries: $\iota=\langle Q,S,I,D,A,\Gamma\rangle$}
+  \scriptsize
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{L{0.11\textwidth}|L{0.26\textwidth}|L{0.16\textwidth}|L{0.16\textwidth}|L{0.19\textwidth}}
+    \textbf{Inquiry} & \textbf{Question $Q$} & \textbf{Sensors $S$}
+      & \textbf{Detection $D$} & \textbf{Annotation $A$} \\
+    \hline
+    Fridge & How regular is the compressor cycle, and how much energy does each cycle use?
+      & fridge plug & \texttt{power\_cycle}, learned thresholds & none \emph{(annotation-free)} \\
+    Microwave & When is it used, and what for?
+      & microwave plug & \texttt{power\_cycle}, learned thresholds & \texttt{what} required \\
+    Session & When is the meeting room used, and for how long?
+      & TV plug, temperature, humidity & \texttt{power\_cycle}, UK-DALE profile
+      & \texttt{who}, \texttt{what} required \\
+    Comfort & Do temperature and humidity stay in the comfort band during meetings?
+      & temperature, humidity & \texttt{climate\_\allowbreak observation}
+      & \texttt{why}, \texttt{how}, \texttt{performance} required \\
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Inquiry goals and indicators}
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{L{0.13\textwidth}|L{0.47\textwidth}|L{0.24\textwidth}}
+    \textbf{Inquiry} & \textbf{Goal $\Gamma$} & \textbf{Indicators $I$} \\
+    \hline
+    Fridge & Confirm the detector draws consistent on/off boundaries across many
+      repetitions (not anomaly detection).
+      & energy, duration, mean power, peak power \\
+    Microwave & Handle a sparse, short, noisy signal, and sort each burst into one
+      of four uses.
+      & energy, duration, peak power \\
+    Session & Measure real meeting-room occupancy rather than inferring it from the
+      TV alone.
+      & energy, duration, mean power \\
+    Comfort & Trade comfort against energy, and surface AC left running when nobody
+      is in the room.
+      & avg. temperature, avg. humidity \\
+  \end{tabular}
+\end{frame}
+
+\demoframe{Meeting-room inquiries}{inquiry-list-meeting-room.png}

@@ -1,0 +1,84 @@
+% Visual system adapted from Downloads/template.odp.
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman}
+\usefonttheme{serif}
+
+\definecolor{templateRed}{HTML}{E41E26}
+\definecolor{templateDarkRed}{HTML}{B5121B}
+\definecolor{templateBlue}{HTML}{173FC4}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{alerted text}{fg=templateDarkRed}
+\setbeamercolor{block title}{fg=white,bg=templateRed}
+\setbeamercolor{block body}{fg=black,bg=templateRed!7}
+\setbeamercolor{block title alerted}{fg=white,bg=templateDarkRed}
+\setbeamercolor{block body alerted}{fg=black,bg=templateDarkRed!7}
+\setbeamerfont{title}{family=\rmfamily,series=\bfseries,size=\fontsize{26}{31}}
+\setbeamerfont{frametitle}{family=\rmfamily,series=\bfseries,size=\fontsize{18}{22}}
+\setbeamerfont{author}{family=\rmfamily,size=\large}
+\setbeamerfont{institute}{family=\rmfamily,size=\normalsize}
+
+\newcommand{\templatebranding}{%
+  \includegraphics[height=0.38cm]{assets/template-logo-mark.png}%
+  \hspace{0.12cm}%
+  \includegraphics[height=0.29cm]{assets/template-logo-wordmark.png}%
+}
+
+% IEEE-style numeric citation with the complete reference in the slide footnote.
+\newcommand{\ieeecitefootnote}[2]{%
+  \textsuperscript{\tiny[#1]}%
+  \addtocounter{footnote}{1}%
+  \begingroup
+  \renewcommand{\thefootnote}{}%
+  \footnotetext{\tiny\textbf{[#1]}~#2}%
+  \endgroup
+}
+
+\makeatletter
+\defbeamertemplate*{title page}{template}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[inner sep=0pt] at (current page.center) {%
+      \includegraphics[width=\paperwidth,height=\paperheight]{assets/template-cover-background.jpeg}%
+    };
+    \node[anchor=north east,inner sep=0pt] at ([xshift=-2.7cm,yshift=-0.32cm]current page.north east) {\templatebranding};
+  \end{tikzpicture}%
+  \vspace*{2.0cm}%
+  \hspace*{1.2cm}\begin{minipage}{0.78\paperwidth}
+    \raggedright\color{templateDarkRed}\usebeamerfont{title}\inserttitle\par
+  \end{minipage}%
+  \vfill
+  \ifx\insertauthor\@empty\else
+    \hspace*{2.2cm}\begin{minipage}{0.64\paperwidth}
+      \centering\color{white}\usebeamerfont{author}\insertauthor\par
+      \vspace{0.18cm}
+      \usebeamerfont{institute}\insertinstitute\par
+    \end{minipage}%
+  \fi
+  \vspace*{1.15cm}%
+}
+\makeatother
+
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.72cm,dp=0.12cm]{normal text}%
+    \hfill\raisebox{0.08cm}{\templatebranding}\hspace*{2.7cm}%
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \hbox{\color{templateRed}\rule{\paperwidth}{0.35pt}}%
+}
+
+\setbeamertemplate{frametitle}{%
+  \vspace{0.32cm}%
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.92cm,rightskip=0.92cm,sep=0pt]{frametitle}%
+    \usebeamerfont{frametitle}\strut\insertframetitle\strut\par%
+  \end{beamercolorbox}%
+  \vspace{0.25cm}%
+}
+
+\setbeamertemplate{footline}{%
+  \hfill\usebeamerfont{page number}\insertframenumber\hspace{0.95cm}\vspace{0.42cm}
+}
