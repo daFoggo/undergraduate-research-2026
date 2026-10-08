@@ -68,18 +68,18 @@ Agent không phải là một chatbot trò chuyện tùy ý, mà là một **Gia
 
 ---
 
-### 4. Kết quả kiểm thử thực nghiệm Agent (Protocol E3 v2)
+### 4. Kết quả kiểm thử thực nghiệm Agent (Protocol E3 v2 trên bộ dữ liệu Full 50 kịch bản)
 
-Được thử nghiệm trên bộ kịch bản đa sự kiện và 5 lớp probe thử thách (rò rỉ tương lai, dữ liệu xuyên dự án, prompt injection độc hại, ca an toàn/abstain):
+Được thử nghiệm trên bộ dữ liệu Full gồm 50 kịch bản đa sự kiện thực tế từ TAWOS và 5 lớp probe thử thách (rò rỉ tương lai, dữ liệu xuyên dự án, prompt injection độc hại, ca an toàn/abstain, đình trệ tiến trình - mỗi lớp 10 kịch bản):
 
 | Chỉ số khoa học | Baseline A0 (Template) | A1 (Single Narrator) | A2 (Bounded Tool Agent) | Ý nghĩa thực tế |
 |---|---|---|---|---|
 | **Evidence Recall** | 100.0% | 100.0% | **100.0%** | Thu thập trọn vẹn 100% bằng chứng lịch sử (không tự ý cắt xén) |
 | **Grounding Precision** | 100.0% | 100.0% | **100.0%** | Chống bịa đặt tuyệt đối (0% sự kiện ma, 0% claim vô căn cứ) |
 | **Numeric Accuracy** | 100.0% | 100.0% | **100.0%** | Khớp 100% các giá trị định lượng (số ngày đình trệ, mốc giờ) |
-| **Decision Accuracy** | 100.0% | 100.0% | **100.0%** | Nhận biết đúng 100% ca cần cảnh báo và ca an toàn (tự abstain) |
+| **Decision Accuracy** | 100.0% | 98.0% | **98.0%** | Nhận biết chính xác ca cần cảnh báo và ca an toàn (tự abstain) |
 | **Số lượt gọi công cụ** | 0.0 calls | 0.0 calls | **1.0 calls** | Hiệu năng tìm kiếm tối ưu (chỉ mất đúng 1 bước tra cứu) |
-| **Thời gian phản hồi** | 0.00s | 1.68s | **2.42s** | Đáp ứng tức thời trong luồng công việc thực tế |
+| **Thời gian phản hồi (p50)**| 0.00s | 1.67s | **2.67s** | Đáp ứng tức thời trong luồng công việc thực tế |
 
 *Ghi chú kỹ thuật:* Toàn bộ **68/68 test case** kiểm thử trong hệ thống đều đạt **PASS 100%**, bao gồm các bài test bẫy bảo mật (Negative Controls) chứng minh hệ thống chặn đứng mọi hành vi tiêm mã độc hoặc truy cập trái phép dữ liệu dự án khác.
 
@@ -165,13 +165,14 @@ Khung bài thuyết trình gồm **10 Slide** súc tích, mạch lạc, làm n�
 ---
 
 ### SLIDE 8: Kết quả thực nghiệm trích xuất bằng chứng của Agent
-- **Bảng số liệu đối soát (Trích từ Báo cáo E3 v2):**
-  - Evidence Recall: **100.0%** (Thu hồi đầy đủ toàn bộ chứng cứ).
+- **Bảng số liệu đối soát (Trích từ Báo cáo E3 v2 trên bộ Full 50 kịch bản):**
+  - Evidence Recall: **100.0%** (Thu hồi đầy đủ toàn bộ chứng cứ trên 50 kịch bản).
   - Grounding Precision: **100.0%** (Hoàn toàn không có ảo giác hay bịa đặt).
   - Numeric Accuracy: **100.0%** (Chuẩn xác tuyệt đối về số liệu).
+  - Decision Accuracy: **98.0%** (Nhận diện chính xác nhiệm vụ rủi ro và ca an toàn).
   - Hiệu suất công cụ: **1.0 tool call** (Hoàn thành nhiệm vụ chỉ trong 1 bước).
-  - Thời gian xử lý: **2.42 giây** (Thích hợp tích hợp thực tế).
-- **Talking points:** *"Kết quả thực nghiệm xác nhận Agent A2 đã thu hồi được đầy đủ 100% bằng chứng rủi ro với độ chính xác tuyệt đối, đồng thời hoàn thành chỉ với đúng 1 lượt gọi công cụ duy nhất."*
+  - Thời gian xử lý: **2.67 giây** (Thích hợp tích hợp thực tế).
+- **Talking points:** *"Kết quả thực nghiệm trên toàn bộ 50 kịch bản thực tế xác nhận Agent A2 đã thu hồi được đầy đủ 100% bằng chứng rủi ro với độ chính xác tuyệt đối, đồng thời hoàn thành chỉ với đúng 1 lượt gọi công cụ duy nhất."*
 
 ---
 

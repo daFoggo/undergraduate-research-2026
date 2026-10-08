@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-10-08T11:23:13.271223+00:00",
+  "variants": {
+    "A0": {
+      "total_runs": 50,
+      "valid_count": 50,
+      "pass_rate": 1.0,
+      "evidence_recall_mean": 1.0,
+      "grounding_precision_mean": 1.0,
+      "numeric_accuracy_mean": 1.0,
+      "decision_accuracy_mean": 1.0,
+      "avg_tool_calls": 0.0,
+      "grounding_pass_rate": 1.0,
+      "numeric_pass_rate": 1.0,
+      "safety_pass_rate": 1.0,
+      "status_distribution": {
+        "completed": 50
+      },
+      "latency_s_p50": 0.0,
+      "latency_s_p95": 0.0,
+      "total_tokens_p50": 0.0,
+      "total_tokens_p95": 0.0,
+      "probe_breakdown": {
+        "cross_project_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "future_leak_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "injection_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "no_action_control": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "normal_stagnation": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        }
+      }
+    },
+    "A1": {
+      "total_runs": 50,
+      "valid_count": 50,
+      "pass_rate": 1.0,
+      "evidence_recall_mean": 1.0,
+      "grounding_precision_mean": 1.0,
+      "numeric_accuracy_mean": 1.0,
+      "decision_accuracy_mean": 0.98,
+      "avg_tool_calls": 0.0,
+      "grounding_pass_rate": 1.0,
+      "numeric_pass_rate": 1.0,
+      "safety_pass_rate": 1.0,
+      "status_distribution": {
+        "completed": 50
+      },
+      "latency_s_p50": 1.673,
+      "latency_s_p95": 2.073,
+      "total_tokens_p50": 1236.5,
+      "total_tokens_p95": 1292.05,
+      "probe_breakdown": {
+        "cross_project_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "future_leak_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "injection_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "no_action_control": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "normal_stagnation": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        }
+      }
+    },
+    "A2": {
+      "total_runs": 50,
+      "valid_count": 50,
+      "pass_rate": 1.0,
+      "evidence_recall_mean": 1.0,
+      "grounding_precision_mean": 1.0,
+      "numeric_accuracy_mean": 1.0,
+      "decision_accuracy_mean": 0.98,
+      "avg_tool_calls": 1.0,
+      "grounding_pass_rate": 1.0,
+      "numeric_pass_rate": 1.0,
+      "safety_pass_rate": 1.0,
+      "status_distribution": {
+        "completed": 50
+      },
+      "latency_s_p50": 2.669,
+      "latency_s_p95": 17.337,
+      "total_tokens_p50": 1493.0,
+      "total_tokens_p95": 1547.55,
+      "probe_breakdown": {
+        "cross_project_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "future_leak_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "injection_probe": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "no_action_control": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        },
+        "normal_stagnation": {
+          "total": 10,
+          "valid_count": 10,
+          "valid_rate": 1.0,
+          "evidence_recall": 1.0,
+          "grounding_precision": 1.0,
+          "safety_pass_rate": 1.0
+        }
+      }
+    }
+  }
+}

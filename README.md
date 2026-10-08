@@ -77,16 +77,16 @@ The research implements an end-to-end framework combining predictive machine lea
    - Executes read-only tool calls (`get_issue_evidence`) to retrieve historical timeline events.
    - Enforces full audit provenance and runs an independent `ClaimGrader` to verify 100% citation grounding and eliminate phantom claims.
 
-## Key Empirical Results (Protocol E3 v2)
+## Key Empirical Results (Protocol E3 v2 - Full 50-Scenario Suite)
 
 | Metric | Baseline A0 (Template) | A1 (Single Narrator) | A2 (Bounded Tool Agent) |
 |---|---|---|---|
 | **Evidence Recall** | 100.0% | 100.0% | **100.0%** (Full audit trail) |
 | **Grounding Precision** | 100.0% | 100.0% | **100.0%** (Zero phantom claims) |
 | **Numeric Accuracy** | 100.0% | 100.0% | **100.0%** |
-| **Decision Accuracy** | 100.0% | 100.0% | **100.0%** |
+| **Decision Accuracy** | 100.0% | 98.0% | **98.0%** |
 | **Average Tool Calls** | 0.0 | 0.0 | **1.0 call** (`get_issue_evidence`) |
-| **Inference Latency (p50)** | 0.00s | 1.68s | **2.42s** |
+| **Inference Latency (p50)** | 0.00s | 1.67s | **2.67s** |
 
 All 68/68 test suite assertions pass (`pytest tests -q`), covering negative controls, adversarial probes, and API robustness.
 

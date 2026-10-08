@@ -218,19 +218,19 @@ Bộ kịch bản kiểm thử độc lập bao gồm 5 lớp probe thử thách
 
 ### 7.4. Kết quả thực nghiệm kỹ thuật
 
-Toàn bộ các biến thể được kiểm tra tự động và chấm điểm độc lập bởi `ClaimGrader` trên đầu ra nguyên bản (không can thiệp sửa đổi):
+Toàn bộ các biến thể được kiểm tra tự động và chấm điểm độc lập bởi `ClaimGrader` trên bộ dữ liệu Full gồm 50 kịch bản đa sự kiện (150 lượt chạy thực nghiệm):
 
 | Biến thể | Evidence Recall | Grounding Precision | Numeric Accuracy | Decision Accuracy | Số lượt gọi công cụ | Độ trễ (p50) |
 |---|---|---|---|---|---|---|
 | **A0 (Template)** | **100.0%** | **100.0%** | **100.0%** | **100.0%** | 0.0 calls | 0.00s |
-| **A1 (Narrator)** | **100.0%** | **100.0%** | **100.0%** | **100.0%** | 0.0 calls | 1.68s |
-| **A2 (Bounded Agent)**| **100.0%** | **100.0%** | **100.0%** | **100.0%** | **1.0 calls** | 2.42s |
+| **A1 (Narrator)** | **100.0%** | **100.0%** | **100.0%** | **98.0%** | 0.0 calls | 1.67s |
+| **A2 (Bounded Agent)**| **100.0%** | **100.0%** | **100.0%** | **98.0%** | **1.0 calls** | 2.67s |
 
 **Những phát hiện cốt lõi từ thực nghiệm:**
-1. **Thu hồi bằng chứng hoàn chỉnh (100% Evidence Recall):** Với ràng buộc tường minh về tính minh bạch kiểm toán (Audit Trail / Provenance), Agent trích xuất đầy đủ 100% các sự kiện lịch sử cấu thành rủi ro, loại bỏ hoàn toàn hiện tượng tự ý rút gọn thông tin ban đầu.
+1. **Thu hồi bằng chứng hoàn chỉnh (100% Evidence Recall):** Với ràng buộc tường minh về tính minh bạch kiểm toán (Audit Trail / Provenance), Agent trích xuất đầy đủ 100% các sự kiện lịch sử cấu thành rủi ro trên toàn bộ 50 kịch bản.
 2. **Khả năng chống bịa đặt tuyệt đối (100% Grounding Precision):** Cơ chế lược đồ cấu trúc `ClaimSchemaV2` kết hợp `ClaimGrader` bảo đảm không có bất kỳ mã sự kiện ma hay suy diễn vô căn cứ nào được chấp nhận vào đầu ra cuối cùng.
-3. **Hiệu quả gọi công cụ tối ưu:** Biến thể A2 hoàn thành trích xuất đầy đủ ngữ cảnh chỉ với đúng **1.0 lượt gọi công cụ** (`get_issue_evidence`), đảm bảo thời gian phản hồi nhanh (2.42s) và chi phí token thấp.
-4. **Vượt qua 100% các probe thử thách:** Tự động phát hiện và từ chối các prompt injection, ngăn chặn rò rỉ dữ liệu ngoài phạm vi dự án và dữ liệu tương lai.
+3. **Hiệu quả gọi công cụ tối ưu:** Biến thể A2 hoàn thành trích xuất đầy đủ ngữ cảnh chỉ với đúng **1.0 lượt gọi công cụ** (`get_issue_evidence`), đảm bảo thời gian phản hồi nhanh (2.67s) và chi phí token thấp.
+4. **Vượt qua 100% các probe thử thách:** Tự động phát hiện và từ chối các prompt injection, ngăn chặn rò rỉ dữ liệu ngoài phạm vi dự án và dữ liệu tương lai trên toàn bộ 50 ca thử thách.
 
 ## 8. Sản phẩm ứng dụng
 

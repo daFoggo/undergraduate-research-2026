@@ -298,8 +298,9 @@ def generate_benchmark_suites(
 
     dev_suite = all_scenarios[:n_dev]
     locked_suite = all_scenarios[n_dev : n_dev + n_locked]
+    full_suite = all_scenarios[: n_dev + n_locked]
 
-    return {'dev': dev_suite, 'locked': locked_suite}
+    return {'dev': dev_suite, 'locked': locked_suite, 'full': full_suite}
 
 
 def export_scenarios_jsonl(scenarios: List[ScenarioV2], output_path: Path) -> str:

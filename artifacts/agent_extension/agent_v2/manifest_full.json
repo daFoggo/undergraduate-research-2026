@@ -1,0 +1,12 @@
+{
+  "suite_name": "full",
+  "suite_hash": "dae1ce188810279fc5c860dc57623504d2d550fc3b5421bb8667819f9cf79720",
+  "scenario_count": 50,
+  "repetitions": 1,
+  "model_name": "gemini-3.5-flash-lite",
+  "variants": [
+    "A0",
+    "A1",
+    "A2"
+  ]
+}

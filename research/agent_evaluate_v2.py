@@ -316,10 +316,11 @@ def generate_markdown_report(metrics: Dict[str, Any], manifest: Dict[str, Any]) 
 
 
 def run_evaluation(
-    suite_type: str = 'dev',
+    suite_type: str = 'full',
     repetitions: int = 1,
     model: str = 'gemini-3.5-flash-lite',
     variants: Optional[List[str]] = None,
+    limit: Optional[int] = None,
 ) -> Dict[str, Any]:
     """Execute evaluation benchmark and persist all artifacts into agent_v2 directory."""
     if variants is None:
@@ -329,11 +330,15 @@ def run_evaluation(
     suite_file = ARTIFACT_DIR / f'scenarios_{suite_type}.jsonl'
 
     if not suite_file.exists():
-        suites = generate_benchmark_suites(n_dev=15, n_locked=30)
+        suites = generate_benchmark_suites(n_dev=15, n_locked=35)
         export_scenarios_jsonl(suites['dev'], ARTIFACT_DIR / 'scenarios_dev.jsonl')
         export_scenarios_jsonl(suites['locked'], ARTIFACT_DIR / 'scenarios_locked.jsonl')
+        export_scenarios_jsonl(suites['full'], ARTIFACT_DIR / 'scenarios_full.jsonl')
 
     scenarios = load_scenarios_jsonl(suite_file)
+    if limit is not None and limit > 0:
+        scenarios = scenarios[:limit]
+
     with suite_file.open('rb') as f:
         import hashlib
         suite_hash = hashlib.sha256(f.read()).hexdigest()
@@ -355,12 +360,11 @@ def run_evaluation(
         for variant in variants:
             for rep in range(1, repetitions + 1):
                 if variant in ('A1', 'A2') and client is not None:
-                    time.sleep(1.5)  # Pace requests to respect provider rate limits
+                    time.sleep(2.0)  # Pace requests to respect provider rate limits
                 trace = evaluate_scenario_run(runner, scen, variant, rep, schema_version='v2')
                 traces.append(trace)
                 status_icon = "PASS" if trace['valid'] else ("FAIL" if trace['status'] != 'provider_error' else "ERR")
                 print(f"[{scen_idx}/{len(scenarios)}] {variant} rep={rep} {scen.scenario_type[:15]}: {status_icon} ({trace['latency_s']:.2f}s, {trace['total_tokens']} tokens)")
-
 
     if client:
         client.close()
@@ -393,17 +397,22 @@ def run_evaluation(
     report_path = ARTIFACT_DIR / 'eval_report.md'
     report_path.write_text(report_md, encoding='utf-8')
 
+    suite_report_path = ARTIFACT_DIR / f'eval_report_{suite_type}.md'
+    suite_report_path.write_text(report_md, encoding='utf-8')
+
     print(f"\nEvaluation finished! Artifacts persisted to {ARTIFACT_DIR}:")
     print(f" - Traces: {traces_path.name}")
     print(f" - Metrics: {metrics_path.name}")
     print(f" - Report: {report_path.name}")
+    print(f" - Suite Report: {suite_report_path.name}")
 
     return metrics
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Protocol E3 v2 Evaluation Runner")
-    parser.add_argument('--suite', choices=['dev', 'locked'], default='dev', help="Scenario suite to evaluate")
+    parser.add_argument('--suite', choices=['dev', 'locked', 'full'], default='full', help="Scenario suite to evaluate")
+    parser.add_argument('--limit', type=int, default=None, help="Optional limit on number of scenarios")
     parser.add_argument('--repetitions', type=int, default=1, help="Number of repetitions per scenario")
     parser.add_argument('--model', type=str, default='gemini-3.5-flash-lite', help="Model name")
     parser.add_argument('--variants', nargs='+', default=['A0', 'A1', 'A2'], help="Variants to evaluate")
@@ -414,4 +423,5 @@ if __name__ == '__main__':
         repetitions=args.repetitions,
         model=args.model,
         variants=args.variants,
+        limit=args.limit,
     )

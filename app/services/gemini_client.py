@@ -148,7 +148,7 @@ class GeminiClient:
                 })
             payload['tools'] = [{'functionDeclarations': declarations}]
 
-        max_retries = 3
+        max_retries = 5
         backoff = 4.0
         res = None
         for attempt in range(max_retries):

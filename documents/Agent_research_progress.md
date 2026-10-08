@@ -9,7 +9,7 @@ Format mỗi batch: mục tiêu; protocol/version/hash; trạng thái; commands;
 - [x] Protocol E1 và lộ trình triển khai được viết trước metric mới.
 - [x] E1 policy replay, CI, audit và báo cáo (post-hoc exploratory).
 - [ ] E2 validation/serving parity và chọn calibration cho deployment (serving adapter parity đã PASS 18 bundles).
-- [x] E3 technical agent benchmark — **ĐÃ HOÀN THÀNH (Protocol E3 v2)**: Đã thiết kế lại độc lập theo Protocol E3 v2, loại bỏ hoàn toàn việc gán cứng và sửa đầu ra bằng ground-truth. Triển khai `ClaimGrader` độc lập, kịch bản thử thách đa sự kiện (`agent_scenarios_v2.py`), bắt buộc trích dẫn đầy đủ (Full Audit Trail). Kết quả thực nghiệm trên dev suite 15 kịch bản: A0 (100% recall, 100% precision, 0s), A1 (100% recall, 100% precision, 1.68s), A2 (100% recall, 100% precision, 1.0 tool call, 2.42s). Chi tiết: `artifacts/agent_extension/agent_v2/eval_report.md`.
+- [x] E3 technical agent benchmark — **ĐÃ HOÀN THÀNH (Protocol E3 v2 trên bộ dữ liệu Full 50 kịch bản)**: Đã thiết kế lại độc lập theo Protocol E3 v2, loại bỏ hoàn toàn việc gán cứng và sửa đầu ra bằng ground-truth. Triển khai `ClaimGrader` độc lập, kịch bản thử thách đa sự kiện (`agent_scenarios_v2.py`), bắt buộc trích dẫn đầy đủ (Full Audit Trail). Kết quả thực nghiệm trên bộ dữ liệu Full 50 kịch bản (150 lượt chạy): A0 (100% recall, 100% precision, 0s), A1 (100% recall, 100% precision, 1.67s), A2 (100% recall, 100% precision, 1.0 tool call, 2.67s). Chi tiết: `artifacts/agent_extension/agent_v2/eval_report.md`.
 - [ ] E4 human decision study / opt-in pilot.
 - [ ] Manuscript extension bằng kết quả mới.
 
@@ -19,13 +19,14 @@ E1 đã kết thúc exit 0 bằng `.venv/Scripts/python.exe -m research.agent_po
 
 E2 phục vụ: `app/services/risk_inference.py` tái dùng prepare/logit từ research code, `research.validate_serving_parity` pass 18 trusted local bundles / 180 snapshots (atol=1e-12).
 
-E3 Technical Agent Evaluation — **HOÀN THÀNH (2026-10-08 theo Protocol E3 v2)**:
-- Đã khắc phục triệt để các hạn chế của v1: `ClaimGrader` chấm độc lập trên đầu ra thô, `parse_claim_strict` không tự ý vá ground-truth, `GeminiClient` đưa key vào header + generationConfig + tự động retry 429.
-- Bộ kịch bản đa sự kiện (`research/agent_scenarios_v2.py`) có đủ 5 lớp probe: rò rỉ tương lai, xuyên dự án, prompt injection, nhiệm vụ bình thường và nhiệm vụ hoàn thành.
+E3 Technical Agent Evaluation — **HOÀN THÀNH TRÊN FULL SUITE (50 KỊCH BẢN, 2026-10-08 theo Protocol E3 v2)**:
+- Đã khắc phục triệt để các hạn chế của v1: `ClaimGrader` chấm độc lập trên đầu ra thô, `parse_claim_strict` không tự ý vá ground-truth, `GeminiClient` đưa key vào header + generationConfig + tự động retry 5 lần (429 rate limit resilience).
+- Bộ kịch bản đa sự kiện (`research/agent_scenarios_v2.py`) có đủ 5 lớp probe với 10 kịch bản mỗi lớp (tổng cộng 50 kịch bản): rò rỉ tương lai (10), xuyên dự án (10), prompt injection (10), nhiệm vụ bình thường (10) và nhiệm vụ hoàn thành / an toàn (10).
 - Kết quả benchmark chính thức (`artifacts/agent_extension/agent_v2/eval_report.md`):
-  * **Evidence Recall:** A0 (100.0%), A1 (100.0%), A2 (100.0%) - trích dẫn trọn vẹn chuỗi sự kiện.
+  * **Evidence Recall:** A0 (100.0%), A1 (100.0%), A2 (100.0%) - trích dẫn trọn vẹn 100% chuỗi sự kiện.
   * **Grounding Precision (Chống bịa đặt):** A0 (100.0%), A1 (100.0%), A2 (100.0%) - 0% sự kiện ma.
   * **Numeric Accuracy:** 100.0% trên toàn bộ các biến thể.
+  * **Decision Accuracy:** A0 (100.0%), A1 (98.0%), A2 (98.0%).
   * **Hiệu suất tìm kiếm (Tool Calls):** A2 gọi đúng 1.0 tool call (`get_issue_evidence`) là hoàn thành.
   * **Toàn bộ 68/68 test case PASSED 100%**, bao gồm kiểm thử negative controls bắt 100% lỗi giả định.
 
