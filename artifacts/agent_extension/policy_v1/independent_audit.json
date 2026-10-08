@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "summary_rows": 96,
+  "contrasts": 24,
+  "alerts": 180638,
+  "hashes_verified": true,
+  "original_prefix_eligibility": true,
+  "counts_recomputed": true,
+  "analysis": "posthoc_exploratory; not LLM agent validation"
+}

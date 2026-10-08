@@ -13,6 +13,8 @@ postgres-data/
 *.log
 artifacts/models/
 artifacts/predictions/
+artifacts/agent_extension/*/alert_log.csv
+artifacts/agent_extension/*/sprint_metrics.csv
 catboost_info/
 *.aux
 *.fls

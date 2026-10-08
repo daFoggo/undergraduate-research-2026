@@ -1,0 +1,12 @@
+# Preserve exact bytes of new provenance-hashed extension sources/artifacts.
+# Do not change newline policy for the previously frozen research study.
+artifacts/agent_extension/** text eol=lf
+app/services/** text eol=lf
+research/agent_policy*.py text eol=lf
+research/validate_agent_policy.py text eol=lf
+research/validate_serving_parity.py text eol=lf
+documents/Protocol_agent_extension_v1.md text eol=lf
+documents/Agent_research_progress.md text eol=lf
+documents/Deep_research_AI_agent_canh_bao_som.md text eol=lf
+documents/Phan_tich_policy_agent_E1.md text eol=lf
+docs/plans/2026-10-08-proactive-sprint-agent.md text eol=lf
